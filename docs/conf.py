@@ -33,7 +33,7 @@ if version.startswith('v'):
 else:
     release = version
 
-ga_token = os.environ.get("GOOGLE_ANALYTICS_TOKEN", "")
+ga_token = os.environ.get("GOOGLE_ANALYTICS_TOKEN", "G-23TNKN36XM")
 
 if version == 'root':
     doxygen_installed = False
