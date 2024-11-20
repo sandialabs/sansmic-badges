@@ -3,6 +3,7 @@
 """Get all tagged releases and build the documentation.
 """
 
+import shutil
 import subprocess
 import json
 import os
@@ -50,8 +51,14 @@ for tag in tags:
         )
     )
 
+try:
+    shutil.mkdir(os.path.abspath(os.path.join(".","html")))
+    shutil.mkdir(os.path.abspath(os.path.join(".","html","_static")))
+except:
+    pass
+
 with open(
-    os.path.abspath(os.path.join(".", "docs", "_static", "switcher.json")),
+    os.path.abspath(os.path.join(".", "html", "_static", "switcher.json")),
     "w",
 ) as fswitch:
     json.dump(versions, fswitch)
