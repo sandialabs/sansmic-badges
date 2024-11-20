@@ -265,7 +265,7 @@ html_theme_options = {
         "json_url": "https://sandialabs.github.io/sansmic/_static/switcher.json",
         "version_match": release,
     },
-    "show_version_warning_banner": True,
+    "show_version_warning_banner": True if version != 'root' else False,
     # "secondary_sidebar_items": ["page-toc"], #["page-toc", "edit-this-page", "sourcelink"],
     "navbar_start": [
         "navbar-logo",
