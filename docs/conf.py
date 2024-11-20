@@ -29,7 +29,9 @@ author = "See AUTHORS.md"
 
 if version.startswith('v'):
     version = version[1:]
-release = 'v' + version
+    release = 'v' + version
+else:
+    release = version
 
 ga_token = os.environ.get("GOOGLE_ANALYTICS_TOKEN", "")
 
@@ -263,6 +265,7 @@ html_theme_options = {
         "json_url": "https://sandialabs.github.io/sansmic/_static/switcher.json",
         "version_match": release,
     },
+    "show_version_warning_banner": True,
     # "secondary_sidebar_items": ["page-toc"], #["page-toc", "edit-this-page", "sourcelink"],
     "navbar_start": [
         "navbar-logo",
