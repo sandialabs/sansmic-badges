@@ -51,11 +51,7 @@ for tag in tags:
         )
     )
 
-try:
-    shutil.mkdir(os.path.abspath(os.path.join(".","html")))
-    shutil.mkdir(os.path.abspath(os.path.join(".","html","_static")))
-except:
-    pass
+os.makedirs(os.path.abspath(os.path.join(".","html","_static")), exist_ok=True)
 
 with open(
     os.path.abspath(os.path.join(".", "html", "_static", "switcher.json")),
