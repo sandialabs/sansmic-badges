@@ -2,6 +2,57 @@
 sansmic
 =======
 
+.. rubric:: Project details
+
+.. image:: https://img.shields.io/github/license/sandialabs/sansmic
+   :alt: GitHub License
+
+.. image:: /_static/badges/Contributor%20Covenant-2.1-4baaaa.svg
+   :alt: Contributor Covenant badge
+   :target: https://github.com/sandialabs/sansmic/blob/main/CODE_OF_CONDUCT.md
+
+.. image:: https://www.bestpractices.dev/projects/9399/badge
+   :alt: Best Practices badge
+   :target: https://www.bestpractices.dev/projects/9399
+
+.. image:: https://api.scorecard.dev/projects/github.com/sandialabs/sansmic/badge
+   :alt: Scorecard badge
+   :target: https://scorecard.dev/viewer/?uri=github.com/sandialabs/sansmic
+
+
+.. rubric:: Current stable release
+
+.. image:: https://img.shields.io/pypi/v/sansmic?logo=pypi&logoColor=white
+   :alt: PyPI - Version
+
+.. image:: https://img.shields.io/github/release-date/sandialabs/sansmic
+   :alt: GitHub Release Date
+
+.. image:: https://img.shields.io/github/v/release/sandialabs/sansmic?display_name=release&logo=github&logoColor=white
+   :alt: GitHub Release
+
+.. image:: https://img.shields.io/github/check-runs/sandialabs/sansmic/BUILD_SCRIPT_REPLACE?logo=github&logoColor=white
+   :alt: GitHub tag check runs
+
+
+.. rubric:: Development version
+
+.. image:: https://sloc.xyz/github/sandialabs/sansmic/?category=code
+   :alt: Lines of code badge
+
+.. image:: https://github.com/sandialabs/sansmic/actions/workflows/test-matrix.yml/badge.svg?branch=main
+   :alt: Tests status on main branch badge
+   :target: https://github.com/sandialabs/sansmic/actions/workflows/test-matrix.yml
+
+.. image:: https://codecov.io/github/sandialabs/sansmic/graph/badge.svg?token=oDeMIUHoqg
+   :alt: Codecov on main branch badge
+
+.. image:: https://github.com/sandialabs/sansmic/actions/workflows/gh-pages.yml/badge.svg?branch=main
+   :alt: Docs building on main branch badge
+   :target: https://github.com/sandialabs/sansmic/actions/workflows/gh-pages.yml
+
+
+
 The sansmic leaching simulator
 ==============================
 
