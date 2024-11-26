@@ -39,7 +39,7 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
 
-    <script src="../_static/documentation_options.js?v=76e2d817"></script>
+    <script src="../_static/documentation_options.js?v=d29a5c0e"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
@@ -60,7 +60,7 @@
     <script>
         DOCUMENTATION_OPTIONS.theme_version = '0.16.0';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://sandialabs.github.io/sansmic/_static/switcher.json';
-        DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'v1.0.0';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'v1.0.1';
         DOCUMENTATION_OPTIONS.show_version_warning_banner = true;
         </script>
     <script src="../_static/pypi-icon.js?v=74687d30"></script>
@@ -70,7 +70,7 @@
     <link rel="prev" title="Getting started" href="getting-started.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="1.0.0" />
+  <meta name="docsearch:version" content="1.0.1" />
   </head>
   
   
@@ -451,143 +451,181 @@
 The following include all available output options, but note that not all options may be
 available if you have not installed the appropriate packages (see Advanced Installation).</p>
 <section id="sansmic">
-<h2><code class="docutils literal notranslate"><span class="pre">sansmic</span></code><a class="headerlink" href="#sansmic" title="Link to this heading">#</a></h2>
-<p><p>Simulate leaching in an underground salt cavern due to ordinary solution mining, product withdrawal, or product fill.</p>
-</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">usage</span><span class="p">:</span> <span class="n">sansmic</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">version</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">copyright</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">license</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">o</span> <span class="n">PREFIX</span><span class="p">]</span>
-               <span class="p">[</span><span class="o">--</span><span class="n">toml</span> <span class="o">|</span> <span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">toml</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">csv</span> <span class="o">|</span> <span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">csv</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">hdf</span> <span class="o">|</span> <span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">hdf</span><span class="p">]</span>
-               <span class="p">[</span><span class="o">--</span><span class="n">json</span> <span class="o">|</span> <span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">json</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">tst</span> <span class="o">|</span> <span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">tst</span><span class="p">]</span>
-               <span class="p">[</span><span class="o">--</span><span class="n">old</span><span class="o">-</span><span class="n">out</span> <span class="o">|</span> <span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">old</span><span class="o">-</span><span class="n">out</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">v</span> <span class="o">|</span> <span class="o">-</span><span class="n">q</span> <span class="o">|</span> <span class="o">--</span><span class="n">debug</span><span class="p">]</span>
-               <span class="n">INPUTFILE</span>
+<span id="sansmic"></span><h2>sansmic<a class="headerlink" href="#sansmic" title="Link to this heading">#</a></h2>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sansmic<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>SCENARIO_FILE
 </pre></div>
 </div>
-<section id="sansmic.app-_main_parser-positional-arguments">
-<h3>Positional Arguments<a class="headerlink" href="#sansmic.app-_main_parser-positional-arguments" title="Link to this heading">#</a></h3>
-<dl class="option-list">
-<dt><kbd>INPUTFILE</kbd></dt>
-<dd><p>the SANSMIC input file to use; if extensansmic.ion is ‘.dat’, –toml is implied</p>
+<p class="rubric">Options</p>
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-sansmic-o">
+<span id="cmdoption-sansmic-prefix"></span><span class="sig-name descname"><span class="pre">-o</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--prefix</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;prefix&gt;</span></span><a class="headerlink" href="#cmdoption-sansmic-o" title="Link to this definition">#</a></dt>
+<dd><p>Prefix for output files.  [default: from SCENARIO_FILE]</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-sansmic-toml">
+<span id="cmdoption-sansmic-no-toml"></span><span class="sig-name descname"><span class="pre">--toml</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--no-toml</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-sansmic-toml" title="Link to this definition">#</a></dt>
+<dd><p>Create a TOML scenario file.  [default: iff SCENARIO_FILE is .DAT format or PREFIX is set]</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-sansmic-csv">
+<span id="cmdoption-sansmic-no-csv"></span><span class="sig-name descname"><span class="pre">--csv</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--no-csv</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-sansmic-csv" title="Link to this definition">#</a></dt>
+<dd><p>Create CSV output files.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Default<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">True</span></code></p>
 </dd>
 </dl>
-</section>
-<section id="sansmic.app-_main_parser-named-arguments">
-<h3>Named Arguments<a class="headerlink" href="#sansmic.app-_main_parser-named-arguments" title="Link to this heading">#</a></h3>
-<dl class="option-list">
-<dt><kbd>--version</kbd></dt>
-<dd><p>Display version number and exit.</p>
-</dd>
-<dt><kbd>--copyright</kbd></dt>
-<dd><p>Display full copyright details and exit.</p>
-</dd>
-<dt><kbd>--license</kbd></dt>
-<dd><p>Display full license details and exit.</p>
-<p>Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
-</dd>
-</dl>
-</section>
-<section id="sansmic.app-_main_parser-output-options">
-<h3>Output options<a class="headerlink" href="#sansmic.app-_main_parser-output-options" title="Link to this heading">#</a></h3>
-<p>Default options:  <code class="docutils literal notranslate"><span class="pre">--csv</span>&#160; <span class="pre">--tst</span>&#160; <span class="pre">--no-hdf</span>&#160; <span class="pre">--no-json</span>&#160; <span class="pre">--no-old-out</span></code></p>
-<dl class="option-list">
-<dt><kbd>-o, --output</kbd></dt>
-<dd><p>change output file prefix; if used, –toml is implied</p>
-</dd>
-<dt><kbd>--toml</kbd></dt>
-<dd><p>Create a TOML scenario file.</p>
-</dd>
-<dt><kbd>--no-toml</kbd></dt>
-<dd><p>Don’t create a TOML scenario file.</p>
-</dd>
-<dt><kbd>--csv</kbd></dt>
-<dd><p>Create CSV results files.</p>
-</dd>
-<dt><kbd>--no-csv</kbd></dt>
-<dd><p>Don’t create CSV results files.</p>
-</dd>
-<dt><kbd>--hdf</kbd></dt>
-<dd><p>Create an HDF5 formatted results file.</p>
-</dd>
-<dt><kbd>--no-hdf</kbd></dt>
-<dd><p>Don’t create an HDF5 results file.</p>
-</dd>
-<dt><kbd>--json</kbd></dt>
-<dd><p>Create a JSON formatted results file.</p>
-</dd>
-<dt><kbd>--no-json</kbd></dt>
-<dd><p>Don’t create a JSON results file.</p>
-</dd>
-<dt><kbd>--tst</kbd></dt>
-<dd><p>Create a daily summary TST text file.</p>
-</dd>
-<dt><kbd>--no-tst</kbd></dt>
-<dd><p>Don’t create a TST summary file.</p>
-</dd>
-<dt><kbd>--old-out</kbd></dt>
-<dd><p>Create an old-style SANSMIC OUT file.</p>
-</dd>
-<dt><kbd>--no-old-out</kbd></dt>
-<dd><p>Don’t create an old-style OUT file.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-sansmic-hdf">
+<span id="cmdoption-sansmic-no-hdf"></span><span class="sig-name descname"><span class="pre">--hdf</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--no-hdf</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-sansmic-hdf" title="Link to this definition">#</a></dt>
+<dd><p>Create an HDF5 output file.  [default: no-hdf]</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-sansmic-tst">
+<span id="cmdoption-sansmic-no-tst"></span><span class="sig-name descname"><span class="pre">--tst</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--no-tst</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-sansmic-tst" title="Link to this definition">#</a></dt>
+<dd><p>Create an old-style TST file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Default<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">True</span></code></p>
 </dd>
 </dl>
-</section>
-<section id="sansmic.app-_main_parser-console/stdout/stderr-reporting">
-<h3>Console/stdout/stderr reporting<a class="headerlink" href="#sansmic.app-_main_parser-console/stdout/stderr-reporting" title="Link to this heading">#</a></h3>
-<p>The following options are mutually exclusive</p>
-<dl class="option-list">
-<dt><kbd>-v, --verbose</kbd></dt>
-<dd><p>increase reporting details</p>
-<p>Default: <code class="docutils literal notranslate"><span class="pre">0</span></code></p>
-</dd>
-<dt><kbd>-q, --quiet</kbd></dt>
-<dd><p>turn off runtime screen output</p>
-<p>Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
-</dd>
-<dt><kbd>--debug</kbd></dt>
-<dd><p>turn on debug messages and set max verbosity</p>
-<p>Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-sansmic-json">
+<span id="cmdoption-sansmic-no-json"></span><span class="sig-name descname"><span class="pre">--json</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--no-json</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-sansmic-json" title="Link to this definition">#</a></dt>
+<dd><p>Create a JSON output data file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Default<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 </dd>
 </dl>
-</section>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-sansmic-oldout">
+<span id="cmdoption-sansmic-no-oldout"></span><span class="sig-name descname"><span class="pre">--oldout</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--no-oldout</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-sansmic-oldout" title="Link to this definition">#</a></dt>
+<dd><p>Create an old-style OUT file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Default<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-sansmic-v">
+<span id="cmdoption-sansmic-verbose"></span><span class="sig-name descname"><span class="pre">-v</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--verbose</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-sansmic-v" title="Link to this definition">#</a></dt>
+<dd><p>Increase log details.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Default<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">0</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-sansmic-q">
+<span id="cmdoption-sansmic-quiet"></span><span class="sig-name descname"><span class="pre">-q</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--quiet</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-sansmic-q" title="Link to this definition">#</a></dt>
+<dd><p>Suppress all screen output.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Default<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-sansmic-debug">
+<span class="sig-name descname"><span class="pre">--debug</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-sansmic-debug" title="Link to this definition">#</a></dt>
+<dd><p>Output debug information.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Default<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-sansmic-version">
+<span class="sig-name descname"><span class="pre">--version</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-sansmic-version" title="Link to this definition">#</a></dt>
+<dd><p>Show the version and exit.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-sansmic-license">
+<span class="sig-name descname"><span class="pre">--license</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-sansmic-license" title="Link to this definition">#</a></dt>
+<dd><p>Show license and exit.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-sansmic-copyright">
+<span class="sig-name descname"><span class="pre">--copyright</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-sansmic-copyright" title="Link to this definition">#</a></dt>
+<dd><p>Print copyright and exit.</p>
+</dd></dl>
+
+<p class="rubric">Arguments</p>
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-sansmic-arg-SCENARIO_FILE">
+<span class="sig-name descname"><span class="pre">SCENARIO_FILE</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-sansmic-arg-SCENARIO_FILE" title="Link to this definition">#</a></dt>
+<dd><p>Required argument</p>
+</dd></dl>
+
 </section>
 <section id="sansmic-convert">
-<h2><code class="docutils literal notranslate"><span class="pre">sansmic-convert</span></code><a class="headerlink" href="#sansmic-convert" title="Link to this heading">#</a></h2>
-<p><p>Convert from an old-style DAT file to the new TOML format.</p>
-</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">usage</span><span class="p">:</span> <span class="n">sansmic</span><span class="o">-</span><span class="n">convert</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">version</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">copyright</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">license</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">f</span><span class="p">]</span>
-                       <span class="n">OLD_FILE</span> <span class="n">NEW_FILE</span>
+<span id="sansmic-convert"></span><h2>sansmic-convert<a class="headerlink" href="#sansmic-convert" title="Link to this heading">#</a></h2>
+<p>Command line function to convert a scenario/dat to a new format.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sansmic-convert<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>DAT_FILE<span class="w"> </span><span class="o">[</span>OUT_FILE<span class="o">]</span>
 </pre></div>
 </div>
-<section id="sansmic.app-_convert_parser-positional-arguments">
-<h3>Positional Arguments<a class="headerlink" href="#sansmic.app-_convert_parser-positional-arguments" title="Link to this heading">#</a></h3>
-<dl class="option-list">
-<dt><kbd>OLD_FILE</kbd></dt>
-<dd><p>the SANSMIC input file to convert</p>
-</dd>
-<dt><kbd>NEW_FILE</kbd></dt>
-<dd><p>the new scenario file to create [extensansmic.ion choices: .toml, .json, .yaml]</p>
-</dd>
-</dl>
-</section>
-<section id="sansmic.app-_convert_parser-named-arguments">
-<h3>Named Arguments<a class="headerlink" href="#sansmic.app-_convert_parser-named-arguments" title="Link to this heading">#</a></h3>
-<dl class="option-list">
-<dt><kbd>--version</kbd></dt>
-<dd><p>Display version number and exit.</p>
-</dd>
-<dt><kbd>--copyright</kbd></dt>
-<dd><p>Display full copyright details and exit.</p>
-</dd>
-<dt><kbd>--license</kbd></dt>
-<dd><p>Display full license details and exit.</p>
-<p>Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
-</dd>
-<dt><kbd>-f, --full</kbd></dt>
-<dd><p>Keep all entries, even if they are blank</p>
-<p>Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+<p class="rubric">Options</p>
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-sansmic-convert-full">
+<span class="sig-name descname"><span class="pre">--full</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-sansmic-convert-full" title="Link to this definition">#</a></dt>
+<dd><p>Keep all entries even blanks.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Default<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 </dd>
 </dl>
-</section>
-<p><p>sansmic (c) 2024 NTESS. Use the –copyright or –license flags for full details.</p>
-</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-sansmic-convert-version">
+<span class="sig-name descname"><span class="pre">--version</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-sansmic-convert-version" title="Link to this definition">#</a></dt>
+<dd><p>Show the version and exit.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-sansmic-convert-license">
+<span class="sig-name descname"><span class="pre">--license</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-sansmic-convert-license" title="Link to this definition">#</a></dt>
+<dd><p>Show license and exit.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-sansmic-convert-copyright">
+<span class="sig-name descname"><span class="pre">--copyright</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-sansmic-convert-copyright" title="Link to this definition">#</a></dt>
+<dd><p>Print copyright and exit.</p>
+</dd></dl>
+
+<p class="rubric">Arguments</p>
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-sansmic-convert-arg-DAT_FILE">
+<span class="sig-name descname"><span class="pre">DAT_FILE</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-sansmic-convert-arg-DAT_FILE" title="Link to this definition">#</a></dt>
+<dd><p>Required argument</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-sansmic-convert-arg-OUT_FILE">
+<span class="sig-name descname"><span class="pre">OUT_FILE</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-sansmic-convert-arg-OUT_FILE" title="Link to this definition">#</a></dt>
+<dd><p>Optional argument</p>
+</dd></dl>
+
 </section>
 </section>
 
@@ -638,18 +676,8 @@ available if you have not installed the appropriate packages (see Advanced Insta
   </div>
   <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sansmic"><code class="docutils literal notranslate"><span class="pre">sansmic</span></code></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sansmic.app-_main_parser-positional-arguments">Positional Arguments</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sansmic.app-_main_parser-named-arguments">Named Arguments</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sansmic.app-_main_parser-output-options">Output options</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sansmic.app-_main_parser-console/stdout/stderr-reporting">Console/stdout/stderr reporting</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sansmic-convert"><code class="docutils literal notranslate"><span class="pre">sansmic-convert</span></code></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sansmic.app-_convert_parser-positional-arguments">Positional Arguments</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sansmic.app-_convert_parser-named-arguments">Named Arguments</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sansmic">sansmic</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sansmic-convert">sansmic-convert</a></li>
 </ul>
   </nav></div>
 

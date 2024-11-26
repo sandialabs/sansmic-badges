@@ -1,0 +1,10 @@
+
+
+print\_license
+==============
+
+.. currentmodule:: sansmic.app
+
+
+
+.. autofunction:: sansmic.app::print_license

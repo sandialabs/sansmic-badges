@@ -2,7 +2,7 @@ sansmic.app
 ===========
 
 .. automodule:: sansmic.app
-   :exclude-members: convert, main, AboutAction, 
+   :exclude-members: print_copyright, print_license, 
 
    
    
@@ -17,21 +17,12 @@ sansmic.app
       :toctree:
       :template: autosummary/base.rst
    
-      convert
-      main
+      print_copyright
+      print_license
    
    
 
    
-   
-   .. rubric:: Classes
-
-   .. autosummary::
-      :nosignatures:
-      :toctree:
-      :template: autosummary/class.rst
-   
-      AboutAction
    
    
 

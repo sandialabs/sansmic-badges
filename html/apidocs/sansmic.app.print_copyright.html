@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>AboutAction &#8212; Sansmic</title>
+    <title>print_copyright &#8212; Sansmic</title>
   
   
   
@@ -39,7 +39,7 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
 
-    <script src="../_static/documentation_options.js?v=76e2d817"></script>
+    <script src="../_static/documentation_options.js?v=d29a5c0e"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
@@ -56,21 +56,21 @@
                 gtag('js', new Date());
                 gtag('config', 'G-23TNKN36XM');
             </script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'apidocs/sansmic.app.AboutAction';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'apidocs/sansmic.app.print_copyright';</script>
     <script>
         DOCUMENTATION_OPTIONS.theme_version = '0.16.0';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://sandialabs.github.io/sansmic/_static/switcher.json';
-        DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'v1.0.0';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'v1.0.1';
         DOCUMENTATION_OPTIONS.show_version_warning_banner = true;
         </script>
     <script src="../_static/pypi-icon.js?v=74687d30"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="sansmic.empirical" href="sansmic.empirical.html" />
-    <link rel="prev" title="main" href="sansmic.app.main.html" />
+    <link rel="next" title="print_license" href="sansmic.app.print_license.html" />
+    <link rel="prev" title="sansmic.app" href="sansmic.app.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="1.0.0" />
+  <meta name="docsearch:version" content="1.0.1" />
   </head>
   
   
@@ -374,9 +374,8 @@
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="sansmic.html">sansmic</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="sansmic.app.html">sansmic.app</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="sansmic.app.convert.html">convert</a></li>
-<li class="toctree-l3"><a class="reference internal" href="sansmic.app.main.html">main</a></li>
-<li class="toctree-l3 current active"><a class="current reference internal" href="#">AboutAction</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">print_copyright</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.app.print_license.html">print_license</a></li>
 </ul>
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="sansmic.empirical.html">sansmic.empirical</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -559,7 +558,7 @@
     
     <li class="breadcrumb-item"><a href="sansmic.app.html" class="nav-link">sansmic.app</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">AboutAction</span></li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">print_copyright</span></li>
   </ul>
 </nav>
 </div>
@@ -576,37 +575,15 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="aboutaction">
-<h1>AboutAction<a class="headerlink" href="#aboutaction" title="Link to this heading">#</a></h1>
-<dl class="py class">
-<dt class="sig sig-object py" id="sansmic.app.AboutAction">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">AboutAction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">option_strings</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dest</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">const</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">choices</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">required</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">help</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metavar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sansmic/app.html#AboutAction"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sansmic.app.AboutAction" title="Link to this definition">#</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/argparse.html#argparse.Action" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Action</span></code></a></p>
-<p>Argparse action to print out version, copyright and/or license information from the package __init__</p>
-<p class="rubric">Summary</p>
-<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
-<tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#sansmic.app.AboutAction.add_to_parser" title="sansmic.app.AboutAction.add_to_parser"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_to_parser</span></code></a>(parser)</p></td>
-<td><p>Add the --version, --copyright and --license arguments to a parser.</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<p class="rubric">Details</p>
-<dl class="py method">
-<dt class="sig sig-object py" id="sansmic.app.AboutAction.__call__">
-<span class="sig-name descname"><span class="pre">__call__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parser</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespace</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">option_string</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sansmic/app.html#AboutAction.__call__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sansmic.app.AboutAction.__call__" title="Link to this definition">#</a></dt>
-<dd><p>Call self as a function.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="sansmic.app.AboutAction.add_to_parser">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">add_to_parser</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parser</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sansmic/app.html#AboutAction.add_to_parser"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sansmic.app.AboutAction.add_to_parser" title="Link to this definition">#</a></dt>
-<dd><p>Add the –version, –copyright and –license arguments to a parser.</p>
+  <section id="print-copyright">
+<h1>print_copyright<a class="headerlink" href="#print-copyright" title="Link to this heading">#</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="sansmic.app.print_copyright">
+<span class="sig-name descname"><span class="pre">print_copyright</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ctx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">param</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sansmic/app.html#print_copyright"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sansmic.app.print_copyright" title="Link to this definition">#</a></dt>
+<dd><p>Print the copyright for sansmic.</p>
+<p>This is a click option callback function.</p>
 <dl class="field-list simple">
 </dl>
-</dd></dl>
-
 </dd></dl>
 
 </section>
@@ -622,20 +599,20 @@
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="sansmic.app.main.html"
+       href="sansmic.app.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">main</p>
+        <p class="prev-next-title">sansmic.app</p>
       </div>
     </a>
     <a class="right-next"
-       href="sansmic.empirical.html"
+       href="sansmic.app.print_license.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">sansmic.empirical</p>
+        <p class="prev-next-title">print_license</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -658,18 +635,14 @@
   </div>
   <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sansmic.app.AboutAction"><code class="docutils literal notranslate"><span class="pre">AboutAction</span></code></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sansmic.app.AboutAction.__call__"><code class="docutils literal notranslate"><span class="pre">__call__()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sansmic.app.AboutAction.add_to_parser"><code class="docutils literal notranslate"><span class="pre">add_to_parser()</span></code></a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sansmic.app.print_copyright"><code class="docutils literal notranslate"><span class="pre">print_copyright()</span></code></a></li>
 </ul>
   </nav></div>
 
   <div class="sidebar-secondary-item">
 
   <div class="tocsection sourcelink">
-    <a href="../_sources/apidocs/sansmic.app.AboutAction.rst.txt">
+    <a href="../_sources/apidocs/sansmic.app.print_copyright.rst.txt">
       <i class="fa-solid fa-file-lines"></i> Show Source
     </a>
   </div>

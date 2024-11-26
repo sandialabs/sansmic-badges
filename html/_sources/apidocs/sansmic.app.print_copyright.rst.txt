@@ -1,0 +1,10 @@
+
+
+print\_copyright
+================
+
+.. currentmodule:: sansmic.app
+
+
+
+.. autofunction:: sansmic.app::print_copyright
