@@ -1,0 +1,14 @@
+.. _exhale_function_libsansmic_8hpp_1aebbfefaf337ee806ea88b6d52e36f905:
+
+Function sansmic::xnterp_dkr
+============================
+
+- Defined in :ref:`file_libsansmic.hpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: sansmic::xnterp_dkr(double, vector<double>, vector<double>, int)
+   :project: libsansmic

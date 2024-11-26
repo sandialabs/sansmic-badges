@@ -1,0 +1,44 @@
+CStage
+======
+
+.. currentmodule:: sansmic.libsansmic
+
+.. autoclass:: CStage
+
+
+   .. rubric:: Summary
+   .. autosummary::
+
+
+
+   
+
+
+
+
+
+   
+      ~CStage.cavern_sg
+      ~CStage.fill_rate
+      ~CStage.injection_depth
+      ~CStage.injection_duration
+      ~CStage.injection_fluid_sg
+      ~CStage.injection_rate
+      ~CStage.inn_tbg_inside_radius
+      ~CStage.inn_tbg_outside_radius
+      ~CStage.interface_depth
+      ~CStage.mode
+      ~CStage.out_csg_inside_radius
+      ~CStage.out_csg_outside_radius
+      ~CStage.print_interval
+      ~CStage.production_depth
+      ~CStage.rest_duration
+      ~CStage.stop_value
+      ~CStage.subsequent
+      ~CStage.timestep
+      ~CStage.title
+
+
+
+   .. rubric:: Details
+

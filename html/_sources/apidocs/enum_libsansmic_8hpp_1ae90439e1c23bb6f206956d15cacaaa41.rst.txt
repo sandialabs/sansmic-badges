@@ -1,0 +1,14 @@
+.. _exhale_enum_libsansmic_8hpp_1ae90439e1c23bb6f206956d15cacaaa41:
+
+Enum GeomFormat
+===============
+
+- Defined in :ref:`file_libsansmic.hpp`
+
+
+Enum Documentation
+------------------
+
+
+.. doxygenenum:: sansmic::GeomFormat
+   :project: libsansmic

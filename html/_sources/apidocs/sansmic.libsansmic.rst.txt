@@ -1,0 +1,39 @@
+sansmic.libsansmic
+==================
+
+.. automodule:: sansmic.libsansmic
+   :exclude-members: CGeometryFormat, CModel, CResults, CRunMode, CSalt, CScenario, CStage, 
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+      :nosignatures:
+      :toctree:
+      :template: autosummary/class.rst
+   
+      CGeometryFormat
+      CModel
+      CResults
+      CRunMode
+      CSalt
+      CScenario
+      CStage
+   
+   
+
+   
+   
+   
+
+
+

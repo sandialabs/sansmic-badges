@@ -1,0 +1,809 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Nomenclature &#8212; Sansmic</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+
+    <script src="_static/documentation_options.js?v=76e2d817"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-23TNKN36XM"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-23TNKN36XM');
+            </script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-23TNKN36XM');
+            </script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'nomenclature';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.0';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://sandialabs.github.io/sansmic/_static/switcher.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'v1.0.0';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner = true;
+        </script>
+    <script src="_static/pypi-icon.js?v=74687d30"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="API Reference" href="refman.html" />
+    <link rel="prev" title="References" href="references.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="1.0.0" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Sansmic</p>
+  
+</a></div>
+    
+      <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="userman.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="refman.html">
+    API Reference
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/sandialabs/sansmic" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/sansmic/" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.sandia.gov" title="Sandia National Laboratories" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="_static/snl_logo.png" class="icon-link-image" alt="Sandia National Laboratories"/></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="userman.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="refman.html">
+    API Reference
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/sandialabs/sansmic" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/sansmic/" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.sandia.gov" title="Sandia National Laboratories" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="_static/snl_logo.png" class="icon-link-image" alt="Sandia National Laboratories"/></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="um/intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="um/getting-started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="um/running-sansmic.html">Running sansmic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="um/scenarios.html">Scenarios</a></li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">References</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Nomenclature</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item"><nav class="sidebar-indices-items" aria-labelledby="pst-indices-navigation-heading-2">
+  <p id="pst-indices-navigation-heading-2" class="sidebar-indices-items__title" role="heading" aria-level="1">Indices</p>
+  <ul class="indices-link">
+        <li class="toctree-l1">
+          <a class="reference internal"
+             href="genindex.html"
+             accesskey="I">General Index</a>
+        </li>
+        <li class="toctree-l1">
+          <a class="reference internal" href="py-modindex.html">Python Module Index</a>
+        </li>
+  </ul>
+</nav></div>
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="userman.html" class="nav-link">User Guide</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Nomenclature</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="nomenclature">
+<span id="id1"></span><h1>Nomenclature<a class="headerlink" href="#nomenclature" title="Link to this heading">#</a></h1>
+<section id="notation">
+<h2>Notation<a class="headerlink" href="#notation" title="Link to this heading">#</a></h2>
+<p>The following abbreviations, acronyms, initialisms, and mathematical and unit
+symbols are used in this documentation.</p>
+<dl class="glossary">
+<dt id="term-API-organization">API (organization)<a class="headerlink" href="#term-API-organization" title="Link to this term">#</a></dt><dd><p>American Petroleum Institute</p>
+</dd>
+<dt id="term-API-software">API (software)<a class="headerlink" href="#term-API-software" title="Link to this term">#</a></dt><dd><p>application programming interface</p>
+</dd>
+<dt id="term-bbl">bbl<a class="headerlink" href="#term-bbl" title="Link to this term">#</a></dt><dd><p>(unit symbol) <a class="reference internal" href="#term-barrel"><span class="xref std std-term">barrel</span></a>, oil barrel</p>
+</dd>
+<dt id="term-BPD">BPD<a class="headerlink" href="#term-BPD" title="Link to this term">#</a></dt><dd><p>barrels per day</p>
+</dd>
+<dt id="term-coeff.">coeff.<a class="headerlink" href="#term-coeff." title="Link to this term">#</a></dt><dd><p>coefficient</p>
+</dd>
+<dt id="term-CSV">CSV<a class="headerlink" href="#term-CSV" title="Link to this term">#</a></dt><dd><p>(file format) Comma Separated Values</p>
+</dd>
+<dt id="term-DOE">DOE<a class="headerlink" href="#term-DOE" title="Link to this term">#</a></dt><dd><p><a class="reference external" href="https://www.energy.gov/">U.S. Department of Energy</a></p>
+</dd>
+<dt id="term-EOT">EOT<a class="headerlink" href="#term-EOT" title="Link to this term">#</a></dt><dd><p>end of tubing</p>
+</dd>
+<dt id="term-ft">ft<a class="headerlink" href="#term-ft" title="Link to this term">#</a></dt><dd><p>(unit symbol) <a class="reference internal" href="#term-foot"><span class="xref std std-term">foot</span></a>, international foot</p>
+</dd>
+<dt id="term-GUI">GUI<a class="headerlink" href="#term-GUI" title="Link to this term">#</a></dt><dd><p>graphical user interface</p>
+</dd>
+<dt id="term-HDF5">HDF5<a class="headerlink" href="#term-HDF5" title="Link to this term">#</a></dt><dd><p>(file format) <a class="reference external" href="https://docs.hdfgroup.org/hdf5/v1_14/index.html">Heirarchical Data Format v5</a></p>
+</dd>
+<dt id="term-I-F">I/F<a class="headerlink" href="#term-I-F" title="Link to this term">#</a></dt><dd><p>interface</p>
+</dd>
+<dt id="term-I-O">I/O<a class="headerlink" href="#term-I-O" title="Link to this term">#</a></dt><dd><p>input/output</p>
+</dd>
+<dt id="term-ID">ID<a class="headerlink" href="#term-ID" title="Link to this term">#</a></dt><dd><p>inner diameter, internal diameter</p>
+</dd>
+<dt id="term-in">in<a class="headerlink" href="#term-in" title="Link to this term">#</a></dt><dd><p>(unit symbol) <a class="reference internal" href="#term-inch"><span class="xref std std-term">inch</span></a>, standard inch</p>
+</dd>
+<dt id="term-JSON">JSON<a class="headerlink" href="#term-JSON" title="Link to this term">#</a></dt><dd><p>(file format) <a class="reference external" href="https://www.json.org/">JavaScript Object Notation</a></p>
+</dd>
+<dt id="term-LAS">LAS<a class="headerlink" href="#term-LAS" title="Link to this term">#</a></dt><dd><p>(file format) <a class="reference external" href="https://www.usgs.gov/programs/national-geological-and-geophysical-data-preservation-program/las-format">Log ASCII Standard</a></p>
+</dd>
+<dt id="term-lb">lb<a class="headerlink" href="#term-lb" title="Link to this term">#</a></dt><dd><p>(unit symbol) <a class="reference internal" href="#term-pound"><span class="xref std std-term">pound</span></a>, avoirdupois pound</p>
+</dd>
+<dt id="term-lbf">lbf<a class="headerlink" href="#term-lbf" title="Link to this term">#</a></dt><dd><p>(unit symbol) <a class="reference internal" href="#term-pound-force"><span class="xref std std-term">pound-force</span></a></p>
+</dd>
+<dt id="term-LF">LF<a class="headerlink" href="#term-LF" title="Link to this term">#</a></dt><dd><p>leach/fill mode</p>
+</dd>
+<dt id="term-M-O">M&amp;O<a class="headerlink" href="#term-M-O" title="Link to this term">#</a></dt><dd><p>maintenance and operations</p>
+</dd>
+<dt id="term-MarkDown">MarkDown<a class="headerlink" href="#term-MarkDown" title="Link to this term">#</a></dt><dd><p>(file format) <a class="reference external" href="https://github.com/skills/communicate-using-markdown">MarkDown</a></p>
+</dd>
+<dt id="term-Mbbl">Mbbl<a class="headerlink" href="#term-Mbbl" title="Link to this term">#</a></dt><dd><p>(unit symbol) one <strong>thousand</strong> <a class="reference internal" href="#term-barrel"><span class="xref std std-term">barrels</span></a> (= 10³ bbl)</p>
+<p><strong>NOTE:</strong> this is a <a class="reference internal" href="#term-customary-units"><span class="xref std std-term">U.S. customary</span></a> prefixed symbol;
+this is <em>not</em> a “mega-barrel” and is not using the SI “mega-” prefix.
+<strong>Do not</strong> use this notation with SI units.</p>
+</dd>
+<dt id="term-MD">MD<a class="headerlink" href="#term-MD" title="Link to this term">#</a></dt><dd><p><a class="reference internal" href="#term-measured-depth"><span class="xref std std-term">measured depth</span></a></p>
+</dd>
+<dt id="term-MMbb">MMbb<a class="headerlink" href="#term-MMbb" title="Link to this term">#</a></dt><dd><p>(unit symbol) one <strong>million</strong> <a class="reference internal" href="#term-barrel"><span class="xref std std-term">barrels</span></a> (= 10⁶ bbl)</p>
+<p><strong>NOTE:</strong> this is a <a class="reference internal" href="#term-customary-units"><span class="xref std std-term">U.S. customary</span></a> prefixed symbol - <strong>do not</strong> use
+this notation with SI units.</p>
+</dd>
+<dt id="term-NIST">NIST<a class="headerlink" href="#term-NIST" title="Link to this term">#</a></dt><dd><p><a class="reference external" href="https://www.nist.gov/">National Institute of Standards and Technology</a></p>
+</dd>
+<dt id="term-OBI">OBI<a class="headerlink" href="#term-OBI" title="Link to this term">#</a></dt><dd><p>oil-brine interface</p>
+</dd>
+<dt id="term-OD">OD<a class="headerlink" href="#term-OD" title="Link to this term">#</a></dt><dd><p>outer diameter, outside diameter</p>
+</dd>
+<dt id="term-ODE">ODE<a class="headerlink" href="#term-ODE" title="Link to this term">#</a></dt><dd><p>ordinary differential equation</p>
+</dd>
+<dt id="term-OL">OL<a class="headerlink" href="#term-OL" title="Link to this term">#</a></dt><dd><p>ordinary leach mode</p>
+</dd>
+<dt id="term-psi">psi<a class="headerlink" href="#term-psi" title="Link to this term">#</a></dt><dt id="term-lbf-in2">lbf/in²<a class="headerlink" href="#term-lbf-in2" title="Link to this term">#</a></dt><dd><p>(unit symbol) <a class="reference internal" href="#term-pound-force-per-square-inch"><span class="xref std std-term">pound-force per square inch</span></a></p>
+</dd>
+<dt id="term-QA">QA<a class="headerlink" href="#term-QA" title="Link to this term">#</a></dt><dd><p>quality assurance</p>
+</dd>
+<dt id="term-reStructuredText">reStructuredText<a class="headerlink" href="#term-reStructuredText" title="Link to this term">#</a></dt><dd><p>(file format) <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html">reStructuredText</a></p>
+</dd>
+<dt id="term-Sandia">Sandia<a class="headerlink" href="#term-Sandia" title="Link to this term">#</a></dt><dd><p><a class="reference external" href="https://www.sandia.gov/">Sandia National Laboratories</a></p>
+</dd>
+<dt id="term-SF">SF<a class="headerlink" href="#term-SF" title="Link to this term">#</a></dt><dd><p>product storage fill mode</p>
+</dd>
+<dt id="term-sg">sg<a class="headerlink" href="#term-sg" title="Link to this term">#</a></dt><dd><p>specific gravity</p>
+</dd>
+<dt id="term-SI">SI<a class="headerlink" href="#term-SI" title="Link to this term">#</a></dt><dd><p>International System of Units (see also <span id="id4">[<a class="reference internal" href="references.html#id5" title="NIST. The International System of Units (SI). NIST Special Publication (SP) 330. National Institute of Standards and Technology, U.S. Department of Commerce, Gaithersburg, MD, 2019 edition, 2019. doi:10.6028/NIST.SP.330-2019.">28</a>]</span>)</p>
+</dd>
+<dt id="term-SMRI">SMRI<a class="headerlink" href="#term-SMRI" title="Link to this term">#</a></dt><dd><p><a class="reference external" href="https://www.solutionmining.org">Solution Mining Research Institute</a></p>
+</dd>
+<dt id="term-SNL">SNL<a class="headerlink" href="#term-SNL" title="Link to this term">#</a></dt><dd><p><a class="reference external" href="https://www.sandia.gov/">Sandia National Laboratories</a></p>
+</dd>
+<dt id="term-SPR">SPR<a class="headerlink" href="#term-SPR" title="Link to this term">#</a></dt><dd><p><a class="reference external" href="https://www.spr.doe.gov/">U.S. Strategic Petroleum Reserve</a></p>
+</dd>
+<dt id="term-TD">TD<a class="headerlink" href="#term-TD" title="Link to this term">#</a></dt><dd><p>total depth</p>
+</dd>
+<dt id="term-TOML">TOML<a class="headerlink" href="#term-TOML" title="Link to this term">#</a></dt><dd><p>(file format) <a class="reference external" href="https://toml.io/">[Tom’s Obvious Minimal Language]</a></p>
+</dd>
+<dt id="term-USC">USC<a class="headerlink" href="#term-USC" title="Link to this term">#</a></dt><dd><p><a class="reference internal" href="#term-customary-units"><span class="xref std std-term">U.S. Customary</span></a> (see also <span id="id3">[<a class="reference internal" href="references.html#id6" title="NIST. Specifications, Tolerances, and Other Technical Requirements for Weighing and Measuring Devices, as adopted by the 108th National Conference on Weights and Measures, 2023, chapter C, &quot;General Tables of Units of Measurement&quot;. NIST Handbook (HB) 44. National Institute of Standards and Technology, U.S. Department of Commerce, Washington, DC, 2024 edition, 2024. URL: https://www.nist.gov/pml/owm/nist-handbook-44-current-edition, doi:10.6028/NIST.HB.44-2024.">29</a>]</span>)</p>
+</dd>
+<dt id="term-WL">WL<a class="headerlink" href="#term-WL" title="Link to this term">#</a></dt><dd><p>withdrawal leach mode</p>
+</dd>
+<dt id="term-wt.-pct.">wt. pct.<a class="headerlink" href="#term-wt.-pct." title="Link to this term">#</a></dt><dd><p>weight percent</p>
+</dd>
+<dt id="term-YAML">YAML<a class="headerlink" href="#term-YAML" title="Link to this term">#</a></dt><dd><p>(file format) <a class="reference external" href="https://yaml.org/">YAML Ain’t Markup Language</a></p>
+</dd>
+<dt id="term-ZDP">ZDP<a class="headerlink" href="#term-ZDP" title="Link to this term">#</a></dt><dd><p><a class="reference internal" href="#term-zero-depth-point"><span class="xref std std-term">zero-depth point</span></a></p>
+</dd>
+<dt id="term-F">°F<a class="headerlink" href="#term-F" title="Link to this term">#</a></dt><dd><p>(unit symbol) <a class="reference internal" href="#term-degree-Fahrenheit"><span class="xref std std-term">degree Fahrenheit</span></a></p>
+</dd>
+</dl>
+</section>
+<section id="glossary">
+<span id="id5"></span><h2>Glossary<a class="headerlink" href="#glossary" title="Link to this heading">#</a></h2>
+<dl class="glossary">
+<dt id="term-barrel">barrel<a class="headerlink" href="#term-barrel" title="Link to this term">#</a></dt><dt id="term-barrels">barrels<a class="headerlink" href="#term-barrels" title="Link to this term">#</a></dt><dt id="term-oil-barrel">oil barrel<a class="headerlink" href="#term-oil-barrel" title="Link to this term">#</a></dt><dd><p>U.S. and petroleum industry unit of volume. The oil barrel is equal to 42 U.S. liquid gallons, which are
+in turn defined as exactly 231 cubic inches. Thus, the oil barrel is equal to 9702 cubic inches or
+539/96 cubic feet (9702/1728 == 539/96) <span id="id14">[<a class="reference internal" href="references.html#id6" title="NIST. Specifications, Tolerances, and Other Technical Requirements for Weighing and Measuring Devices, as adopted by the 108th National Conference on Weights and Measures, 2023, chapter C, &quot;General Tables of Units of Measurement&quot;. NIST Handbook (HB) 44. National Institute of Standards and Technology, U.S. Department of Commerce, Washington, DC, 2024 edition, 2024. URL: https://www.nist.gov/pml/owm/nist-handbook-44-current-edition, doi:10.6028/NIST.HB.44-2024.">29</a>]</span>.
+The unit symbol is “<a class="reference internal" href="#term-bbl"><span class="xref std std-term">bbl</span></a>” or “bbl oil”.</p>
+</dd>
+<dt id="term-customary-units">customary units<a class="headerlink" href="#term-customary-units" title="Link to this term">#</a></dt><dd><p>Sansmic uses <a class="reference internal" href="#term-U.S.-Customary-units"><span class="xref std std-term">U.S. Customary units</span></a> internally.
+Customary units are non-SI units still used in the U.S. and some other countries. Customary units
+still in use are nearly all based on the English <a class="reference internal" href="#term-foot"><span class="xref std std-term">foot</span></a> in some way. However,
+<a class="reference internal" href="#term-U.S.-Customary-units"><span class="xref std std-term">U.S. Customary units</span></a> <em>are not the same as Imperial units,</em> and referring to them
+that way is a recipe for confusion <span id="id6">[<a class="reference internal" href="references.html#id6" title="NIST. Specifications, Tolerances, and Other Technical Requirements for Weighing and Measuring Devices, as adopted by the 108th National Conference on Weights and Measures, 2023, chapter C, &quot;General Tables of Units of Measurement&quot;. NIST Handbook (HB) 44. National Institute of Standards and Technology, U.S. Department of Commerce, Washington, DC, 2024 edition, 2024. URL: https://www.nist.gov/pml/owm/nist-handbook-44-current-edition, doi:10.6028/NIST.HB.44-2024.">29</a>]</span>.</p>
+<p>Note that U.S. Customary units are also <em>not the same</em> as now-deprecated <a class="reference internal" href="#term-U.S.-Survey-units"><span class="xref std std-term">U.S. Survey units</span></a>.</p>
+<p><em>See:</em> <a class="reference external" href="https://www.nist.gov/pml/owm/nist-handbook-44-current-edition">NIST Handbook 44 appendices B and C</a>.</p>
+</dd>
+<dt id="term-degree-Fahrenheit">degree Fahrenheit<a class="headerlink" href="#term-degree-Fahrenheit" title="Link to this term">#</a></dt><dd><p><a class="reference internal" href="#term-customary-units"><span class="xref std std-term">Customary unit</span></a> of temperature. A change of one degree Fahrenheit is exactly
+equal to a change of 5/9 degree Celsius. The unit symbol is “<a class="reference internal" href="#term-F"><span class="xref std std-term">°F</span></a>” or “degF” if limited
+to alphanumeric characters <span id="id19">[<a class="reference internal" href="references.html#id6" title="NIST. Specifications, Tolerances, and Other Technical Requirements for Weighing and Measuring Devices, as adopted by the 108th National Conference on Weights and Measures, 2023, chapter C, &quot;General Tables of Units of Measurement&quot;. NIST Handbook (HB) 44. National Institute of Standards and Technology, U.S. Department of Commerce, Washington, DC, 2024 edition, 2024. URL: https://www.nist.gov/pml/owm/nist-handbook-44-current-edition, doi:10.6028/NIST.HB.44-2024.">29</a>]</span>. Conversion is done using the following
+formula.</p>
+<div class="math notranslate nohighlight">
+\[T~/^\circ\mathrm{F} = 32 + \frac{5}{9} T~/^\circ\mathrm{C}\]</div>
+</dd>
+<dt id="term-foot">foot<a class="headerlink" href="#term-foot" title="Link to this term">#</a></dt><dt id="term-feet">feet<a class="headerlink" href="#term-feet" title="Link to this term">#</a></dt><dt id="term-international-foot">international foot<a class="headerlink" href="#term-international-foot" title="Link to this term">#</a></dt><dd><p><a class="reference internal" href="#term-customary-units"><span class="xref std std-term">Customary unit</span></a> of length, defined as exactly 0.3048 meters <span id="id15">[<a class="reference internal" href="references.html#id6" title="NIST. Specifications, Tolerances, and Other Technical Requirements for Weighing and Measuring Devices, as adopted by the 108th National Conference on Weights and Measures, 2023, chapter C, &quot;General Tables of Units of Measurement&quot;. NIST Handbook (HB) 44. National Institute of Standards and Technology, U.S. Department of Commerce, Washington, DC, 2024 edition, 2024. URL: https://www.nist.gov/pml/owm/nist-handbook-44-current-edition, doi:10.6028/NIST.HB.44-2024.">29</a>]</span>.
+The unit symbols “<a class="reference internal" href="#term-ft"><span class="xref std std-term">ft</span></a>” and “ift” are both acceptable and interchangable <span id="id16">[<a class="reference internal" href="references.html#id6" title="NIST. Specifications, Tolerances, and Other Technical Requirements for Weighing and Measuring Devices, as adopted by the 108th National Conference on Weights and Measures, 2023, chapter C, &quot;General Tables of Units of Measurement&quot;. NIST Handbook (HB) 44. National Institute of Standards and Technology, U.S. Department of Commerce, Washington, DC, 2024 edition, 2024. URL: https://www.nist.gov/pml/owm/nist-handbook-44-current-edition, doi:10.6028/NIST.HB.44-2024.">29</a>]</span>.</p>
+</dd>
+<dt id="term-inch">inch<a class="headerlink" href="#term-inch" title="Link to this term">#</a></dt><dt id="term-inches">inches<a class="headerlink" href="#term-inches" title="Link to this term">#</a></dt><dd><p><a class="reference internal" href="#term-customary-units"><span class="xref std std-term">Customary unit</span></a> of length, defined as exactly 0.0254 meters (12 in = 1 <a class="reference internal" href="#term-ft"><span class="xref std std-term">ft</span></a>) <span id="id17">[<a class="reference internal" href="references.html#id6" title="NIST. Specifications, Tolerances, and Other Technical Requirements for Weighing and Measuring Devices, as adopted by the 108th National Conference on Weights and Measures, 2023, chapter C, &quot;General Tables of Units of Measurement&quot;. NIST Handbook (HB) 44. National Institute of Standards and Technology, U.S. Department of Commerce, Washington, DC, 2024 edition, 2024. URL: https://www.nist.gov/pml/owm/nist-handbook-44-current-edition, doi:10.6028/NIST.HB.44-2024.">29</a>]</span>.
+Unit symbol is “<a class="reference internal" href="#term-in"><span class="xref std std-term">in</span></a>” <span id="id18">[<a class="reference internal" href="references.html#id6" title="NIST. Specifications, Tolerances, and Other Technical Requirements for Weighing and Measuring Devices, as adopted by the 108th National Conference on Weights and Measures, 2023, chapter C, &quot;General Tables of Units of Measurement&quot;. NIST Handbook (HB) 44. National Institute of Standards and Technology, U.S. Department of Commerce, Washington, DC, 2024 edition, 2024. URL: https://www.nist.gov/pml/owm/nist-handbook-44-current-edition, doi:10.6028/NIST.HB.44-2024.">29</a>]</span>.</p>
+</dd>
+<dt id="term-measured-depth">measured depth<a class="headerlink" href="#term-measured-depth" title="Link to this term">#</a></dt><dd><p>The measured depth (<a class="reference internal" href="#term-MD"><span class="xref std std-term">MD</span></a>) is the positive-valued distance from a specific <a class="reference internal" href="#term-zero-depth-point"><span class="xref std std-term">zero-depth point</span></a> (<a class="reference internal" href="#term-ZDP"><span class="xref std std-term">ZDP</span></a>) downhole within a
+well, wellbore, or cavern. It is not corrected or adjusted to another datum (e.g., sea level), and
+it is not corrected for well deviation or horizontal movements.</p>
+</dd>
+<dt id="term-pound">pound<a class="headerlink" href="#term-pound" title="Link to this term">#</a></dt><dt id="term-pounds">pounds<a class="headerlink" href="#term-pounds" title="Link to this term">#</a></dt><dt id="term-pound-avoirdupois">pound avoirdupois<a class="headerlink" href="#term-pound-avoirdupois" title="Link to this term">#</a></dt><dd><p><a class="reference internal" href="#term-customary-units"><span class="xref std std-term">Customary unit</span></a> of mass. One pound avoirdupois is defined as exactly 0.45359237
+kilograms  <span id="id20">[<a class="reference internal" href="references.html#id6" title="NIST. Specifications, Tolerances, and Other Technical Requirements for Weighing and Measuring Devices, as adopted by the 108th National Conference on Weights and Measures, 2023, chapter C, &quot;General Tables of Units of Measurement&quot;. NIST Handbook (HB) 44. National Institute of Standards and Technology, U.S. Department of Commerce, Washington, DC, 2024 edition, 2024. URL: https://www.nist.gov/pml/owm/nist-handbook-44-current-edition, doi:10.6028/NIST.HB.44-2024.">29</a>]</span>. The unit symbol is “<a class="reference internal" href="#term-lb"><span class="xref std std-term">lb</span></a>” or “lb avdp” (to differentiate it from some other pound) <span id="id21">[<a class="reference internal" href="references.html#id6" title="NIST. Specifications, Tolerances, and Other Technical Requirements for Weighing and Measuring Devices, as adopted by the 108th National Conference on Weights and Measures, 2023, chapter C, &quot;General Tables of Units of Measurement&quot;. NIST Handbook (HB) 44. National Institute of Standards and Technology, U.S. Department of Commerce, Washington, DC, 2024 edition, 2024. URL: https://www.nist.gov/pml/owm/nist-handbook-44-current-edition, doi:10.6028/NIST.HB.44-2024.">29</a>]</span>.</p>
+</dd>
+<dt id="term-pound-force">pound-force<a class="headerlink" href="#term-pound-force" title="Link to this term">#</a></dt><dt id="term-pounds-force">pounds-force<a class="headerlink" href="#term-pounds-force" title="Link to this term">#</a></dt><dd><p><a class="reference internal" href="#term-customary-units"><span class="xref std std-term">Customary unit</span></a> of force, equal to one <a class="reference internal" href="#term-pound"><span class="xref std std-term">pound</span></a> accelerated at
+standard gravity (gₙ ≡ 9.80665 m/s²). One pound-force is exactly equal to 4.4482216152605 newtons
+The unit symbol is “<a class="reference internal" href="#term-lbf"><span class="xref std std-term">lbf</span></a>” <span id="id22">[<a class="reference internal" href="references.html#id6" title="NIST. Specifications, Tolerances, and Other Technical Requirements for Weighing and Measuring Devices, as adopted by the 108th National Conference on Weights and Measures, 2023, chapter C, &quot;General Tables of Units of Measurement&quot;. NIST Handbook (HB) 44. National Institute of Standards and Technology, U.S. Department of Commerce, Washington, DC, 2024 edition, 2024. URL: https://www.nist.gov/pml/owm/nist-handbook-44-current-edition, doi:10.6028/NIST.HB.44-2024.">29</a>]</span>.</p>
+</dd>
+<dt id="term-pound-force-per-square-inch">pound-force per square inch<a class="headerlink" href="#term-pound-force-per-square-inch" title="Link to this term">#</a></dt><dt id="term-pounds-force-per-square-inch">pounds-force per square inch<a class="headerlink" href="#term-pounds-force-per-square-inch" title="Link to this term">#</a></dt><dd><p>A <a class="reference internal" href="#term-customary-units"><span class="xref std std-term">customary unit</span></a> of pressure. The technical unit symbol is “lbf/in²”,
+but the symbol “<a class="reference internal" href="#term-psi"><span class="xref std std-term">psi</span></a>” is more commonly used; “PSI” is an abbreviation appropriate for
+text, but should not be used as a unit symbol <span id="id23">[<a class="reference internal" href="references.html#id6" title="NIST. Specifications, Tolerances, and Other Technical Requirements for Weighing and Measuring Devices, as adopted by the 108th National Conference on Weights and Measures, 2023, chapter C, &quot;General Tables of Units of Measurement&quot;. NIST Handbook (HB) 44. National Institute of Standards and Technology, U.S. Department of Commerce, Washington, DC, 2024 edition, 2024. URL: https://www.nist.gov/pml/owm/nist-handbook-44-current-edition, doi:10.6028/NIST.HB.44-2024.">29</a>]</span>. The PSI does not have an exact decimal representation,
+though it can be written exactly as a fraction. 1 psi is approximately equal to 6894.757 pascal.</p>
+</dd>
+<dt id="term-SALT">SALT<a class="headerlink" href="#term-SALT" title="Link to this term">#</a></dt><dd><p><a class="reference internal" href="#term-SMRI"><span class="xref std std-term">SMRI</span></a> solution mining code</p>
+</dd>
+<dt id="term-SANSMIC">SANSMIC<a class="headerlink" href="#term-SANSMIC" title="Link to this term">#</a></dt><dd><p>Sandia Solution Mining Code</p>
+</dd>
+<dt id="term-U.S.-Customary-units">U.S. Customary units<a class="headerlink" href="#term-U.S.-Customary-units" title="Link to this term">#</a></dt><dd><p>The International <a class="reference internal" href="#term-customary-units"><span class="xref std std-term">customary units</span></a> plus additional units that are U.S. specific, such as the
+U.S. liquid gallon. The <a class="reference internal" href="#term-oil-barrel"><span class="xref std std-term">oil barrel</span></a> is not techincally a U.S. Customary unit, although it is
+defined in terms of U.S. Customary units (1 barrel = 42 U.S. gallons).
+Note that U.S. Customary units are also <em>not the same</em> as now-deprecated <a class="reference internal" href="#term-U.S.-Survey-units"><span class="xref std std-term">U.S. Survey units</span></a>.</p>
+<p><em>See:</em> <a class="reference external" href="https://www.nist.gov/pml/owm/nist-handbook-44-current-edition">NIST Handbook 44 appendices B and C</a>.</p>
+</dd>
+<dt id="term-U.S.-Survey-units">U.S. Survey units<a class="headerlink" href="#term-U.S.-Survey-units" title="Link to this term">#</a></dt><dd><p><strong>DEPRECATED</strong> The old (pre-2022) U.S. Survey units are based on the foot of the late 1800s. This foot was
+renamed the “U.S. Survey Foot” in 1959, when the <a class="reference internal" href="#term-international-foot"><span class="xref std std-term">international foot</span></a> became the standard
+“foot” in the United States  <span id="id8">[<a class="reference internal" href="references.html#id6" title="NIST. Specifications, Tolerances, and Other Technical Requirements for Weighing and Measuring Devices, as adopted by the 108th National Conference on Weights and Measures, 2023, chapter C, &quot;General Tables of Units of Measurement&quot;. NIST Handbook (HB) 44. National Institute of Standards and Technology, U.S. Department of Commerce, Washington, DC, 2024 edition, 2024. URL: https://www.nist.gov/pml/owm/nist-handbook-44-current-edition, doi:10.6028/NIST.HB.44-2024.">29</a>]</span>. In 2022, the U.S. Government
+deprecated the U.S. Survey Foot and its derived units  <span id="id9">[<a class="reference internal" href="references.html#id6" title="NIST. Specifications, Tolerances, and Other Technical Requirements for Weighing and Measuring Devices, as adopted by the 108th National Conference on Weights and Measures, 2023, chapter C, &quot;General Tables of Units of Measurement&quot;. NIST Handbook (HB) 44. National Institute of Standards and Technology, U.S. Department of Commerce, Washington, DC, 2024 edition, 2024. URL: https://www.nist.gov/pml/owm/nist-handbook-44-current-edition, doi:10.6028/NIST.HB.44-2024.">29</a>]</span>. All survey
+units (acre, chain, etc.) are now defined in terms of the international foot <span id="id10">[<a class="reference internal" href="references.html#id6" title="NIST. Specifications, Tolerances, and Other Technical Requirements for Weighing and Measuring Devices, as adopted by the 108th National Conference on Weights and Measures, 2023, chapter C, &quot;General Tables of Units of Measurement&quot;. NIST Handbook (HB) 44. National Institute of Standards and Technology, U.S. Department of Commerce, Washington, DC, 2024 edition, 2024. URL: https://www.nist.gov/pml/owm/nist-handbook-44-current-edition, doi:10.6028/NIST.HB.44-2024.">29</a>]</span>.</p>
+<p>When referring to historical measurements, and
+using the deprecated units, the unit should be prefixed with the letter “s” (e.g., sft and sac instead
+of ft and ac)  <span id="id11">[<a class="reference internal" href="references.html#id6" title="NIST. Specifications, Tolerances, and Other Technical Requirements for Weighing and Measuring Devices, as adopted by the 108th National Conference on Weights and Measures, 2023, chapter C, &quot;General Tables of Units of Measurement&quot;. NIST Handbook (HB) 44. National Institute of Standards and Technology, U.S. Department of Commerce, Washington, DC, 2024 edition, 2024. URL: https://www.nist.gov/pml/owm/nist-handbook-44-current-edition, doi:10.6028/NIST.HB.44-2024.">29</a>]</span>. They should no longer be used when creating new documents or new measurements.
+The “survey foot” and “survey mile” are now the preferred terms for the old U.S. Survey
+Foot and U.S. Survey Mile with unit symbols “sft” and “smi”, not “usft” or “usmi” <span id="id12">[<a class="reference internal" href="references.html#id6" title="NIST. Specifications, Tolerances, and Other Technical Requirements for Weighing and Measuring Devices, as adopted by the 108th National Conference on Weights and Measures, 2023, chapter C, &quot;General Tables of Units of Measurement&quot;. NIST Handbook (HB) 44. National Institute of Standards and Technology, U.S. Department of Commerce, Washington, DC, 2024 edition, 2024. URL: https://www.nist.gov/pml/owm/nist-handbook-44-current-edition, doi:10.6028/NIST.HB.44-2024.">29</a>]</span>.</p>
+<p><em>See:</em> <a class="reference external" href="https://www.nist.gov/pml/owm/nist-handbook-44-current-edition">NIST Handbook 44 appendices B and C</a>.</p>
+</dd>
+<dt id="term-zero-depth-point">zero-depth point<a class="headerlink" href="#term-zero-depth-point" title="Link to this term">#</a></dt><dd><p>The zero-depth point (<a class="reference internal" href="#term-ZDP"><span class="xref std std-term">ZDP</span></a>) is the point on a wellhead, rig, or other permanent datum, that is used to set</p>
+<div class="math notranslate nohighlight">
+\[z_\mathrm{zdp} := 0.0\]</div>
+<p>for <a class="reference internal" href="#term-measured-depth"><span class="xref std std-term">measured depth</span></a> (<a class="reference internal" href="#term-MD"><span class="xref std std-term">MD</span></a>) values. This should not change over time once a well
+has been completed.</p>
+</dd>
+</dl>
+</section>
+<section id="u-s-customary-units">
+<h2>U.S. Customary Units<a class="headerlink" href="#u-s-customary-units" title="Link to this heading">#</a></h2>
+<p>It is assumed that any user is familiar with <a class="reference internal" href="#term-SI"><span class="xref std std-term">SI</span></a> units; however,
+for those that want the most up-to-date information, NIST-SP-330 provides the U.S.
+English-laguage version of the official SI definition. <span id="id24">[<a class="reference internal" href="references.html#id5" title="NIST. The International System of Units (SI). NIST Special Publication (SP) 330. National Institute of Standards and Technology, U.S. Department of Commerce, Gaithersburg, MD, 2019 edition, 2019. doi:10.6028/NIST.SP.330-2019.">28</a>]</span></p>
+<p>The following <a class="reference internal" href="#term-U.S.-Customary-units"><span class="xref std std-term">U.S. Customary units</span></a> (USC) are non-SI units that are
+used in SANSMIC along with the equivalent SI unit and conversion
+factor. See NIST-HB-44 Appendix B and C for more information on customary units
+and the legal and official conversion factors specified by the U.S.
+Government. <span id="id25">[<a class="reference internal" href="references.html#id6" title="NIST. Specifications, Tolerances, and Other Technical Requirements for Weighing and Measuring Devices, as adopted by the 108th National Conference on Weights and Measures, 2023, chapter C, &quot;General Tables of Units of Measurement&quot;. NIST Handbook (HB) 44. National Institute of Standards and Technology, U.S. Department of Commerce, Washington, DC, 2024 edition, 2024. URL: https://www.nist.gov/pml/owm/nist-handbook-44-current-edition, doi:10.6028/NIST.HB.44-2024.">29</a>]</span></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">USC to SI conversion factors</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p class="sd-card-text">USC unit</p></th>
+<th class="head"><p class="sd-card-text">Definition (in SI units)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p class="sd-card-text"><a class="reference internal" href="#term-ft"><span class="xref std std-term">ft</span></a></p></td>
+<td><p class="sd-card-text">:= 0.3048 m</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><a class="reference internal" href="#term-in"><span class="xref std std-term">in</span></a></p></td>
+<td><p class="sd-card-text">:= 2.54 cm</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">in²</p></td>
+<td><p class="sd-card-text">≡ 6.4516 cm²</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">ft³</p></td>
+<td><p class="sd-card-text">≡ 0.028316846592 m³</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"><a class="reference internal" href="#term-Mbbl"><span class="xref std std-term">Mbbl</span></a>/d</p></td>
+<td><p class="sd-card-text">≡ 158.987294938 m³/d</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><a class="reference internal" href="#term-lb"><span class="xref std std-term">lb</span></a></p></td>
+<td><p class="sd-card-text">:= 0.45359237 kg</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"><a class="reference internal" href="#term-lbf"><span class="xref std std-term">lbf</span></a></p></td>
+<td><p class="sd-card-text">≡ 4.4482216152605 N</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><a class="reference internal" href="#term-psi"><span class="xref std std-term">psi</span></a></p></td>
+<td><p class="sd-card-text">≡ 1 lbf/in²</p>
+<p class="sd-card-text">≡ (44482216152605 / 6451600) kPa</p>
+<p class="sd-card-text">≈ 6.894757 kPa</p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"><a class="reference internal" href="#term-sg"><span class="xref std std-term">sg</span></a></p></td>
+<td><p class="sd-card-text">= 1000 kg/m³</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</details></section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="references.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">References</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="refman.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">API Reference</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#notation">Notation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#glossary">Glossary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#u-s-customary-units">U.S. Customary Units</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="_sources/nomenclature.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2024 National Technology and Engineering Solutions of Sandia, LLC. Under the terms of Contract DE-NA0003525 with NTESS, the U.S. Government retains certain rights in this software..
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.0.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

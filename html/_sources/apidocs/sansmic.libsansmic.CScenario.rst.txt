@@ -1,0 +1,50 @@
+CScenario
+=========
+
+.. currentmodule:: sansmic.libsansmic
+
+.. autoclass:: CScenario
+
+
+   .. rubric:: Summary
+   .. autosummary::
+
+
+
+   
+      ~CScenario.add_stage
+
+
+
+
+
+   
+      ~CScenario.absolute_error
+      ~CScenario.cavern_height
+      ~CScenario.coallescing_wells
+      ~CScenario.depth_vector
+      ~CScenario.diffusion_beta
+      ~CScenario.dissolution_factor
+      ~CScenario.eddy_coefficient
+      ~CScenario.entrainment_coeff
+      ~CScenario.floor_depth
+      ~CScenario.fraction_insolubles
+      ~CScenario.geometry_format
+      ~CScenario.jet_model_version
+      ~CScenario.max_brine_sg
+      ~CScenario.molecular_diffusion
+      ~CScenario.num_cells
+      ~CScenario.plume_model_version
+      ~CScenario.radius_vector
+      ~CScenario.relative_error
+      ~CScenario.solid_density
+      ~CScenario.temperature_model_version
+      ~CScenario.title
+      ~CScenario.ullage_standoff
+      ~CScenario.volume_vector
+      ~CScenario.well_separation
+
+
+
+   .. rubric:: Details
+

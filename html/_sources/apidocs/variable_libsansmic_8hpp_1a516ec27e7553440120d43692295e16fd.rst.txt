@@ -1,0 +1,14 @@
+.. _exhale_variable_libsansmic_8hpp_1a516ec27e7553440120d43692295e16fd:
+
+Variable sansmic::julian_year
+=============================
+
+- Defined in :ref:`file_libsansmic.hpp`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: sansmic::julian_year
+   :project: libsansmic

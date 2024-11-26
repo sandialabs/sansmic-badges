@@ -1,0 +1,10 @@
+
+
+write\_hdf\_results
+===================
+
+.. currentmodule:: sansmic.io
+
+
+
+.. autofunction:: sansmic.io::write_hdf_results

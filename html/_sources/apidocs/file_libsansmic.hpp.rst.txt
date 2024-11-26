@@ -1,0 +1,193 @@
+
+.. _file_libsansmic.hpp:
+
+File libsansmic.hpp
+===================
+
+
+libsansmic API definitions 
+
+
+Definition (``libsansmic.hpp``)
+-------------------------------
+
+
+
+
+
+
+Includes
+--------
+
+
+- ``array``
+
+- ``cmath``
+
+- ``fstream``
+
+- ``string``
+
+- ``vector``
+
+
+
+Included By
+-----------
+
+
+- :ref:`file_jetmodel.cpp`
+
+- :ref:`file_libsansmic.cpp`
+
+- :ref:`file_model.cpp`
+
+- :ref:`file_odesolver.cpp`
+
+- :ref:`file_plumerise.cpp`
+
+- :ref:`file_salt.cpp`
+
+- :ref:`file_scenario.cpp`
+
+- :ref:`file_stage.cpp`
+
+- :ref:`file_util.cpp`
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_sansmic`
+
+
+Classes
+-------
+
+
+- :ref:`exhale_struct_structsansmic_1_1Results`
+
+- :ref:`exhale_struct_structsansmic_1_1Scenario`
+
+- :ref:`exhale_struct_structsansmic_1_1Stage`
+
+- :ref:`exhale_class_classsansmic_1_1Derivable`
+
+- :ref:`exhale_class_classsansmic_1_1JetModel`
+
+- :ref:`exhale_class_classsansmic_1_1Model`
+
+- :ref:`exhale_class_classsansmic_1_1ODESolver`
+
+- :ref:`exhale_class_classsansmic_1_1PlumeRise`
+
+- :ref:`exhale_class_classsansmic_1_1Salt`
+
+
+Enums
+-----
+
+
+- :ref:`exhale_enum_libsansmic_8hpp_1ae90439e1c23bb6f206956d15cacaaa41`
+
+- :ref:`exhale_enum_libsansmic_8hpp_1a0ac474463be3271f78ea252870114800`
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_libsansmic_8hpp_1af7843017d1ba247ba894354fd04066fd`
+
+- :ref:`exhale_function_libsansmic_8hpp_1abfcdec9ce8fcf3b394cc6f909dcfdadf`
+
+- :ref:`exhale_function_libsansmic_8hpp_1af835812a8204d3a9d032f4a82131a96b`
+
+- :ref:`exhale_function_libsansmic_8hpp_1ad862c88ec431b0775d64800d4a79c4ac`
+
+- :ref:`exhale_function_libsansmic_8hpp_1ab33feadd6242c54d884b2877b48aede1`
+
+- :ref:`exhale_function_libsansmic_8hpp_1a9e5dc0ecd570d5b736f756b1da33158a`
+
+- :ref:`exhale_function_libsansmic_8hpp_1abd9435272066c6467cd42223a85ab523`
+
+- :ref:`exhale_function_libsansmic_8hpp_1aebbfefaf337ee806ea88b6d52e36f905`
+
+
+Variables
+---------
+
+
+- :ref:`exhale_variable_libsansmic_8hpp_1ae05f440aa5cf0cf27c924af6abd84429`
+
+- :ref:`exhale_variable_libsansmic_8hpp_1a5835f26770e6fcee73a6a866ba1a0ca3`
+
+- :ref:`exhale_variable_libsansmic_8hpp_1a6509f1ad75d4faaef799a26d4963ed75`
+
+- :ref:`exhale_variable_libsansmic_8hpp_1a4097c0a08bdfca709ad6af1edbbae5cf`
+
+- :ref:`exhale_variable_libsansmic_8hpp_1a1e9d11c00b0f8ab30e067f17b93b3a77`
+
+- :ref:`exhale_variable_libsansmic_8hpp_1a6bf5141a96e95158acead28325d3ba7a`
+
+- :ref:`exhale_variable_libsansmic_8hpp_1a35f688aef259e35313b3d8fb13215b04`
+
+- :ref:`exhale_variable_libsansmic_8hpp_1a4d1216187d22cbd5da9dff170fcc6478`
+
+- :ref:`exhale_variable_libsansmic_8hpp_1a4489ee3413eb2756ead2968898cc919e`
+
+- :ref:`exhale_variable_libsansmic_8hpp_1a09c047eba91ce1d85e4e7fdd4bafebe4`
+
+- :ref:`exhale_variable_libsansmic_8hpp_1ade5f8e06aa0040eaeff7a2faf8a53f84`
+
+- :ref:`exhale_variable_libsansmic_8hpp_1a65eb61864cca7f60402dca06829b0278`
+
+- :ref:`exhale_variable_libsansmic_8hpp_1a3790b5abe2d5afc09d3952d7a215ae76`
+
+- :ref:`exhale_variable_libsansmic_8hpp_1a680959cdfd3d7eb4a54cf899aed119e8`
+
+- :ref:`exhale_variable_libsansmic_8hpp_1aa08e28983055aebd0561072245a9580e`
+
+- :ref:`exhale_variable_libsansmic_8hpp_1a516ec27e7553440120d43692295e16fd`
+
+- :ref:`exhale_variable_libsansmic_8hpp_1a8e6656a08a16d80623c90f0531fae06d`
+
+- :ref:`exhale_variable_libsansmic_8hpp_1a583f186218b8bf2ad5c54928a6c20134`
+
+- :ref:`exhale_variable_libsansmic_8hpp_1a68a31f328274bc97dfa478bb42920449`
+
+- :ref:`exhale_variable_libsansmic_8hpp_1a421a5bf73c6bebdda01605bd0dea0660`
+
+- :ref:`exhale_variable_libsansmic_8hpp_1aa33076a804fd17b06c540f5548faac0d`
+
+- :ref:`exhale_variable_libsansmic_8hpp_1ade021519e336911922fb0b56739207b9`
+
+- :ref:`exhale_variable_libsansmic_8hpp_1a0eba3ceb565254ff682a2520ae565ad8`
+
+- :ref:`exhale_variable_libsansmic_8hpp_1a4a9a89674d91f081c447f3e6326e3239`
+
+- :ref:`exhale_variable_libsansmic_8hpp_1aff42d2545a2cb7a612252a8d6f1799da`
+
+- :ref:`exhale_variable_libsansmic_8hpp_1a5f0f9ae5a5526c0a1ec6c58d0e6a6c1d`
+
+- :ref:`exhale_variable_libsansmic_8hpp_1a60f9a61a4a145f39de28d2db23619afc`
+
+- :ref:`exhale_variable_libsansmic_8hpp_1ae1faba63a84df20abb428a8f0a473e64`
+
+- :ref:`exhale_variable_libsansmic_8hpp_1a2e2c0c62680e276009c4d14267633c96`
+
+- :ref:`exhale_variable_libsansmic_8hpp_1a65d119aa16b025a2586c16bc1179ee58`
+
+- :ref:`exhale_variable_libsansmic_8hpp_1aa8e12cd784414f4da441d6e5cd428176`
+
+- :ref:`exhale_variable_libsansmic_8hpp_1a3672ba92add1b2550dbf908383a392cd`
+
+- :ref:`exhale_variable_libsansmic_8hpp_1a583d71ee41f917002e5274dc9e2dd828`
+
+- :ref:`exhale_variable_libsansmic_8hpp_1a2f7db9be399d5ac9e2e7b21e5aff61df`
+
+- :ref:`exhale_variable_libsansmic_8hpp_1acf7d3f4554cbe417c5e190b85a100894`
+

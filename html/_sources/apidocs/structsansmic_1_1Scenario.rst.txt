@@ -1,0 +1,17 @@
+.. _exhale_struct_structsansmic_1_1Scenario:
+
+Struct Scenario
+===============
+
+- Defined in :ref:`file_libsansmic.hpp`
+
+
+Struct Documentation
+--------------------
+
+
+.. doxygenstruct:: sansmic::Scenario
+   :project: libsansmic
+   :members:
+   :protected-members:
+   :undoc-members:

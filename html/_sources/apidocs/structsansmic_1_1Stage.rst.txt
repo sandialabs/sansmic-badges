@@ -1,0 +1,17 @@
+.. _exhale_struct_structsansmic_1_1Stage:
+
+Struct Stage
+============
+
+- Defined in :ref:`file_libsansmic.hpp`
+
+
+Struct Documentation
+--------------------
+
+
+.. doxygenstruct:: sansmic::Stage
+   :project: libsansmic
+   :members:
+   :protected-members:
+   :undoc-members:

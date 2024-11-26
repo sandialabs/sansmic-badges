@@ -1,0 +1,14 @@
+.. _exhale_variable_libsansmic_8hpp_1a3790b5abe2d5afc09d3952d7a215ae76:
+
+Variable sansmic::INVALID_LOG_FILE
+==================================
+
+- Defined in :ref:`file_libsansmic.hpp`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: sansmic::INVALID_LOG_FILE
+   :project: libsansmic

@@ -1,0 +1,14 @@
+.. _exhale_function_libsansmic_8hpp_1ad862c88ec431b0775d64800d4a79c4ac:
+
+Function sansmic::sign(double, double)
+======================================
+
+- Defined in :ref:`file_libsansmic.hpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: sansmic::sign(double, double)
+   :project: libsansmic

@@ -1,0 +1,1323 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sansmic.io &#8212; Sansmic</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+
+    <script src="../../_static/documentation_options.js?v=76e2d817"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-23TNKN36XM"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-23TNKN36XM');
+            </script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-23TNKN36XM');
+            </script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/sansmic/io';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.0';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://sandialabs.github.io/sansmic/_static/switcher.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'v1.0.0';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner = true;
+        </script>
+    <script src="../../_static/pypi-icon.js?v=74687d30"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="1.0.0" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Sansmic</p>
+  
+</a></div>
+    
+      <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../userman.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../refman.html">
+    API Reference
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/sandialabs/sansmic" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/sansmic/" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.sandia.gov" title="Sandia National Laboratories" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../../_static/snl_logo.png" class="icon-link-image" alt="Sandia National Laboratories"/></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../userman.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../refman.html">
+    API Reference
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/sandialabs/sansmic" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/sansmic/" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.sandia.gov" title="Sandia National Laboratories" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../../_static/snl_logo.png" class="icon-link-image" alt="Sandia National Laboratories"/></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item"><nav class="sidebar-indices-items" aria-labelledby="pst-indices-navigation-heading-2">
+  <p id="pst-indices-navigation-heading-2" class="sidebar-indices-items__title" role="heading" aria-level="1">Indices</p>
+  <ul class="indices-link">
+        <li class="toctree-l1">
+          <a class="reference internal"
+             href="../../genindex.html"
+             accesskey="I">General Index</a>
+        </li>
+        <li class="toctree-l1">
+          <a class="reference internal" href="../../py-modindex.html">Python Module Index</a>
+        </li>
+  </ul>
+</nav></div>
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">sansmic.io</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for sansmic.io</h1><div class="highlight"><pre>
+<span></span><span class="c1"># coding: utf-8</span>
+<span class="c1">#</span>
+<span class="c1"># Copyright (c) 2024 National Technology and Engineering Solutions of</span>
+<span class="c1"># Sandia, LLC. Under the terms of Contract DE-NA0003525 with NTESS,</span>
+<span class="c1"># the U.S. Government retains certain rights in this software.</span>
+<span class="c1">#</span>
+<span class="c1"># SPDX-License-Identifier: BSD-3-Clause.</span>
+
+<span class="sd">&quot;&quot;&quot;Provide input and output functions for sansmic.&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="kn">from</span> <span class="nn">dataclasses</span> <span class="kn">import</span> <span class="n">fields</span>
+<span class="kn">from</span> <span class="nn">enum</span> <span class="kn">import</span> <span class="n">IntEnum</span>
+
+<span class="k">if</span> <span class="n">sys</span><span class="o">.</span><span class="n">version_info</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">11</span><span class="p">:</span>
+    <span class="kn">import</span> <span class="nn">tomli</span> <span class="k">as</span> <span class="nn">tomllib</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="kn">import</span> <span class="nn">tomllib</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="kn">import</span> <span class="nn">yaml</span>
+<span class="k">except</span> <span class="ne">ImportError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="kn">import</span> <span class="nn">ruamel.yaml</span> <span class="k">as</span> <span class="nn">_yaml</span>
+
+        <span class="n">yaml</span> <span class="o">=</span> <span class="n">_yaml</span><span class="o">.</span><span class="n">YAML</span>
+    <span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+        <span class="n">yaml</span> <span class="o">=</span> <span class="n">e</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="kn">import</span> <span class="nn">h5py</span>
+<span class="k">except</span> <span class="ne">ImportError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="n">h5py</span> <span class="o">=</span> <span class="n">e</span>
+
+<span class="kn">from</span> <span class="nn">.model</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">GeometryFormat</span><span class="p">,</span>
+    <span class="n">Results</span><span class="p">,</span>
+    <span class="n">Scenario</span><span class="p">,</span>
+    <span class="n">SimulationMode</span><span class="p">,</span>
+    <span class="n">StageDefinition</span><span class="p">,</span>
+    <span class="n">StopCondition</span><span class="p">,</span>
+    <span class="n">_OutDataBlock</span><span class="p">,</span>
+    <span class="n">_OutputData</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s2">&quot;sansmic&quot;</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="read_scenario">
+<a class="viewcode-back" href="../../apidocs/sansmic.io.read_scenario.html#sansmic.io.read_scenario">[docs]</a>
+<span class="k">def</span> <span class="nf">read_scenario</span><span class="p">(</span>
+    <span class="n">config_file</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">warn</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">strict</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="kc">None</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Scenario</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Load a sansmic scenario file.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    config_file : str</span>
+<span class="sd">        filename or full path to a new-style configuration file</span>
+<span class="sd">    warn : bool, optional</span>
+<span class="sd">        emit warnings if there are extra, unrecognized options in the file, by default True</span>
+<span class="sd">    strict : bool, optional</span>
+<span class="sd">        raise errors if there are extra, unrecognized options in the file, by default False</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    Scenario</span>
+<span class="sd">        the sansmic scenario</span>
+
+<span class="sd">    Raises</span>
+<span class="sd">    ------</span>
+<span class="sd">    RuntimeError</span>
+<span class="sd">        if there is an unrecognized option and ``strict`` is True, or if there are no</span>
+<span class="sd">        stages defined.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span>
+        <span class="s2">&quot;Attempting to read scenario </span><span class="si">{}</span><span class="s2"> in </span><span class="si">{}</span><span class="s2"> mode&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+            <span class="n">config_file</span><span class="p">,</span> <span class="s2">&quot;strict&quot;</span> <span class="k">if</span> <span class="n">strict</span> <span class="k">else</span> <span class="s2">&quot;permissive&quot;</span>
+        <span class="p">)</span>
+    <span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">config_file</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;.json&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="nb">format</span> <span class="o">==</span> <span class="s2">&quot;json&quot;</span><span class="p">:</span>
+            <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">config_file</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fin</span><span class="p">:</span>
+                <span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">fin</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">config_file</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;.yaml&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="nb">format</span> <span class="o">==</span> <span class="s2">&quot;yaml&quot;</span><span class="p">:</span>
+            <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">config_file</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fin</span><span class="p">:</span>
+                <span class="n">data</span> <span class="o">=</span> <span class="n">yaml</span><span class="o">.</span><span class="n">safe_load</span><span class="p">(</span><span class="n">fin</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">config_file</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;.toml&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="nb">format</span> <span class="o">==</span> <span class="s2">&quot;toml&quot;</span><span class="p">:</span>
+            <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">config_file</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fin</span><span class="p">:</span>
+                <span class="n">data</span> <span class="o">=</span> <span class="n">tomllib</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">fin</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">config_file</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;.dat&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="nb">format</span> <span class="o">==</span> <span class="s2">&quot;dat&quot;</span><span class="p">:</span>
+            <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">config_file</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fin</span><span class="p">:</span>
+                <span class="n">data</span> <span class="o">=</span> <span class="n">read_dat</span><span class="p">(</span><span class="n">fin</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">data</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">config_file</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fin</span><span class="p">:</span>
+                <span class="n">data</span> <span class="o">=</span> <span class="n">tomllib</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">fin</span><span class="p">)</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;Error reading scenario file </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">config_file</span><span class="p">))</span>
+        <span class="k">raise</span>
+
+    <span class="k">if</span> <span class="s2">&quot;stages&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">data</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;stages&quot;</span><span class="p">])</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;No stages provided. Failed to load valid scenario.&quot;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;No stages provided.&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">Scenario</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">data</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="read_dat">
+<a class="viewcode-back" href="../../apidocs/sansmic.io.read_dat.html#sansmic.io.read_dat">[docs]</a>
+<span class="k">def</span> <span class="nf">read_dat</span><span class="p">(</span><span class="n">str_or_buffer</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">ignore_errors</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Scenario</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Read an old-style SANSMIC input DAT file.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    str_or_buffer : str or stream</span>
+<span class="sd">        The file or stream buffer to process.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    Scenario</span>
+<span class="sd">        the scenario derived from the DAT file</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">scenario</span> <span class="o">=</span> <span class="n">Scenario</span><span class="p">()</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">str_or_buffer</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span>
+        <span class="n">str_or_buffer</span><span class="p">,</span> <span class="nb">str</span>
+    <span class="p">)</span> <span class="k">else</span> <span class="n">str_or_buffer</span> <span class="k">as</span> <span class="n">fin</span><span class="p">:</span>
+        <span class="n">prefix</span> <span class="o">=</span> <span class="n">fin</span><span class="o">.</span><span class="n">name</span>
+        <span class="n">scenario</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;Converted from </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">prefix</span><span class="p">)</span>
+        <span class="n">first</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Reading old DAT format file: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">prefix</span><span class="p">))</span>
+        <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+            <span class="n">stage</span> <span class="o">=</span> <span class="n">StageDefinition</span><span class="p">()</span>
+            <span class="c1"># Stage - block 1</span>
+            <span class="n">title</span> <span class="o">=</span> <span class="n">fin</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+            <span class="k">if</span> <span class="n">title</span> <span class="o">==</span> <span class="s2">&quot;END&quot;</span><span class="p">:</span>
+                <span class="k">break</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot; Record 1: Stage title&quot;</span><span class="p">)</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;  title         = </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">title</span><span class="p">))</span>
+            <span class="c1"># Stage - block 2</span>
+            <span class="p">(</span>
+                <span class="n">num_cells</span><span class="p">,</span>
+                <span class="n">mode</span><span class="p">,</span>
+                <span class="n">print_interval</span><span class="p">,</span>
+                <span class="n">subsequent</span><span class="p">,</span>
+                <span class="n">iResetGeo</span><span class="p">,</span>
+                <span class="n">rest_duration</span><span class="p">,</span>
+                <span class="n">num_coallescing</span><span class="p">,</span>
+                <span class="n">geometry_format</span><span class="p">,</span>
+                <span class="n">stop_value</span><span class="p">,</span>
+            <span class="p">)</span> <span class="o">=</span> <span class="p">(</span>
+                <span class="n">fin</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+            <span class="p">)</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot; Record 2: General&quot;</span><span class="p">)</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;  ndiv          = </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">num_cells</span><span class="p">))</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;  leachtype     = </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">mode</span><span class="p">))</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;  iprint        = </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">print_interval</span><span class="p">))</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;  repeat        = </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">subsequent</span><span class="p">))</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;  resetgeo[depr]= </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">iResetGeo</span><span class="p">))</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;  iWait         = </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">rest_duration</span><span class="p">))</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;  nco           = </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">num_coallescing</span><span class="p">))</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;  idata         = </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">geometry_format</span><span class="p">))</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;  ivol          = </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">stop_value</span><span class="p">))</span>
+            <span class="c1"># Stage - block 3</span>
+            <span class="p">(</span>
+                <span class="n">cavern_height</span><span class="p">,</span>
+                <span class="n">injection_height</span><span class="p">,</span>
+                <span class="n">production_height</span><span class="p">,</span>
+                <span class="n">interface_height</span><span class="p">,</span>
+                <span class="n">ullage_standoff</span><span class="p">,</span>
+            <span class="p">)</span> <span class="o">=</span> <span class="p">(</span>
+                <span class="n">fin</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+            <span class="p">)</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot; Record 3: Heights&quot;</span><span class="p">)</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;  zmax          = </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">cavern_height</span><span class="p">))</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;  zi            = </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">injection_height</span><span class="p">))</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;  zp            = </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">production_height</span><span class="p">))</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;  zb            = </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">interface_height</span><span class="p">))</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;  zu            = </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">ullage_standoff</span><span class="p">))</span>
+            <span class="c1"># Stage - block 4</span>
+            <span class="n">injection_rate</span> <span class="o">=</span> <span class="n">fin</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot; Record 4: Injection flow rates&quot;</span><span class="p">)</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;  QI            = </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">injection_rate</span><span class="p">))</span>
+            <span class="c1"># TODO: FIXME: handle injection tables? Or do we ignore for old</span>
+            <span class="c1"># style inputs?</span>
+            <span class="c1">#</span>
+            <span class="c1"># Stage - block 5</span>
+            <span class="p">(</span>
+                <span class="n">inn_tbg_inside_radius</span><span class="p">,</span>
+                <span class="n">inn_tbg_outside_radius</span><span class="p">,</span>
+                <span class="n">out_csg_inside_radius</span><span class="p">,</span>
+                <span class="n">out_csg_outside_radius</span><span class="p">,</span>
+            <span class="p">)</span> <span class="o">=</span> <span class="p">(</span>
+                <span class="n">fin</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+            <span class="p">)</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot; Record 5: Casing and tubing&quot;</span><span class="p">)</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;  rpi           = </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">inn_tbg_inside_radius</span><span class="p">))</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;  rpo           = </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">inn_tbg_outside_radius</span><span class="p">))</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;  rcasi         = </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">out_csg_inside_radius</span><span class="p">))</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;  rcaso         = </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">out_csg_outside_radius</span><span class="p">))</span>
+            <span class="c1"># Stage - block 6</span>
+            <span class="n">injection_fluid_sg</span><span class="p">,</span> <span class="n">cavern_sg</span> <span class="o">=</span> <span class="n">fin</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot; Record 6: Water and brine&quot;</span><span class="p">)</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;  sginj         = </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">injection_fluid_sg</span><span class="p">))</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;  sgcav         = </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">cavern_sg</span><span class="p">))</span>
+            <span class="c1"># Stage - block 7</span>
+            <span class="n">timestep</span><span class="p">,</span> <span class="n">injection_duration</span> <span class="o">=</span> <span class="n">fin</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot; Record 7: Timing&quot;</span><span class="p">)</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;  dt            = </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">timestep</span><span class="p">))</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;  tend          = </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">injection_duration</span><span class="p">))</span>
+            <span class="c1"># Stage - block 8</span>
+            <span class="n">fill_rate</span><span class="p">,</span> <span class="n">tDelay</span><span class="p">,</span> <span class="n">coallescing_well_separation</span> <span class="o">=</span> <span class="p">(</span>
+                <span class="n">fin</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+            <span class="p">)</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot; Record 8: Oil fill rates&quot;</span><span class="p">)</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;  qfil          = </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">fill_rate</span><span class="p">))</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;  tdlay  [depr.]= </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">tDelay</span><span class="p">))</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;  sep           = </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">coallescing_well_separation</span><span class="p">))</span>
+            <span class="k">if</span> <span class="nb">float</span><span class="p">(</span><span class="n">tDelay</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;The TDLAY option should not be used. Ignoring.&quot;</span><span class="p">)</span>
+            <span class="c1"># First stage - block 9</span>
+            <span class="k">if</span> <span class="n">first</span><span class="p">:</span>
+                <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;First stage initialization&quot;</span><span class="p">)</span>
+                <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot; Record 9: Geometry&quot;</span><span class="p">)</span>
+                <span class="n">geometry_data</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+                <span class="n">first</span> <span class="o">=</span> <span class="kc">False</span>
+                <span class="n">geometry_format</span> <span class="o">=</span> <span class="n">GeometryFormat</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">geometry_format</span><span class="p">))</span>
+                <span class="k">if</span> <span class="n">geometry_format</span> <span class="o">==</span> <span class="n">GeometryFormat</span><span class="o">.</span><span class="n">RADIUS_LIST</span><span class="p">:</span>
+                    <span class="n">radii</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+                    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">num_cells</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+                        <span class="n">r</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">fin</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+                        <span class="n">radii</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+                    <span class="n">geometry_data</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">radii</span><span class="o">=</span><span class="n">radii</span><span class="p">)</span>
+                <span class="k">elif</span> <span class="n">geometry_format</span> <span class="o">==</span> <span class="n">GeometryFormat</span><span class="o">.</span><span class="n">VOLUME_LIST</span><span class="p">:</span>
+                    <span class="n">ndata</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">fin</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+                    <span class="n">depths</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+                    <span class="n">volumes</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+                    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">ndata</span><span class="p">):</span>
+                        <span class="n">z</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">fin</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+                        <span class="n">depths</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+                    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">ndata</span><span class="p">):</span>
+                        <span class="n">v</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">fin</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+                        <span class="n">volumes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+                    <span class="n">geometry_data</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">depths</span><span class="o">=</span><span class="n">depths</span><span class="p">,</span> <span class="n">volumes</span><span class="o">=</span><span class="n">volumes</span><span class="p">)</span>
+                <span class="k">elif</span> <span class="n">geometry_format</span> <span class="o">==</span> <span class="n">GeometryFormat</span><span class="o">.</span><span class="n">VOLUME_TABLE</span><span class="p">:</span>
+                    <span class="n">ndata</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">fin</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+                    <span class="n">depths</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+                    <span class="n">volumes</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+                    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">ndata</span><span class="p">):</span>
+                        <span class="n">z</span><span class="p">,</span> <span class="n">v</span> <span class="o">=</span> <span class="n">fin</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+                        <span class="n">depths</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">z</span><span class="p">))</span>
+                        <span class="n">volumes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">v</span><span class="p">))</span>
+                    <span class="n">geometry_data</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">depths</span><span class="o">=</span><span class="n">depths</span><span class="p">,</span> <span class="n">volumes</span><span class="o">=</span><span class="n">volumes</span><span class="p">)</span>
+                <span class="k">elif</span> <span class="n">geometry_format</span> <span class="o">==</span> <span class="n">GeometryFormat</span><span class="o">.</span><span class="n">VOLUME_TABLE</span><span class="p">:</span>
+                    <span class="n">ndata</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">fin</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+                    <span class="n">depths</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+                    <span class="n">radii</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+                    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">ndata</span><span class="p">):</span>
+                        <span class="n">z</span><span class="p">,</span> <span class="n">v</span> <span class="o">=</span> <span class="n">fin</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+                        <span class="n">depths</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">z</span><span class="p">))</span>
+                        <span class="n">radii</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">v</span><span class="p">))</span>
+                    <span class="n">geometry_data</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">depths</span><span class="o">=</span><span class="n">depths</span><span class="p">,</span> <span class="n">radii</span><span class="o">=</span><span class="n">radii</span><span class="p">)</span>
+
+                <span class="n">dissolution_factor</span><span class="p">,</span> <span class="n">insoluble_fraction</span><span class="p">,</span> <span class="n">refdep</span><span class="p">,</span> <span class="n">depth</span> <span class="o">=</span> <span class="p">(</span>
+                    <span class="n">fin</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+                <span class="p">)</span>
+                <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot; Record 10: Miscellaneous&quot;</span><span class="p">)</span>
+                <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;  zdis          = </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">dissolution_factor</span><span class="p">))</span>
+                <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;  zfin          = </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">insoluble_fraction</span><span class="p">))</span>
+                <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;  refdep [depr.]= </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">refdep</span><span class="p">))</span>
+                <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;  depth         = </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">depth</span><span class="p">))</span>
+                <span class="k">if</span> <span class="n">refdep</span> <span class="o">!=</span> <span class="n">depth</span><span class="p">:</span>
+                    <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span>
+                        <span class="s2">&quot;The REFDEP is no longer used, only DEPTH. Ignoring REFDEP.&quot;</span>
+                    <span class="p">)</span>
+                <span class="k">if</span> <span class="nb">float</span><span class="p">(</span><span class="n">dissolution_factor</span><span class="p">)</span> <span class="o">!=</span> <span class="mf">1.0</span><span class="p">:</span>
+                    <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span>
+                        <span class="s2">&quot;The ZDIS should always be 1.0. This is a dangerous choice.&quot;</span>
+                    <span class="p">)</span>
+                <span class="n">scenario</span><span class="o">.</span><span class="n">geometry_format</span> <span class="o">=</span> <span class="n">geometry_format</span>
+                <span class="n">scenario</span><span class="o">.</span><span class="n">geometry_data</span> <span class="o">=</span> <span class="n">geometry_data</span>
+                <span class="n">scenario</span><span class="o">.</span><span class="n">num_cells</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">num_cells</span><span class="p">)</span>
+                <span class="n">scenario</span><span class="o">.</span><span class="n">coallescing_wells</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">num_coallescing</span><span class="p">)</span>
+                <span class="n">scenario</span><span class="o">.</span><span class="n">well_separation</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">coallescing_well_separation</span><span class="p">)</span>
+                <span class="n">df</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">dissolution_factor</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">df</span> <span class="o">!=</span> <span class="mf">1.0</span><span class="p">:</span>
+                    <span class="n">scenario</span><span class="o">.</span><span class="n">advanced</span><span class="o">.</span><span class="n">dissolution_factor</span> <span class="o">=</span> <span class="n">df</span>
+                <span class="n">scenario</span><span class="o">.</span><span class="n">insolubles_ratio</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">insoluble_fraction</span><span class="p">)</span>
+                <span class="n">scenario</span><span class="o">.</span><span class="n">floor_depth</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">depth</span><span class="p">)</span>
+                <span class="n">scenario</span><span class="o">.</span><span class="n">cavern_height</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">cavern_height</span><span class="p">)</span>
+                <span class="n">scenario</span><span class="o">.</span><span class="n">ullage_standoff</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">ullage_standoff</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Subsequent stage initialization&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">first</span> <span class="ow">and</span> <span class="n">scenario</span><span class="o">.</span><span class="n">num_cells</span> <span class="o">!=</span> <span class="nb">int</span><span class="p">(</span><span class="n">num_cells</span><span class="p">)</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">ignore_errors</span><span class="p">:</span>
+                <span class="n">logger</span><span class="o">.</span><span class="n">critical</span><span class="p">(</span><span class="s2">&quot;Old-style DAT has changes in NDIV throughout the file&quot;</span><span class="p">)</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid data in DAT file: NDIV not constant.&quot;</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="ow">not</span> <span class="n">first</span> <span class="ow">and</span> <span class="nb">int</span><span class="p">(</span><span class="n">iResetGeo</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">ignore_errors</span><span class="p">:</span>
+                <span class="n">logger</span><span class="o">.</span><span class="n">critical</span><span class="p">(</span>
+                    <span class="s2">&quot;The RESETGEO flag (item 5 on line 2 of stage </span><span class="si">{}</span><span class="s2">) is set to 1. This is not valid in this version of SANSMIC. Please correct this and rerun.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                        <span class="nb">len</span><span class="p">(</span><span class="n">scenario</span><span class="o">.</span><span class="n">stages</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+                    <span class="p">)</span>
+                <span class="p">)</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid data in DAT file: RESETGEO not 0&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">first</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">cavern_sg</span><span class="p">,</span> <span class="p">(</span><span class="nb">float</span><span class="p">,</span> <span class="nb">int</span><span class="p">))</span> <span class="ow">and</span> <span class="n">cavern_sg</span> <span class="o">&gt;</span> <span class="mf">1.0</span><span class="p">:</span>
+                <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span>
+                    <span class="s2">&quot;The REPEAT option was supposed to turn off the cavern SG; it did not do so. sansmic is currently mimicing SANSMIC behavior and resetting the cavern brine to </span><span class="si">{}</span><span class="s2"> sg in stage </span><span class="si">{}</span><span class="s2">. </span><span class="se">\n\n</span><span class="s2">If this is not what is intended, please manually remove the &#39;set-cavern-sg&#39; entry from stages after stage 1. This behavior will change in future releases.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">cavern_sg</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">scenario</span><span class="o">.</span><span class="n">stages</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+                <span class="p">)</span>
+            <span class="n">stage</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="n">title</span>
+            <span class="n">stage</span><span class="o">.</span><span class="n">simulation_mode</span> <span class="o">=</span> <span class="n">SimulationMode</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">mode</span><span class="p">))</span>
+            <span class="n">stage</span><span class="o">.</span><span class="n">save_frequency</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">print_interval</span><span class="p">)</span>
+            <span class="n">stage</span><span class="o">.</span><span class="n">set_initial_conditions</span> <span class="o">=</span> <span class="nb">bool</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="nb">int</span><span class="p">(</span><span class="n">subsequent</span><span class="p">))</span>
+            <span class="n">stage</span><span class="o">.</span><span class="n">rest_duration</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">rest_duration</span><span class="p">)</span>
+            <span class="n">stage</span><span class="o">.</span><span class="n">stop_value</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">stop_value</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">stage</span><span class="o">.</span><span class="n">stop_value</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">stage</span><span class="o">.</span><span class="n">stop_condition</span> <span class="o">=</span> <span class="n">StopCondition</span><span class="o">.</span><span class="n">DEPTH</span>
+            <span class="k">if</span> <span class="n">stage</span><span class="o">.</span><span class="n">stop_value</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">stage</span><span class="o">.</span><span class="n">stop_condition</span> <span class="o">=</span> <span class="n">StopCondition</span><span class="o">.</span><span class="n">VOLUME</span>
+            <span class="n">stage</span><span class="o">.</span><span class="n">brine_injection_depth</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">injection_height</span><span class="p">)</span>
+            <span class="n">stage</span><span class="o">.</span><span class="n">brine_production_depth</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">production_height</span><span class="p">)</span>
+            <span class="n">stage</span><span class="o">.</span><span class="n">brine_interface_depth</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">interface_height</span><span class="p">)</span>
+            <span class="n">stage</span><span class="o">.</span><span class="n">brine_injection_rate</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">injection_rate</span><span class="p">)</span>
+            <span class="n">stage</span><span class="o">.</span><span class="n">inner_tbg_inside_diam</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">inn_tbg_inside_radius</span><span class="p">)</span> <span class="o">*</span> <span class="mi">2</span>
+            <span class="n">stage</span><span class="o">.</span><span class="n">inner_tbg_outside_diam</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">inn_tbg_outside_radius</span><span class="p">)</span> <span class="o">*</span> <span class="mi">2</span>
+            <span class="n">stage</span><span class="o">.</span><span class="n">outer_csg_inside_diam</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">out_csg_inside_radius</span><span class="p">)</span> <span class="o">*</span> <span class="mi">2</span>
+            <span class="n">stage</span><span class="o">.</span><span class="n">outer_csg_outside_diam</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">out_csg_outside_radius</span><span class="p">)</span> <span class="o">*</span> <span class="mi">2</span>
+            <span class="n">stage</span><span class="o">.</span><span class="n">brine_injection_sg</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">injection_fluid_sg</span><span class="p">)</span>
+            <span class="n">stage</span><span class="o">.</span><span class="n">set_cavern_sg</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">cavern_sg</span><span class="p">)</span>
+            <span class="n">stage</span><span class="o">.</span><span class="n">solver_timestep</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">timestep</span><span class="p">)</span>
+            <span class="n">stage</span><span class="o">.</span><span class="n">injection_duration</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">injection_duration</span><span class="p">)</span>
+            <span class="n">stage</span><span class="o">.</span><span class="n">product_injection_rate</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">fill_rate</span><span class="p">)</span>
+            <span class="n">scenario</span><span class="o">.</span><span class="n">stages</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">stage</span><span class="p">)</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Finished reading stage&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">scenario</span></div>
+
+
+
+<div class="viewcode-block" id="write_scenario">
+<a class="viewcode-back" href="../../apidocs/sansmic.io.write_scenario.html#sansmic.io.write_scenario">[docs]</a>
+<span class="k">def</span> <span class="nf">write_scenario</span><span class="p">(</span><span class="n">scenario</span><span class="p">:</span> <span class="n">Scenario</span><span class="p">,</span> <span class="n">filename</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">redundant</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Write a new-style SANSMIC scenario file (preferred extension is .toml)&quot;&quot;&quot;</span>
+    <span class="n">sdict</span> <span class="o">=</span> <span class="n">scenario</span><span class="o">.</span><span class="n">to_dict</span><span class="p">(</span><span class="n">redundant</span><span class="p">)</span>
+    <span class="n">keys</span> <span class="o">=</span> <span class="p">[</span><span class="n">k</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">sdict</span><span class="o">.</span><span class="n">keys</span><span class="p">()]</span>
+    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">keys</span><span class="p">:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">redundant</span> <span class="ow">and</span> <span class="n">k</span> <span class="o">==</span> <span class="s2">&quot;coallescing-wells&quot;</span> <span class="ow">and</span> <span class="n">sdict</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">sdict</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+            <span class="n">sdict</span><span class="p">[</span><span class="s2">&quot;well-separation&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">if</span> <span class="n">sdict</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">redundant</span><span class="p">:</span>
+                <span class="n">sdict</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">del</span> <span class="n">sdict</span><span class="p">[</span><span class="n">k</span><span class="p">]</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">sdict</span><span class="p">[</span><span class="n">k</span><span class="p">],</span> <span class="n">IntEnum</span><span class="p">):</span>
+            <span class="n">sdict</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">sdict</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">,</span> <span class="s2">&quot;-&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">ct</span><span class="p">,</span> <span class="n">s</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">sdict</span><span class="p">[</span><span class="s2">&quot;stages&quot;</span><span class="p">]):</span>
+        <span class="k">if</span> <span class="p">(</span>
+            <span class="ow">not</span> <span class="n">redundant</span>
+            <span class="ow">and</span> <span class="n">scenario</span><span class="o">.</span><span class="n">stages</span><span class="p">[</span><span class="n">ct</span><span class="p">]</span><span class="o">.</span><span class="n">stop_condition</span> <span class="o">==</span> <span class="n">StopCondition</span><span class="o">.</span><span class="n">DURATION</span>
+        <span class="p">):</span>
+            <span class="k">del</span> <span class="n">s</span><span class="p">[</span><span class="s2">&quot;stop-condition&quot;</span><span class="p">]</span>
+            <span class="k">del</span> <span class="n">s</span><span class="p">[</span><span class="s2">&quot;stop-value&quot;</span><span class="p">]</span>
+        <span class="n">keys</span> <span class="o">=</span> <span class="p">[</span><span class="n">k</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">s</span><span class="o">.</span><span class="n">keys</span><span class="p">()]</span>
+        <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">keys</span><span class="p">:</span>
+            <span class="k">if</span> <span class="p">(</span>
+                <span class="ow">not</span> <span class="n">redundant</span>
+                <span class="ow">and</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">scenario</span><span class="o">.</span><span class="n">defaults</span>
+                <span class="ow">and</span> <span class="n">scenario</span><span class="o">.</span><span class="n">defaults</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span> <span class="o">==</span> <span class="n">s</span><span class="p">[</span><span class="n">k</span><span class="p">]</span>
+            <span class="p">):</span>
+                <span class="k">del</span> <span class="n">s</span><span class="p">[</span><span class="n">k</span><span class="p">]</span>
+                <span class="k">continue</span>
+            <span class="k">if</span> <span class="n">s</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">redundant</span><span class="p">:</span>
+                    <span class="n">s</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="k">del</span> <span class="n">s</span><span class="p">[</span><span class="n">k</span><span class="p">]</span>
+            <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">k</span><span class="p">],</span> <span class="n">IntEnum</span><span class="p">):</span>
+                <span class="n">s</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">s</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">,</span> <span class="s2">&quot;-&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">redundant</span> <span class="ow">and</span> <span class="n">ct</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="s2">&quot;set-initial-conditions&quot;</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
+            <span class="k">del</span> <span class="n">s</span><span class="p">[</span><span class="s2">&quot;set-initial-conditions&quot;</span><span class="p">]</span>
+    <span class="n">name</span><span class="p">,</span> <span class="n">ext</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fout</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">ext</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;.toml&quot;</span> <span class="ow">or</span> <span class="nb">format</span> <span class="o">==</span> <span class="s2">&quot;toml&quot;</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">sdict</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                <span class="k">if</span> <span class="n">k</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;stages&quot;</span><span class="p">,</span> <span class="s2">&quot;defaults&quot;</span><span class="p">,</span> <span class="s2">&quot;advanced&quot;</span><span class="p">]:</span>
+                    <span class="k">continue</span>
+                <span class="k">elif</span> <span class="n">k</span> <span class="o">==</span> <span class="s2">&quot;geometry-data&quot;</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+                    <span class="k">for</span> <span class="n">k2</span><span class="p">,</span> <span class="n">v2</span> <span class="ow">in</span> <span class="n">v</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                        <span class="n">fout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;geometry-data.</span><span class="si">{}</span><span class="s2"> = </span><span class="si">{}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">k2</span><span class="p">,</span> <span class="n">v2</span><span class="p">))</span>
+                    <span class="k">continue</span>
+                <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="nb">bool</span><span class="p">):</span>
+                    <span class="n">v</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">v</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+                <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+                    <span class="n">v</span> <span class="o">=</span> <span class="nb">repr</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+                <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">IntEnum</span><span class="p">):</span>
+                    <span class="n">v</span> <span class="o">=</span> <span class="nb">repr</span><span class="p">(</span><span class="n">v</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">,</span> <span class="s2">&quot;-&quot;</span><span class="p">))</span>
+                <span class="n">fout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> = </span><span class="si">{}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">))</span>
+
+            <span class="k">if</span> <span class="s2">&quot;advanced&quot;</span> <span class="ow">in</span> <span class="n">sdict</span><span class="p">:</span>
+                <span class="n">fout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">[advanced]</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+                <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">sdict</span><span class="p">[</span><span class="s2">&quot;advanced&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="nb">bool</span><span class="p">):</span>
+                        <span class="n">v</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">v</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+                    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+                        <span class="n">v</span> <span class="o">=</span> <span class="nb">repr</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+                    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">IntEnum</span><span class="p">):</span>
+                        <span class="n">v</span> <span class="o">=</span> <span class="nb">repr</span><span class="p">(</span><span class="n">v</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">,</span> <span class="s2">&quot;-&quot;</span><span class="p">))</span>
+                    <span class="n">fout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> = </span><span class="si">{}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">))</span>
+
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">sdict</span><span class="p">[</span><span class="s2">&quot;defaults&quot;</span><span class="p">])</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">fout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">[defaults]</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+                <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">sdict</span><span class="p">[</span><span class="s2">&quot;defaults&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="nb">bool</span><span class="p">):</span>
+                        <span class="n">v</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">v</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+                    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+                        <span class="n">v</span> <span class="o">=</span> <span class="nb">repr</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+                    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">IntEnum</span><span class="p">):</span>
+                        <span class="n">v</span> <span class="o">=</span> <span class="nb">repr</span><span class="p">(</span><span class="n">v</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">,</span> <span class="s2">&quot;-&quot;</span><span class="p">))</span>
+                    <span class="n">fout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> = </span><span class="si">{}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">))</span>
+
+            <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">sdict</span><span class="p">[</span><span class="s2">&quot;stages&quot;</span><span class="p">]:</span>
+                <span class="n">fout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">[[stages]]</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+                <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">s</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="nb">bool</span><span class="p">):</span>
+                        <span class="n">v</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">v</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+                    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+                        <span class="n">v</span> <span class="o">=</span> <span class="nb">repr</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+                    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">IntEnum</span><span class="p">):</span>
+                        <span class="n">v</span> <span class="o">=</span> <span class="nb">repr</span><span class="p">(</span><span class="n">v</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">,</span> <span class="s2">&quot;-&quot;</span><span class="p">))</span>
+                    <span class="n">fout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> = </span><span class="si">{}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">))</span>
+        <span class="k">elif</span> <span class="n">ext</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;.json&quot;</span> <span class="ow">or</span> <span class="nb">format</span> <span class="o">==</span> <span class="s2">&quot;json&quot;</span><span class="p">:</span>
+            <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">sdict</span><span class="p">,</span> <span class="n">fout</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">ext</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;.yaml&quot;</span> <span class="ow">or</span> <span class="nb">format</span> <span class="o">==</span> <span class="s2">&quot;yaml&quot;</span><span class="p">:</span>
+            <span class="n">yaml</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">sdict</span><span class="p">,</span> <span class="n">fout</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">critical</span><span class="p">(</span>
+                <span class="s1">&#39;Unknown file extension (</span><span class="si">{}</span><span class="s1">) and invalid format (</span><span class="si">{}</span><span class="s1">). Valid extensions/formats are &quot;toml&quot;, &quot;yaml&quot; and &quot;json&quot;.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                    <span class="n">ext</span><span class="p">,</span> <span class="nb">format</span>
+                <span class="p">)</span>
+            <span class="p">)</span>
+            <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;Unknown file format for scenario output&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="read_classic_out_ddl">
+<a class="viewcode-back" href="../../apidocs/sansmic.io.read_classic_out_ddl.html#sansmic.io.read_classic_out_ddl">[docs]</a>
+<span class="k">def</span> <span class="nf">read_classic_out_ddl</span><span class="p">(</span><span class="n">file_prefix</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Read in the data from &quot;.out&quot; and &quot;.ddl&quot; files from a classic SANSMIC run.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    file_prefix : [type]</span>
+<span class="sd">        [description]</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    [type]</span>
+<span class="sd">        [description]</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">started</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">dataline</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">skip1</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">steps</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+    <span class="n">step</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">phaseline</span> <span class="o">=</span> <span class="kc">False</span>
+
+    <span class="n">r_0</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+    <span class="n">z_0</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+    <span class="n">h_0</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_prefix</span> <span class="o">+</span> <span class="s2">&quot;.ddl&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fddl</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">ct</span><span class="p">,</span> <span class="n">line</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">fddl</span><span class="o">.</span><span class="n">readlines</span><span class="p">()):</span>
+            <span class="k">if</span> <span class="n">ct</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="k">continue</span>
+            <span class="n">words</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+            <span class="n">idx</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">words</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+            <span class="n">z</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">words</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+            <span class="n">r</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">words</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+            <span class="n">r_0</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">r</span><span class="p">)</span>
+            <span class="n">z_0</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">idx</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="k">break</span>
+    <span class="k">for</span> <span class="n">z</span> <span class="ow">in</span> <span class="n">z_0</span><span class="p">:</span>
+        <span class="n">h</span> <span class="o">=</span> <span class="n">z</span> <span class="o">-</span> <span class="n">z_0</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">h_0</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">h</span><span class="p">)</span>
+
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_prefix</span> <span class="o">+</span> <span class="s2">&quot;.out&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fout</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">fout</span><span class="o">.</span><span class="n">readlines</span><span class="p">():</span>
+            <span class="n">words</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+            <span class="k">if</span> <span class="n">skip1</span><span class="p">:</span>
+                <span class="n">skip1</span> <span class="o">=</span> <span class="kc">False</span>
+                <span class="k">continue</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">skip1</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">words</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="k">continue</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">started</span> <span class="ow">and</span> <span class="n">words</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;TIME=&quot;</span><span class="p">:</span>
+                <span class="n">started</span> <span class="o">=</span> <span class="kc">True</span>
+                <span class="n">step</span> <span class="o">=</span> <span class="n">_OutDataBlock</span><span class="p">()</span>
+            <span class="k">elif</span> <span class="ow">not</span> <span class="n">started</span><span class="p">:</span>
+                <span class="k">continue</span>
+            <span class="k">if</span> <span class="n">words</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;TIME=&quot;</span><span class="p">:</span>
+                <span class="n">step</span><span class="o">.</span><span class="n">t</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">words</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">*</span> <span class="mf">24.0</span>
+                <span class="n">step</span><span class="o">.</span><span class="n">dt</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">words</span><span class="p">[</span><span class="mi">7</span><span class="p">])</span> <span class="o">*</span> <span class="mf">24.0</span>
+                <span class="n">step</span><span class="o">.</span><span class="n">t_prime</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">words</span><span class="p">[</span><span class="mi">11</span><span class="p">])</span> <span class="o">*</span> <span class="mf">24.0</span>
+                <span class="n">phaseline</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="k">elif</span> <span class="n">phaseline</span> <span class="ow">and</span> <span class="n">words</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;INJECTION&quot;</span><span class="p">:</span>
+                <span class="n">step</span><span class="o">.</span><span class="n">phase</span> <span class="o">=</span> <span class="mi">1</span>
+                <span class="n">step</span><span class="o">.</span><span class="n">stage</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">words</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+                <span class="n">phaseline</span> <span class="o">=</span> <span class="kc">False</span>
+            <span class="k">elif</span> <span class="n">phaseline</span> <span class="ow">and</span> <span class="n">words</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;WORKOVER&quot;</span><span class="p">:</span>
+                <span class="n">step</span><span class="o">.</span><span class="n">phase</span> <span class="o">=</span> <span class="mi">0</span>
+                <span class="n">step</span><span class="o">.</span><span class="n">stage</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">words</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+                <span class="n">phaseline</span> <span class="o">=</span> <span class="kc">False</span>
+            <span class="k">elif</span> <span class="n">words</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;I(INJ),&quot;</span><span class="p">:</span>
+                <span class="n">step</span><span class="o">.</span><span class="n">injCell</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">words</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span>
+                <span class="n">step</span><span class="o">.</span><span class="n">prodCell</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">words</span><span class="p">[</span><span class="mi">5</span><span class="p">])</span>
+                <span class="n">step</span><span class="o">.</span><span class="n">obiCell</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">words</span><span class="p">[</span><span class="mi">6</span><span class="p">])</span>
+                <span class="n">step</span><span class="o">.</span><span class="n">plumCell</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">words</span><span class="p">[</span><span class="mi">7</span><span class="p">])</span>
+            <span class="k">elif</span> <span class="n">words</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;H(INJ),&quot;</span><span class="p">:</span>
+                <span class="n">step</span><span class="o">.</span><span class="n">z_inj</span> <span class="o">=</span> <span class="n">z_0</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="nb">float</span><span class="p">(</span><span class="n">words</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span>
+                <span class="n">step</span><span class="o">.</span><span class="n">z_prod</span> <span class="o">=</span> <span class="n">z_0</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="nb">float</span><span class="p">(</span><span class="n">words</span><span class="p">[</span><span class="mi">5</span><span class="p">])</span>
+                <span class="c1"># step.z_obi = z_0[0] - float(words[6])</span>
+                <span class="n">step</span><span class="o">.</span><span class="n">z_plm</span> <span class="o">=</span> <span class="n">z_0</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="nb">float</span><span class="p">(</span><span class="n">words</span><span class="p">[</span><span class="mi">7</span><span class="p">])</span>
+            <span class="k">elif</span> <span class="n">words</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Ljet(ft),&quot;</span><span class="p">:</span>
+                <span class="n">step</span><span class="o">.</span><span class="n">l_jet</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">words</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span>
+                <span class="n">step</span><span class="o">.</span><span class="n">r_jet</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">words</span><span class="p">[</span><span class="mi">5</span><span class="p">])</span>
+                <span class="n">step</span><span class="o">.</span><span class="n">u_jet</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">words</span><span class="p">[</span><span class="mi">6</span><span class="p">])</span>
+                <span class="n">skip1</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="k">elif</span> <span class="n">words</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;HEIGHT&quot;</span><span class="p">:</span>
+                <span class="n">skip1</span> <span class="o">=</span> <span class="kc">True</span>
+                <span class="n">dataline</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="k">elif</span> <span class="n">dataline</span><span class="p">:</span>
+                <span class="n">cellid</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">5</span><span class="p">])</span>
+                <span class="k">if</span> <span class="n">cellid</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+                    <span class="n">dataline</span> <span class="o">=</span> <span class="kc">False</span>
+                    <span class="n">skip1</span> <span class="o">=</span> <span class="kc">True</span>
+                <span class="n">step</span><span class="o">.</span><span class="n">idx</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">cellid</span><span class="p">)</span>
+                <span class="n">step</span><span class="o">.</span><span class="n">h</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">float</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">5</span><span class="p">:</span><span class="mi">16</span><span class="p">]))</span>
+                <span class="n">step</span><span class="o">.</span><span class="n">r</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">float</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">16</span><span class="p">:</span><span class="mi">27</span><span class="p">]))</span>
+                <span class="n">step</span><span class="o">.</span><span class="n">dr_0</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">float</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">27</span><span class="p">:</span><span class="mi">38</span><span class="p">]))</span>
+                <span class="n">step</span><span class="o">.</span><span class="n">sg</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">float</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">38</span><span class="p">:</span><span class="mi">49</span><span class="p">]))</span>
+                <span class="n">step</span><span class="o">.</span><span class="n">theta</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">float</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">49</span><span class="p">:</span><span class="mi">60</span><span class="p">]))</span>
+                <span class="n">step</span><span class="o">.</span><span class="n">Q_inj</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">float</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">60</span><span class="p">:</span><span class="mi">71</span><span class="p">]))</span>
+                <span class="n">step</span><span class="o">.</span><span class="n">V</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">float</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">71</span><span class="p">:</span><span class="mi">82</span><span class="p">]))</span>
+                <span class="n">step</span><span class="o">.</span><span class="n">f_dis</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">float</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">82</span><span class="p">:</span><span class="mi">93</span><span class="p">]))</span>
+                <span class="n">step</span><span class="o">.</span><span class="n">f_flag</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">93</span><span class="p">:</span><span class="mi">98</span><span class="p">]))</span>
+                <span class="n">step</span><span class="o">.</span><span class="n">xincl</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">float</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">98</span><span class="p">:</span><span class="mi">109</span><span class="p">]))</span>
+                <span class="n">step</span><span class="o">.</span><span class="n">amd</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">float</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">109</span><span class="p">:</span><span class="mi">120</span><span class="p">]))</span>
+                <span class="n">step</span><span class="o">.</span><span class="n">D_coeff</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">float</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">120</span><span class="p">:</span><span class="mi">131</span><span class="p">]))</span>
+                <span class="n">step</span><span class="o">.</span><span class="n">dC_dz</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">float</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">131</span><span class="p">:</span><span class="mi">142</span><span class="p">]))</span>
+                <span class="n">step</span><span class="o">.</span><span class="n">C_old</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">float</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">142</span><span class="p">:</span><span class="mi">153</span><span class="p">]))</span>
+                <span class="n">step</span><span class="o">.</span><span class="n">C_new</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">float</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">153</span><span class="p">:</span><span class="mi">164</span><span class="p">]))</span>
+                <span class="n">step</span><span class="o">.</span><span class="n">dC</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">float</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">164</span><span class="p">:</span><span class="mi">175</span><span class="p">]))</span>
+                <span class="n">step</span><span class="o">.</span><span class="n">dr</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">float</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">175</span><span class="p">:</span><span class="mi">186</span><span class="p">]))</span>
+                <span class="n">step</span><span class="o">.</span><span class="n">C_plm</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">float</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">186</span><span class="p">:</span><span class="mi">197</span><span class="p">]))</span>
+                <span class="n">step</span><span class="o">.</span><span class="n">u_plm</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">float</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">197</span><span class="p">:</span><span class="mi">208</span><span class="p">]))</span>
+                <span class="n">step</span><span class="o">.</span><span class="n">r_plm</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">float</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">208</span><span class="p">:]))</span>
+            <span class="k">elif</span> <span class="n">words</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;TOTAL&quot;</span><span class="p">:</span>
+                <span class="n">step</span><span class="o">.</span><span class="n">V_cavTot</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">25</span><span class="p">:</span><span class="mi">36</span><span class="p">])</span>
+            <span class="k">elif</span> <span class="n">words</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;BRINE&quot;</span> <span class="ow">and</span> <span class="n">words</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;OUT&quot;</span><span class="p">:</span>
+                <span class="n">step</span><span class="o">.</span><span class="n">Q_out</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">25</span><span class="p">:</span><span class="mi">36</span><span class="p">])</span>
+            <span class="k">elif</span> <span class="n">words</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;OUTLET&quot;</span><span class="p">:</span>
+                <span class="n">step</span><span class="o">.</span><span class="n">sg_out</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">25</span><span class="p">:</span><span class="mi">36</span><span class="p">])</span>
+            <span class="k">elif</span> <span class="n">words</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;VOLUME&quot;</span><span class="p">:</span>
+                <span class="n">step</span><span class="o">.</span><span class="n">V_insolTot</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">25</span><span class="p">:</span><span class="mi">36</span><span class="p">])</span>
+            <span class="k">elif</span> <span class="n">words</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;INSOL&quot;</span><span class="p">:</span>
+                <span class="n">step</span><span class="o">.</span><span class="n">z_insol</span> <span class="o">=</span> <span class="n">z_0</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="nb">float</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">25</span><span class="p">:</span><span class="mi">36</span><span class="p">])</span>
+            <span class="k">elif</span> <span class="n">words</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;BLANKET&quot;</span><span class="p">:</span>
+                <span class="n">step</span><span class="o">.</span><span class="n">z_obi</span> <span class="o">=</span> <span class="n">z_0</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="nb">float</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">25</span><span class="p">:</span><span class="mi">36</span><span class="p">])</span>
+            <span class="k">elif</span> <span class="n">words</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;VOL&quot;</span><span class="p">:</span>
+                <span class="n">step</span><span class="o">.</span><span class="n">V_insolVent</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">25</span><span class="p">:</span><span class="mi">36</span><span class="p">])</span>
+            <span class="k">elif</span> <span class="n">words</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;BRINE&quot;</span> <span class="ow">and</span> <span class="n">words</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;VOLUME&quot;</span><span class="p">:</span>
+                <span class="n">step</span><span class="o">.</span><span class="n">V_brine</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">25</span><span class="p">:</span><span class="mi">36</span><span class="p">])</span>
+            <span class="k">elif</span> <span class="n">words</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;ULLAGE&quot;</span><span class="p">:</span>
+                <span class="n">step</span><span class="o">.</span><span class="n">V_ullage</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">25</span><span class="p">:</span><span class="mi">36</span><span class="p">])</span>
+            <span class="k">elif</span> <span class="n">words</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;USEABLE&quot;</span><span class="p">:</span>
+                <span class="n">step</span><span class="o">.</span><span class="n">V_usable</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">25</span><span class="p">:</span><span class="mi">36</span><span class="p">])</span>
+            <span class="k">elif</span> <span class="n">words</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;CFAC&quot;</span><span class="p">:</span>
+                <span class="n">step</span><span class="o">.</span><span class="n">err</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">25</span><span class="p">:</span><span class="mi">36</span><span class="p">])</span>
+            <span class="k">elif</span> <span class="n">line</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;----------&quot;</span><span class="p">):</span>
+                <span class="c1"># TODO: add datablock to list</span>
+                <span class="n">steps</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">step</span><span class="p">)</span>
+                <span class="n">started</span> <span class="o">=</span> <span class="kc">False</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;unrecognized line: &quot;</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span>
+    <span class="n">combo</span> <span class="o">=</span> <span class="n">_OutputData</span><span class="p">()</span>
+    <span class="n">combo</span><span class="o">.</span><span class="n">z_0</span> <span class="o">=</span> <span class="n">z_0</span>
+    <span class="n">combo</span><span class="o">.</span><span class="n">h_0</span> <span class="o">=</span> <span class="n">h_0</span>
+    <span class="n">combo</span><span class="o">.</span><span class="n">r_0</span> <span class="o">=</span> <span class="n">r_0</span>
+    <span class="n">combo</span><span class="o">.</span><span class="n">V_injTot</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+    <span class="n">combo</span><span class="o">.</span><span class="n">V_fillTot</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+    <span class="n">combo</span><span class="o">.</span><span class="n">sg_cavAve</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+
+    <span class="k">for</span> <span class="n">step</span> <span class="ow">in</span> <span class="n">steps</span><span class="p">:</span>
+        <span class="n">combo</span><span class="o">.</span><span class="n">V_injTot</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+        <span class="n">combo</span><span class="o">.</span><span class="n">V_fillTot</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+        <span class="n">combo</span><span class="o">.</span><span class="n">sg_cavAve</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">step</span><span class="o">.</span><span class="vm">__dict__</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">combo</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
+                <span class="k">continue</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">tmp</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">combo</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">tmp</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="nb">setattr</span><span class="p">(</span><span class="n">combo</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="nb">list</span><span class="p">())</span>
+                <span class="k">if</span> <span class="n">key</span> <span class="o">==</span> <span class="s2">&quot;t&quot;</span><span class="p">:</span>
+                    <span class="n">val</span> <span class="o">=</span> <span class="n">step</span><span class="o">.</span><span class="n">t</span> <span class="o">+</span> <span class="n">step</span><span class="o">.</span><span class="n">t_prime</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">val</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">step</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span>
+                <span class="nb">getattr</span><span class="p">(</span><span class="n">combo</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
+
+    <span class="n">res</span> <span class="o">=</span> <span class="n">Results</span><span class="p">(</span><span class="n">combo</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">res</span></div>
+
+
+
+<div class="viewcode-block" id="read_tst_file">
+<a class="viewcode-back" href="../../apidocs/sansmic.io.read_tst_file.html#sansmic.io.read_tst_file">[docs]</a>
+<span class="k">def</span> <span class="nf">read_tst_file</span><span class="p">(</span><span class="n">file_prefix</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Read a .tst output file into a DataFrame.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    file_prefix : str</span>
+<span class="sd">        Filename without extension.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">Q_fill</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+    <span class="n">t</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+    <span class="n">V_cavTot</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+    <span class="n">err</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+    <span class="n">sg_out</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+    <span class="n">sg_cavAve</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+    <span class="n">V_insolTot</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+    <span class="n">z_insol</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+    <span class="n">z_obi</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+    <span class="n">V_insolVent</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+    <span class="n">V_ullage</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+    <span class="n">V_usable</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+    <span class="n">Q_inj</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+    <span class="n">Q_fill</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+    <span class="n">V_injTot</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+    <span class="n">V_fillTot</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_prefix</span> <span class="o">+</span> <span class="s2">&quot;.tst&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fout</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">fout</span><span class="o">.</span><span class="n">readlines</span><span class="p">():</span>
+            <span class="n">words</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">words</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="k">continue</span>
+            <span class="k">if</span> <span class="n">words</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;#&quot;</span><span class="p">,</span> <span class="s2">&quot;t&quot;</span><span class="p">,</span> <span class="s2">&quot;(d)&quot;</span><span class="p">,</span> <span class="s2">&quot;File=&quot;</span><span class="p">,</span> <span class="s2">&quot;TIME&quot;</span><span class="p">,</span> <span class="s2">&quot;Days&quot;</span><span class="p">,</span> <span class="s2">&quot;---&quot;</span><span class="p">,</span> <span class="s2">&quot;===&quot;</span><span class="p">]:</span>
+                <span class="k">continue</span>
+            <span class="n">t</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">words</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+            <span class="n">V_cavTot</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">words</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+            <span class="n">err</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">words</span><span class="p">[</span><span class="mi">2</span><span class="p">]))</span>
+            <span class="n">sg_out</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">words</span><span class="p">[</span><span class="mi">3</span><span class="p">]))</span>
+            <span class="n">sg_cavAve</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">words</span><span class="p">[</span><span class="mi">4</span><span class="p">]))</span>
+            <span class="n">V_insolTot</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">words</span><span class="p">[</span><span class="mi">5</span><span class="p">]))</span>
+            <span class="n">z_insol</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">words</span><span class="p">[</span><span class="mi">6</span><span class="p">]))</span>
+            <span class="n">z_obi</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">words</span><span class="p">[</span><span class="mi">7</span><span class="p">]))</span>
+            <span class="n">V_insolVent</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">words</span><span class="p">[</span><span class="mi">8</span><span class="p">]))</span>
+            <span class="n">V_ullage</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">words</span><span class="p">[</span><span class="mi">9</span><span class="p">]))</span>
+            <span class="n">V_usable</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">words</span><span class="p">[</span><span class="mi">10</span><span class="p">]))</span>
+            <span class="n">Q_inj</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">words</span><span class="p">[</span><span class="mi">11</span><span class="p">]))</span>
+            <span class="n">V_injTot</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">words</span><span class="p">[</span><span class="mi">12</span><span class="p">]))</span>
+            <span class="n">Q_fill</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">words</span><span class="p">[</span><span class="mi">13</span><span class="p">]))</span>
+            <span class="n">V_fillTot</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">words</span><span class="p">[</span><span class="mi">14</span><span class="p">]))</span>
+    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span>
+        <span class="nb">dict</span><span class="p">(</span>
+            <span class="n">t_d</span><span class="o">=</span><span class="n">t</span><span class="p">,</span>
+            <span class="n">V_cav</span><span class="o">=</span><span class="n">V_cavTot</span><span class="p">,</span>
+            <span class="n">err_ode</span><span class="o">=</span><span class="n">err</span><span class="p">,</span>
+            <span class="n">sg_out</span><span class="o">=</span><span class="n">sg_out</span><span class="p">,</span>
+            <span class="n">sg_ave</span><span class="o">=</span><span class="n">sg_cavAve</span><span class="p">,</span>
+            <span class="n">V_insol</span><span class="o">=</span><span class="n">V_insolTot</span><span class="p">,</span>
+            <span class="n">z_insol</span><span class="o">=</span><span class="n">z_insol</span><span class="p">,</span>
+            <span class="n">z_obi</span><span class="o">=</span><span class="n">z_obi</span><span class="p">,</span>
+            <span class="n">V_vented</span><span class="o">=</span><span class="n">V_insolVent</span><span class="p">,</span>
+            <span class="n">Q_inj</span><span class="o">=</span><span class="n">Q_inj</span><span class="p">,</span>
+            <span class="n">Q_fill</span><span class="o">=</span><span class="n">Q_fill</span><span class="p">,</span>
+            <span class="n">V_inj</span><span class="o">=</span><span class="n">V_injTot</span><span class="p">,</span>
+            <span class="n">V_fill</span><span class="o">=</span><span class="n">V_fillTot</span><span class="p">,</span>
+        <span class="p">)</span>
+    <span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="write_hdf_results">
+<a class="viewcode-back" href="../../apidocs/sansmic.io.write_hdf_results.html#sansmic.io.write_hdf_results">[docs]</a>
+<span class="k">def</span> <span class="nf">write_hdf_results</span><span class="p">(</span><span class="n">results</span><span class="p">:</span> <span class="n">Results</span><span class="p">,</span> <span class="n">filename</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Write results to an HDF5 file.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    results : Results</span>
+<span class="sd">        The results object to write</span>
+<span class="sd">    filename : str</span>
+<span class="sd">        The filename to write the results to.</span>
+
+<span class="sd">    Keyword Arguments</span>
+<span class="sd">    -----------------</span>
+<span class="sd">    kwargs : additional keyword arguments</span>
+<span class="sd">        See :meth:`~sansmic.model.Results.to_hdf` for keyword arguments.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">results</span><span class="o">.</span><span class="n">to_hdf</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="read_hdf_results">
+<a class="viewcode-back" href="../../apidocs/sansmic.io.read_hdf_results.html#sansmic.io.read_hdf_results">[docs]</a>
+<span class="k">def</span> <span class="nf">read_hdf_results</span><span class="p">(</span><span class="n">filename</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Results</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Read results from an HDF5 file.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    filename : str</span>
+<span class="sd">        Filename to read the results from.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">results</span> <span class="o">=</span> <span class="n">Results</span><span class="o">.</span><span class="n">from_hdf</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">results</span></div>
+
+
+
+<div class="viewcode-block" id="write_json_results">
+<a class="viewcode-back" href="../../apidocs/sansmic.io.write_json_results.html#sansmic.io.write_json_results">[docs]</a>
+<span class="k">def</span> <span class="nf">write_json_results</span><span class="p">(</span><span class="n">results</span><span class="p">:</span> <span class="n">Results</span><span class="p">,</span> <span class="n">filename</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Write results to a JSON file.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    results : Results</span>
+<span class="sd">        The results object to write</span>
+<span class="sd">    filename : str</span>
+<span class="sd">        The filename to write the results to.</span>
+
+<span class="sd">    Keyword Arguments</span>
+<span class="sd">    -----------------</span>
+<span class="sd">    kwargs : additional keyword arguments</span>
+<span class="sd">        See :meth:`json.dump` for valid keyword arguments</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">results</span><span class="o">.</span><span class="n">to_dict</span><span class="p">(),</span> <span class="n">f</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="read_json_results">
+<a class="viewcode-back" href="../../apidocs/sansmic.io.read_json_results.html#sansmic.io.read_json_results">[docs]</a>
+<span class="k">def</span> <span class="nf">read_json_results</span><span class="p">(</span><span class="n">filename</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Read results from a JSON file.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    filename : str</span>
+<span class="sd">        Filename to read the results from.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">d</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">Results</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">d</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="write_csv_results">
+<a class="viewcode-back" href="../../apidocs/sansmic.io.write_csv_results.html#sansmic.io.write_csv_results">[docs]</a>
+<span class="k">def</span> <span class="nf">write_csv_results</span><span class="p">(</span><span class="n">results</span><span class="p">:</span> <span class="n">Results</span><span class="p">,</span> <span class="n">prefix</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Write results to CSV files.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    results : Results</span>
+<span class="sd">        The results to write out.</span>
+<span class="sd">    prefix : str</span>
+<span class="sd">        Write results files in CSV formats.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">prefix</span> <span class="o">+</span> <span class="s2">&quot;-summary.csv&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">results</span><span class="o">.</span><span class="n">df_t_1D</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">lineterminator</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">prefix</span> <span class="o">+</span> <span class="s2">&quot;-radius.csv&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">radius</span>
+        <span class="n">df</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">depths</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">T</span>
+        <span class="n">df</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">time</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">T</span>
+        <span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">lineterminator</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">prefix</span> <span class="o">+</span> <span class="s2">&quot;-density.csv&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">cell_sg</span>
+        <span class="n">df</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">depths</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">T</span>
+        <span class="n">df</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">time</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">T</span>
+        <span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">lineterminator</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">prefix</span> <span class="o">+</span> <span class="s2">&quot;-wall-angle.csv&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">wall_angle</span>
+        <span class="n">df</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">depths</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">T</span>
+        <span class="n">df</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">time</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">T</span>
+        <span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">lineterminator</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">prefix</span> <span class="o">+</span> <span class="s2">&quot;-dr_dt.csv&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">rate_of_change_in_radius</span>
+        <span class="n">df</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">depths</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">T</span>
+        <span class="n">df</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">time</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">T</span>
+        <span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">lineterminator</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">prefix</span> <span class="o">+</span> <span class="s2">&quot;-dC_dt.csv&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">rate_of_change_in_sg</span>
+        <span class="n">df</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">depths</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">T</span>
+        <span class="n">df</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">time</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">T</span>
+        <span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">lineterminator</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">prefix</span> <span class="o">+</span> <span class="s2">&quot;-dC_dz.csv&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">vertical_diffusion_rate</span>
+        <span class="n">df</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">depths</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">T</span>
+        <span class="n">df</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">time</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">T</span>
+        <span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">lineterminator</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span></div>
+
+</pre></div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2024 National Technology and Engineering Solutions of Sandia, LLC. Under the terms of Contract DE-NA0003525 with NTESS, the U.S. Government retains certain rights in this software..
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.0.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

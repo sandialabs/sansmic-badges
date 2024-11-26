@@ -1,0 +1,37 @@
+﻿sansmic
+=======
+
+.. automodule:: sansmic
+   :exclude-members: 
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+
+
+.. rubric:: Modules
+
+.. autosummary::
+   :toctree:
+   :recursive:
+   :template: autosummary/module.rst
+
+   app
+   empirical
+   io
+   libsansmic
+   model
+

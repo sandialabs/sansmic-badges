@@ -1,0 +1,34 @@
+
+.. _file_libsansmic.cpp:
+
+File libsansmic.cpp
+===================
+
+
+Python bindings for sansmic.libsansmic. 
+
+
+Definition (``libsansmic.cpp``)
+-------------------------------
+
+
+
+
+
+
+Includes
+--------
+
+
+- ``libsansmic.hpp`` (:ref:`file_libsansmic.hpp`)
+
+- ``pybind11/iostream.h``
+
+- ``pybind11/pybind11.h``
+
+- ``pybind11/stl.h``
+
+
+
+
+

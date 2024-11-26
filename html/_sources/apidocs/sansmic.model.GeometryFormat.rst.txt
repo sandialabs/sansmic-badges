@@ -1,0 +1,30 @@
+GeometryFormat
+==============
+
+.. currentmodule:: sansmic.model
+
+.. autoclass:: GeometryFormat
+
+
+   .. rubric:: Summary
+   .. autosummary::
+
+
+
+   
+
+
+
+
+
+   
+      ~GeometryFormat.RADIUS_LIST
+      ~GeometryFormat.VOLUME_LIST
+      ~GeometryFormat.VOLUME_TABLE
+      ~GeometryFormat.RADIUS_TABLE
+      ~GeometryFormat.LAYER_CAKE
+
+
+
+   .. rubric:: Details
+

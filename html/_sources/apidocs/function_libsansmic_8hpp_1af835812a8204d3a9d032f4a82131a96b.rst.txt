@@ -1,0 +1,14 @@
+.. _exhale_function_libsansmic_8hpp_1af835812a8204d3a9d032f4a82131a96b:
+
+Function sansmic::ddim
+======================
+
+- Defined in :ref:`file_libsansmic.hpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: sansmic::ddim(double, double)
+   :project: libsansmic

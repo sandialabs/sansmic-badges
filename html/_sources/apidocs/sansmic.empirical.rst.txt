@@ -1,0 +1,40 @@
+sansmic.empirical
+=================
+
+.. automodule:: sansmic.empirical
+   :exclude-members: rho_NaCl_s, a, c, sg_matrix, wt_pct_vec, T_degC_vec, wt_pct_max, T_degC_max, sg_max, 
+
+   
+   
+   .. rubric:: Module Attributes
+
+   .. autosummary::
+      :toctree:
+      :template: autosummary/base.rst
+   
+      rho_NaCl_s
+      a
+      c
+      sg_matrix
+      wt_pct_vec
+      T_degC_vec
+      wt_pct_max
+      T_degC_max
+      sg_max
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+
+

@@ -1,0 +1,31 @@
+CGeometryFormat
+===============
+
+.. currentmodule:: sansmic.libsansmic
+
+.. autoclass:: CGeometryFormat
+
+
+   .. rubric:: Summary
+   .. autosummary::
+
+
+
+   
+
+
+
+
+
+   
+      ~CGeometryFormat.RADIUS_LIST
+      ~CGeometryFormat.RADIUS_TABLE
+      ~CGeometryFormat.VOLUME_LIST
+      ~CGeometryFormat.VOLUME_TABLE
+      ~CGeometryFormat.name
+      ~CGeometryFormat.value
+
+
+
+   .. rubric:: Details
+

@@ -1,0 +1,32 @@
+
+.. _file_salt.cpp:
+
+File salt.cpp
+=============
+
+
+Salt class implementation. 
+
+
+Definition (``salt.cpp``)
+-------------------------
+
+
+
+
+
+
+Includes
+--------
+
+
+- ``array``
+
+- ``cmath``
+
+- ``libsansmic.hpp`` (:ref:`file_libsansmic.hpp`)
+
+
+
+
+

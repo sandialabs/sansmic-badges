@@ -1,0 +1,14 @@
+.. _exhale_function_libsansmic_8hpp_1af7843017d1ba247ba894354fd04066fd:
+
+Function sansmic::bound
+=======================
+
+- Defined in :ref:`file_libsansmic.hpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: sansmic::bound(double, double, double)
+   :project: libsansmic

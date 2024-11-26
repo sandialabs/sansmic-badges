@@ -1,0 +1,10 @@
+
+
+read\_json\_results
+===================
+
+.. currentmodule:: sansmic.io
+
+
+
+.. autofunction:: sansmic.io::read_json_results

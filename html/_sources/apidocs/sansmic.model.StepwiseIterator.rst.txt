@@ -1,0 +1,7 @@
+StepwiseIterator
+================
+
+.. currentmodule:: sansmic.model
+
+.. autoclass:: StepwiseIterator
+

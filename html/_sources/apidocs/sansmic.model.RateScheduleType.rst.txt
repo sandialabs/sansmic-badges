@@ -1,0 +1,27 @@
+RateScheduleType
+================
+
+.. currentmodule:: sansmic.model
+
+.. autoclass:: RateScheduleType
+
+
+   .. rubric:: Summary
+   .. autosummary::
+
+
+
+   
+
+
+
+
+
+   
+      ~RateScheduleType.CONSTANT_RATE
+      ~RateScheduleType.DATAFILE
+
+
+
+   .. rubric:: Details
+

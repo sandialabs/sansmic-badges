@@ -1,0 +1,51 @@
+
+.. _file_model.cpp:
+
+File model.cpp
+==============
+
+
+Main program for SANSMIC. 
+
+
+Definition (``model.cpp``)
+--------------------------
+
+
+
+
+
+
+Includes
+--------
+
+
+- ``array``
+
+- ``cmath``
+
+- ``cstdlib``
+
+- ``fstream``
+
+- ``iomanip``
+
+- ``iostream``
+
+- ``libsansmic.hpp`` (:ref:`file_libsansmic.hpp`)
+
+- ``string``
+
+- ``vector``
+
+
+
+
+
+
+Defines
+-------
+
+
+- :ref:`exhale_define_model_8cpp_1a2d2b6ceee9d9602972e2de6426a3b9cf`
+

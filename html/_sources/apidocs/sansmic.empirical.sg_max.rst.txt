@@ -1,0 +1,10 @@
+
+
+sg\_max
+=======
+
+.. currentmodule:: sansmic.empirical
+
+
+
+.. autodata:: sansmic.empirical::sg_max

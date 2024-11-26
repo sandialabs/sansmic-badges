@@ -1,0 +1,10 @@
+
+
+main
+====
+
+.. currentmodule:: sansmic.app
+
+
+
+.. autofunction:: sansmic.app::main

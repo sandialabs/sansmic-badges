@@ -1,0 +1,38 @@
+
+.. _file_stage.cpp:
+
+File stage.cpp
+==============
+
+
+Stage definition. 
+
+
+Definition (``stage.cpp``)
+--------------------------
+
+
+
+
+
+
+Includes
+--------
+
+
+- ``array``
+
+- ``cmath``
+
+- ``fstream``
+
+- ``libsansmic.hpp`` (:ref:`file_libsansmic.hpp`)
+
+- ``string``
+
+- ``vector``
+
+
+
+
+

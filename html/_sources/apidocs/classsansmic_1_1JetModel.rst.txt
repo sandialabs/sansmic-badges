@@ -1,0 +1,17 @@
+.. _exhale_class_classsansmic_1_1JetModel:
+
+Class JetModel
+==============
+
+- Defined in :ref:`file_libsansmic.hpp`
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: sansmic::JetModel
+   :project: libsansmic
+   :members:
+   :protected-members:
+   :undoc-members:

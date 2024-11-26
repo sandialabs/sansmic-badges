@@ -1,0 +1,17 @@
+.. _exhale_struct_structsansmic_1_1Results:
+
+Struct Results
+==============
+
+- Defined in :ref:`file_libsansmic.hpp`
+
+
+Struct Documentation
+--------------------
+
+
+.. doxygenstruct:: sansmic::Results
+   :project: libsansmic
+   :members:
+   :protected-members:
+   :undoc-members:

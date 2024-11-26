@@ -1,0 +1,74 @@
+CResults
+========
+
+.. currentmodule:: sansmic.libsansmic
+
+.. autoclass:: CResults
+
+
+   .. rubric:: Summary
+   .. autosummary::
+
+
+
+   
+
+
+
+
+
+   
+      ~CResults.C_new
+      ~CResults.C_old
+      ~CResults.C_plm
+      ~CResults.D_coeff
+      ~CResults.Q_inj
+      ~CResults.Q_out
+      ~CResults.V
+      ~CResults.V_cavTot
+      ~CResults.V_fillTot
+      ~CResults.V_injTot
+      ~CResults.V_insolTot
+      ~CResults.V_insolVent
+      ~CResults.amd
+      ~CResults.dC
+      ~CResults.dC_dz
+      ~CResults.dr
+      ~CResults.dr_0
+      ~CResults.dt
+      ~CResults.err
+      ~CResults.f_dis
+      ~CResults.f_flag
+      ~CResults.h_0
+      ~CResults.h_insol
+      ~CResults.injCell
+      ~CResults.l_jet
+      ~CResults.obiCell
+      ~CResults.phase
+      ~CResults.plumCell
+      ~CResults.prodCell
+      ~CResults.r
+      ~CResults.r_0
+      ~CResults.r_jet
+      ~CResults.r_plm
+      ~CResults.sg
+      ~CResults.sg_cavAve
+      ~CResults.sg_out
+      ~CResults.stage
+      ~CResults.step
+      ~CResults.t
+      ~CResults.theta
+      ~CResults.u_jet
+      ~CResults.u_plm
+      ~CResults.xincl
+      ~CResults.z_0
+      ~CResults.z_inj
+      ~CResults.z_insol
+      ~CResults.z_obi
+      ~CResults.z_plm
+      ~CResults.z_prod
+
+
+
+   .. rubric:: Details
+

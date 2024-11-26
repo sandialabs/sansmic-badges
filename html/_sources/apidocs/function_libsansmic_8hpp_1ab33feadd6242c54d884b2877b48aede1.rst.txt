@@ -1,0 +1,14 @@
+.. _exhale_function_libsansmic_8hpp_1ab33feadd6242c54d884b2877b48aede1:
+
+Function sansmic::sign(int, int)
+================================
+
+- Defined in :ref:`file_libsansmic.hpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: sansmic::sign(int, int)
+   :project: libsansmic

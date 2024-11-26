@@ -1,0 +1,1124 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Class ODESolver &#8212; Sansmic</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+
+    <script src="../_static/documentation_options.js?v=76e2d817"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-23TNKN36XM"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-23TNKN36XM');
+            </script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-23TNKN36XM');
+            </script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'apidocs/classsansmic_1_1ODESolver';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.0';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://sandialabs.github.io/sansmic/_static/switcher.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'v1.0.0';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner = true;
+        </script>
+    <script src="../_static/pypi-icon.js?v=74687d30"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Class PlumeRise" href="classsansmic_1_1PlumeRise.html" />
+    <link rel="prev" title="Class Model" href="classsansmic_1_1Model.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="1.0.0" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Sansmic</p>
+  
+</a></div>
+    
+      <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../userman.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../refman.html">
+    API Reference
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/sandialabs/sansmic" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/sansmic/" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.sandia.gov" title="Sandia National Laboratories" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../_static/snl_logo.png" class="icon-link-image" alt="Sandia National Laboratories"/></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../userman.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../refman.html">
+    API Reference
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/sandialabs/sansmic" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/sansmic/" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.sandia.gov" title="Sandia National Laboratories" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../_static/snl_logo.png" class="icon-link-image" alt="Sandia National Laboratories"/></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">Python package</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="sansmic.html">sansmic</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="sansmic.app.html">sansmic.app</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.app.convert.html">convert</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.app.main.html">main</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.app.AboutAction.html">AboutAction</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="sansmic.empirical.html">sansmic.empirical</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.empirical.rho_NaCl_s.html">rho_NaCl_s</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.empirical.a.html">a</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.empirical.c.html">c</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.empirical.sg_matrix.html">sg_matrix</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.empirical.wt_pct_vec.html">wt_pct_vec</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.empirical.T_degC_vec.html">T_degC_vec</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.empirical.wt_pct_max.html">wt_pct_max</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.empirical.T_degC_max.html">T_degC_max</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.empirical.sg_max.html">sg_max</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="sansmic.io.html">sansmic.io</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.io.read_classic_out_ddl.html">read_classic_out_ddl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.io.read_dat.html">read_dat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.io.read_hdf_results.html">read_hdf_results</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.io.read_json_results.html">read_json_results</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.io.read_scenario.html">read_scenario</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.io.read_tst_file.html">read_tst_file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.io.write_csv_results.html">write_csv_results</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.io.write_hdf_results.html">write_hdf_results</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.io.write_json_results.html">write_json_results</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.io.write_scenario.html">write_scenario</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="sansmic.libsansmic.html">sansmic.libsansmic</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.libsansmic.CGeometryFormat.html">CGeometryFormat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.libsansmic.CModel.html">CModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.libsansmic.CResults.html">CResults</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.libsansmic.CRunMode.html">CRunMode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.libsansmic.CSalt.html">CSalt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.libsansmic.CScenario.html">CScenario</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.libsansmic.CStage.html">CStage</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="sansmic.model.html">sansmic.model</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.model.AdvancedOptions.html">AdvancedOptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.model.GeometryFormat.html">GeometryFormat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.model.RateScheduleType.html">RateScheduleType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.model.Results.html">Results</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.model.Scenario.html">Scenario</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.model.SimulationMode.html">SimulationMode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.model.Simulator.html">Simulator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.model.StageDefinition.html">StageDefinition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.model.StepwiseIterator.html">StepwiseIterator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.model.StopCondition.html">StopCondition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.model.Units.html">Units</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">C++ library</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">libsansmic</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="namespace_sansmic.html">Namespace sansmic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structsansmic_1_1Results.html">Struct Results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structsansmic_1_1Scenario.html">Struct Scenario</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structsansmic_1_1Stage.html">Struct Stage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classsansmic_1_1Derivable.html">Class Derivable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classsansmic_1_1JetModel.html">Class JetModel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classsansmic_1_1Model.html">Class Model</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Class ODESolver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classsansmic_1_1PlumeRise.html">Class PlumeRise</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classsansmic_1_1Salt.html">Class Salt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="enum_libsansmic_8hpp_1ae90439e1c23bb6f206956d15cacaaa41.html">Enum GeomFormat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="enum_libsansmic_8hpp_1a0ac474463be3271f78ea252870114800.html">Enum LeachMode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_libsansmic_8hpp_1af7843017d1ba247ba894354fd04066fd.html">Function sansmic::bound</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_libsansmic_8hpp_1abfcdec9ce8fcf3b394cc6f909dcfdadf.html">Function sansmic::dabs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_libsansmic_8hpp_1af835812a8204d3a9d032f4a82131a96b.html">Function sansmic::ddim</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_libsansmic_8hpp_1ad862c88ec431b0775d64800d4a79c4ac.html">Function sansmic::sign(double, double)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_libsansmic_8hpp_1ab33feadd6242c54d884b2877b48aede1.html">Function sansmic::sign(int, int)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_libsansmic_8hpp_1a9e5dc0ecd570d5b736f756b1da33158a.html">Function sansmic::sq</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_libsansmic_8hpp_1abd9435272066c6467cd42223a85ab523.html">Function sansmic::trigad</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_libsansmic_8hpp_1aebbfefaf337ee806ea88b6d52e36f905.html">Function sansmic::xnterp_dkr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1ae05f440aa5cf0cf27c924af6abd84429.html">Variable sansmic::_pi_</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1a5835f26770e6fcee73a6a866ba1a0ca3.html">Variable sansmic::bbl_to_cf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1a6509f1ad75d4faaef799a26d4963ed75.html">Variable sansmic::cf_to_bbl</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1a4097c0a08bdfca709ad6af1edbbae5cf.html">Variable sansmic::cubic_foot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1a1e9d11c00b0f8ab30e067f17b93b3a77.html">Variable sansmic::cubic_inch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1a6bf5141a96e95158acead28325d3ba7a.html">Variable sansmic::day</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1a35f688aef259e35313b3d8fb13215b04.html">Variable sansmic::degree_Fahrenheit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1a4d1216187d22cbd5da9dff170fcc6478.html">Variable sansmic::foot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1a4489ee3413eb2756ead2968898cc919e.html">Variable sansmic::ft_to_in</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1a09c047eba91ce1d85e4e7fdd4bafebe4.html">Variable sansmic::hour</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1ade5f8e06aa0040eaeff7a2faf8a53f84.html">Variable sansmic::in_to_ft</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1a65eb61864cca7f60402dca06829b0278.html">Variable sansmic::inch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1a3790b5abe2d5afc09d3952d7a215ae76.html">Variable sansmic::INVALID_LOG_FILE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1a680959cdfd3d7eb4a54cf899aed119e8.html">Variable sansmic::INVALID_OUT_FILE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1aa08e28983055aebd0561072245a9580e.html">Variable sansmic::INVALID_TST_FILE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1a516ec27e7553440120d43692295e16fd.html">Variable sansmic::julian_year</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1a8e6656a08a16d80623c90f0531fae06d.html">Variable sansmic::liquid_gallon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1a583f186218b8bf2ad5c54928a6c20134.html">Variable sansmic::minute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1a68a31f328274bc97dfa478bb42920449.html">Variable sansmic::MISSING_DAT_FILE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1a421a5bf73c6bebdda01605bd0dea0660.html">Variable sansmic::NDIV_CHANGES_THROUGHOUT_FILE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1aa33076a804fd17b06c540f5548faac0d.html">Variable sansmic::OBI_AT_CAVERN_FLOOR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1ade021519e336911922fb0b56739207b9.html">Variable sansmic::ODE_BAD_ABSERR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1a0eba3ceb565254ff682a2520ae565ad8.html">Variable sansmic::ODE_IFLAG_SEVEN</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1a4a9a89674d91f081c447f3e6326e3239.html">Variable sansmic::ODE_IFLAG_SIX</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1aff42d2545a2cb7a612252a8d6f1799da.html">Variable sansmic::oil_barrel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1a5f0f9ae5a5526c0a1ec6c58d0e6a6c1d.html">Variable sansmic::per_d_to_per_h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1a60f9a61a4a145f39de28d2db23619afc.html">Variable sansmic::per_h_to_per_d</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1ae1faba63a84df20abb428a8f0a473e64.html">Variable sansmic::pound_force</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1a2e2c0c62680e276009c4d14267633c96.html">Variable sansmic::pound_mass</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1a65d119aa16b025a2586c16bc1179ee58.html">Variable sansmic::square_foot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1aa8e12cd784414f4da441d6e5cd428176.html">Variable sansmic::square_inch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1a3672ba92add1b2550dbf908383a392cd.html">Variable sansmic::std_gravity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1a583d71ee41f917002e5274dc9e2dd828.html">Variable sansmic::UNIMPLEMENTED_FLOW_TABLES</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1a2f7db9be399d5ac9e2e7b21e5aff61df.html">Variable sansmic::UNIMPLEMENTED_GEOMETRY_IDATA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1acf7d3f4554cbe417c5e190b85a100894.html">Variable sansmic::zero_Fahrenheit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="define_model_8cpp_1a2d2b6ceee9d9602972e2de6426a3b9cf.html">Define VERSION_INFO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_jetmodel.cpp.html">File jetmodel.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_libsansmic.cpp.html">File libsansmic.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_libsansmic.hpp.html">File libsansmic.hpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_model.cpp.html">File model.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_odesolver.cpp.html">File odesolver.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_plumerise.cpp.html">File plumerise.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_salt.cpp.html">File salt.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_scenario.cpp.html">File scenario.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_stage.cpp.html">File stage.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_util.cpp.html">File util.cpp</a></li>
+</ul>
+</details></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item"><nav class="sidebar-indices-items" aria-labelledby="pst-indices-navigation-heading-2">
+  <p id="pst-indices-navigation-heading-2" class="sidebar-indices-items__title" role="heading" aria-level="1">Indices</p>
+  <ul class="indices-link">
+        <li class="toctree-l1">
+          <a class="reference internal"
+             href="../genindex.html"
+             accesskey="I">General Index</a>
+        </li>
+        <li class="toctree-l1">
+          <a class="reference internal" href="../py-modindex.html">Python Module Index</a>
+        </li>
+  </ul>
+</nav></div>
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../refman.html" class="nav-link">API Reference</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">libsansmic</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Class ODESolver</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="class-odesolver">
+<span id="exhale-class-classsansmic-1-1odesolver"></span><h1>Class ODESolver<a class="headerlink" href="#class-odesolver" title="Link to this heading">#</a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_libsansmic.hpp.html#file-libsansmic-hpp"><span class="std std-ref">File libsansmic.hpp</span></a></p></li>
+</ul>
+<section id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Link to this heading">#</a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N7sansmic9ODESolverE">
+<span id="_CPPv3N7sansmic9ODESolverE"></span><span id="_CPPv2N7sansmic9ODESolverE"></span><span id="sansmic::ODESolver"></span><span class="target" id="classsansmic_1_1ODESolver"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ODESolver</span></span></span><a class="headerlink" href="#_CPPv4N7sansmic9ODESolverE" title="Link to this definition">#</a><br /></dt>
+<dd><p>The ODE solver class. </p>
+<p>The function of this code is completely explained and documented in the text, <em>Computer solution of ordinary differential equations, the initial value problem</em> by L. F. Shampine and M. K. Gordon. Further details on use of this code are available in <em>Solving ordinary differential equations with ODE, STEP, and INTRP</em>, by L. F. Shampine and M. K. Gordon, SLA-73-1060. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7sansmic9ODESolver9ODESolverEv">
+<span id="_CPPv3N7sansmic9ODESolver9ODESolverEv"></span><span id="_CPPv2N7sansmic9ODESolver9ODESolverEv"></span><span id="sansmic::ODESolver::ODESolver__void"></span><span class="target" id="classsansmic_1_1ODESolver_1abbd4851097ca2ff84a30e6076bfa5d6f"></span><span class="sig-name descname"><span class="n"><span class="pre">ODESolver</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7sansmic9ODESolver9ODESolverEv" title="Link to this definition">#</a><br /></dt>
+<dd><p>Create a new <a class="reference internal" href="#classsansmic_1_1ODESolver"><span class="std std-ref">ODESolver</span></a> object with <code class="docutils literal notranslate"><span class="pre">neqn</span></code> = 0 and no <code class="docutils literal notranslate"><span class="pre">f</span></code> object. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7sansmic9ODESolver9ODESolverEiP9Derivable">
+<span id="_CPPv3N7sansmic9ODESolver9ODESolverEiP9Derivable"></span><span id="_CPPv2N7sansmic9ODESolver9ODESolverEiP9Derivable"></span><span id="sansmic::ODESolver::ODESolver__i.DerivableP"></span><span class="target" id="classsansmic_1_1ODESolver_1a090042eb8da25567b4c012658ef36a9d"></span><span class="sig-name descname"><span class="n"><span class="pre">ODESolver</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">n</span></span>, <a class="reference internal" href="classsansmic_1_1Derivable.html#_CPPv4N7sansmic9DerivableE" title="sansmic::Derivable"><span class="n"><span class="pre">Derivable</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">f</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7sansmic9ODESolver9ODESolverEiP9Derivable" title="Link to this definition">#</a><br /></dt>
+<dd><p>Create a new solver object with a specific ODE in mind. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>n</strong> – the number of equations </p></li>
+<li><p><strong>f</strong> – the derivative function object </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7sansmic9ODESolver7num_eqnEv">
+<span id="_CPPv3N7sansmic9ODESolver7num_eqnEv"></span><span id="_CPPv2N7sansmic9ODESolver7num_eqnEv"></span><span id="sansmic::ODESolver::num_eqn__void"></span><span class="target" id="classsansmic_1_1ODESolver_1a3c1e3f939c611487db2dd5811caab28f"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">num_eqn</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7sansmic9ODESolver7num_eqnEv" title="Link to this definition">#</a><br /></dt>
+<dd><p>Get the number of equations this solver was configured for. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>number of equations </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7sansmic9ODESolver3odeER6vectorIdERddRdRdRi">
+<span id="_CPPv3N7sansmic9ODESolver3odeER6vectorIdERddRdRdRi"></span><span id="_CPPv2N7sansmic9ODESolver3odeER6vectorIdERddRdRdRi"></span><span id="sansmic::ODESolver::ode__vector:double:R.doubleR.double.doubleR.doubleR.iR"></span><span class="target" id="classsansmic_1_1ODESolver_1a33c862fb36ed7c3fdd0c4e6f6cc383e7"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ode</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">y</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">t</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">tout</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">relerr</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">abserr</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">iflag</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7sansmic9ODESolver3odeER6vectorIdERddRdRdRi" title="Link to this definition">#</a><br /></dt>
+<dd><p>Integrate a system of neqn first order ODEs. </p>
+<p><p><p class="rubric">Abstract</p>
+<p>Subroutine ode integrates a system of <span class="math notranslate nohighlight">\(n_{eqn}\)</span>
+first order ordinary differential equations of the form</p>
+<div class="math notranslate nohighlight">
+\[\frac{d}{dt}y_i = f(t, y_1, y_2, \dots, y_{n})\]</div>
+<p>with <span class="math notranslate nohighlight">\(y_i\)</span> given at <span class="math notranslate nohighlight">\(t\)</span>.</p>
+<p>The subroutine integrates from <span class="math notranslate nohighlight">\(t\)</span> to <span class="math notranslate nohighlight">\(t_{out}\)</span>.  On return the
+parameters in the call list are set for continuing the integration.
+the user has only to define a new value <span class="math notranslate nohighlight">\(t_{out}\)</span> and call
+<code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">ode()</span></code> again.</p>
+<p>The differential equations are actually solved by a suite of codes
+<code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">de()</span></code>, <code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">step1()</span></code>, and
+<code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">intrp()</span></code>. <code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">ode()</span></code> allocates virtual
+storage [as class variables] and calls <code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">de()</span></code>
+<code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">de()</span></code> is a supervisor which
+directs the solution.
+It calls on the routines <code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">step1()</span></code> and
+<code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">intrp()</span></code> to advance the integration and to interpolate at
+output points. <code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">step1()</span></code> uses a modified divided difference
+form of the Adams PECE formulas and local extrapolation.  It adjusts the order
+and step size to control the local error per unit step in a generalized sense.
+Normally each call to <code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">step1()</span></code> advances the solution one
+step in the direction of <span class="math notranslate nohighlight">\(t_{out}\)</span>.  For reasons of efficiency
+<code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">de()</span></code> integrates beyond <span class="math notranslate nohighlight">\(t_{out}\)</span> internally, though
+never beyond <span class="math notranslate nohighlight">\(t+10(t_{out}-t)\)</span>, and calls <code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">intrp()</span></code> to
+interpolate the solution at <span class="math notranslate nohighlight">\(t_{out}\)</span>.  An option is provided to stop the
+integration at <span class="math notranslate nohighlight">\(t_{out}\)</span> but it should be used only if it is impossible
+to continue the integration beyond <span class="math notranslate nohighlight">\(t_{out}\)</span>.</p>
+<p>This code is completely explained and documented in the text,
+<cite>Computer solution of ordinary differential equations, the initial value
+problem</cite> by L. F. Shampine and M. K. Gordon. for usage details, also see
+SLA-73-1060.</p>
+<p>The parameters represent:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">f</span></code> – subroutine <span class="math notranslate nohighlight">\(f(t,y,\dot{y})\)</span> to evaluate derivatives
+<span class="math notranslate nohighlight">\(\dot{y}(i)=dy(i)/dt\)</span></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">neqn</span></code> – number of equations to be integrated, <span class="math notranslate nohighlight">\(n_{eqn}\)</span></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">y[]</span></code> – solution vector at <span class="math notranslate nohighlight">\(t\)</span></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">t</span></code> – independent variable <span class="math notranslate nohighlight">\(t\)</span></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tout</span></code> – point at which solution is desired <span class="math notranslate nohighlight">\(t_{out}\)</span></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">relerr</span></code>, <code class="docutils literal notranslate"><span class="pre">abserr</span></code> – relative and absolute error tolerances for local
+error test. At each step the code requires <span class="math notranslate nohighlight">\(|\epsilon_{local}| \le
+|y|\times \epsilon_{rel} + \epsilon_{abs}\)</span> for each component of the local
+error and solution vectors</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iflag</span></code> – indicates status of integration</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">work</span></code> – [object] to hold information internal to code which is necessary
+for subsequent calls</p></li>
+</ul>
+<dl class="simple">
+<dt>First call to ode:</dt><dd><p>The user must provide storage in his calling program for the arrays in the
+call list, y(neqn), work(100+21*neqn), iwork(5),declare <cite>f</cite> in an external
+statement, supply the subroutine <span class="math notranslate nohighlight">\(f(t,y,\dot{y})\)</span> to evaluate
+<span class="math notranslate nohighlight">\(dy(i)/dt = \dot{y}(i) = f(t,y(1),y(2),...,y(n_{eqn}))\)</span> and
+initialize the parameters:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">neqn</span></code> – number of equations to be integrated</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">y[]</span></code> – vector of initial conditions</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">t</span></code> – starting point of integration</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tout</span></code> – point at which solution is desired</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">relerr</span></code>, <code class="docutils literal notranslate"><span class="pre">abserr</span></code> – relative and absolute local error tolerances</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iflag</span></code> – +1, -1.  indicator to initialize the code. Normal input is
++1. The user should set <code class="docutils literal notranslate"><span class="pre">iflag==-1</span></code> only if it is impossible to
+continue the integration beyond <span class="math notranslate nohighlight">\(t_{out}\)</span>. All parameters except
+<code class="docutils literal notranslate"><span class="pre">f</span></code>, <code class="docutils literal notranslate"><span class="pre">neqn</span></code> and
+<code class="docutils literal notranslate"><span class="pre">tout</span></code> may be altered by the code on output so must be variables in the
+calling program.</p></li>
+</ul>
+</dd>
+<dt>Output from ode:</dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">neqn</span></code> – unchanged</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">y[]</span></code> – solution at <span class="math notranslate nohighlight">\(t\)</span></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">t</span></code> – last point reached in integration; normal return has <code class="docutils literal notranslate"><span class="pre">t</span> <span class="pre">==</span>
+<span class="pre">tout</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tout</span></code> – unchanged</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">relerr</span></code>, <code class="docutils literal notranslate"><span class="pre">abserr</span></code> – normal return has tolerances unchanged.
+<code class="docutils literal notranslate"><span class="pre">iflag</span> <span class="pre">==</span> <span class="pre">3</span></code> signals tolerances increased</p></li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">iflag</span></code>:</dt><dd><ul>
+<li><p>2 – normal return.  integration reached <span class="math notranslate nohighlight">\(t_{out}\)</span></p></li>
+<li><p>3 – integration did not reach <span class="math notranslate nohighlight">\(t_{out}\)</span> because error
+tolerances too small. <code class="docutils literal notranslate"><span class="pre">relerr</span></code>, <code class="docutils literal notranslate"><span class="pre">abserr</span></code> increased appropriately
+for continuing</p></li>
+<li><p>4 – integration did not reach <span class="math notranslate nohighlight">\(t_{out}\)</span> because more than
+500 steps needed</p></li>
+<li><p>5 – integration did not reach <span class="math notranslate nohighlight">\(t_{out}\)</span> because equations
+appear to be stiff</p></li>
+<li><p>6 – integration did not reach <span class="math notranslate nohighlight">\(t_{out}\)</span> because solution
+vanished making pure relative error impossible. Must use non-zero
+abserr  to continue.</p></li>
+<li><p>7 – invalid input parameters (fatal error) the value of <code class="docutils literal notranslate"><span class="pre">iflag</span></code>
+is returned negative when the input value is negative and the
+integration does not reach <code class="docutils literal notranslate"><span class="pre">tout</span></code>, i.e., -3, -4, -5, -6.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+<dt>Subsequent calls to ode:</dt><dd><p>Subroutine returns with all information needed
+to continue the integration. If the integration reached <span class="math notranslate nohighlight">\(t_{out}\)</span>,
+the user need only define a new <span class="math notranslate nohighlight">\(t_{out}\)</span> and call again. If the
+integration did not reach  <span class="math notranslate nohighlight">\(t_{out}\)</span> and the user wants to continue
+he just calls again. In the case  <code class="docutils literal notranslate"><span class="pre">iflag==6</span></code> , the user must also alter
+the error criterion. The output value of <code class="docutils literal notranslate"><span class="pre">iflag</span></code> is the appropriate
+input value for subsequent calls. The only situation in which it should be
+altered is to stop the integration internally at the new <span class="math notranslate nohighlight">\(t_{out}\)</span>,
+i.e., change output
+<code class="docutils literal notranslate"><span class="pre">iflag=2</span></code> to input <code class="docutils literal notranslate"><span class="pre">iflag=-2</span></code>. Error tolerances may be changed by the
+user before continuing. All other parameters must remain unchanged.</p>
+</dd>
+</dl>
+</p>
+ </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>y</strong> – solution vector at t </p></li>
+<li><p><strong>t</strong> – independent variable </p></li>
+<li><p><strong>tout</strong> – point at which solution is desired </p></li>
+<li><p><strong>relerr</strong> – relative error tolerance for local error test </p></li>
+<li><p><strong>abserr</strong> – absolute error tolerance for local error test </p></li>
+<li><p><strong>iflag</strong> – status of integration</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-protected-functions">Protected Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7sansmic9ODESolver2deER6vectorIdERddRdRdRiRbRbRiRbRiRiRi">
+<span id="_CPPv3N7sansmic9ODESolver2deER6vectorIdERddRdRdRiRbRbRiRbRiRiRi"></span><span id="_CPPv2N7sansmic9ODESolver2deER6vectorIdERddRdRdRiRbRbRiRbRiRiRi"></span><span id="sansmic::ODESolver::de__vector:double:R.doubleR.double.doubleR.doubleR.iR.bR.bR.iR.bR.iR.iR.iR"></span><span class="target" id="classsansmic_1_1ODESolver_1ad139d3f182f0586b4732209bbd56af6c"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">de</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">y</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">t</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">tout</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">relerr</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">abserr</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">iflag</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">phase1</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">start</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">ns</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">nornd</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">k</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">kold</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">isnold</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7sansmic9ODESolver2deER6vectorIdERddRdRdRiRbRbRiRbRiRiRi" title="Link to this definition">#</a><br /></dt>
+<dd><p>Differential equation solver. </p>
+<p><p><p class="rubric">Abstract</p>
+<p>ode merely allocates storage for de to relieve the user of the inconvenience of
+a long call list and provides the public interface to the DE function.</p>
+<p>This code is completely explained and documented in the text,
+<em>Computer solution of ordinary differential equations, the initial
+value problem</em> by L. F. Shampine and M. K. Gordon.</p>
+</p>
+ </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>y</strong> – solution vector at T </p></li>
+<li><p><strong>t</strong> – independent variable </p></li>
+<li><p><strong>tout</strong> – point at which solution is desired </p></li>
+<li><p><strong>relerr</strong> – relative error tolerance </p></li>
+<li><p><strong>abserr</strong> – absolute error tolerance </p></li>
+<li><p><strong>iflag</strong> – status of integration </p></li>
+<li><p><strong>phase1</strong> – work variable </p></li>
+<li><p><strong>start</strong> – work variable </p></li>
+<li><p><strong>ns</strong> – work variable </p></li>
+<li><p><strong>nornd</strong> – work variable </p></li>
+<li><p><strong>k</strong> – work variable </p></li>
+<li><p><strong>kold</strong> – work variable </p></li>
+<li><p><strong>isnold</strong> – work variable</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7sansmic9ODESolver5intrpEdR6vectorIdEi">
+<span id="_CPPv3N7sansmic9ODESolver5intrpEdR6vectorIdEi"></span><span id="_CPPv2N7sansmic9ODESolver5intrpEdR6vectorIdEi"></span><span id="sansmic::ODESolver::intrp__double.vector:double:R.i"></span><span class="target" id="classsansmic_1_1ODESolver_1a382e2a88095e1d1fc8e40e7fea061d8b"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">intrp</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">xout</span></span>, <span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">yout</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">kold</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7sansmic9ODESolver5intrpEdR6vectorIdEi" title="Link to this definition">#</a><br /></dt>
+<dd><p>Approximate the solution near x by polymonial. </p>
+<p><p><p class="rubric">Abstract</p>
+<p>The methods in subroutine <code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">step1()</span></code> approximate the solution
+near <span class="math notranslate nohighlight">\(x\)</span> by a polynomial. Subroutine <code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">intrp()</span></code>
+approximates the solution at <span class="math notranslate nohighlight">\(x_{out}\)</span> by evaluating the polynomial
+there. Information defining this polynomial is passed from
+<code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">step1()</span></code> so <code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">intrp()</span></code> cannot be used
+alone.</p>
+<p>This code is completely explained and documented in the text, <em>Computer
+solution of ordinary differential equations, the initial value problem</em> by L.
+F. Shampine and M. K. Gordon. Further details on use of this code are available
+in <em>Solving ordinary differential equations with ODE, STEP, and INTRP</em>, by L.
+F. Shampine and M. K. Gordon, SLA-73-1060.</p>
+<dl>
+<dt>Input to <code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">intrp()</span></code></dt><dd><p>The user provides storage in the calling program for the arrays in the call
+list
+- <code class="docutils literal notranslate"><span class="pre">dimension</span> <span class="pre">y(neqn),yout(neqn),ypout(neqn),phi(neqn,16),psi(12)</span></code></p>
+<p>and defines
+- <code class="docutils literal notranslate"><span class="pre">xout</span></code> – point at which solution is desired.</p>
+<p>The remaining parameters are defined by a previous call to
+<code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">step1()</span></code> and should be passed to
+<code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">intrp()</span></code> unchanged.</p>
+</dd>
+<dt>Output from <code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">intrp()</span></code></dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">yout</span></code> – solution at <span class="math notranslate nohighlight">\(x_{out}\)</span></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ypout</span></code> – derivative of solution at <span class="math notranslate nohighlight">\(x_{out}\)</span></p></li>
+</ul>
+<p>the remaining parameters are returned unaltered from their input values.
+Integration with <code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">step1()</span></code> may be continued.</p>
+</dd>
+</dl>
+</p>
+ </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>xout</strong> – points at which solution is known </p></li>
+<li><p><strong>yout</strong> – solution at xout </p></li>
+<li><p><strong>kold</strong> – pass from sansmic::step1 - unchanged</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7sansmic9ODESolver5step1ERdRbRiRiRbRbRiRb">
+<span id="_CPPv3N7sansmic9ODESolver5step1ERdRbRiRiRbRbRiRb"></span><span id="_CPPv2N7sansmic9ODESolver5step1ERdRbRiRiRbRbRiRb"></span><span id="sansmic::ODESolver::step1__doubleR.bR.iR.iR.bR.bR.iR.bR"></span><span class="target" id="classsansmic_1_1ODESolver_1a9a61f61b6505c1dcc827ff588b9e828f"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">step1</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">eps</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">start</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">k</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">kold</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">crash</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">phase1</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">ns</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">nornd</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7sansmic9ODESolver5step1ERdRbRiRiRbRbRiRb" title="Link to this definition">#</a><br /></dt>
+<dd><p>Take a single solver step, used indirectly through ODE. </p>
+<p><p><p class="rubric">Abstract</p>
+<p>Subroutine <code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">step1()</span></code> is normally used indirectly through
+subroutine <code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">ode()</span></code>. Because <code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">ode()</span></code>
+suffices for most problems and is much easier to use, using it should be
+considered before using <code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">step1()</span></code> alone.</p>
+<p>Subroutine <code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">step1()</span></code> integrates a system of <span class="math notranslate nohighlight">\(n_{eqn}\)</span>
+first order ordinary differential equations one step, normally from <span class="math notranslate nohighlight">\(x\)</span>
+to <span class="math notranslate nohighlight">\(x+h\)</span>, using a modified divided difference form of the Adams PECE
+formulas. Local extrapolation is used to improve absolute stability and
+accuracy. The code adjusts its order and step size to control the local error
+per unit step in a generalized sense.  special devices are included to control
+roundoff error and to detect when the user is requesting too much accuracy.</p>
+<p>This code is completely explained and documented in the text, <em>Computer
+solution of ordinary differential equations, the initial value problem</em> by L.
+F. Shampine and M. K. Gordon. Further details on use of this code are available
+in <em>Solving ordinary differential equations with ODE, STEP, and INTRP</em>, by L.
+F. Shampine and M. K. Gordon, SLA-73-1060.</p>
+<p>The parameters represent:
+- <code class="docutils literal notranslate"><span class="pre">f</span></code> – subroutine to evaluate derivatives
+- <code class="docutils literal notranslate"><span class="pre">neqn</span></code> – number of equations to be integrated
+- <code class="docutils literal notranslate"><span class="pre">y[]</span></code> – solution vector at <span class="math notranslate nohighlight">\(x\)</span>
+- <code class="docutils literal notranslate"><span class="pre">x</span></code> – independent variable
+- <code class="docutils literal notranslate"><span class="pre">h</span></code> – appropriate step size for next step.  normally determined by code
+- <code class="docutils literal notranslate"><span class="pre">eps</span></code> – local error tolerance
+- <code class="docutils literal notranslate"><span class="pre">wt[]</span></code> – vector of weights for error criterion
+- <code class="docutils literal notranslate"><span class="pre">start</span></code> – logical variable set true for first step, false otherwise
+- <code class="docutils literal notranslate"><span class="pre">hold</span></code> – step size used for last successful step
+- <code class="docutils literal notranslate"><span class="pre">k</span></code> – appropriate order for next step (determined by code)
+- <code class="docutils literal notranslate"><span class="pre">kold</span></code> – order used for last successful step
+- <code class="docutils literal notranslate"><span class="pre">crash</span></code> – logical variable set true when no step can be taken, else false
+- <code class="docutils literal notranslate"><span class="pre">yp[]</span></code> – derivative of solution vector at <span class="math notranslate nohighlight">\(x\)</span> after successful step</p>
+<p>The arrays <code class="docutils literal notranslate"><span class="pre">phi</span></code>, <code class="docutils literal notranslate"><span class="pre">psi</span></code> are required for the interpolation subroutine
+<code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">intrp()</span></code>. The array <code class="docutils literal notranslate"><span class="pre">p</span></code> is internal to the code. The
+remaining nine variables and arrays are included in the call list only to
+eliminate local retention of variables between calls.</p>
+<dl>
+<dt>Input to <code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">step1()</span></code></dt><dd><dl>
+<dt>First call</dt><dd><p>The user must provide storage in his calling program for all arrays
+in the call list, namely</p>
+<div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">dimension</span>
+<span class="n">y</span><span class="p">(</span><span class="n">neqn</span><span class="p">),</span><span class="n">wt</span><span class="p">(</span><span class="n">neqn</span><span class="p">),</span><span class="n">phi</span><span class="p">(</span><span class="n">neqn</span><span class="p">,</span><span class="mi">16</span><span class="p">),</span><span class="n">p</span><span class="p">(</span><span class="n">neqn</span><span class="p">),</span><span class="n">yp</span><span class="p">(</span><span class="n">neqn</span><span class="p">),</span><span class="n">psi</span><span class="p">(</span><span class="mi">12</span><span class="p">),</span><span class="w"> </span><span class="mi">1</span>
+<span class="n">alpha</span><span class="p">(</span><span class="mi">12</span><span class="p">),</span><span class="n">beta</span><span class="p">(</span><span class="mi">12</span><span class="p">),</span><span class="n">sig</span><span class="p">(</span><span class="mi">13</span><span class="p">),</span><span class="n">v</span><span class="p">(</span><span class="mi">12</span><span class="p">),</span><span class="n">w</span><span class="p">(</span><span class="mi">12</span><span class="p">),</span><span class="n">g</span><span class="p">(</span><span class="mi">13</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The user must also declare <cite>start</cite>, <cite>crash</cite>, <cite>phase1</cite> and <cite>nornd</cite>
+logical variables and <cite>f</cite> an external subroutine, supply the subroutine
+<code class="docutils literal notranslate"><span class="pre">f(x,y,yp)</span></code>  to evaluate</p>
+<div class="math notranslate nohighlight">
+\[\frac{d}{dx} y_i = \dot{y}_i = f(x, y_1, y_2, \dots, y_n)\]</div>
+<p>and initialize only the following parameters.
+(<em>Note: this is provided by the PlumeRise class for the specific
+SANSMIC case.</em>)</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">neqn</span></code> – number of equations to be integrated</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">y[]</span></code> – vector of initial values of dependent variables</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">x</span></code> – initial value of the independent variable</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">h</span></code> – nominal step size indicating direction of integration and
+maximum size of step.  must be variable</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">eps</span></code> – local error tolerance per step.  must be variable</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">wt[]</span></code> – vector of non-zero weights for error criterion</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">start</span></code> – <code class="docutils literal notranslate"><span class="pre">true</span></code></p></li>
+</ul>
+<p>step1  requires that the l2 norm of the vector with components
+local error(l)/wt(l)  be less than  eps  for a successful step.  the
+array  wt  allows the user to specify an error test appropriate
+for their problem.  For example,</p>
+<dl class="simple">
+<dt>wt(l) = 1.0</dt><dd><p>specifies absolute error,</p>
+</dd>
+<dt>wt(l) = abs(y(l))</dt><dd><p>error relative to the most recent value of the l-th component of
+the solution, wt(l) = abs(yp(l)) error relative to the most recent
+value of the l-th component of the derivative, wt(l) =
+amax1(wt(l),abs(y(l))) error relative to the largest magnitude of
+l-th component obtained so far, wt(l) abs(y(l))*relerr/eps +
+abserr/eps specifies a mixed relative-absolute test where  relerr
+is relative error, abserr  is absolute error and  eps =
+amax1(relerr,abserr) .</p>
+</dd>
+</dl>
+</dd>
+<dt>Subsequent calls</dt><dd><p>Subroutine <code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">step1()</span></code> is designed so that all
+information needed to continue the integration, including the step size
+h  and the order k , is returned with each step.  with the exception of
+the step size, the error tolerance, and the weights, none of the
+parameters should be altered. the array  wt  must be updated after each
+step to maintain relative error tests like those above.  normally the
+integration is continued just beyond the desired endpoint and the
+solution interpolated there with subroutine intrp . if it is impossible
+to integrate beyond the endpoint, the step size may be reduced to hit
+the endpoint since the code will not take a step larger than the  h
+input. changing the direction of integration, i.e., the sign of  h ,
+requires the user set  start = .true. before calling  step1 again. this
+is the only situation in which  start should be altered.</p>
+</dd>
+</dl>
+</dd>
+<dt>Output from STEP1</dt><dd><dl class="simple">
+<dt>Successful step</dt><dd><p>the subroutine returns after each successful step with  start  and
+crash  set .false. .  x  represents the independent variable
+advanced one step of length  hold  from its value on input and  y
+the solution vector at the new value of  x .  all other parameters
+represent information corresponding to the new  x  needed to
+continue the integration.</p>
+</dd>
+<dt>Unsuccessful step</dt><dd><p>when the error tolerance is too small for the machine precision,
+the subroutine returns without taking a step and  crash = .true. .
+an appropriate step size and error tolerance for continuing are
+estimated and all other information is restored as upon input
+before returning.  to continue with the larger tolerance, the user
+just calls the code again.  a restart is neither required nor
+desirable.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</p>
+ </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>eps</strong> – local error tolerance </p></li>
+<li><p><strong>start</strong> – logical variable set true for first step </p></li>
+<li><p><strong>k</strong> – appropriate order for next step </p></li>
+<li><p><strong>kold</strong> – order used for last successful step </p></li>
+<li><p><strong>crash</strong> – logical variable set true when no step can be taken </p></li>
+<li><p><strong>phase1</strong> – elimainate local retention of variables </p></li>
+<li><p><strong>ns</strong> – elimainate local retention of variables </p></li>
+<li><p><strong>nornd</strong> – elimainate local retention of variables</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-protected-attributes">Protected Attributes</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7sansmic9ODESolver4neqnE">
+<span id="_CPPv3N7sansmic9ODESolver4neqnE"></span><span id="_CPPv2N7sansmic9ODESolver4neqnE"></span><span id="sansmic::ODESolver::neqn__i"></span><span class="target" id="classsansmic_1_1ODESolver_1a33830278b00ee5e28b3d53224c624787"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">neqn</span></span></span><a class="headerlink" href="#_CPPv4N7sansmic9ODESolver4neqnE" title="Link to this definition">#</a><br /></dt>
+<dd><p>the number of equations </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7sansmic9ODESolver5dy_dxE">
+<span id="_CPPv3N7sansmic9ODESolver5dy_dxE"></span><span id="_CPPv2N7sansmic9ODESolver5dy_dxE"></span><span id="sansmic::ODESolver::dy_dx__DerivableP"></span><span class="target" id="classsansmic_1_1ODESolver_1a26a06cbb6b712c98ec99ff2bcd8be3aa"></span><a class="reference internal" href="classsansmic_1_1Derivable.html#_CPPv4N7sansmic9DerivableE" title="sansmic::Derivable"><span class="n"><span class="pre">Derivable</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">dy_dx</span></span></span><a class="headerlink" href="#_CPPv4N7sansmic9ODESolver5dy_dxE" title="Link to this definition">#</a><br /></dt>
+<dd><p>the derivative function object </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="classsansmic_1_1Model.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Class Model</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="classsansmic_1_1PlumeRise.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Class PlumeRise</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#class-documentation">Class Documentation</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic9ODESolverE"><code class="docutils literal notranslate"><span class="pre">ODESolver</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic9ODESolver9ODESolverEv"><code class="docutils literal notranslate"><span class="pre">ODESolver()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic9ODESolver9ODESolverEiP9Derivable"><code class="docutils literal notranslate"><span class="pre">ODESolver()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic9ODESolver7num_eqnEv"><code class="docutils literal notranslate"><span class="pre">num_eqn()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic9ODESolver3odeER6vectorIdERddRdRdRi"><code class="docutils literal notranslate"><span class="pre">ode()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic9ODESolver2deER6vectorIdERddRdRdRiRbRbRiRbRiRiRi"><code class="docutils literal notranslate"><span class="pre">de()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic9ODESolver5intrpEdR6vectorIdEi"><code class="docutils literal notranslate"><span class="pre">intrp()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic9ODESolver5step1ERdRbRiRiRbRbRiRb"><code class="docutils literal notranslate"><span class="pre">step1()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic9ODESolver4neqnE"><code class="docutils literal notranslate"><span class="pre">neqn</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic9ODESolver5dy_dxE"><code class="docutils literal notranslate"><span class="pre">dy_dx</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../_sources/apidocs/classsansmic_1_1ODESolver.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2024 National Technology and Engineering Solutions of Sandia, LLC. Under the terms of Contract DE-NA0003525 with NTESS, the U.S. Government retains certain rights in this software..
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.0.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

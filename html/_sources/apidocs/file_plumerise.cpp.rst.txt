@@ -1,0 +1,32 @@
+
+.. _file_plumerise.cpp:
+
+File plumerise.cpp
+==================
+
+
+Plume rise derivative class. 
+
+
+Definition (``plumerise.cpp``)
+------------------------------
+
+
+
+
+
+
+Includes
+--------
+
+
+- ``cmath``
+
+- ``libsansmic.hpp`` (:ref:`file_libsansmic.hpp`)
+
+- ``vector``
+
+
+
+
+

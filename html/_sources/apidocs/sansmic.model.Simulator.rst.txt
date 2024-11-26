@@ -1,0 +1,37 @@
+Simulator
+=========
+
+.. currentmodule:: sansmic.model
+
+.. autoclass:: Simulator
+
+
+   .. rubric:: Summary
+   .. autosummary::
+
+
+
+   
+      ~Simulator.close
+      ~Simulator.get_current_state
+      ~Simulator.open
+      ~Simulator.run_sim
+
+
+
+
+
+   
+      ~Simulator.current_stage
+      ~Simulator.current_time
+      ~Simulator.current_volume
+      ~Simulator.is_open
+      ~Simulator.is_running
+      ~Simulator.num_stages
+      ~Simulator.results
+      ~Simulator.steps
+
+
+
+   .. rubric:: Details
+

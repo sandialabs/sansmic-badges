@@ -1,0 +1,2485 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Index &#8212; Sansmic</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+
+    <script src="_static/documentation_options.js?v=76e2d817"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-23TNKN36XM"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-23TNKN36XM');
+            </script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-23TNKN36XM');
+            </script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'genindex';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.0';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://sandialabs.github.io/sansmic/_static/switcher.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'v1.0.0';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner = true;
+        </script>
+    <script src="_static/pypi-icon.js?v=74687d30"></script>
+    <link rel="index" title="Index" href="#" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="1.0.0" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Sansmic</p>
+  
+</a></div>
+    
+      <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="userman.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="refman.html">
+    API Reference
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/sandialabs/sansmic" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/sansmic/" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.sandia.gov" title="Sandia National Laboratories" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="_static/snl_logo.png" class="icon-link-image" alt="Sandia National Laboratories"/></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="userman.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="refman.html">
+    API Reference
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/sandialabs/sansmic" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/sansmic/" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.sandia.gov" title="Sandia National Laboratories" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="_static/snl_logo.png" class="icon-link-image" alt="Sandia National Laboratories"/></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item"><nav class="sidebar-indices-items" aria-labelledby="pst-indices-navigation-heading-2">
+  <p id="pst-indices-navigation-heading-2" class="sidebar-indices-items__title" role="heading" aria-level="1">Indices</p>
+  <ul class="indices-link">
+        <li class="toctree-l1">
+          <a class="reference internal"
+             href="#"
+             accesskey="I">General Index</a>
+        </li>
+        <li class="toctree-l1">
+          <a class="reference internal" href="py-modindex.html">Python Module Index</a>
+        </li>
+  </ul>
+</nav></div>
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none"></div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+
+<h1 id="index">Index</h1>
+
+<div class="genindex-jumpbox">
+ <a href="#Symbols"><strong>Symbols</strong></a>
+ | <a href="#_"><strong>_</strong></a>
+ | <a href="#A"><strong>A</strong></a>
+ | <a href="#B"><strong>B</strong></a>
+ | <a href="#C"><strong>C</strong></a>
+ | <a href="#D"><strong>D</strong></a>
+ | <a href="#E"><strong>E</strong></a>
+ | <a href="#F"><strong>F</strong></a>
+ | <a href="#G"><strong>G</strong></a>
+ | <a href="#H"><strong>H</strong></a>
+ | <a href="#I"><strong>I</strong></a>
+ | <a href="#J"><strong>J</strong></a>
+ | <a href="#L"><strong>L</strong></a>
+ | <a href="#M"><strong>M</strong></a>
+ | <a href="#N"><strong>N</strong></a>
+ | <a href="#O"><strong>O</strong></a>
+ | <a href="#P"><strong>P</strong></a>
+ | <a href="#Q"><strong>Q</strong></a>
+ | <a href="#R"><strong>R</strong></a>
+ | <a href="#S"><strong>S</strong></a>
+ | <a href="#Software code"><strong>Software code</strong></a>
+ | <a href="#S"><strong>S</strong></a>
+ | <a href="#T"><strong>T</strong></a>
+ | <a href="#U"><strong>U</strong></a>
+ | <a href="#V"><strong>V</strong></a>
+ | <a href="#W"><strong>W</strong></a>
+ | <a href="#X"><strong>X</strong></a>
+ | <a href="#Y"><strong>Y</strong></a>
+ | <a href="#Z"><strong>Z</strong></a>
+ 
+</div>
+<h2 id="Symbols">Symbols</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    [defaults]
+
+      <ul>
+        <li><a href="um/scenarios.html#confval-defaults">configuration value</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="nomenclature.html#term-F"><strong>°F</strong></a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="_">_</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidocs/sansmic.app.AboutAction.html#sansmic.app.AboutAction.__call__">__call__() (AboutAction method)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="A">A</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidocs/sansmic.empirical.a.html#sansmic.empirical.a">a (in module sansmic.empirical)</a>
+</li>
+      <li><a href="apidocs/sansmic.app.AboutAction.html#sansmic.app.AboutAction">AboutAction (class in sansmic.app)</a>
+</li>
+      <li>
+    absolute-error
+
+      <ul>
+        <li><a href="um/scenarios.html#confval-absolute-error">configuration value</a>
+</li>
+      </ul></li>
+      <li><a href="apidocs/sansmic.model.AdvancedOptions.html#sansmic.model.AdvancedOptions.absolute_error">absolute_error (AdvancedOptions attribute)</a>
+
+      <ul>
+        <li><a href="apidocs/sansmic.libsansmic.CScenario.html#sansmic.libsansmic.CScenario.absolute_error">(CScenario property)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidocs/sansmic.libsansmic.CScenario.html#sansmic.libsansmic.CScenario.add_stage">add_stage() (CScenario method)</a>
+</li>
+      <li><a href="apidocs/sansmic.app.AboutAction.html#sansmic.app.AboutAction.add_to_parser">add_to_parser() (AboutAction class method)</a>
+</li>
+      <li><a href="apidocs/sansmic.model.Scenario.html#sansmic.model.Scenario.advanced">advanced (Scenario attribute)</a>
+</li>
+      <li><a href="apidocs/sansmic.model.AdvancedOptions.html#sansmic.model.AdvancedOptions">AdvancedOptions (class in sansmic.model)</a>
+</li>
+      <li><a href="apidocs/sansmic.libsansmic.CResults.html#sansmic.libsansmic.CResults.amd">amd (CResults property)</a>
+</li>
+      <li><a href="nomenclature.html#term-API-organization"><strong>API (organization)</strong></a>
+
+      <ul>
+        <li><a href="nomenclature.html#term-API-software"><strong>(software)</strong></a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="B">B</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="nomenclature.html#term-barrel"><strong>barrel</strong></a>
+</li>
+      <li><a href="apidocs/sansmic.model.Units.html#sansmic.model.Units.barrel">barrel() (Units class method)</a>
+</li>
+      <li><a href="nomenclature.html#term-barrels"><strong>barrels</strong></a>
+</li>
+      <li><a href="nomenclature.html#term-bbl"><strong>bbl</strong></a>
+</li>
+      <li><a href="nomenclature.html#term-BPD"><strong>BPD</strong></a>
+</li>
+      <li>
+    brine-injection-depth
+
+      <ul>
+        <li><a href="um/scenarios.html#confval-brine-injection-depth">configuration value</a>
+</li>
+      </ul></li>
+      <li>
+    brine-injection-rate
+
+      <ul>
+        <li><a href="um/scenarios.html#confval-brine-injection-rate">configuration value</a>
+</li>
+      </ul></li>
+      <li>
+    brine-injection-sg
+
+      <ul>
+        <li><a href="um/scenarios.html#confval-brine-injection-sg">configuration value</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    brine-interface-depth
+
+      <ul>
+        <li><a href="um/scenarios.html#confval-brine-interface-depth">configuration value</a>
+</li>
+      </ul></li>
+      <li>
+    brine-production-depth
+
+      <ul>
+        <li><a href="um/scenarios.html#confval-brine-production-depth">configuration value</a>
+</li>
+      </ul></li>
+      <li><a href="apidocs/sansmic.model.StageDefinition.html#sansmic.model.StageDefinition.brine_injection_depth">brine_injection_depth (StageDefinition attribute)</a>
+</li>
+      <li><a href="apidocs/sansmic.model.StageDefinition.html#sansmic.model.StageDefinition.brine_injection_rate">brine_injection_rate (StageDefinition attribute)</a>
+</li>
+      <li><a href="apidocs/sansmic.model.StageDefinition.html#sansmic.model.StageDefinition.brine_injection_sg">brine_injection_sg (StageDefinition attribute)</a>
+</li>
+      <li><a href="apidocs/sansmic.model.StageDefinition.html#sansmic.model.StageDefinition.brine_interface_depth">brine_interface_depth (StageDefinition attribute)</a>
+</li>
+      <li><a href="apidocs/sansmic.model.StageDefinition.html#sansmic.model.StageDefinition.brine_production_depth">brine_production_depth (StageDefinition attribute)</a>
+</li>
+      <li><a href="apidocs/sansmic.model.Results.html#sansmic.model.Results.brine_production_rate">brine_production_rate (Results property)</a>
+</li>
+      <li><a href="apidocs/sansmic.model.Results.html#sansmic.model.Results.brine_production_sg">brine_production_sg (Results property)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="C">C</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidocs/sansmic.empirical.c.html#sansmic.empirical.c">c (in module sansmic.empirical)</a>
+</li>
+      <li><a href="apidocs/sansmic.libsansmic.CResults.html#sansmic.libsansmic.CResults.C_new">C_new (CResults property)</a>
+</li>
+      <li><a href="apidocs/sansmic.libsansmic.CResults.html#sansmic.libsansmic.CResults.C_old">C_old (CResults property)</a>
+</li>
+      <li><a href="apidocs/sansmic.libsansmic.CResults.html#sansmic.libsansmic.CResults.C_plm">C_plm (CResults property)</a>
+</li>
+      <li>
+    cavern-height
+
+      <ul>
+        <li><a href="um/scenarios.html#confval-cavern-height">configuration value</a>
+</li>
+      </ul></li>
+      <li><a href="apidocs/sansmic.model.Results.html#sansmic.model.Results.cavern_average_brine_sg">cavern_average_brine_sg (Results property)</a>
+</li>
+      <li><a href="apidocs/sansmic.libsansmic.CScenario.html#sansmic.libsansmic.CScenario.cavern_height">cavern_height (CScenario property)</a>
+
+      <ul>
+        <li><a href="apidocs/sansmic.model.Scenario.html#sansmic.model.Scenario.cavern_height">(Scenario attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="apidocs/sansmic.libsansmic.CStage.html#sansmic.libsansmic.CStage.cavern_sg">cavern_sg (CStage property)</a>
+</li>
+      <li><a href="apidocs/sansmic.model.Results.html#sansmic.model.Results.cavern_total_depth">cavern_total_depth (Results property)</a>
+</li>
+      <li><a href="apidocs/sansmic.model.Results.html#sansmic.model.Results.cavern_volume">cavern_volume (Results property)</a>
+</li>
+      <li><a href="apidocs/sansmic.model.Results.html#sansmic.model.Results.cell_injection_rate">cell_injection_rate (Results property)</a>
+</li>
+      <li><a href="apidocs/sansmic.model.Results.html#sansmic.model.Results.cell_sg">cell_sg (Results property)</a>
+</li>
+      <li><a href="apidocs/sansmic.model.Results.html#sansmic.model.Results.cell_volume">cell_volume (Results property)</a>
+</li>
+      <li><a href="apidocs/sansmic.model.Units.html#sansmic.model.Units.centimeter">centimeter() (Units class method)</a>
+</li>
+      <li><a href="apidocs/sansmic.libsansmic.CGeometryFormat.html#sansmic.libsansmic.CGeometryFormat">CGeometryFormat (class in sansmic.libsansmic)</a>
+</li>
+      <li><a href="apidocs/sansmic.model.Results.html#sansmic.model.Results.change_in_radius">change_in_radius (Results property)</a>
+</li>
+      <li><a href="apidocs/sansmic.model.Simulator.html#sansmic.model.Simulator.close">close() (Simulator method)</a>
+</li>
+      <li><a href="apidocs/sansmic.libsansmic.CModel.html#sansmic.libsansmic.CModel.close_outfiles">close_outfiles() (CModel method)</a>
+</li>
+      <li><a href="apidocs/sansmic.libsansmic.CModel.html#sansmic.libsansmic.CModel">CModel (class in sansmic.libsansmic)</a>
+</li>
+      <li>
+    coallescing-wells
+
+      <ul>
+        <li><a href="um/scenarios.html#confval-coallescing-wells">configuration value</a>
+</li>
+      </ul></li>
+      <li><a href="apidocs/sansmic.model.AdvancedOptions.html#sansmic.model.AdvancedOptions.coallescing_wells">coallescing_wells (AdvancedOptions attribute)</a>
+
+      <ul>
+        <li><a href="apidocs/sansmic.libsansmic.CScenario.html#sansmic.libsansmic.CScenario.coallescing_wells">(CScenario property)</a>
+</li>
+      </ul></li>
+      <li><a href="nomenclature.html#term-coeff."><strong>coeff.</strong></a>
+</li>
+      <li>
+    comments
+
+      <ul>
+        <li><a href="um/scenarios.html#confval-comments">configuration value</a>
+</li>
+      </ul></li>
+      <li><a href="apidocs/sansmic.model.Scenario.html#sansmic.model.Scenario.comments">comments (Scenario attribute)</a>
+</li>
+      <li>
+    configuration value
+
+      <ul>
+        <li><a href="um/scenarios.html#confval-defaults">[defaults]</a>
+</li>
+        <li><a href="um/scenarios.html#confval-absolute-error">absolute-error</a>
+</li>
+        <li><a href="um/scenarios.html#confval-brine-injection-depth">brine-injection-depth</a>
+</li>
+        <li><a href="um/scenarios.html#confval-brine-injection-rate">brine-injection-rate</a>
+</li>
+        <li><a href="um/scenarios.html#confval-brine-injection-sg">brine-injection-sg</a>
+</li>
+        <li><a href="um/scenarios.html#confval-brine-interface-depth">brine-interface-depth</a>
+</li>
+        <li><a href="um/scenarios.html#confval-brine-production-depth">brine-production-depth</a>
+</li>
+        <li><a href="um/scenarios.html#confval-cavern-height">cavern-height</a>
+</li>
+        <li><a href="um/scenarios.html#confval-coallescing-wells">coallescing-wells</a>
+</li>
+        <li><a href="um/scenarios.html#confval-comments">comments</a>
+</li>
+        <li><a href="um/scenarios.html#confval-diffusion-beta">diffusion-beta</a>
+</li>
+        <li><a href="um/scenarios.html#confval-dissolution-factor">dissolution-factor</a>
+</li>
+        <li><a href="um/scenarios.html#confval-eddy-coefficient">eddy-coefficient</a>
+</li>
+        <li><a href="um/scenarios.html#confval-entrainment-coeff">entrainment-coeff</a>
+</li>
+        <li><a href="um/scenarios.html#confval-floor-depth">floor-depth</a>
+</li>
+        <li><a href="um/scenarios.html#confval-geometry-data">geometry-data</a>
+</li>
+        <li><a href="um/scenarios.html#confval-geometry-data.depths">geometry-data.depths</a>
+</li>
+        <li><a href="um/scenarios.html#confval-geometry-data.radii">geometry-data.radii</a>
+</li>
+        <li><a href="um/scenarios.html#confval-geometry-data.volumes">geometry-data.volumes</a>
+</li>
+        <li><a href="um/scenarios.html#confval-geometry-format">geometry-format</a>
+</li>
+        <li><a href="um/scenarios.html#confval-injection-duration">injection-duration</a>
+</li>
+        <li><a href="um/scenarios.html#confval-inner-tbg-inside-diam">inner-tbg-inside-diam</a>
+</li>
+        <li><a href="um/scenarios.html#confval-inner-tbg-outside-diam">inner-tbg-outside-diam</a>
+</li>
+        <li><a href="um/scenarios.html#confval-insolubles-ratio">insolubles-ratio</a>
+</li>
+        <li><a href="um/scenarios.html#confval-jet-model-version">jet-model-version</a>
+</li>
+        <li><a href="um/scenarios.html#confval-max-brine-sg">max-brine-sg</a>
+</li>
+        <li><a href="um/scenarios.html#confval-molecular-diffusion">molecular-diffusion</a>
+</li>
+        <li><a href="um/scenarios.html#confval-num-cells">num-cells</a>
+</li>
+        <li><a href="um/scenarios.html#confval-outer-csg-inside-diam">outer-csg-inside-diam</a>
+</li>
+        <li><a href="um/scenarios.html#confval-outer-csg-outside-diam">outer-csg-outside-diam</a>
+</li>
+        <li><a href="um/scenarios.html#confval-product-injection-rate">product-injection-rate</a>
+</li>
+        <li><a href="um/scenarios.html#confval-relative-error">relative-error</a>
+</li>
+        <li><a href="um/scenarios.html#confval-rest-duration">rest-duration</a>
+</li>
+        <li><a href="um/scenarios.html#confval-save-frequency">save-frequency</a>
+</li>
+        <li><a href="um/scenarios.html#confval-set-cavern-sg">set-cavern-sg</a>
+</li>
+        <li><a href="um/scenarios.html#confval-set-initial-conditions">set-initial-conditions</a>
+</li>
+        <li><a href="um/scenarios.html#confval-simulation-mode">simulation-mode</a>
+</li>
+        <li><a href="um/scenarios.html#confval-solid-density">solid-density</a>
+</li>
+        <li><a href="um/scenarios.html#confval-solver-timestep">solver-timestep</a>
+</li>
+        <li><a href="um/scenarios.html#confval-stop-condition">stop-condition</a>
+</li>
+        <li><a href="um/scenarios.html#confval-stop-value">stop-value</a>
+</li>
+        <li><a href="um/scenarios.html#confval-title">title</a>
+</li>
+        <li><a href="um/scenarios.html#confval-ullage-standoff">ullage-standoff</a>
+</li>
+        <li><a href="um/scenarios.html#confval-units">units</a>
+</li>
+        <li><a href="um/scenarios.html#confval-well-separation">well-separation</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidocs/sansmic.libsansmic.CModel.html#sansmic.libsansmic.CModel.configure">configure() (CModel method)</a>
+</li>
+      <li><a href="apidocs/sansmic.model.RateScheduleType.html#sansmic.model.RateScheduleType.CONSTANT_RATE">CONSTANT_RATE (RateScheduleType attribute)</a>
+</li>
+      <li><a href="apidocs/sansmic.app.convert.html#sansmic.app.convert">convert() (in module sansmic.app)</a>
+</li>
+      <li><a href="apidocs/sansmic.libsansmic.CResults.html#sansmic.libsansmic.CResults">CResults (class in sansmic.libsansmic)</a>
+</li>
+      <li><a href="apidocs/sansmic.libsansmic.CRunMode.html#sansmic.libsansmic.CRunMode">CRunMode (class in sansmic.libsansmic)</a>
+</li>
+      <li><a href="apidocs/sansmic.libsansmic.CSalt.html#sansmic.libsansmic.CSalt">CSalt (class in sansmic.libsansmic)</a>
+</li>
+      <li><a href="apidocs/sansmic.libsansmic.CScenario.html#sansmic.libsansmic.CScenario">CScenario (class in sansmic.libsansmic)</a>
+</li>
+      <li><a href="apidocs/sansmic.libsansmic.CStage.html#sansmic.libsansmic.CStage">CStage (class in sansmic.libsansmic)</a>
+</li>
+      <li><a href="nomenclature.html#term-CSV"><strong>CSV</strong></a>
+</li>
+      <li><a href="apidocs/sansmic.model.Units.html#sansmic.model.Units.cubic_foot">cubic_foot() (Units class method)</a>
+</li>
+      <li><a href="apidocs/sansmic.model.Results.html#sansmic.model.Results.cumulative_fill_volume">cumulative_fill_volume (Results property)</a>
+</li>
+      <li><a href="apidocs/sansmic.model.Results.html#sansmic.model.Results.cumulative_injection_volume">cumulative_injection_volume (Results property)</a>
+</li>
+      <li><a href="apidocs/sansmic.model.Results.html#sansmic.model.Results.cumulative_insoluble_material_vented">cumulative_insoluble_material_vented (Results property)</a>
+</li>
+      <li><a href="apidocs/sansmic.model.Results.html#sansmic.model.Results.cumulative_insoluble_material_volume">cumulative_insoluble_material_volume (Results property)</a>
+</li>
+      <li><a href="apidocs/sansmic.model.Simulator.html#sansmic.model.Simulator.current_stage">current_stage (Simulator property)</a>
+</li>
+      <li><a href="apidocs/sansmic.model.Simulator.html#sansmic.model.Simulator.current_time">current_time (Simulator property)</a>
+</li>
+      <li><a href="apidocs/sansmic.model.Simulator.html#sansmic.model.Simulator.current_volume">current_volume (Simulator property)</a>
+</li>
+      <li><a href="nomenclature.html#term-customary-units"><strong>customary units</strong></a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="D">D</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidocs/sansmic.libsansmic.CResults.html#sansmic.libsansmic.CResults.D_coeff">D_coeff (CResults property)</a>
+</li>
+      <li><a href="apidocs/sansmic.model.RateScheduleType.html#sansmic.model.RateScheduleType.DATAFILE">DATAFILE (RateScheduleType attribute)</a>
+</li>
+      <li><a href="apidocs/sansmic.libsansmic.CResults.html#sansmic.libsansmic.CResults.dC">dC (CResults property)</a>
+</li>
+      <li><a href="apidocs/sansmic.libsansmic.CResults.html#sansmic.libsansmic.CResults.dC_dz">dC_dz (CResults property)</a>
+</li>
+      <li><a href="apidocs/sansmic.model.Scenario.html#sansmic.model.Scenario.defaults">defaults (Scenario attribute)</a>
+
+      <ul>
+        <li><a href="apidocs/sansmic.model.StageDefinition.html#sansmic.model.StageDefinition.defaults">(StageDefinition attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="nomenclature.html#term-degree-Fahrenheit"><strong>degree Fahrenheit</strong></a>
+</li>
+      <li><a href="apidocs/sansmic.model.StopCondition.html#sansmic.model.StopCondition.DEPTH">DEPTH (StopCondition attribute)</a>
+</li>
+      <li><a href="apidocs/sansmic.libsansmic.CScenario.html#sansmic.libsansmic.CScenario.depth_vector">depth_vector (CScenario property)</a>
+</li>
+      <li><a href="apidocs/sansmic.model.Results.html#sansmic.model.Results.depths">depths (Results property)</a>
+</li>
+      <li><a href="apidocs/sansmic.model.Results.html#sansmic.model.Results.df_t_1D">df_t_1D (Results attribute)</a>
+</li>
+      <li><a href="apidocs/sansmic.model.Results.html#sansmic.model.Results.df_t_z_2D">df_t_z_2D (Results attribute)</a>
+</li>
+      <li><a href="apidocs/sansmic.model.Results.html#sansmic.model.Results.df_z_1D">df_z_1D (Results attribute)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    diffusion-beta
+
+      <ul>
+        <li><a href="um/scenarios.html#confval-diffusion-beta">configuration value</a>
+</li>
+      </ul></li>
+      <li><a href="apidocs/sansmic.model.AdvancedOptions.html#sansmic.model.AdvancedOptions.diffusion_beta">diffusion_beta (AdvancedOptions attribute)</a>
+
+      <ul>
+        <li><a href="apidocs/sansmic.libsansmic.CScenario.html#sansmic.libsansmic.CScenario.diffusion_beta">(CScenario property)</a>
+</li>
+      </ul></li>
+      <li>
+    dissolution-factor
+
+      <ul>
+        <li><a href="um/scenarios.html#confval-dissolution-factor">configuration value</a>
+</li>
+      </ul></li>
+      <li><a href="apidocs/sansmic.model.AdvancedOptions.html#sansmic.model.AdvancedOptions.dissolution_factor">dissolution_factor (AdvancedOptions attribute)</a>
+
+      <ul>
+        <li><a href="apidocs/sansmic.libsansmic.CScenario.html#sansmic.libsansmic.CScenario.dissolution_factor">(CScenario property)</a>
+</li>
+      </ul></li>
+      <li><a href="nomenclature.html#term-DOE"><strong>DOE</strong></a>
+</li>
+      <li><a href="apidocs/sansmic.libsansmic.CResults.html#sansmic.libsansmic.CResults.dr">dr (CResults property)</a>
+</li>
+      <li><a href="apidocs/sansmic.libsansmic.CResults.html#sansmic.libsansmic.CResults.dr_0">dr_0 (CResults property)</a>
+</li>
+      <li><a href="apidocs/sansmic.libsansmic.CResults.html#sansmic.libsansmic.CResults.dt">dt (CResults property)</a>
+</li>
+      <li><a href="apidocs/sansmic.model.StopCondition.html#sansmic.model.StopCondition.DURATION">DURATION (StopCondition attribute)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="E">E</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    eddy-coefficient
+
+      <ul>
+        <li><a href="um/scenarios.html#confval-eddy-coefficient">configuration value</a>
+</li>
+      </ul></li>
+      <li><a href="apidocs/sansmic.model.AdvancedOptions.html#sansmic.model.AdvancedOptions.eddy_coefficient">eddy_coefficient (AdvancedOptions attribute)</a>
+
+      <ul>
+        <li><a href="apidocs/sansmic.libsansmic.CScenario.html#sansmic.libsansmic.CScenario.eddy_coefficient">(CScenario property)</a>
+</li>
+      </ul></li>
+      <li><a href="apidocs/sansmic.model.Results.html#sansmic.model.Results.effective_diffusion_coefficient">effective_diffusion_coefficient (Results property)</a>
+</li>
+      <li><a href="apidocs/sansmic.model.Results.html#sansmic.model.Results.effective_dissolution_factor">effective_dissolution_factor (Results property)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    entrainment-coeff
+
+      <ul>
+        <li><a href="um/scenarios.html#confval-entrainment-coeff">configuration value</a>
+</li>
+      </ul></li>
+      <li><a href="apidocs/sansmic.model.AdvancedOptions.html#sansmic.model.AdvancedOptions.entrainment_coeff">entrainment_coeff (AdvancedOptions attribute)</a>
+
+      <ul>
+        <li><a href="apidocs/sansmic.libsansmic.CScenario.html#sansmic.libsansmic.CScenario.entrainment_coeff">(CScenario property)</a>
+</li>
+      </ul></li>
+      <li><a href="nomenclature.html#term-EOT"><strong>EOT</strong></a>
+</li>
+      <li><a href="apidocs/sansmic.libsansmic.CResults.html#sansmic.libsansmic.CResults.err">err (CResults property)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="F">F</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidocs/sansmic.libsansmic.CResults.html#sansmic.libsansmic.CResults.f_dis">f_dis (CResults property)</a>
+</li>
+      <li><a href="apidocs/sansmic.libsansmic.CResults.html#sansmic.libsansmic.CResults.f_flag">f_flag (CResults property)</a>
+</li>
+      <li><a href="nomenclature.html#term-feet"><strong>feet</strong></a>
+</li>
+      <li><a href="apidocs/sansmic.libsansmic.CStage.html#sansmic.libsansmic.CStage.fill_rate">fill_rate (CStage property)</a>
+</li>
+      <li>
+    floor-depth
+
+      <ul>
+        <li><a href="um/scenarios.html#confval-floor-depth">configuration value</a>
+</li>
+      </ul></li>
+      <li><a href="apidocs/sansmic.libsansmic.CScenario.html#sansmic.libsansmic.CScenario.floor_depth">floor_depth (CScenario property)</a>
+
+      <ul>
+        <li><a href="apidocs/sansmic.model.Scenario.html#sansmic.model.Scenario.floor_depth">(Scenario attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="nomenclature.html#term-foot"><strong>foot</strong></a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidocs/sansmic.model.Units.html#sansmic.model.Units.foot">foot() (Units class method)</a>
+</li>
+      <li><a href="apidocs/sansmic.libsansmic.CScenario.html#sansmic.libsansmic.CScenario.fraction_insolubles">fraction_insolubles (CScenario property)</a>
+</li>
+      <li><a href="apidocs/sansmic.model.AdvancedOptions.html#sansmic.model.AdvancedOptions.from_dict">from_dict() (AdvancedOptions class method)</a>
+
+      <ul>
+        <li><a href="apidocs/sansmic.model.Results.html#sansmic.model.Results.from_dict">(Results class method)</a>
+</li>
+        <li><a href="apidocs/sansmic.model.Scenario.html#sansmic.model.Scenario.from_dict">(Scenario class method)</a>
+</li>
+        <li><a href="apidocs/sansmic.model.StageDefinition.html#sansmic.model.StageDefinition.from_dict">(StageDefinition class method)</a>
+</li>
+      </ul></li>
+      <li><a href="apidocs/sansmic.model.Results.html#sansmic.model.Results.from_hdf">from_hdf() (Results class method)</a>
+</li>
+      <li><a href="nomenclature.html#term-ft"><strong>ft</strong></a>
+</li>
+      <li><a href="apidocs/sansmic.model.Units.html#sansmic.model.Units.FT_IN_BBL">FT_IN_BBL (Units attribute)</a>
+</li>
+      <li><a href="apidocs/sansmic.model.Units.html#sansmic.model.Units.FT_IN_FT3">FT_IN_FT3 (Units attribute)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="G">G</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidocs/sansmic.libsansmic.CModel.html#sansmic.libsansmic.CModel.generate_out_file">generate_out_file() (CModel method)</a>
+</li>
+      <li><a href="apidocs/sansmic.libsansmic.CModel.html#sansmic.libsansmic.CModel.generate_tst_file">generate_tst_file() (CModel method)</a>
+</li>
+      <li>
+    geometry-data
+
+      <ul>
+        <li><a href="um/scenarios.html#confval-geometry-data">configuration value</a>
+</li>
+      </ul></li>
+      <li>
+    geometry-data.depths
+
+      <ul>
+        <li><a href="um/scenarios.html#confval-geometry-data.depths">configuration value</a>
+</li>
+      </ul></li>
+      <li>
+    geometry-data.radii
+
+      <ul>
+        <li><a href="um/scenarios.html#confval-geometry-data.radii">configuration value</a>
+</li>
+      </ul></li>
+      <li>
+    geometry-data.volumes
+
+      <ul>
+        <li><a href="um/scenarios.html#confval-geometry-data.volumes">configuration value</a>
+</li>
+      </ul></li>
+      <li>
+    geometry-format
+
+      <ul>
+        <li><a href="um/scenarios.html#confval-geometry-format">configuration value</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidocs/sansmic.model.Scenario.html#sansmic.model.Scenario.geometry_data">geometry_data (Scenario attribute)</a>
+</li>
+      <li><a href="apidocs/sansmic.libsansmic.CScenario.html#sansmic.libsansmic.CScenario.geometry_format">geometry_format (CScenario property)</a>
+
+      <ul>
+        <li><a href="apidocs/sansmic.model.Scenario.html#sansmic.model.Scenario.geometry_format">(Scenario attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="apidocs/sansmic.model.GeometryFormat.html#sansmic.model.GeometryFormat">GeometryFormat (class in sansmic.model)</a>
+</li>
+      <li><a href="apidocs/sansmic.model.Simulator.html#sansmic.model.Simulator.get_current_state">get_current_state() (Simulator method)</a>
+</li>
+      <li><a href="apidocs/sansmic.libsansmic.CSalt.html#sansmic.libsansmic.CSalt.get_recession_rate_coeff">get_recession_rate_coeff() (CSalt method)</a>
+</li>
+      <li><a href="apidocs/sansmic.libsansmic.CSalt.html#sansmic.libsansmic.CSalt.get_saturated_sg">get_saturated_sg() (CSalt method)</a>
+</li>
+      <li><a href="apidocs/sansmic.libsansmic.CSalt.html#sansmic.libsansmic.CSalt.get_solid_density">get_solid_density() (CSalt method)</a>
+</li>
+      <li><a href="apidocs/sansmic.libsansmic.CSalt.html#sansmic.libsansmic.CSalt.get_wt_pct_sg_coeff">get_wt_pct_sg_coeff() (CSalt method)</a>
+</li>
+      <li><a href="nomenclature.html#term-GUI"><strong>GUI</strong></a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="H">H</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidocs/sansmic.libsansmic.CResults.html#sansmic.libsansmic.CResults.h_0">h_0 (CResults property)</a>
+</li>
+      <li><a href="apidocs/sansmic.libsansmic.CResults.html#sansmic.libsansmic.CResults.h_insol">h_insol (CResults property)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="nomenclature.html#term-HDF5"><strong>HDF5</strong></a>
+</li>
+      <li><a href="apidocs/sansmic.model.Results.html#sansmic.model.Results.hours">hours (Results property)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="I">I</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="nomenclature.html#term-I-F"><strong>I/F</strong></a>
+</li>
+      <li><a href="nomenclature.html#term-I-O"><strong>I/O</strong></a>
+</li>
+      <li><a href="nomenclature.html#term-ID"><strong>ID</strong></a>
+</li>
+      <li><a href="nomenclature.html#term-in"><strong>in</strong></a>
+</li>
+      <li><a href="nomenclature.html#term-inch"><strong>inch</strong></a>
+</li>
+      <li><a href="apidocs/sansmic.model.Units.html#sansmic.model.Units.inch">inch() (Units class method)</a>
+</li>
+      <li><a href="nomenclature.html#term-inches"><strong>inches</strong></a>
+</li>
+      <li><a href="apidocs/sansmic.libsansmic.CResults.html#sansmic.libsansmic.CResults.injCell">injCell (CResults property)</a>
+</li>
+      <li>
+    injection-duration
+
+      <ul>
+        <li><a href="um/scenarios.html#confval-injection-duration">configuration value</a>
+</li>
+      </ul></li>
+      <li><a href="apidocs/sansmic.model.Results.html#sansmic.model.Results.injection_cell">injection_cell (Results property)</a>
+</li>
+      <li><a href="apidocs/sansmic.libsansmic.CStage.html#sansmic.libsansmic.CStage.injection_depth">injection_depth (CStage property)</a>
+
+      <ul>
+        <li><a href="apidocs/sansmic.model.Results.html#sansmic.model.Results.injection_depth">(Results property)</a>
+</li>
+      </ul></li>
+      <li><a href="apidocs/sansmic.libsansmic.CStage.html#sansmic.libsansmic.CStage.injection_duration">injection_duration (CStage property)</a>
+
+      <ul>
+        <li><a href="apidocs/sansmic.model.StageDefinition.html#sansmic.model.StageDefinition.injection_duration">(StageDefinition attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="apidocs/sansmic.libsansmic.CStage.html#sansmic.libsansmic.CStage.injection_fluid_sg">injection_fluid_sg (CStage property)</a>
+</li>
+      <li><a href="apidocs/sansmic.model.Results.html#sansmic.model.Results.injection_phase">injection_phase (Results property)</a>
+</li>
+      <li><a href="apidocs/sansmic.libsansmic.CStage.html#sansmic.libsansmic.CStage.injection_rate">injection_rate (CStage property)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidocs/sansmic.libsansmic.CStage.html#sansmic.libsansmic.CStage.inn_tbg_inside_radius">inn_tbg_inside_radius (CStage property)</a>
+</li>
+      <li><a href="apidocs/sansmic.libsansmic.CStage.html#sansmic.libsansmic.CStage.inn_tbg_outside_radius">inn_tbg_outside_radius (CStage property)</a>
+</li>
+      <li>
+    inner-tbg-inside-diam
+
+      <ul>
+        <li><a href="um/scenarios.html#confval-inner-tbg-inside-diam">configuration value</a>
+</li>
+      </ul></li>
+      <li>
+    inner-tbg-outside-diam
+
+      <ul>
+        <li><a href="um/scenarios.html#confval-inner-tbg-outside-diam">configuration value</a>
+</li>
+      </ul></li>
+      <li><a href="apidocs/sansmic.model.StageDefinition.html#sansmic.model.StageDefinition.inner_tbg_inside_diam">inner_tbg_inside_diam (StageDefinition attribute)</a>
+</li>
+      <li><a href="apidocs/sansmic.model.StageDefinition.html#sansmic.model.StageDefinition.inner_tbg_outside_diam">inner_tbg_outside_diam (StageDefinition attribute)</a>
+</li>
+      <li><a href="apidocs/sansmic.model.Results.html#sansmic.model.Results.insoluble_material_height">insoluble_material_height (Results property)</a>
+</li>
+      <li>
+    insolubles-ratio
+
+      <ul>
+        <li><a href="um/scenarios.html#confval-insolubles-ratio">configuration value</a>
+</li>
+      </ul></li>
+      <li><a href="apidocs/sansmic.model.Scenario.html#sansmic.model.Scenario.insolubles_ratio">insolubles_ratio (Scenario attribute)</a>
+</li>
+      <li><a href="apidocs/sansmic.model.Results.html#sansmic.model.Results.interface_cell">interface_cell (Results property)</a>
+</li>
+      <li><a href="apidocs/sansmic.libsansmic.CStage.html#sansmic.libsansmic.CStage.interface_depth">interface_depth (CStage property)</a>
+
+      <ul>
+        <li><a href="apidocs/sansmic.model.Results.html#sansmic.model.Results.interface_depth">(Results property)</a>
+</li>
+      </ul></li>
+      <li><a href="nomenclature.html#term-international-foot"><strong>international foot</strong></a>
+</li>
+      <li><a href="apidocs/sansmic.model.Simulator.html#sansmic.model.Simulator.is_open">is_open (Simulator property)</a>
+</li>
+      <li><a href="apidocs/sansmic.model.Simulator.html#sansmic.model.Simulator.is_running">is_running (Simulator property)</a>
+</li>
+      <li><a href="apidocs/sansmic.libsansmic.CModel.html#sansmic.libsansmic.CModel.is_running">is_running() (CModel method)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="J">J</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    jet-model-version
+
+      <ul>
+        <li><a href="um/scenarios.html#confval-jet-model-version">configuration value</a>
+</li>
+      </ul></li>
+      <li><a href="apidocs/sansmic.model.Results.html#sansmic.model.Results.jet_length">jet_length (Results property)</a>
+</li>
+      <li><a href="apidocs/sansmic.model.AdvancedOptions.html#sansmic.model.AdvancedOptions.jet_model_version">jet_model_version (AdvancedOptions attribute)</a>
+
+      <ul>
+        <li><a href="apidocs/sansmic.libsansmic.CScenario.html#sansmic.libsansmic.CScenario.jet_model_version">(CScenario property)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidocs/sansmic.model.Results.html#sansmic.model.Results.jet_radius">jet_radius (Results property)</a>
+</li>
+      <li><a href="apidocs/sansmic.model.Results.html#sansmic.model.Results.jet_velocity">jet_velocity (Results property)</a>
+</li>
+      <li><a href="nomenclature.html#term-JSON"><strong>JSON</strong></a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="L">L</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidocs/sansmic.libsansmic.CResults.html#sansmic.libsansmic.CResults.l_jet">l_jet (CResults property)</a>
+</li>
+      <li><a href="nomenclature.html#term-LAS"><strong>LAS</strong></a>
+</li>
+      <li><a href="apidocs/sansmic.model.GeometryFormat.html#sansmic.model.GeometryFormat.LAYER_CAKE">LAYER_CAKE (GeometryFormat attribute)</a>
+</li>
+      <li><a href="nomenclature.html#term-lb"><strong>lb</strong></a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="nomenclature.html#term-lbf"><strong>lbf</strong></a>
+</li>
+      <li><a href="nomenclature.html#term-lbf-in2"><strong>lbf/in²</strong></a>
+</li>
+      <li><a href="apidocs/sansmic.libsansmic.CRunMode.html#sansmic.libsansmic.CRunMode.LEACH_FILL">LEACH_FILL (CRunMode attribute)</a>
+
+      <ul>
+        <li><a href="apidocs/sansmic.model.SimulationMode.html#sansmic.model.SimulationMode.LEACH_FILL">(SimulationMode attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="nomenclature.html#term-LF"><strong>LF</strong></a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="M">M</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="nomenclature.html#term-M-O"><strong>M&amp;O</strong></a>
+</li>
+      <li><a href="apidocs/sansmic.model.Units.html#sansmic.model.Units.M_CM_M3">M_CM_M3 (Units attribute)</a>
+</li>
+      <li><a href="apidocs/sansmic.app.main.html#sansmic.app.main">main() (in module sansmic.app)</a>
+</li>
+      <li><a href="nomenclature.html#term-MarkDown"><strong>MarkDown</strong></a>
+</li>
+      <li>
+    max-brine-sg
+
+      <ul>
+        <li><a href="um/scenarios.html#confval-max-brine-sg">configuration value</a>
+</li>
+      </ul></li>
+      <li><a href="apidocs/sansmic.model.AdvancedOptions.html#sansmic.model.AdvancedOptions.max_brine_sg">max_brine_sg (AdvancedOptions attribute)</a>
+
+      <ul>
+        <li><a href="apidocs/sansmic.libsansmic.CScenario.html#sansmic.libsansmic.CScenario.max_brine_sg">(CScenario property)</a>
+</li>
+      </ul></li>
+      <li><a href="nomenclature.html#term-Mbbl"><strong>Mbbl</strong></a>
+</li>
+      <li><a href="nomenclature.html#term-MD"><strong>MD</strong></a>
+</li>
+      <li><a href="nomenclature.html#term-measured-depth"><strong>measured depth</strong></a>
+</li>
+      <li><a href="nomenclature.html#term-MMbb"><strong>MMbb</strong></a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidocs/sansmic.libsansmic.CStage.html#sansmic.libsansmic.CStage.mode">mode (CStage property)</a>
+</li>
+      <li>
+    module
+
+      <ul>
+        <li><a href="apidocs/sansmic.html#module-sansmic">sansmic</a>
+</li>
+        <li><a href="apidocs/sansmic.app.html#module-sansmic.app">sansmic.app</a>
+</li>
+        <li><a href="apidocs/sansmic.empirical.html#module-sansmic.empirical">sansmic.empirical</a>
+</li>
+        <li><a href="apidocs/sansmic.io.html#module-sansmic.io">sansmic.io</a>
+</li>
+        <li><a href="apidocs/sansmic.libsansmic.html#module-sansmic.libsansmic">sansmic.libsansmic</a>
+</li>
+        <li><a href="apidocs/sansmic.model.html#module-sansmic.model">sansmic.model</a>
+</li>
+      </ul></li>
+      <li>
+    molecular-diffusion
+
+      <ul>
+        <li><a href="um/scenarios.html#confval-molecular-diffusion">configuration value</a>
+</li>
+      </ul></li>
+      <li><a href="apidocs/sansmic.model.AdvancedOptions.html#sansmic.model.AdvancedOptions.molecular_diffusion">molecular_diffusion (AdvancedOptions attribute)</a>
+
+      <ul>
+        <li><a href="apidocs/sansmic.libsansmic.CScenario.html#sansmic.libsansmic.CScenario.molecular_diffusion">(CScenario property)</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="N">N</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidocs/sansmic.libsansmic.CGeometryFormat.html#sansmic.libsansmic.CGeometryFormat.name">name (CGeometryFormat property)</a>
+
+      <ul>
+        <li><a href="apidocs/sansmic.libsansmic.CRunMode.html#sansmic.libsansmic.CRunMode.name">(CRunMode property)</a>
+</li>
+      </ul></li>
+      <li><a href="apidocs/sansmic.model.Scenario.html#sansmic.model.Scenario.new_simulation">new_simulation() (Scenario method)</a>
+</li>
+      <li><a href="apidocs/sansmic.model.Scenario.html#sansmic.model.Scenario.new_stage">new_stage() (Scenario method)</a>
+</li>
+      <li><a href="nomenclature.html#term-NIST"><strong>NIST</strong></a>
+</li>
+      <li><a href="apidocs/sansmic.model.Results.html#sansmic.model.Results.node_heights">node_heights (Results property)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    num-cells
+
+      <ul>
+        <li><a href="um/scenarios.html#confval-num-cells">configuration value</a>
+</li>
+      </ul></li>
+      <li><a href="apidocs/sansmic.libsansmic.CScenario.html#sansmic.libsansmic.CScenario.num_cells">num_cells (CScenario property)</a>
+
+      <ul>
+        <li><a href="apidocs/sansmic.model.Scenario.html#sansmic.model.Scenario.num_cells">(Scenario attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="apidocs/sansmic.model.Simulator.html#sansmic.model.Simulator.num_stages">num_stages (Simulator property)</a>
+</li>
+      <li><a href="apidocs/sansmic.libsansmic.CModel.html#sansmic.libsansmic.CModel.num_stages">num_stages() (CModel method)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="O">O</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="nomenclature.html#term-OBI"><strong>OBI</strong></a>
+</li>
+      <li><a href="apidocs/sansmic.libsansmic.CResults.html#sansmic.libsansmic.CResults.obiCell">obiCell (CResults property)</a>
+</li>
+      <li><a href="nomenclature.html#term-OD"><strong>OD</strong></a>
+</li>
+      <li><a href="nomenclature.html#term-ODE"><strong>ODE</strong></a>
+</li>
+      <li><a href="apidocs/sansmic.model.Results.html#sansmic.model.Results.ode_convergence">ode_convergence (Results property)</a>
+</li>
+      <li><a href="nomenclature.html#term-oil-barrel"><strong>oil barrel</strong></a>
+</li>
+      <li><a href="apidocs/sansmic.libsansmic.CRunMode.html#sansmic.libsansmic.CRunMode.OIL_FILL">OIL_FILL (CRunMode attribute)</a>
+</li>
+      <li><a href="nomenclature.html#term-OL"><strong>OL</strong></a>
+</li>
+      <li><a href="apidocs/sansmic.model.Simulator.html#sansmic.model.Simulator.open">open() (Simulator method)</a>
+</li>
+      <li><a href="apidocs/sansmic.libsansmic.CModel.html#sansmic.libsansmic.CModel.open_outfiles">open_outfiles() (CModel method)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidocs/sansmic.libsansmic.CRunMode.html#sansmic.libsansmic.CRunMode.ORDINARY">ORDINARY (CRunMode attribute)</a>
+
+      <ul>
+        <li><a href="apidocs/sansmic.model.SimulationMode.html#sansmic.model.SimulationMode.ORDINARY">(SimulationMode attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="apidocs/sansmic.libsansmic.CStage.html#sansmic.libsansmic.CStage.out_csg_inside_radius">out_csg_inside_radius (CStage property)</a>
+</li>
+      <li><a href="apidocs/sansmic.libsansmic.CStage.html#sansmic.libsansmic.CStage.out_csg_outside_radius">out_csg_outside_radius (CStage property)</a>
+</li>
+      <li>
+    outer-csg-inside-diam
+
+      <ul>
+        <li><a href="um/scenarios.html#confval-outer-csg-inside-diam">configuration value</a>
+</li>
+      </ul></li>
+      <li>
+    outer-csg-outside-diam
+
+      <ul>
+        <li><a href="um/scenarios.html#confval-outer-csg-outside-diam">configuration value</a>
+</li>
+      </ul></li>
+      <li><a href="apidocs/sansmic.model.StageDefinition.html#sansmic.model.StageDefinition.outer_csg_inside_diam">outer_csg_inside_diam (StageDefinition attribute)</a>
+</li>
+      <li><a href="apidocs/sansmic.model.StageDefinition.html#sansmic.model.StageDefinition.outer_csg_outside_diam">outer_csg_outside_diam (StageDefinition attribute)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="P">P</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidocs/sansmic.libsansmic.CResults.html#sansmic.libsansmic.CResults.phase">phase (CResults property)</a>
+</li>
+      <li><a href="apidocs/sansmic.libsansmic.CResults.html#sansmic.libsansmic.CResults.plumCell">plumCell (CResults property)</a>
+</li>
+      <li><a href="apidocs/sansmic.model.AdvancedOptions.html#sansmic.model.AdvancedOptions.plume_model_version">plume_model_version (AdvancedOptions attribute)</a>
+
+      <ul>
+        <li><a href="apidocs/sansmic.libsansmic.CScenario.html#sansmic.libsansmic.CScenario.plume_model_version">(CScenario property)</a>
+</li>
+      </ul></li>
+      <li><a href="apidocs/sansmic.model.Results.html#sansmic.model.Results.plume_radius">plume_radius (Results property)</a>
+</li>
+      <li><a href="apidocs/sansmic.model.Results.html#sansmic.model.Results.plume_sg">plume_sg (Results property)</a>
+</li>
+      <li><a href="apidocs/sansmic.model.Results.html#sansmic.model.Results.plume_stagnation_cell">plume_stagnation_cell (Results property)</a>
+</li>
+      <li><a href="apidocs/sansmic.model.Results.html#sansmic.model.Results.plume_stagnation_depth">plume_stagnation_depth (Results property)</a>
+</li>
+      <li><a href="apidocs/sansmic.model.Results.html#sansmic.model.Results.plume_velocity">plume_velocity (Results property)</a>
+</li>
+      <li><a href="nomenclature.html#term-pound"><strong>pound</strong></a>
+</li>
+      <li><a href="nomenclature.html#term-pound-avoirdupois"><strong>pound avoirdupois</strong></a>
+</li>
+      <li><a href="nomenclature.html#term-pound-force"><strong>pound-force</strong></a>
+</li>
+      <li><a href="nomenclature.html#term-pound-force-per-square-inch"><strong>pound-force per square inch</strong></a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="nomenclature.html#term-pounds"><strong>pounds</strong></a>
+</li>
+      <li><a href="nomenclature.html#term-pounds-force"><strong>pounds-force</strong></a>
+</li>
+      <li><a href="nomenclature.html#term-pounds-force-per-square-inch"><strong>pounds-force per square inch</strong></a>
+</li>
+      <li><a href="apidocs/sansmic.libsansmic.CStage.html#sansmic.libsansmic.CStage.print_interval">print_interval (CStage property)</a>
+</li>
+      <li><a href="apidocs/sansmic.libsansmic.CResults.html#sansmic.libsansmic.CResults.prodCell">prodCell (CResults property)</a>
+</li>
+      <li>
+    product-injection-rate
+
+      <ul>
+        <li><a href="um/scenarios.html#confval-product-injection-rate">configuration value</a>
+</li>
+      </ul></li>
+      <li><a href="apidocs/sansmic.model.StageDefinition.html#sansmic.model.StageDefinition.product_injection_depth">product_injection_depth (StageDefinition attribute)</a>
+</li>
+      <li><a href="apidocs/sansmic.model.StageDefinition.html#sansmic.model.StageDefinition.product_injection_rate">product_injection_rate (StageDefinition attribute)</a>
+</li>
+      <li><a href="apidocs/sansmic.model.StageDefinition.html#sansmic.model.StageDefinition.product_production_depth">product_production_depth (StageDefinition attribute)</a>
+</li>
+      <li><a href="apidocs/sansmic.model.Results.html#sansmic.model.Results.production_cell">production_cell (Results property)</a>
+</li>
+      <li><a href="apidocs/sansmic.libsansmic.CStage.html#sansmic.libsansmic.CStage.production_depth">production_depth (CStage property)</a>
+
+      <ul>
+        <li><a href="apidocs/sansmic.model.Results.html#sansmic.model.Results.production_depth">(Results property)</a>
+</li>
+      </ul></li>
+      <li><a href="nomenclature.html#term-psi"><strong>psi</strong></a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="Q">Q</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidocs/sansmic.libsansmic.CResults.html#sansmic.libsansmic.CResults.Q_inj">Q_inj (CResults property)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidocs/sansmic.libsansmic.CResults.html#sansmic.libsansmic.CResults.Q_out">Q_out (CResults property)</a>
+</li>
+      <li><a href="nomenclature.html#term-QA"><strong>QA</strong></a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="R">R</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidocs/sansmic.libsansmic.CResults.html#sansmic.libsansmic.CResults.r">r (CResults property)</a>
+</li>
+      <li><a href="apidocs/sansmic.libsansmic.CResults.html#sansmic.libsansmic.CResults.r_0">r_0 (CResults property)</a>
+</li>
+      <li><a href="apidocs/sansmic.libsansmic.CResults.html#sansmic.libsansmic.CResults.r_jet">r_jet (CResults property)</a>
+</li>
+      <li><a href="apidocs/sansmic.libsansmic.CResults.html#sansmic.libsansmic.CResults.r_plm">r_plm (CResults property)</a>
+</li>
+      <li><a href="apidocs/sansmic.model.Results.html#sansmic.model.Results.radius">radius (Results property)</a>
+</li>
+      <li><a href="apidocs/sansmic.libsansmic.CGeometryFormat.html#sansmic.libsansmic.CGeometryFormat.RADIUS_LIST">RADIUS_LIST (CGeometryFormat attribute)</a>
+
+      <ul>
+        <li><a href="apidocs/sansmic.model.GeometryFormat.html#sansmic.model.GeometryFormat.RADIUS_LIST">(GeometryFormat attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="apidocs/sansmic.libsansmic.CGeometryFormat.html#sansmic.libsansmic.CGeometryFormat.RADIUS_TABLE">RADIUS_TABLE (CGeometryFormat attribute)</a>
+
+      <ul>
+        <li><a href="apidocs/sansmic.model.GeometryFormat.html#sansmic.model.GeometryFormat.RADIUS_TABLE">(GeometryFormat attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="apidocs/sansmic.libsansmic.CScenario.html#sansmic.libsansmic.CScenario.radius_vector">radius_vector (CScenario property)</a>
+</li>
+      <li><a href="apidocs/sansmic.model.Results.html#sansmic.model.Results.rate_of_change_in_radius">rate_of_change_in_radius (Results property)</a>
+</li>
+      <li><a href="apidocs/sansmic.model.Results.html#sansmic.model.Results.rate_of_change_in_sg">rate_of_change_in_sg (Results property)</a>
+</li>
+      <li><a href="apidocs/sansmic.model.RateScheduleType.html#sansmic.model.RateScheduleType">RateScheduleType (class in sansmic.model)</a>
+</li>
+      <li><a href="apidocs/sansmic.io.read_classic_out_ddl.html#sansmic.io.read_classic_out_ddl">read_classic_out_ddl() (in module sansmic.io)</a>
+</li>
+      <li><a href="apidocs/sansmic.io.read_dat.html#sansmic.io.read_dat">read_dat() (in module sansmic.io)</a>
+</li>
+      <li><a href="apidocs/sansmic.io.read_hdf_results.html#sansmic.io.read_hdf_results">read_hdf_results() (in module sansmic.io)</a>
+</li>
+      <li><a href="apidocs/sansmic.io.read_json_results.html#sansmic.io.read_json_results">read_json_results() (in module sansmic.io)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidocs/sansmic.io.read_scenario.html#sansmic.io.read_scenario">read_scenario() (in module sansmic.io)</a>
+</li>
+      <li><a href="apidocs/sansmic.io.read_tst_file.html#sansmic.io.read_tst_file">read_tst_file() (in module sansmic.io)</a>
+</li>
+      <li><a href="apidocs/sansmic.libsansmic.CSalt.html#sansmic.libsansmic.CSalt.recession_rate">recession_rate() (CSalt method)</a>
+</li>
+      <li>
+    relative-error
+
+      <ul>
+        <li><a href="um/scenarios.html#confval-relative-error">configuration value</a>
+</li>
+      </ul></li>
+      <li><a href="apidocs/sansmic.model.AdvancedOptions.html#sansmic.model.AdvancedOptions.relative_error">relative_error (AdvancedOptions attribute)</a>
+
+      <ul>
+        <li><a href="apidocs/sansmic.libsansmic.CScenario.html#sansmic.libsansmic.CScenario.relative_error">(CScenario property)</a>
+</li>
+      </ul></li>
+      <li>
+    rest-duration
+
+      <ul>
+        <li><a href="um/scenarios.html#confval-rest-duration">configuration value</a>
+</li>
+      </ul></li>
+      <li><a href="apidocs/sansmic.libsansmic.CStage.html#sansmic.libsansmic.CStage.rest_duration">rest_duration (CStage property)</a>
+
+      <ul>
+        <li><a href="apidocs/sansmic.model.StageDefinition.html#sansmic.model.StageDefinition.rest_duration">(StageDefinition attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="nomenclature.html#term-reStructuredText"><strong>reStructuredText</strong></a>
+</li>
+      <li><a href="apidocs/sansmic.model.Results.html#sansmic.model.Results">Results (class in sansmic.model)</a>
+</li>
+      <li><a href="apidocs/sansmic.model.Simulator.html#sansmic.model.Simulator.results">results (Simulator property)</a>
+</li>
+      <li><a href="apidocs/sansmic.empirical.rho_NaCl_s.html#sansmic.empirical.rho_NaCl_s">rho_NaCl_s (in module sansmic.empirical)</a>
+</li>
+      <li><a href="apidocs/sansmic.libsansmic.CModel.html#sansmic.libsansmic.CModel.run_next_step">run_next_step() (CModel method)</a>
+</li>
+      <li><a href="apidocs/sansmic.libsansmic.CModel.html#sansmic.libsansmic.CModel.run_sim">run_sim() (CModel method)</a>
+
+      <ul>
+        <li><a href="apidocs/sansmic.model.Simulator.html#sansmic.model.Simulator.run_sim">(Simulator method)</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="S">S</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="nomenclature.html#term-Sandia"><strong>Sandia</strong></a>
+</li>
+      <li>
+    sansmic
+
+      <ul>
+        <li><a href="apidocs/sansmic.html#module-sansmic">module</a>
+</li>
+      </ul></li>
+      <li>
+    sansmic.app
+
+      <ul>
+        <li><a href="apidocs/sansmic.app.html#module-sansmic.app">module</a>
+</li>
+      </ul></li>
+      <li>
+    sansmic.empirical
+
+      <ul>
+        <li><a href="apidocs/sansmic.empirical.html#module-sansmic.empirical">module</a>
+</li>
+      </ul></li>
+      <li>
+    sansmic.io
+
+      <ul>
+        <li><a href="apidocs/sansmic.io.html#module-sansmic.io">module</a>
+</li>
+      </ul></li>
+      <li>
+    sansmic.libsansmic
+
+      <ul>
+        <li><a href="apidocs/sansmic.libsansmic.html#module-sansmic.libsansmic">module</a>
+</li>
+      </ul></li>
+      <li>
+    sansmic.model
+
+      <ul>
+        <li><a href="apidocs/sansmic.model.html#module-sansmic.model">module</a>
+</li>
+      </ul></li>
+      <li><a href="apidocs/variable_libsansmic_8hpp_1ae05f440aa5cf0cf27c924af6abd84429.html#_CPPv4N7sansmic4_pi_E">sansmic::_pi_ (C++ member)</a>
+</li>
+      <li><a href="apidocs/variable_libsansmic_8hpp_1a5835f26770e6fcee73a6a866ba1a0ca3.html#_CPPv4N7sansmic9bbl_to_cfE">sansmic::bbl_to_cf (C++ member)</a>
+</li>
+      <li><a href="apidocs/function_libsansmic_8hpp_1af7843017d1ba247ba894354fd04066fd.html#_CPPv4N7sansmic5boundEddd">sansmic::bound (C++ function)</a>
+</li>
+      <li><a href="apidocs/variable_libsansmic_8hpp_1a6509f1ad75d4faaef799a26d4963ed75.html#_CPPv4N7sansmic9cf_to_bblE">sansmic::cf_to_bbl (C++ member)</a>
+</li>
+      <li><a href="apidocs/variable_libsansmic_8hpp_1a4097c0a08bdfca709ad6af1edbbae5cf.html#_CPPv4N7sansmic10cubic_footE">sansmic::cubic_foot (C++ member)</a>
+</li>
+      <li><a href="apidocs/variable_libsansmic_8hpp_1a1e9d11c00b0f8ab30e067f17b93b3a77.html#_CPPv4N7sansmic10cubic_inchE">sansmic::cubic_inch (C++ member)</a>
+</li>
+      <li><a href="apidocs/function_libsansmic_8hpp_1abfcdec9ce8fcf3b394cc6f909dcfdadf.html#_CPPv4N7sansmic4dabsEd">sansmic::dabs (C++ function)</a>
+</li>
+      <li><a href="apidocs/variable_libsansmic_8hpp_1a6bf5141a96e95158acead28325d3ba7a.html#_CPPv4N7sansmic3dayE">sansmic::day (C++ member)</a>
+</li>
+      <li><a href="apidocs/function_libsansmic_8hpp_1af835812a8204d3a9d032f4a82131a96b.html#_CPPv4N7sansmic4ddimEdd">sansmic::ddim (C++ function)</a>
+</li>
+      <li><a href="apidocs/variable_libsansmic_8hpp_1a35f688aef259e35313b3d8fb13215b04.html#_CPPv4N7sansmic17degree_FahrenheitE">sansmic::degree_Fahrenheit (C++ member)</a>
+</li>
+      <li><a href="apidocs/classsansmic_1_1Derivable.html#_CPPv4N7sansmic9DerivableE">sansmic::Derivable (C++ class)</a>
+</li>
+      <li><a href="apidocs/classsansmic_1_1Derivable.html#_CPPv4N7sansmic9Derivable4funcERdR6vectorIdER6vectorIdE">sansmic::Derivable::func (C++ function)</a>
+</li>
+      <li><a href="apidocs/classsansmic_1_1Derivable.html#_CPPv4N7sansmic9Derivable4neqnE">sansmic::Derivable::neqn (C++ member)</a>
+</li>
+      <li><a href="apidocs/variable_libsansmic_8hpp_1a4d1216187d22cbd5da9dff170fcc6478.html#_CPPv4N7sansmic4footE">sansmic::foot (C++ member)</a>
+</li>
+      <li><a href="apidocs/variable_libsansmic_8hpp_1a4489ee3413eb2756ead2968898cc919e.html#_CPPv4N7sansmic8ft_to_inE">sansmic::ft_to_in (C++ member)</a>
+</li>
+      <li><a href="apidocs/enum_libsansmic_8hpp_1ae90439e1c23bb6f206956d15cacaaa41.html#_CPPv4N7sansmic10GeomFormatE">sansmic::GeomFormat (C++ enum)</a>
+</li>
+      <li><a href="apidocs/enum_libsansmic_8hpp_1ae90439e1c23bb6f206956d15cacaaa41.html#_CPPv4N7sansmic10GeomFormat10RadiusListE">sansmic::GeomFormat::RadiusList (C++ enumerator)</a>
+</li>
+      <li><a href="apidocs/enum_libsansmic_8hpp_1ae90439e1c23bb6f206956d15cacaaa41.html#_CPPv4N7sansmic10GeomFormat11RadiusTableE">sansmic::GeomFormat::RadiusTable (C++ enumerator)</a>
+</li>
+      <li><a href="apidocs/enum_libsansmic_8hpp_1ae90439e1c23bb6f206956d15cacaaa41.html#_CPPv4N7sansmic10GeomFormat10VolumeListE">sansmic::GeomFormat::VolumeList (C++ enumerator)</a>
+</li>
+      <li><a href="apidocs/enum_libsansmic_8hpp_1ae90439e1c23bb6f206956d15cacaaa41.html#_CPPv4N7sansmic10GeomFormat11VolumeTableE">sansmic::GeomFormat::VolumeTable (C++ enumerator)</a>
+</li>
+      <li><a href="apidocs/variable_libsansmic_8hpp_1a09c047eba91ce1d85e4e7fdd4bafebe4.html#_CPPv4N7sansmic4hourE">sansmic::hour (C++ member)</a>
+</li>
+      <li><a href="apidocs/variable_libsansmic_8hpp_1ade5f8e06aa0040eaeff7a2faf8a53f84.html#_CPPv4N7sansmic8in_to_ftE">sansmic::in_to_ft (C++ member)</a>
+</li>
+      <li><a href="apidocs/variable_libsansmic_8hpp_1a65eb61864cca7f60402dca06829b0278.html#_CPPv4N7sansmic4inchE">sansmic::inch (C++ member)</a>
+</li>
+      <li><a href="apidocs/variable_libsansmic_8hpp_1a3790b5abe2d5afc09d3952d7a215ae76.html#_CPPv4N7sansmic16INVALID_LOG_FILEE">sansmic::INVALID_LOG_FILE (C++ member)</a>
+</li>
+      <li><a href="apidocs/variable_libsansmic_8hpp_1a680959cdfd3d7eb4a54cf899aed119e8.html#_CPPv4N7sansmic16INVALID_OUT_FILEE">sansmic::INVALID_OUT_FILE (C++ member)</a>
+</li>
+      <li><a href="apidocs/variable_libsansmic_8hpp_1aa08e28983055aebd0561072245a9580e.html#_CPPv4N7sansmic16INVALID_TST_FILEE">sansmic::INVALID_TST_FILE (C++ member)</a>
+</li>
+      <li><a href="apidocs/classsansmic_1_1JetModel.html#_CPPv4N7sansmic8JetModelE">sansmic::JetModel (C++ class)</a>
+</li>
+      <li><a href="apidocs/classsansmic_1_1JetModel.html#_CPPv4N7sansmic8JetModel11get_versionEv">sansmic::JetModel::get_version (C++ function)</a>
+</li>
+      <li><a href="apidocs/classsansmic_1_1JetModel.html#_CPPv4N7sansmic8JetModel8JetModelEi">sansmic::JetModel::JetModel (C++ function)</a>, <a href="apidocs/classsansmic_1_1JetModel.html#_CPPv4N7sansmic8JetModel8JetModelEv">[1]</a>
+</li>
+      <li><a href="apidocs/classsansmic_1_1JetModel.html#_CPPv4N7sansmic8JetModel6lengthEd">sansmic::JetModel::length (C++ function)</a>
+</li>
+      <li><a href="apidocs/classsansmic_1_1JetModel.html#_CPPv4N7sansmic8JetModel11set_versionEi">sansmic::JetModel::set_version (C++ function)</a>
+</li>
+      <li><a href="apidocs/classsansmic_1_1JetModel.html#_CPPv4N7sansmic8JetModel8velocityEdd">sansmic::JetModel::velocity (C++ function)</a>
+</li>
+      <li><a href="apidocs/variable_libsansmic_8hpp_1a516ec27e7553440120d43692295e16fd.html#_CPPv4N7sansmic11julian_yearE">sansmic::julian_year (C++ member)</a>
+</li>
+      <li><a href="apidocs/enum_libsansmic_8hpp_1a0ac474463be3271f78ea252870114800.html#_CPPv4N7sansmic9LeachModeE">sansmic::LeachMode (C++ enum)</a>
+</li>
+      <li><a href="apidocs/enum_libsansmic_8hpp_1a0ac474463be3271f78ea252870114800.html#_CPPv4N7sansmic9LeachMode9LeachFillE">sansmic::LeachMode::LeachFill (C++ enumerator)</a>
+</li>
+      <li><a href="apidocs/enum_libsansmic_8hpp_1a0ac474463be3271f78ea252870114800.html#_CPPv4N7sansmic9LeachMode7OilFillE">sansmic::LeachMode::OilFill (C++ enumerator)</a>
+</li>
+      <li><a href="apidocs/enum_libsansmic_8hpp_1a0ac474463be3271f78ea252870114800.html#_CPPv4N7sansmic9LeachMode8OrdinaryE">sansmic::LeachMode::Ordinary (C++ enumerator)</a>
+</li>
+      <li><a href="apidocs/enum_libsansmic_8hpp_1a0ac474463be3271f78ea252870114800.html#_CPPv4N7sansmic9LeachMode10WithdrawalE">sansmic::LeachMode::Withdrawal (C++ enumerator)</a>
+</li>
+      <li><a href="apidocs/variable_libsansmic_8hpp_1a8e6656a08a16d80623c90f0531fae06d.html#_CPPv4N7sansmic13liquid_gallonE">sansmic::liquid_gallon (C++ member)</a>
+</li>
+      <li><a href="apidocs/variable_libsansmic_8hpp_1a583f186218b8bf2ad5c54928a6c20134.html#_CPPv4N7sansmic6minuteE">sansmic::minute (C++ member)</a>
+</li>
+      <li><a href="apidocs/variable_libsansmic_8hpp_1a68a31f328274bc97dfa478bb42920449.html#_CPPv4N7sansmic16MISSING_DAT_FILEE">sansmic::MISSING_DAT_FILE (C++ member)</a>
+</li>
+      <li><a href="apidocs/classsansmic_1_1Model.html#_CPPv4N7sansmic5ModelE">sansmic::Model (C++ class)</a>
+</li>
+      <li><a href="apidocs/classsansmic_1_1Model.html#_CPPv4N7sansmic5Model13b_use_outfileE">sansmic::Model::b_use_outfile (C++ member)</a>
+</li>
+      <li><a href="apidocs/classsansmic_1_1Model.html#_CPPv4N7sansmic5Model13b_use_tstfileE">sansmic::Model::b_use_tstfile (C++ member)</a>
+</li>
+      <li><a href="apidocs/classsansmic_1_1Model.html#_CPPv4N7sansmic5Model14close_outfilesEv">sansmic::Model::close_outfiles (C++ function)</a>
+</li>
+      <li><a href="apidocs/classsansmic_1_1Model.html#_CPPv4N7sansmic5Model9configureE8Scenario">sansmic::Model::configure (C++ function)</a>
+</li>
+      <li><a href="apidocs/classsansmic_1_1Model.html#_CPPv4N7sansmic5Model9end_stageEv">sansmic::Model::end_stage (C++ function)</a>
+</li>
+      <li><a href="apidocs/classsansmic_1_1Model.html#_CPPv4N7sansmic5Model17generate_out_fileEb">sansmic::Model::generate_out_file (C++ function)</a>
+</li>
+      <li><a href="apidocs/classsansmic_1_1Model.html#_CPPv4N7sansmic5Model17generate_tst_fileEb">sansmic::Model::generate_tst_file (C++ function)</a>
+</li>
+      <li><a href="apidocs/classsansmic_1_1Model.html#_CPPv4N7sansmic5Model17get_current_stageEv">sansmic::Model::get_current_stage (C++ function)</a>
+</li>
+      <li><a href="apidocs/classsansmic_1_1Model.html#_CPPv4N7sansmic5Model17get_current_stateEv">sansmic::Model::get_current_state (C++ function)</a>
+</li>
+      <li><a href="apidocs/classsansmic_1_1Model.html#_CPPv4N7sansmic5Model16get_current_timeEv">sansmic::Model::get_current_time (C++ function)</a>
+</li>
+      <li><a href="apidocs/classsansmic_1_1Model.html#_CPPv4N7sansmic5Model18get_current_volumeEv">sansmic::Model::get_current_volume (C++ function)</a>
+</li>
+      <li><a href="apidocs/classsansmic_1_1Model.html#_CPPv4N7sansmic5Model14get_num_stagesEv">sansmic::Model::get_num_stages (C++ function)</a>
+</li>
+      <li><a href="apidocs/classsansmic_1_1Model.html#_CPPv4N7sansmic5Model11get_resultsEv">sansmic::Model::get_results (C++ function)</a>
+</li>
+      <li><a href="apidocs/classsansmic_1_1Model.html#_CPPv4N7sansmic5Model18get_running_statusEv">sansmic::Model::get_running_status (C++ function)</a>
+</li>
+      <li><a href="apidocs/classsansmic_1_1Model.html#_CPPv4N7sansmic5Model10get_stagesEv">sansmic::Model::get_stages (C++ function)</a>
+</li>
+      <li><a href="apidocs/classsansmic_1_1Model.html#_CPPv4N7sansmic5Model10init_stageEv">sansmic::Model::init_stage (C++ function)</a>
+</li>
+      <li><a href="apidocs/classsansmic_1_1Model.html#_CPPv4N7sansmic5Model5ModelE6string">sansmic::Model::Model (C++ function)</a>, <a href="apidocs/classsansmic_1_1Model.html#_CPPv4N7sansmic5Model5ModelEv">[1]</a>
+</li>
+      <li><a href="apidocs/classsansmic_1_1Model.html#_CPPv4N7sansmic5Model13open_outfilesEb">sansmic::Model::open_outfiles (C++ function)</a>
+</li>
+      <li><a href="apidocs/classsansmic_1_1Model.html#_CPPv4N7sansmic5Model7run_simEv">sansmic::Model::run_sim (C++ function)</a>
+</li>
+      <li><a href="apidocs/classsansmic_1_1Model.html#_CPPv4N7sansmic5Model9run_stageEv">sansmic::Model::run_stage (C++ function)</a>
+</li>
+      <li><a href="apidocs/classsansmic_1_1Model.html#_CPPv4N7sansmic5Model8run_stepEv">sansmic::Model::run_step (C++ function)</a>
+</li>
+      <li><a href="apidocs/classsansmic_1_1Model.html#_CPPv4N7sansmic5Model19set_verbosity_levelEi">sansmic::Model::set_verbosity_level (C++ function)</a>
+</li>
+      <li><a href="apidocs/classsansmic_1_1Model.html#_CPPv4N7sansmic5Model9verbosityE">sansmic::Model::verbosity (C++ member)</a>
+</li>
+      <li><a href="apidocs/variable_libsansmic_8hpp_1a421a5bf73c6bebdda01605bd0dea0660.html#_CPPv4N7sansmic28NDIV_CHANGES_THROUGHOUT_FILEE">sansmic::NDIV_CHANGES_THROUGHOUT_FILE (C++ member)</a>
+</li>
+      <li><a href="apidocs/variable_libsansmic_8hpp_1aa33076a804fd17b06c540f5548faac0d.html#_CPPv4N7sansmic19OBI_AT_CAVERN_FLOORE">sansmic::OBI_AT_CAVERN_FLOOR (C++ member)</a>
+</li>
+      <li><a href="apidocs/variable_libsansmic_8hpp_1ade021519e336911922fb0b56739207b9.html#_CPPv4N7sansmic14ODE_BAD_ABSERRE">sansmic::ODE_BAD_ABSERR (C++ member)</a>
+</li>
+      <li><a href="apidocs/variable_libsansmic_8hpp_1a0eba3ceb565254ff682a2520ae565ad8.html#_CPPv4N7sansmic15ODE_IFLAG_SEVENE">sansmic::ODE_IFLAG_SEVEN (C++ member)</a>
+</li>
+      <li><a href="apidocs/variable_libsansmic_8hpp_1a4a9a89674d91f081c447f3e6326e3239.html#_CPPv4N7sansmic13ODE_IFLAG_SIXE">sansmic::ODE_IFLAG_SIX (C++ member)</a>
+</li>
+      <li><a href="apidocs/classsansmic_1_1ODESolver.html#_CPPv4N7sansmic9ODESolverE">sansmic::ODESolver (C++ class)</a>
+</li>
+      <li><a href="apidocs/classsansmic_1_1ODESolver.html#_CPPv4N7sansmic9ODESolver2deER6vectorIdERddRdRdRiRbRbRiRbRiRiRi">sansmic::ODESolver::de (C++ function)</a>
+</li>
+      <li><a href="apidocs/classsansmic_1_1ODESolver.html#_CPPv4N7sansmic9ODESolver5dy_dxE">sansmic::ODESolver::dy_dx (C++ member)</a>
+</li>
+      <li><a href="apidocs/classsansmic_1_1ODESolver.html#_CPPv4N7sansmic9ODESolver5intrpEdR6vectorIdEi">sansmic::ODESolver::intrp (C++ function)</a>
+</li>
+      <li><a href="apidocs/classsansmic_1_1ODESolver.html#_CPPv4N7sansmic9ODESolver4neqnE">sansmic::ODESolver::neqn (C++ member)</a>
+</li>
+      <li><a href="apidocs/classsansmic_1_1ODESolver.html#_CPPv4N7sansmic9ODESolver7num_eqnEv">sansmic::ODESolver::num_eqn (C++ function)</a>
+</li>
+      <li><a href="apidocs/classsansmic_1_1ODESolver.html#_CPPv4N7sansmic9ODESolver3odeER6vectorIdERddRdRdRi">sansmic::ODESolver::ode (C++ function)</a>
+</li>
+      <li><a href="apidocs/classsansmic_1_1ODESolver.html#_CPPv4N7sansmic9ODESolver9ODESolverEiP9Derivable">sansmic::ODESolver::ODESolver (C++ function)</a>, <a href="apidocs/classsansmic_1_1ODESolver.html#_CPPv4N7sansmic9ODESolver9ODESolverEv">[1]</a>
+</li>
+      <li><a href="apidocs/classsansmic_1_1ODESolver.html#_CPPv4N7sansmic9ODESolver5step1ERdRbRiRiRbRbRiRb">sansmic::ODESolver::step1 (C++ function)</a>
+</li>
+      <li><a href="apidocs/variable_libsansmic_8hpp_1aff42d2545a2cb7a612252a8d6f1799da.html#_CPPv4N7sansmic10oil_barrelE">sansmic::oil_barrel (C++ member)</a>
+</li>
+      <li><a href="apidocs/variable_libsansmic_8hpp_1a5f0f9ae5a5526c0a1ec6c58d0e6a6c1d.html#_CPPv4N7sansmic14per_d_to_per_hE">sansmic::per_d_to_per_h (C++ member)</a>
+</li>
+      <li><a href="apidocs/variable_libsansmic_8hpp_1a60f9a61a4a145f39de28d2db23619afc.html#_CPPv4N7sansmic14per_h_to_per_dE">sansmic::per_h_to_per_d (C++ member)</a>
+</li>
+      <li><a href="apidocs/classsansmic_1_1PlumeRise.html#_CPPv4N7sansmic9PlumeRiseE">sansmic::PlumeRise (C++ class)</a>
+</li>
+      <li><a href="apidocs/classsansmic_1_1PlumeRise.html#_CPPv4N7sansmic9PlumeRise4funcERdR6vectorIdER6vectorIdE">sansmic::PlumeRise::func (C++ function)</a>
+</li>
+      <li><a href="apidocs/classsansmic_1_1PlumeRise.html#_CPPv4N7sansmic9PlumeRise4neqnE">sansmic::PlumeRise::neqn (C++ member)</a>
+</li>
+      <li><a href="apidocs/classsansmic_1_1PlumeRise.html#_CPPv4N7sansmic9PlumeRise9PlumeRiseEddR6vectorIdE">sansmic::PlumeRise::PlumeRise (C++ function)</a>
+</li>
+      <li><a href="apidocs/classsansmic_1_1PlumeRise.html#_CPPv4N7sansmic9PlumeRise6solverE">sansmic::PlumeRise::solver (C++ member)</a>
+</li>
+      <li><a href="apidocs/variable_libsansmic_8hpp_1ae1faba63a84df20abb428a8f0a473e64.html#_CPPv4N7sansmic11pound_forceE">sansmic::pound_force (C++ member)</a>
+</li>
+      <li><a href="apidocs/variable_libsansmic_8hpp_1a2e2c0c62680e276009c4d14267633c96.html#_CPPv4N7sansmic10pound_massE">sansmic::pound_mass (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Results.html#_CPPv4N7sansmic7ResultsE">sansmic::Results (C++ struct)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Results.html#_CPPv4N7sansmic7Results3amdE">sansmic::Results::amd (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Results.html#_CPPv4N7sansmic7Results5C_newE">sansmic::Results::C_new (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Results.html#_CPPv4N7sansmic7Results5C_oldE">sansmic::Results::C_old (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Results.html#_CPPv4N7sansmic7Results5C_plmE">sansmic::Results::C_plm (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Results.html#_CPPv4N7sansmic7Results7D_coeffE">sansmic::Results::D_coeff (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Results.html#_CPPv4N7sansmic7Results5dC_dtE">sansmic::Results::dC_dt (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Results.html#_CPPv4N7sansmic7Results5dC_dzE">sansmic::Results::dC_dz (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Results.html#_CPPv4N7sansmic7Results6dr_cavE">sansmic::Results::dr_cav (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Results.html#_CPPv4N7sansmic7Results5dr_dtE">sansmic::Results::dr_dt (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Results.html#_CPPv4N7sansmic7Results2dtE">sansmic::Results::dt (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Results.html#_CPPv4N7sansmic7Results3errE">sansmic::Results::err (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Results.html#_CPPv4N7sansmic7Results5f_disE">sansmic::Results::f_dis (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Results.html#_CPPv4N7sansmic7Results6f_flagE">sansmic::Results::f_flag (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Results.html#_CPPv4N7sansmic7Results3h_0E">sansmic::Results::h_0 (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Results.html#_CPPv4N7sansmic7Results7h_insolE">sansmic::Results::h_insol (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Results.html#_CPPv4N7sansmic7Results7injCellE">sansmic::Results::injCell (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Results.html#_CPPv4N7sansmic7Results5l_jetE">sansmic::Results::l_jet (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Results.html#_CPPv4N7sansmic7Results7obiCellE">sansmic::Results::obiCell (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Results.html#_CPPv4N7sansmic7Results5phaseE">sansmic::Results::phase (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Results.html#_CPPv4N7sansmic7Results7plmCellE">sansmic::Results::plmCell (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Results.html#_CPPv4N7sansmic7Results8prodCellE">sansmic::Results::prodCell (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Results.html#_CPPv4N7sansmic7Results5Q_injE">sansmic::Results::Q_inj (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Results.html#_CPPv4N7sansmic7Results5Q_outE">sansmic::Results::Q_out (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Results.html#_CPPv4N7sansmic7Results3r_0E">sansmic::Results::r_0 (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Results.html#_CPPv4N7sansmic7Results5r_cavE">sansmic::Results::r_cav (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Results.html#_CPPv4N7sansmic7Results5r_jetE">sansmic::Results::r_jet (C++ member)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidocs/structsansmic_1_1Results.html#_CPPv4N7sansmic7Results5r_plmE">sansmic::Results::r_plm (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Results.html#_CPPv4N7sansmic7Results2sgE">sansmic::Results::sg (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Results.html#_CPPv4N7sansmic7Results9sg_cavAveE">sansmic::Results::sg_cavAve (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Results.html#_CPPv4N7sansmic7Results6sg_outE">sansmic::Results::sg_out (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Results.html#_CPPv4N7sansmic7Results5stageE">sansmic::Results::stage (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Results.html#_CPPv4N7sansmic7Results4stepE">sansmic::Results::step (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Results.html#_CPPv4N7sansmic7Results1tE">sansmic::Results::t (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Results.html#_CPPv4N7sansmic7Results5thetaE">sansmic::Results::theta (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Results.html#_CPPv4N7sansmic7Results5u_jetE">sansmic::Results::u_jet (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Results.html#_CPPv4N7sansmic7Results5u_plmE">sansmic::Results::u_plm (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Results.html#_CPPv4N7sansmic7Results1VE">sansmic::Results::V (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Results.html#_CPPv4N7sansmic7Results8V_cavTotE">sansmic::Results::V_cavTot (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Results.html#_CPPv4N7sansmic7Results9V_fillTotE">sansmic::Results::V_fillTot (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Results.html#_CPPv4N7sansmic7Results8V_injTotE">sansmic::Results::V_injTot (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Results.html#_CPPv4N7sansmic7Results10V_insolTotE">sansmic::Results::V_insolTot (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Results.html#_CPPv4N7sansmic7Results11V_insolVentE">sansmic::Results::V_insolVent (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Results.html#_CPPv4N7sansmic7Results5xinclE">sansmic::Results::xincl (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Results.html#_CPPv4N7sansmic7Results3z_0E">sansmic::Results::z_0 (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Results.html#_CPPv4N7sansmic7Results5z_injE">sansmic::Results::z_inj (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Results.html#_CPPv4N7sansmic7Results7z_insolE">sansmic::Results::z_insol (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Results.html#_CPPv4N7sansmic7Results5z_obiE">sansmic::Results::z_obi (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Results.html#_CPPv4N7sansmic7Results5z_plmE">sansmic::Results::z_plm (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Results.html#_CPPv4N7sansmic7Results6z_prodE">sansmic::Results::z_prod (C++ member)</a>
+</li>
+      <li><a href="apidocs/classsansmic_1_1Salt.html#_CPPv4N7sansmic4SaltE">sansmic::Salt (C++ class)</a>
+</li>
+      <li><a href="apidocs/classsansmic_1_1Salt.html#_CPPv4N7sansmic4Salt24get_recession_rate_coeffEv">sansmic::Salt::get_recession_rate_coeff (C++ function)</a>
+</li>
+      <li><a href="apidocs/classsansmic_1_1Salt.html#_CPPv4N7sansmic4Salt10get_sg_maxEv">sansmic::Salt::get_sg_max (C++ function)</a>
+</li>
+      <li><a href="apidocs/classsansmic_1_1Salt.html#_CPPv4N7sansmic4Salt27get_sg_wt_pct_convert_coeffEv">sansmic::Salt::get_sg_wt_pct_convert_coeff (C++ function)</a>
+</li>
+      <li><a href="apidocs/classsansmic_1_1Salt.html#_CPPv4N7sansmic4Salt17get_solid_densityEv">sansmic::Salt::get_solid_density (C++ function)</a>
+</li>
+      <li><a href="apidocs/classsansmic_1_1Salt.html#_CPPv4N7sansmic4Salt14recession_rateEd">sansmic::Salt::recession_rate (C++ function)</a>
+</li>
+      <li><a href="apidocs/classsansmic_1_1Salt.html#_CPPv4N7sansmic4Salt4SaltEdd">sansmic::Salt::Salt (C++ function)</a>, <a href="apidocs/classsansmic_1_1Salt.html#_CPPv4N7sansmic4Salt4SaltEv">[1]</a>
+</li>
+      <li><a href="apidocs/classsansmic_1_1Salt.html#_CPPv4N7sansmic4Salt28set_density_conversion_coeffE5arrayIdXL3EEE">sansmic::Salt::set_density_conversion_coeff (C++ function)</a>
+</li>
+      <li><a href="apidocs/classsansmic_1_1Salt.html#_CPPv4N7sansmic4Salt24set_recession_rate_coeffE5arrayIdXL6EEE">sansmic::Salt::set_recession_rate_coeff (C++ function)</a>
+</li>
+      <li><a href="apidocs/classsansmic_1_1Salt.html#_CPPv4N7sansmic4Salt10set_sg_maxEd">sansmic::Salt::set_sg_max (C++ function)</a>
+</li>
+      <li><a href="apidocs/classsansmic_1_1Salt.html#_CPPv4N7sansmic4Salt17set_solid_densityEd">sansmic::Salt::set_solid_density (C++ function)</a>
+</li>
+      <li><a href="apidocs/classsansmic_1_1Salt.html#_CPPv4N7sansmic4Salt2sgEdd">sansmic::Salt::sg (C++ function)</a>
+</li>
+      <li><a href="apidocs/classsansmic_1_1Salt.html#_CPPv4N7sansmic4Salt6wt_pctEdd">sansmic::Salt::wt_pct (C++ function)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Scenario.html#_CPPv4N7sansmic8ScenarioE">sansmic::Scenario (C++ struct)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Scenario.html#_CPPv4N7sansmic8Scenario14absolute_errorE">sansmic::Scenario::absolute_error (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Scenario.html#_CPPv4N7sansmic8Scenario9add_stageE5Stage">sansmic::Scenario::add_stage (C++ function)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Scenario.html#_CPPv4N7sansmic8Scenario13cavern_heightE">sansmic::Scenario::cavern_height (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Scenario.html#_CPPv4N7sansmic8Scenario17coallescing_wellsE">sansmic::Scenario::coallescing_wells (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Scenario.html#_CPPv4N7sansmic8Scenario8commentsE">sansmic::Scenario::comments (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Scenario.html#_CPPv4N7sansmic8Scenario9debug_logER8ofstream">sansmic::Scenario::debug_log (C++ function)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Scenario.html#_CPPv4N7sansmic8Scenario14diffusion_betaE">sansmic::Scenario::diffusion_beta (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Scenario.html#_CPPv4N7sansmic8Scenario18dissolution_factorE">sansmic::Scenario::dissolution_factor (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Scenario.html#_CPPv4N7sansmic8Scenario16eddy_coefficientE">sansmic::Scenario::eddy_coefficient (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Scenario.html#_CPPv4N7sansmic8Scenario17entrainment_coeffE">sansmic::Scenario::entrainment_coeff (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Scenario.html#_CPPv4N7sansmic8Scenario11floor_depthE">sansmic::Scenario::floor_depth (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Scenario.html#_CPPv4N7sansmic8Scenario19fraction_insolublesE">sansmic::Scenario::fraction_insolubles (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Scenario.html#_CPPv4N7sansmic8Scenario11geom_depthsE">sansmic::Scenario::geom_depths (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Scenario.html#_CPPv4N7sansmic8Scenario10geom_radiiE">sansmic::Scenario::geom_radii (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Scenario.html#_CPPv4N7sansmic8Scenario12geom_volumesE">sansmic::Scenario::geom_volumes (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Scenario.html#_CPPv4N7sansmic8Scenario15geometry_formatE">sansmic::Scenario::geometry_format (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Scenario.html#_CPPv4N7sansmic8Scenario17jet_model_versionE">sansmic::Scenario::jet_model_version (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Scenario.html#_CPPv4N7sansmic8Scenario12max_brine_sgE">sansmic::Scenario::max_brine_sg (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Scenario.html#_CPPv4N7sansmic8Scenario19molecular_diffusionE">sansmic::Scenario::molecular_diffusion (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Scenario.html#_CPPv4N7sansmic8Scenario9num_cellsE">sansmic::Scenario::num_cells (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Scenario.html#_CPPv4N7sansmic8Scenario19plume_model_versionE">sansmic::Scenario::plume_model_version (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Scenario.html#_CPPv4N7sansmic8Scenario14relative_errorE">sansmic::Scenario::relative_error (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Scenario.html#_CPPv4N7sansmic8Scenario8ScenarioEv">sansmic::Scenario::Scenario (C++ function)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Scenario.html#_CPPv4N7sansmic8Scenario13solid_densityE">sansmic::Scenario::solid_density (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Scenario.html#_CPPv4N7sansmic8Scenario6stagesE">sansmic::Scenario::stages (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Scenario.html#_CPPv4N7sansmic8Scenario25temperature_model_versionE">sansmic::Scenario::temperature_model_version (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Scenario.html#_CPPv4N7sansmic8Scenario5titleE">sansmic::Scenario::title (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Scenario.html#_CPPv4N7sansmic8Scenario15ullage_standoffE">sansmic::Scenario::ullage_standoff (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Scenario.html#_CPPv4N7sansmic8Scenario15well_separationE">sansmic::Scenario::well_separation (C++ member)</a>
+</li>
+      <li><a href="apidocs/function_libsansmic_8hpp_1ab33feadd6242c54d884b2877b48aede1.html#_CPPv4N7sansmic4signEii">sansmic::sign (C++ function)</a>, <a href="apidocs/function_libsansmic_8hpp_1ad862c88ec431b0775d64800d4a79c4ac.html#_CPPv4N7sansmic4signEdd">[1]</a>
+</li>
+      <li><a href="apidocs/function_libsansmic_8hpp_1a9e5dc0ecd570d5b736f756b1da33158a.html#_CPPv4N7sansmic2sqEd">sansmic::sq (C++ function)</a>
+</li>
+      <li><a href="apidocs/variable_libsansmic_8hpp_1a65d119aa16b025a2586c16bc1179ee58.html#_CPPv4N7sansmic11square_footE">sansmic::square_foot (C++ member)</a>
+</li>
+      <li><a href="apidocs/variable_libsansmic_8hpp_1aa8e12cd784414f4da441d6e5cd428176.html#_CPPv4N7sansmic11square_inchE">sansmic::square_inch (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Stage.html#_CPPv4N7sansmic5StageE">sansmic::Stage (C++ struct)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Stage.html#_CPPv4N7sansmic5Stage9debug_logER8ofstream">sansmic::Stage::debug_log (C++ function)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Stage.html#_CPPv4N7sansmic5Stage2dtE">sansmic::Stage::dt (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Stage.html#_CPPv4N7sansmic5Stage5h_injE">sansmic::Stage::h_inj (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Stage.html#_CPPv4N7sansmic5Stage5h_obiE">sansmic::Stage::h_obi (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Stage.html#_CPPv4N7sansmic5Stage6h_prodE">sansmic::Stage::h_prod (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Stage.html#_CPPv4N7sansmic5Stage13is_subsequentE">sansmic::Stage::is_subsequent (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Stage.html#_CPPv4N7sansmic5Stage10leach_modeE">sansmic::Stage::leach_mode (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Stage.html#_CPPv4N7sansmic5Stage10print_freqE">sansmic::Stage::print_freq (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Stage.html#_CPPv4N7sansmic5Stage5Q_oilE">sansmic::Stage::Q_oil (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Stage.html#_CPPv4N7sansmic5Stage5Q_rawE">sansmic::Stage::Q_raw (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Stage.html#_CPPv4N7sansmic5Stage7r_csgIDE">sansmic::Stage::r_csgID (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Stage.html#_CPPv4N7sansmic5Stage7r_csgODE">sansmic::Stage::r_csgOD (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Stage.html#_CPPv4N7sansmic5Stage7r_tbgIDE">sansmic::Stage::r_tbgID (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Stage.html#_CPPv4N7sansmic5Stage7r_tbgODE">sansmic::Stage::r_tbgOD (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Stage.html#_CPPv4N7sansmic5Stage7sg_initE">sansmic::Stage::sg_init (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Stage.html#_CPPv4N7sansmic5Stage6sg_rawE">sansmic::Stage::sg_raw (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Stage.html#_CPPv4N7sansmic5Stage5StageEv">sansmic::Stage::Stage (C++ function)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Stage.html#_CPPv4N7sansmic5Stage13stop_cond_valE">sansmic::Stage::stop_cond_val (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Stage.html#_CPPv4N7sansmic5Stage6t_restE">sansmic::Stage::t_rest (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Stage.html#_CPPv4N7sansmic5Stage7t_stageE">sansmic::Stage::t_stage (C++ member)</a>
+</li>
+      <li><a href="apidocs/structsansmic_1_1Stage.html#_CPPv4N7sansmic5Stage5titleE">sansmic::Stage::title (C++ member)</a>
+</li>
+      <li><a href="apidocs/variable_libsansmic_8hpp_1a3672ba92add1b2550dbf908383a392cd.html#_CPPv4N7sansmic11std_gravityE">sansmic::std_gravity (C++ member)</a>
+</li>
+      <li><a href="apidocs/function_libsansmic_8hpp_1abd9435272066c6467cd42223a85ab523.html#_CPPv4N7sansmic6trigadEiiR6vectorIdER6vectorIdER6vectorIdER6vectorIdER6vectorIdE">sansmic::trigad (C++ function)</a>
+</li>
+      <li><a href="apidocs/variable_libsansmic_8hpp_1a583d71ee41f917002e5274dc9e2dd828.html#_CPPv4N7sansmic25UNIMPLEMENTED_FLOW_TABLESE">sansmic::UNIMPLEMENTED_FLOW_TABLES (C++ member)</a>
+</li>
+      <li><a href="apidocs/variable_libsansmic_8hpp_1a2f7db9be399d5ac9e2e7b21e5aff61df.html#_CPPv4N7sansmic28UNIMPLEMENTED_GEOMETRY_IDATAE">sansmic::UNIMPLEMENTED_GEOMETRY_IDATA (C++ member)</a>
+</li>
+      <li><a href="apidocs/function_libsansmic_8hpp_1aebbfefaf337ee806ea88b6d52e36f905.html#_CPPv4N7sansmic10xnterp_dkrEd6vectorIdE6vectorIdEi">sansmic::xnterp_dkr (C++ function)</a>
+</li>
+      <li><a href="apidocs/variable_libsansmic_8hpp_1acf7d3f4554cbe417c5e190b85a100894.html#_CPPv4N7sansmic15zero_FahrenheitE">sansmic::zero_Fahrenheit (C++ member)</a>
+</li>
+      <li>
+    save-frequency
+
+      <ul>
+        <li><a href="um/scenarios.html#confval-save-frequency">configuration value</a>
+</li>
+      </ul></li>
+      <li><a href="apidocs/sansmic.model.StageDefinition.html#sansmic.model.StageDefinition.save_frequency">save_frequency (StageDefinition attribute)</a>
+</li>
+      <li><a href="apidocs/sansmic.model.Scenario.html#sansmic.model.Scenario">Scenario (class in sansmic.model)</a>
+</li>
+      <li>
+    set-cavern-sg
+
+      <ul>
+        <li><a href="um/scenarios.html#confval-set-cavern-sg">configuration value</a>
+</li>
+      </ul></li>
+      <li>
+    set-initial-conditions
+
+      <ul>
+        <li><a href="um/scenarios.html#confval-set-initial-conditions">configuration value</a>
+</li>
+      </ul></li>
+      <li><a href="apidocs/sansmic.model.StageDefinition.html#sansmic.model.StageDefinition.set_cavern_sg">set_cavern_sg (StageDefinition attribute)</a>
+</li>
+      <li><a href="apidocs/sansmic.model.StageDefinition.html#sansmic.model.StageDefinition.set_initial_conditions">set_initial_conditions (StageDefinition attribute)</a>
+</li>
+      <li><a href="apidocs/sansmic.libsansmic.CSalt.html#sansmic.libsansmic.CSalt.set_recession_rate_coeff">set_recession_rate_coeff() (CSalt method)</a>
+</li>
+      <li><a href="apidocs/sansmic.libsansmic.CSalt.html#sansmic.libsansmic.CSalt.set_saturated_sg">set_saturated_sg() (CSalt method)</a>
+</li>
+      <li><a href="apidocs/sansmic.libsansmic.CSalt.html#sansmic.libsansmic.CSalt.set_solid_density">set_solid_density() (CSalt method)</a>
+</li>
+      <li><a href="apidocs/sansmic.libsansmic.CModel.html#sansmic.libsansmic.CModel.set_verbosity_level">set_verbosity_level() (CModel method)</a>
+</li>
+      <li><a href="apidocs/sansmic.libsansmic.CSalt.html#sansmic.libsansmic.CSalt.set_wt_pct_sg_coeff">set_wt_pct_sg_coeff() (CSalt method)</a>
+</li>
+      <li><a href="nomenclature.html#term-SF"><strong>SF</strong></a>
+</li>
+      <li><a href="nomenclature.html#term-sg"><strong>sg</strong></a>
+
+      <ul>
+        <li><a href="apidocs/sansmic.libsansmic.CResults.html#sansmic.libsansmic.CResults.sg">(CResults property)</a>
+</li>
+      </ul></li>
+      <li><a href="apidocs/sansmic.libsansmic.CResults.html#sansmic.libsansmic.CResults.sg_cavAve">sg_cavAve (CResults property)</a>
+</li>
+      <li><a href="apidocs/sansmic.empirical.sg_matrix.html#sansmic.empirical.sg_matrix">sg_matrix (in module sansmic.empirical)</a>
+</li>
+      <li><a href="apidocs/sansmic.empirical.sg_max.html#sansmic.empirical.sg_max">sg_max (in module sansmic.empirical)</a>
+</li>
+      <li><a href="apidocs/sansmic.libsansmic.CResults.html#sansmic.libsansmic.CResults.sg_out">sg_out (CResults property)</a>
+</li>
+      <li><a href="apidocs/sansmic.libsansmic.CSalt.html#sansmic.libsansmic.CSalt.sg_to_wt_pct">sg_to_wt_pct() (CSalt method)</a>
+</li>
+      <li><a href="nomenclature.html#term-SI"><strong>SI</strong></a>
+</li>
+      <li>
+    simulation-mode
+
+      <ul>
+        <li><a href="um/scenarios.html#confval-simulation-mode">configuration value</a>
+</li>
+      </ul></li>
+      <li><a href="apidocs/sansmic.model.StageDefinition.html#sansmic.model.StageDefinition.simulation_mode">simulation_mode (StageDefinition attribute)</a>
+</li>
+      <li><a href="apidocs/sansmic.model.SimulationMode.html#sansmic.model.SimulationMode">SimulationMode (class in sansmic.model)</a>
+</li>
+      <li><a href="apidocs/sansmic.model.Simulator.html#sansmic.model.Simulator">Simulator (class in sansmic.model)</a>
+</li>
+      <li><a href="nomenclature.html#term-SMRI"><strong>SMRI</strong></a>
+</li>
+      <li><a href="nomenclature.html#term-SNL"><strong>SNL</strong></a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="Software code">Software code</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="nomenclature.html#term-SALT"><strong>SALT</strong></a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="nomenclature.html#term-SANSMIC"><strong>SANSMIC</strong></a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="S">S</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    solid-density
+
+      <ul>
+        <li><a href="um/scenarios.html#confval-solid-density">configuration value</a>
+</li>
+      </ul></li>
+      <li><a href="apidocs/sansmic.model.AdvancedOptions.html#sansmic.model.AdvancedOptions.solid_density">solid_density (AdvancedOptions attribute)</a>
+
+      <ul>
+        <li><a href="apidocs/sansmic.libsansmic.CScenario.html#sansmic.libsansmic.CScenario.solid_density">(CScenario property)</a>
+</li>
+      </ul></li>
+      <li>
+    solver-timestep
+
+      <ul>
+        <li><a href="um/scenarios.html#confval-solver-timestep">configuration value</a>
+</li>
+      </ul></li>
+      <li><a href="apidocs/sansmic.model.StageDefinition.html#sansmic.model.StageDefinition.solver_timestep">solver_timestep (StageDefinition attribute)</a>
+</li>
+      <li><a href="nomenclature.html#term-SPR"><strong>SPR</strong></a>
+</li>
+      <li><a href="apidocs/sansmic.libsansmic.CResults.html#sansmic.libsansmic.CResults.stage">stage (CResults property)</a>
+</li>
+      <li><a href="apidocs/sansmic.model.Results.html#sansmic.model.Results.stage_number">stage_number (Results property)</a>
+</li>
+      <li><a href="apidocs/sansmic.model.StageDefinition.html#sansmic.model.StageDefinition">StageDefinition (class in sansmic.model)</a>
+</li>
+      <li><a href="apidocs/sansmic.model.Scenario.html#sansmic.model.Scenario.stages">stages (Scenario attribute)</a>
+</li>
+      <li><a href="apidocs/sansmic.model.Results.html#sansmic.model.Results.state_indicator">state_indicator (Results property)</a>
+</li>
+      <li><a href="apidocs/sansmic.libsansmic.CResults.html#sansmic.libsansmic.CResults.step">step (CResults property)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidocs/sansmic.model.Results.html#sansmic.model.Results.step_number">step_number (Results property)</a>
+</li>
+      <li><a href="apidocs/sansmic.model.Results.html#sansmic.model.Results.step_size">step_size (Results property)</a>
+</li>
+      <li><a href="apidocs/sansmic.model.Simulator.html#sansmic.model.Simulator.steps">steps (Simulator property)</a>
+</li>
+      <li><a href="apidocs/sansmic.model.StepwiseIterator.html#sansmic.model.StepwiseIterator">StepwiseIterator (class in sansmic.model)</a>
+</li>
+      <li>
+    stop-condition
+
+      <ul>
+        <li><a href="um/scenarios.html#confval-stop-condition">configuration value</a>
+</li>
+      </ul></li>
+      <li>
+    stop-value
+
+      <ul>
+        <li><a href="um/scenarios.html#confval-stop-value">configuration value</a>
+</li>
+      </ul></li>
+      <li><a href="apidocs/sansmic.model.StageDefinition.html#sansmic.model.StageDefinition.stop_condition">stop_condition (StageDefinition attribute)</a>
+</li>
+      <li><a href="apidocs/sansmic.libsansmic.CStage.html#sansmic.libsansmic.CStage.stop_value">stop_value (CStage property)</a>
+
+      <ul>
+        <li><a href="apidocs/sansmic.model.StageDefinition.html#sansmic.model.StageDefinition.stop_value">(StageDefinition attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="apidocs/sansmic.model.StopCondition.html#sansmic.model.StopCondition">StopCondition (class in sansmic.model)</a>
+</li>
+      <li><a href="apidocs/sansmic.model.SimulationMode.html#sansmic.model.SimulationMode.STORAGE_FILL">STORAGE_FILL (SimulationMode attribute)</a>
+</li>
+      <li><a href="apidocs/sansmic.libsansmic.CStage.html#sansmic.libsansmic.CStage.subsequent">subsequent (CStage property)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="T">T</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidocs/sansmic.libsansmic.CResults.html#sansmic.libsansmic.CResults.t">t (CResults property)</a>
+</li>
+      <li><a href="apidocs/sansmic.empirical.T_degC_max.html#sansmic.empirical.T_degC_max">T_degC_max (in module sansmic.empirical)</a>
+</li>
+      <li><a href="apidocs/sansmic.empirical.T_degC_vec.html#sansmic.empirical.T_degC_vec">T_degC_vec (in module sansmic.empirical)</a>
+</li>
+      <li><a href="nomenclature.html#term-TD"><strong>TD</strong></a>
+</li>
+      <li><a href="apidocs/sansmic.model.AdvancedOptions.html#sansmic.model.AdvancedOptions.temperature_model_version">temperature_model_version (AdvancedOptions attribute)</a>
+
+      <ul>
+        <li><a href="apidocs/sansmic.libsansmic.CScenario.html#sansmic.libsansmic.CScenario.temperature_model_version">(CScenario property)</a>
+</li>
+      </ul></li>
+      <li><a href="apidocs/sansmic.libsansmic.CResults.html#sansmic.libsansmic.CResults.theta">theta (CResults property)</a>
+</li>
+      <li><a href="apidocs/sansmic.model.Results.html#sansmic.model.Results.time">time (Results property)</a>
+</li>
+      <li><a href="apidocs/sansmic.libsansmic.CStage.html#sansmic.libsansmic.CStage.timestep">timestep (CStage property)</a>
+</li>
+      <li>
+    title
+
+      <ul>
+        <li><a href="um/scenarios.html#confval-title">configuration value</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidocs/sansmic.libsansmic.CScenario.html#sansmic.libsansmic.CScenario.title">title (CScenario property)</a>
+
+      <ul>
+        <li><a href="apidocs/sansmic.libsansmic.CStage.html#sansmic.libsansmic.CStage.title">(CStage property)</a>
+</li>
+        <li><a href="apidocs/sansmic.model.Scenario.html#sansmic.model.Scenario.title">(Scenario attribute)</a>
+</li>
+        <li><a href="apidocs/sansmic.model.StageDefinition.html#sansmic.model.StageDefinition.title">(StageDefinition attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="apidocs/sansmic.model.AdvancedOptions.html#sansmic.model.AdvancedOptions.to_dict">to_dict() (AdvancedOptions method)</a>
+
+      <ul>
+        <li><a href="apidocs/sansmic.model.Results.html#sansmic.model.Results.to_dict">(Results method)</a>
+</li>
+        <li><a href="apidocs/sansmic.model.Scenario.html#sansmic.model.Scenario.to_dict">(Scenario method)</a>
+</li>
+        <li><a href="apidocs/sansmic.model.StageDefinition.html#sansmic.model.StageDefinition.to_dict">(StageDefinition method)</a>
+</li>
+      </ul></li>
+      <li><a href="apidocs/sansmic.model.Results.html#sansmic.model.Results.to_hdf">to_hdf() (Results method)</a>
+</li>
+      <li><a href="nomenclature.html#term-TOML"><strong>TOML</strong></a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="U">U</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="nomenclature.html#term-U.S.-Customary-units"><strong>U.S. Customary units</strong></a>
+</li>
+      <li><a href="nomenclature.html#term-U.S.-Survey-units"><strong>U.S. Survey units</strong></a>
+</li>
+      <li><a href="apidocs/sansmic.libsansmic.CResults.html#sansmic.libsansmic.CResults.u_jet">u_jet (CResults property)</a>
+</li>
+      <li><a href="apidocs/sansmic.libsansmic.CResults.html#sansmic.libsansmic.CResults.u_plm">u_plm (CResults property)</a>
+</li>
+      <li>
+    ullage-standoff
+
+      <ul>
+        <li><a href="um/scenarios.html#confval-ullage-standoff">configuration value</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidocs/sansmic.libsansmic.CScenario.html#sansmic.libsansmic.CScenario.ullage_standoff">ullage_standoff (CScenario property)</a>
+
+      <ul>
+        <li><a href="apidocs/sansmic.model.Scenario.html#sansmic.model.Scenario.ullage_standoff">(Scenario attribute)</a>
+</li>
+      </ul></li>
+      <li>
+    units
+
+      <ul>
+        <li><a href="um/scenarios.html#confval-units">configuration value</a>
+</li>
+      </ul></li>
+      <li><a href="apidocs/sansmic.model.Units.html#sansmic.model.Units">Units (class in sansmic.model)</a>
+</li>
+      <li><a href="apidocs/sansmic.model.Scenario.html#sansmic.model.Scenario.units">units (Scenario attribute)</a>
+</li>
+      <li><a href="nomenclature.html#term-USC"><strong>USC</strong></a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="V">V</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidocs/sansmic.libsansmic.CResults.html#sansmic.libsansmic.CResults.V">V (CResults property)</a>
+</li>
+      <li><a href="apidocs/sansmic.libsansmic.CResults.html#sansmic.libsansmic.CResults.V_cavTot">V_cavTot (CResults property)</a>
+</li>
+      <li><a href="apidocs/sansmic.libsansmic.CResults.html#sansmic.libsansmic.CResults.V_fillTot">V_fillTot (CResults property)</a>
+</li>
+      <li><a href="apidocs/sansmic.libsansmic.CResults.html#sansmic.libsansmic.CResults.V_injTot">V_injTot (CResults property)</a>
+</li>
+      <li><a href="apidocs/sansmic.libsansmic.CResults.html#sansmic.libsansmic.CResults.V_insolTot">V_insolTot (CResults property)</a>
+</li>
+      <li><a href="apidocs/sansmic.libsansmic.CResults.html#sansmic.libsansmic.CResults.V_insolVent">V_insolVent (CResults property)</a>
+</li>
+      <li><a href="apidocs/sansmic.model.StageDefinition.html#sansmic.model.StageDefinition.valid_default_keys">valid_default_keys (StageDefinition attribute)</a>
+</li>
+      <li><a href="apidocs/sansmic.model.StageDefinition.html#sansmic.model.StageDefinition.validate">validate() (StageDefinition method)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidocs/sansmic.libsansmic.CGeometryFormat.html#sansmic.libsansmic.CGeometryFormat.value">value (CGeometryFormat property)</a>
+
+      <ul>
+        <li><a href="apidocs/sansmic.libsansmic.CRunMode.html#sansmic.libsansmic.CRunMode.value">(CRunMode property)</a>
+</li>
+      </ul></li>
+      <li><a href="apidocs/sansmic.model.Results.html#sansmic.model.Results.vertical_diffusion_rate">vertical_diffusion_rate (Results property)</a>
+</li>
+      <li><a href="apidocs/sansmic.model.StopCondition.html#sansmic.model.StopCondition.VOLUME">VOLUME (StopCondition attribute)</a>
+</li>
+      <li><a href="apidocs/sansmic.libsansmic.CGeometryFormat.html#sansmic.libsansmic.CGeometryFormat.VOLUME_LIST">VOLUME_LIST (CGeometryFormat attribute)</a>
+
+      <ul>
+        <li><a href="apidocs/sansmic.model.GeometryFormat.html#sansmic.model.GeometryFormat.VOLUME_LIST">(GeometryFormat attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="apidocs/sansmic.libsansmic.CGeometryFormat.html#sansmic.libsansmic.CGeometryFormat.VOLUME_TABLE">VOLUME_TABLE (CGeometryFormat attribute)</a>
+
+      <ul>
+        <li><a href="apidocs/sansmic.model.GeometryFormat.html#sansmic.model.GeometryFormat.VOLUME_TABLE">(GeometryFormat attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="apidocs/sansmic.libsansmic.CScenario.html#sansmic.libsansmic.CScenario.volume_vector">volume_vector (CScenario property)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="W">W</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidocs/sansmic.model.Results.html#sansmic.model.Results.wall_angle">wall_angle (Results property)</a>
+</li>
+      <li><a href="apidocs/sansmic.model.Results.html#sansmic.model.Results.wall_factor">wall_factor (Results property)</a>
+</li>
+      <li>
+    well-separation
+
+      <ul>
+        <li><a href="um/scenarios.html#confval-well-separation">configuration value</a>
+</li>
+      </ul></li>
+      <li><a href="apidocs/sansmic.model.AdvancedOptions.html#sansmic.model.AdvancedOptions.well_separation">well_separation (AdvancedOptions attribute)</a>
+
+      <ul>
+        <li><a href="apidocs/sansmic.libsansmic.CScenario.html#sansmic.libsansmic.CScenario.well_separation">(CScenario property)</a>
+</li>
+      </ul></li>
+      <li><a href="apidocs/sansmic.libsansmic.CRunMode.html#sansmic.libsansmic.CRunMode.WITHDRAWAL">WITHDRAWAL (CRunMode attribute)</a>
+
+      <ul>
+        <li><a href="apidocs/sansmic.model.SimulationMode.html#sansmic.model.SimulationMode.WITHDRAWAL">(SimulationMode attribute)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="nomenclature.html#term-WL"><strong>WL</strong></a>
+</li>
+      <li><a href="apidocs/sansmic.io.write_csv_results.html#sansmic.io.write_csv_results">write_csv_results() (in module sansmic.io)</a>
+</li>
+      <li><a href="apidocs/sansmic.io.write_hdf_results.html#sansmic.io.write_hdf_results">write_hdf_results() (in module sansmic.io)</a>
+</li>
+      <li><a href="apidocs/sansmic.io.write_json_results.html#sansmic.io.write_json_results">write_json_results() (in module sansmic.io)</a>
+</li>
+      <li><a href="apidocs/sansmic.io.write_scenario.html#sansmic.io.write_scenario">write_scenario() (in module sansmic.io)</a>
+</li>
+      <li><a href="nomenclature.html#term-wt.-pct."><strong>wt. pct.</strong></a>
+</li>
+      <li><a href="apidocs/sansmic.empirical.wt_pct_max.html#sansmic.empirical.wt_pct_max">wt_pct_max (in module sansmic.empirical)</a>
+</li>
+      <li><a href="apidocs/sansmic.libsansmic.CSalt.html#sansmic.libsansmic.CSalt.wt_pct_to_sg">wt_pct_to_sg() (CSalt method)</a>
+</li>
+      <li><a href="apidocs/sansmic.empirical.wt_pct_vec.html#sansmic.empirical.wt_pct_vec">wt_pct_vec (in module sansmic.empirical)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="X">X</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidocs/sansmic.libsansmic.CResults.html#sansmic.libsansmic.CResults.xincl">xincl (CResults property)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="Y">Y</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="nomenclature.html#term-YAML"><strong>YAML</strong></a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="Z">Z</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidocs/sansmic.libsansmic.CResults.html#sansmic.libsansmic.CResults.z_0">z_0 (CResults property)</a>
+</li>
+      <li><a href="apidocs/sansmic.libsansmic.CResults.html#sansmic.libsansmic.CResults.z_inj">z_inj (CResults property)</a>
+</li>
+      <li><a href="apidocs/sansmic.libsansmic.CResults.html#sansmic.libsansmic.CResults.z_insol">z_insol (CResults property)</a>
+</li>
+      <li><a href="apidocs/sansmic.libsansmic.CResults.html#sansmic.libsansmic.CResults.z_obi">z_obi (CResults property)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidocs/sansmic.libsansmic.CResults.html#sansmic.libsansmic.CResults.z_plm">z_plm (CResults property)</a>
+</li>
+      <li><a href="apidocs/sansmic.libsansmic.CResults.html#sansmic.libsansmic.CResults.z_prod">z_prod (CResults property)</a>
+</li>
+      <li><a href="nomenclature.html#term-ZDP"><strong>ZDP</strong></a>
+</li>
+      <li><a href="nomenclature.html#term-zero-depth-point"><strong>zero-depth point</strong></a>
+</li>
+  </ul></td>
+</tr></table>
+
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2024 National Technology and Engineering Solutions of Sandia, LLC. Under the terms of Contract DE-NA0003525 with NTESS, the U.S. Government retains certain rights in this software..
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.0.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

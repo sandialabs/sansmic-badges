@@ -1,0 +1,34 @@
+CSalt
+=====
+
+.. currentmodule:: sansmic.libsansmic
+
+.. autoclass:: CSalt
+
+
+   .. rubric:: Summary
+   .. autosummary::
+
+
+
+   
+      ~CSalt.get_recession_rate_coeff
+      ~CSalt.get_saturated_sg
+      ~CSalt.get_solid_density
+      ~CSalt.get_wt_pct_sg_coeff
+      ~CSalt.recession_rate
+      ~CSalt.set_recession_rate_coeff
+      ~CSalt.set_saturated_sg
+      ~CSalt.set_solid_density
+      ~CSalt.set_wt_pct_sg_coeff
+      ~CSalt.sg_to_wt_pct
+      ~CSalt.wt_pct_to_sg
+
+
+
+
+
+
+
+   .. rubric:: Details
+

@@ -1,0 +1,10 @@
+
+
+read\_dat
+=========
+
+.. currentmodule:: sansmic.io
+
+
+
+.. autofunction:: sansmic.io::read_dat

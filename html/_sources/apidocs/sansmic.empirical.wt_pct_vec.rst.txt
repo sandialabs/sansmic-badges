@@ -1,0 +1,10 @@
+
+
+wt\_pct\_vec
+============
+
+.. currentmodule:: sansmic.empirical
+
+
+
+.. autodata:: sansmic.empirical::wt_pct_vec

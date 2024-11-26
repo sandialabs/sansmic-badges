@@ -1,0 +1,10 @@
+
+
+a
+=
+
+.. currentmodule:: sansmic.empirical
+
+
+
+.. autodata:: sansmic.empirical::a

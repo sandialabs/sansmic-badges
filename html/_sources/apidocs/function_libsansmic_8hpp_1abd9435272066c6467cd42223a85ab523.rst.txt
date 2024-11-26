@@ -1,0 +1,14 @@
+.. _exhale_function_libsansmic_8hpp_1abd9435272066c6467cd42223a85ab523:
+
+Function sansmic::trigad
+========================
+
+- Defined in :ref:`file_libsansmic.hpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: sansmic::trigad(int, int, vector<double>&, vector<double>&, vector<double>&, vector<double>&, vector<double>&)
+   :project: libsansmic

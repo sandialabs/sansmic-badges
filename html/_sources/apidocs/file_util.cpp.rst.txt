@@ -1,0 +1,30 @@
+
+.. _file_util.cpp:
+
+File util.cpp
+=============
+
+
+Utility maths functions. 
+
+
+Definition (``util.cpp``)
+-------------------------
+
+
+
+
+
+
+Includes
+--------
+
+
+- ``libsansmic.hpp`` (:ref:`file_libsansmic.hpp`)
+
+- ``vector``
+
+
+
+
+

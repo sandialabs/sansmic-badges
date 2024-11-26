@@ -1,0 +1,1238 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Scenarios &#8212; Sansmic</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+
+    <script src="../_static/documentation_options.js?v=76e2d817"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-23TNKN36XM"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-23TNKN36XM');
+            </script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-23TNKN36XM');
+            </script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'um/scenarios';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.0';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://sandialabs.github.io/sansmic/_static/switcher.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'v1.0.0';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner = true;
+        </script>
+    <script src="../_static/pypi-icon.js?v=74687d30"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="References" href="../references.html" />
+    <link rel="prev" title="Running sansmic" href="running-sansmic.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="1.0.0" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Sansmic</p>
+  
+</a></div>
+    
+      <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../userman.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../refman.html">
+    API Reference
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/sandialabs/sansmic" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/sansmic/" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.sandia.gov" title="Sandia National Laboratories" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../_static/snl_logo.png" class="icon-link-image" alt="Sandia National Laboratories"/></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../userman.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../refman.html">
+    API Reference
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/sandialabs/sansmic" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/sansmic/" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.sandia.gov" title="Sandia National Laboratories" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../_static/snl_logo.png" class="icon-link-image" alt="Sandia National Laboratories"/></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting-started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="running-sansmic.html">Running sansmic</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Scenarios</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references.html">References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nomenclature.html">Nomenclature</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item"><nav class="sidebar-indices-items" aria-labelledby="pst-indices-navigation-heading-2">
+  <p id="pst-indices-navigation-heading-2" class="sidebar-indices-items__title" role="heading" aria-level="1">Indices</p>
+  <ul class="indices-link">
+        <li class="toctree-l1">
+          <a class="reference internal"
+             href="../genindex.html"
+             accesskey="I">General Index</a>
+        </li>
+        <li class="toctree-l1">
+          <a class="reference internal" href="../py-modindex.html">Python Module Index</a>
+        </li>
+  </ul>
+</nav></div>
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../userman.html" class="nav-link">User Guide</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Scenarios</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="scenarios">
+<h1>Scenarios<a class="headerlink" href="#scenarios" title="Link to this heading">#</a></h1>
+<p>sansmic runs a simulation based on a user-defined scenario.
+In SANSMIC, this was defined in a .DAT file. Modern scenarios are
+defined programmatically, using <a class="reference internal" href="../apidocs/sansmic.model.Scenario.html#sansmic.model.Scenario" title="sansmic.model.Scenario"><code class="xref py py-class docutils literal notranslate"><span class="pre">Scenario</span></code></a>,
+<a class="reference internal" href="../apidocs/sansmic.model.AdvancedOptions.html#sansmic.model.AdvancedOptions" title="sansmic.model.AdvancedOptions"><code class="xref py py-class docutils literal notranslate"><span class="pre">AdvancedOptions</span></code></a>,
+and <a class="reference internal" href="../apidocs/sansmic.model.StageDefinition.html#sansmic.model.StageDefinition" title="sansmic.model.StageDefinition"><code class="xref py py-class docutils literal notranslate"><span class="pre">StageDefinition</span></code></a> objects, or through
+a dictionary representation of these classes.
+The pereferred file format for a scenario file is <a class="reference internal" href="../nomenclature.html#term-TOML"><span class="xref std std-term">TOML</span></a>,
+although <a class="reference internal" href="../nomenclature.html#term-JSON"><span class="xref std std-term">JSON</span></a>, and <a class="reference internal" href="../nomenclature.html#term-YAML"><span class="xref std std-term">YAML</span></a> will be parsed if the proper
+extension is used. All configuration examples will be provided in
+TOML format.</p>
+<p>The scenario file starts with options that are not contained in
+a TOML table. The following is the basic layout of a scenario file</p>
+<div class="highlight-toml notranslate"><div class="highlight"><pre><span></span><span class="n">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;A title for my scenario&#39;</span><span class="w">   </span><span class="c1"># optional but highly recommended</span>
+<span class="n">num-cells</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">200</span><span class="w">                     </span><span class="c1"># required</span>
+<span class="c1"># ... additional per-scenario options will follow</span>
+
+<span class="k">[advanced]</span>
+<span class="c1"># ... advanced and unusual settings, such as ...</span>
+<span class="n">relative-error</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0e-4</span><span class="w">             </span><span class="c1"># the ODE solver tolerance</span>
+
+<span class="k">[defaults]</span>
+<span class="c1"># ... values which can be overridden in a specific stage, but which</span>
+<span class="c1">#     you may want a default value so you don&#39;t *have* to specify</span>
+<span class="c1">#     more than once</span>
+<span class="n">solver-timestep</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.1</span><span class="w">         </span><span class="c1"># hours</span>
+<span class="n">inner-tbg-inside-diam</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">9.85</span><span class="w">  </span><span class="c1"># inches</span>
+
+<span class="k">[[stages]]</span>
+<span class="c1"># ... per-stage options go here</span>
+
+<span class="c1"># [[stages]]</span>
+<span class="c1"># ... define an additional stage with another [[stages]] entry</span>
+</pre></div>
+</div>
+<p>Optional but highly recommended scenario keys are</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#confval-title"><code class="xref std std-confval docutils literal notranslate"><span class="pre">title</span></code></a></p></li>
+<li><p><a class="reference internal" href="#confval-comments"><code class="xref std std-confval docutils literal notranslate"><span class="pre">comments</span></code></a></p></li>
+</ul>
+<p>Required scenario keys are</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#confval-num-cells"><code class="xref std std-confval docutils literal notranslate"><span class="pre">num-cells</span></code></a></p></li>
+<li><p><a class="reference internal" href="#confval-geometry-data"><code class="xref std std-confval docutils literal notranslate"><span class="pre">geometry-data</span></code></a></p></li>
+<li><p><a class="reference internal" href="#confval-geometry-format"><code class="xref std std-confval docutils literal notranslate"><span class="pre">geometry-format</span></code></a></p></li>
+<li><p><a class="reference internal" href="#confval-cavern-height"><code class="xref std std-confval docutils literal notranslate"><span class="pre">cavern-height</span></code></a></p></li>
+<li><p><a class="reference internal" href="#confval-floor-depth"><code class="xref std std-confval docutils literal notranslate"><span class="pre">floor-depth</span></code></a></p></li>
+<li><p><a class="reference internal" href="#confval-ullage-standoff"><code class="xref std std-confval docutils literal notranslate"><span class="pre">ullage-standoff</span></code></a></p></li>
+<li><p><a class="reference internal" href="#confval-insolubles-ratio"><code class="xref std std-confval docutils literal notranslate"><span class="pre">insolubles-ratio</span></code></a></p></li>
+<li><p><a class="reference internal" href="#confval-units"><code class="xref std std-confval docutils literal notranslate"><span class="pre">units</span></code></a> (in progress)</p></li>
+</ul>
+<p>Valid <a class="reference internal" href="#confval-defaults"><code class="xref std std-confval docutils literal notranslate"><span class="pre">[defaults]</span></code></a> keys are</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#confval-solver-timestep"><code class="xref std std-confval docutils literal notranslate"><span class="pre">solver-timestep</span></code></a></p></li>
+<li><p><a class="reference internal" href="#confval-save-frequency"><code class="xref std std-confval docutils literal notranslate"><span class="pre">save-frequency</span></code></a></p></li>
+<li><p><a class="reference internal" href="#confval-inner-tbg-inside-diam"><code class="xref std std-confval docutils literal notranslate"><span class="pre">inner-tbg-inside-diam</span></code></a></p></li>
+<li><p><a class="reference internal" href="#confval-inner-tbg-outside-diam"><code class="xref std std-confval docutils literal notranslate"><span class="pre">inner-tbg-outside-diam</span></code></a></p></li>
+<li><p><a class="reference internal" href="#confval-outer-csg-inside-diam"><code class="xref std std-confval docutils literal notranslate"><span class="pre">outer-csg-inside-diam</span></code></a></p></li>
+<li><p><a class="reference internal" href="#confval-outer-csg-outside-diam"><code class="xref std std-confval docutils literal notranslate"><span class="pre">outer-csg-outside-diam</span></code></a></p></li>
+</ul>
+<p>The <a class="reference internal" href="#advanced">[advanced]</a> section keys are</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#confval-absolute-error"><code class="xref std std-confval docutils literal notranslate"><span class="pre">absolute-error</span></code></a></p></li>
+<li><p><a class="reference internal" href="#confval-relative-error"><code class="xref std std-confval docutils literal notranslate"><span class="pre">relative-error</span></code></a></p></li>
+<li><p><a class="reference internal" href="#confval-coallescing-wells"><code class="xref std std-confval docutils literal notranslate"><span class="pre">coallescing-wells</span></code></a></p></li>
+<li><p><a class="reference internal" href="#confval-well-separation"><code class="xref std std-confval docutils literal notranslate"><span class="pre">well-separation</span></code></a></p></li>
+<li><p><a class="reference internal" href="#confval-jet-model-version"><code class="xref std std-confval docutils literal notranslate"><span class="pre">jet-model-version</span></code></a></p></li>
+<li><p><a class="reference internal" href="#confval-dissolution-factor"><code class="xref std std-confval docutils literal notranslate"><span class="pre">dissolution-factor</span></code></a></p></li>
+<li><p><a class="reference internal" href="#confval-max-brine-sg"><code class="xref std std-confval docutils literal notranslate"><span class="pre">max-brine-sg</span></code></a></p></li>
+<li><p><a class="reference internal" href="#confval-solid-density"><code class="xref std std-confval docutils literal notranslate"><span class="pre">solid-density</span></code></a></p></li>
+<li><p><a class="reference internal" href="#confval-entrainment-coeff"><code class="xref std std-confval docutils literal notranslate"><span class="pre">entrainment-coeff</span></code></a></p></li>
+<li><p><a class="reference internal" href="#confval-molecular-diffusion"><code class="xref std std-confval docutils literal notranslate"><span class="pre">molecular-diffusion</span></code></a></p></li>
+<li><p><a class="reference internal" href="#confval-eddy-coefficient"><code class="xref std std-confval docutils literal notranslate"><span class="pre">eddy-coefficient</span></code></a></p></li>
+<li><p><a class="reference internal" href="#confval-diffusion-beta"><code class="xref std std-confval docutils literal notranslate"><span class="pre">diffusion-beta</span></code></a></p></li>
+</ul>
+<p>The <a class="reference internal" href="#stages">[[stages]]</a> table require that <strong>all</strong> of the following
+be defined for <strong>each</strong> stage</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#confval-title"><code class="xref std std-confval docutils literal notranslate"><span class="pre">title</span></code></a></p></li>
+<li><p><a class="reference internal" href="#confval-simulation-mode"><code class="xref std std-confval docutils literal notranslate"><span class="pre">simulation-mode</span></code></a></p></li>
+<li><p><a class="reference internal" href="#confval-injection-duration"><code class="xref std std-confval docutils literal notranslate"><span class="pre">injection-duration</span></code></a></p></li>
+<li><p><a class="reference internal" href="#confval-rest-duration"><code class="xref std std-confval docutils literal notranslate"><span class="pre">rest-duration</span></code></a></p></li>
+<li><p><a class="reference internal" href="#confval-brine-injection-sg"><code class="xref std std-confval docutils literal notranslate"><span class="pre">brine-injection-sg</span></code></a></p></li>
+<li><p><a class="reference internal" href="#confval-brine-injection-depth"><code class="xref std std-confval docutils literal notranslate"><span class="pre">brine-injection-depth</span></code></a></p></li>
+<li><p><a class="reference internal" href="#confval-brine-production-depth"><code class="xref std std-confval docutils literal notranslate"><span class="pre">brine-production-depth</span></code></a></p></li>
+<li><p><a class="reference internal" href="#confval-brine-injection-rate"><code class="xref std std-confval docutils literal notranslate"><span class="pre">brine-injection-rate</span></code></a></p></li>
+</ul>
+<p>The keys which are required for at least the <strong>first</strong> stage are</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#confval-set-cavern-sg"><code class="xref std std-confval docutils literal notranslate"><span class="pre">set-cavern-sg</span></code></a></p></li>
+<li><p><a class="reference internal" href="#confval-brine-interface-depth"><code class="xref std std-confval docutils literal notranslate"><span class="pre">brine-interface-depth</span></code></a></p></li>
+</ul>
+<p>The keys which can be set using the <code class="docutils literal notranslate"><span class="pre">[defaults]</span></code> section
+can also be set in the <code class="docutils literal notranslate"><span class="pre">[stages]</span></code>, but they must be defined
+in every stage if they are not given defaults.</p>
+<p>Finally, the following options are optional or are only required
+in a certain <a class="reference internal" href="#confval-simulation-mode"><code class="xref std std-confval docutils literal notranslate"><span class="pre">simulation-mode</span></code></a></p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#confval-set-initial-conditions"><code class="xref std std-confval docutils literal notranslate"><span class="pre">set-initial-conditions</span></code></a></p></li>
+<li><p><a class="reference internal" href="#confval-product-injection-rate"><code class="xref std std-confval docutils literal notranslate"><span class="pre">product-injection-rate</span></code></a></p></li>
+<li><p><a class="reference internal" href="#confval-stop-condition"><code class="xref std std-confval docutils literal notranslate"><span class="pre">stop-condition</span></code></a></p></li>
+<li><p><a class="reference internal" href="#confval-stop-value"><code class="xref std std-confval docutils literal notranslate"><span class="pre">stop-value</span></code></a></p></li>
+</ul>
+<section id="scenario-options">
+<h2>Scenario options<a class="headerlink" href="#scenario-options" title="Link to this heading">#</a></h2>
+<dl class="std confval">
+<dt class="sig sig-object std" id="confval-title">
+<span class="sig-name descname"><span class="pre">title</span></span><a class="headerlink" href="#confval-title" title="Link to this definition">#</a></dt>
+<dd><p>A descriptive title for the simulation or for a stage.
+The simulation title is optional, but every stage <em>must</em> have
+a title defined.</p>
+</dd></dl>
+
+<dl class="std confval">
+<dt class="sig sig-object std" id="confval-comments">
+<span class="sig-name descname"><span class="pre">comments</span></span><a class="headerlink" href="#confval-comments" title="Link to this definition">#</a></dt>
+<dd><p>A longer block for detailed comments, citations, etc., can be
+defined at the scenario level. Use triple-quotes to allow use
+of multiple lines, like this</p>
+<div class="highlight-toml notranslate"><div class="highlight"><pre><span></span><span class="n">comments</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;&quot;&quot;This is an example</span>
+<span class="s2">of a comment that spans multiple lines.&quot;&quot;&quot;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="std confval">
+<dt class="sig sig-object std" id="confval-num-cells">
+<span class="sig-name descname"><span class="pre">num-cells</span></span><a class="headerlink" href="#confval-num-cells" title="Link to this definition">#</a></dt>
+<dd><p>The number of cells to use in the vertical domain. Each cell
+is between two nodes. The spacing of the nodes is defined by
+the <a class="reference internal" href="#confval-cavern-height"><code class="xref std std-confval docutils literal notranslate"><span class="pre">cavern-height</span></code></a> divided by <a class="reference internal" href="#confval-num-cells"><code class="xref std std-confval docutils literal notranslate"><span class="pre">num-cells</span></code></a>.</p>
+</dd></dl>
+
+<dl class="std confval">
+<dt class="sig sig-object std" id="confval-geometry-format">
+<span class="sig-name descname"><span class="pre">geometry-format</span></span><a class="headerlink" href="#confval-geometry-format" title="Link to this definition">#</a></dt>
+<dd><p>There are ways to define the geometry, and it is defined by this
+field. The valid options are given below. For all options except
+<em>radius-list</em>, the python module will linearly interpolate between
+depths to get the radii for each node, which is not necessarily a
+volume-conserving operation.</p>
+<dl class="simple">
+<dt>“radius-list”</dt><dd><p>The radii for each <em>node</em> are listed in order from the <em>bottom</em>
+of the cavern to the top. There are <a class="reference internal" href="#confval-num-cells"><code class="xref std std-confval docutils literal notranslate"><span class="pre">num-cells</span></code></a> + 1 nodes
+that are equally spaced based on the <a class="reference internal" href="#confval-cavern-height"><code class="xref std std-confval docutils literal notranslate"><span class="pre">cavern-height</span></code></a> divided
+by the number of cells. The radii are provided in units of <a class="reference internal" href="../nomenclature.html#term-foot"><span class="xref std std-term">foot</span></a>.
+The radii can be listed in the scenario configuration file or in
+a separate file - see <a class="reference internal" href="#confval-geometry-data"><code class="xref std std-confval docutils literal notranslate"><span class="pre">geometry-data</span></code></a>.</p>
+</dd>
+<dt>“radius-table”</dt><dd><p>The radii and depths are both specified, and the radii for each
+evenly-spaced node are interpolated between depths if needed. This
+is not a volume-conserving operation [currently].</p>
+</dd>
+<dt>“volume-table”</dt><dd><p>The volume of the cavern is specified for a list of depths. The
+volumes are then converted to a cumulative volume “strapping” curve,
+and the cumulative volume is interpolated for each evenly-spaced
+node. After this interpolation is performed, the volumes are de-accumulated
+and the radii calculated. This is a volume-conserving operation.</p>
+</dd>
+<dt>“volume-list”</dt><dd><p>This is actually a list of volumes <em>and</em> depths, and is identical
+to a volume table unless the data is in a separate file, in which
+case the number of entries must be specified on the first line,
+followed by all [double check] and then all [double check].
+If depths and radii are specified in the configuration file, then
+this is identical to the <em>volume-table</em> format.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std confval">
+<dt class="sig sig-object std" id="confval-geometry-data">
+<span class="sig-name descname"><span class="pre">geometry-data</span></span><a class="headerlink" href="#confval-geometry-data" title="Link to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd">string or dict</dd>
+</dl>
+<p>If the <a class="reference internal" href="#confval-geometry-data"><code class="xref std std-confval docutils literal notranslate"><span class="pre">geometry-data</span></code></a> field is a string, it is assumed to
+be a path to a file that contains <em>only</em> data in the format defined
+by the <a class="reference internal" href="#confval-geometry-format"><code class="xref std std-confval docutils literal notranslate"><span class="pre">geometry-format</span></code></a>. I.e., if the geometry format is
+<em>radius-list</em>, then it must be a list of numbers, one per line, and
+nothing else in the file.</p>
+<p>If the <a class="reference internal" href="#confval-geometry-data"><code class="xref std std-confval docutils literal notranslate"><span class="pre">geometry-data</span></code></a> is a dictionary, it can have the
+following fields; the fields needed and how they are interpreted and/or
+interpolated are determined by the <a class="reference internal" href="#confval-geometry-format"><code class="xref std std-confval docutils literal notranslate"><span class="pre">geometry-format</span></code></a>.</p>
+<dl class="std confval">
+<dt class="sig sig-object std" id="confval-geometry-data.radii">
+<span class="sig-name descname"><span class="pre">geometry-data.radii</span></span><a class="headerlink" href="#confval-geometry-data.radii" title="Link to this definition">#</a></dt>
+<dd><p>A list of radii. If <a class="reference internal" href="#confval-geometry-format"><code class="xref std std-confval docutils literal notranslate"><span class="pre">geometry-format</span></code></a> = <em>radius-list</em>,
+then this should be the only field provided, and the radii must
+be appropriately specified from bottom to top.</p>
+<p>If <a class="reference internal" href="#confval-geometry-format"><code class="xref std std-confval docutils literal notranslate"><span class="pre">geometry-format</span></code></a> = <em>radius-table</em>, then this field
+should have the radii corresponding to the depths in
+<a class="reference internal" href="#confval-geometry-data.depths"><code class="xref std std-confval docutils literal notranslate"><span class="pre">geometry-data.depths</span></code></a>, and the order is irrelevant provided
+the two fields are in the same order.</p>
+</dd></dl>
+
+<dl class="std confval">
+<dt class="sig sig-object std" id="confval-geometry-data.volumes">
+<span class="sig-name descname"><span class="pre">geometry-data.volumes</span></span><a class="headerlink" href="#confval-geometry-data.volumes" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="std confval">
+<dt class="sig sig-object std" id="confval-geometry-data.depths">
+<span class="sig-name descname"><span class="pre">geometry-data.depths</span></span><a class="headerlink" href="#confval-geometry-data.depths" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="std confval">
+<dt class="sig sig-object std" id="confval-cavern-height">
+<span class="sig-name descname"><span class="pre">cavern-height</span></span><a class="headerlink" href="#confval-cavern-height" title="Link to this definition">#</a></dt>
+<dd><p>The total height of the model domain in the vertical axis.</p>
+</dd></dl>
+
+<dl class="std confval">
+<dt class="sig sig-object std" id="confval-floor-depth">
+<span class="sig-name descname"><span class="pre">floor-depth</span></span><a class="headerlink" href="#confval-floor-depth" title="Link to this definition">#</a></dt>
+<dd><p>The measured depth of the floor of the cavern/well. This
+is a positive value below a surface datum.</p>
+</dd></dl>
+
+<dl class="std confval">
+<dt class="sig sig-object std" id="confval-ullage-standoff">
+<span class="sig-name descname"><span class="pre">ullage-standoff</span></span><a class="headerlink" href="#confval-ullage-standoff" title="Link to this definition">#</a></dt>
+<dd><p>The ullage, or remaining usable volume, is calculated by
+removing the volume between the floor and this distance
+from the brine volume.</p>
+</dd></dl>
+
+<dl class="std confval">
+<dt class="sig sig-object std" id="confval-insolubles-ratio">
+<span class="sig-name descname"><span class="pre">insolubles-ratio</span></span><a class="headerlink" href="#confval-insolubles-ratio" title="Link to this definition">#</a></dt>
+<dd><p>The volumetric fraction of the rock salt that is composed
+of insoluble material that will accumulate on the cavern floor.</p>
+</dd></dl>
+
+<dl class="std confval">
+<dt class="sig sig-object std" id="confval-units">
+<span class="sig-name descname"><span class="pre">units</span></span><a class="headerlink" href="#confval-units" title="Link to this definition">#</a></dt>
+<dd><div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Units is an open issue and is the first priority
+for updates. Currently, only <cite>ft-in-bbl</cite> is enabled.</p>
+</div>
+<p>Specify the units that all options will be provided in. The
+following values are defined</p>
+<dl class="simple">
+<dt>“ft-in-bbl”</dt><dd><p>Depths, heights, and cavern radii are specified in feet;
+casing and tubing radii are specified in inches; volumes
+and flow rates are defined in barrels and barrels/day,
+respectively.</p>
+</dd>
+<dt>“ft-in-ft3”</dt><dd><p>Depths, heights, and cavern radii are specified in feet;
+casing and tubing radii are specified in inches; volumes
+and flow rates are defined in cubic feet and barrels/day,
+respectively.</p>
+</dd>
+<dt>“m-cm-m3”</dt><dd><p>Depths, heights, and cavern radii are specified in meters;
+casing and tubing radii are specified in centimeters; volumes
+and flow rates are defined in cubic meters and cubic meters/day,
+respectively.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std confval">
+<dt class="sig sig-object std" id="confval-defaults">
+<span class="sig-name descname"><span class="pre">[defaults]</span></span><a class="headerlink" href="#confval-defaults" title="Link to this definition">#</a></dt>
+<dd><p>The following values can be set in the <a class="reference internal" href="#confval-defaults"><code class="xref std std-confval docutils literal notranslate"><span class="pre">[defaults]</span></code></a> section,
+in which case their value will be overridden by a value set in
+a stage definition. However, if they are not specified here,
+they must be specified in every stage definition.</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#confval-solver-timestep"><code class="xref std std-confval docutils literal notranslate"><span class="pre">solver-timestep</span></code></a></p></li>
+<li><p><a class="reference internal" href="#confval-save-frequency"><code class="xref std std-confval docutils literal notranslate"><span class="pre">save-frequency</span></code></a></p></li>
+<li><p><a class="reference internal" href="#confval-inner-tbg-inside-diam"><code class="xref std std-confval docutils literal notranslate"><span class="pre">inner-tbg-inside-diam</span></code></a></p></li>
+<li><p><a class="reference internal" href="#confval-inner-tbg-outside-diam"><code class="xref std std-confval docutils literal notranslate"><span class="pre">inner-tbg-outside-diam</span></code></a></p></li>
+<li><p><a class="reference internal" href="#confval-outer-csg-inside-diam"><code class="xref std std-confval docutils literal notranslate"><span class="pre">outer-csg-inside-diam</span></code></a></p></li>
+<li><p><a class="reference internal" href="#confval-outer-csg-outside-diam"><code class="xref std std-confval docutils literal notranslate"><span class="pre">outer-csg-outside-diam</span></code></a></p></li>
+</ul>
+</dd></dl>
+
+</section>
+<section id="advanced">
+<h2><code class="docutils literal notranslate"><span class="pre">[advanced]</span></code><a class="headerlink" href="#advanced" title="Link to this heading">#</a></h2>
+<p>The advanced options table is not required, and all options have
+default values that should not be changed unless necessary. Some
+options provided here will be deprecated in the future, but because
+v1.0.0 of sansmic is designed to replicate the FORTRAN code, they
+are still available.</p>
+<dl class="std confval">
+<dt class="sig sig-object std" id="confval-absolute-error">
+<span class="sig-name descname"><span class="pre">absolute-error</span></span><a class="headerlink" href="#confval-absolute-error" title="Link to this definition">#</a></dt>
+<dd><p>A new option, this allows manual specification of the ODE solver
+absolute error tolerance. By default this value is 1.0e-2, and this
+appears to be generally sufficient.</p>
+</dd></dl>
+
+<dl class="std confval">
+<dt class="sig sig-object std" id="confval-relative-error">
+<span class="sig-name descname"><span class="pre">relative-error</span></span><a class="headerlink" href="#confval-relative-error" title="Link to this definition">#</a></dt>
+<dd><p>A new option, this allows manual specification of the ODE solver
+relative error tolerance. By default this value is 1.0e-4, and this
+appears to be generally sufficient.</p>
+</dd></dl>
+
+<dl class="std confval">
+<dt class="sig sig-object std" id="confval-coallescing-wells">
+<span class="sig-name descname"><span class="pre">coallescing-wells</span></span><a class="headerlink" href="#confval-coallescing-wells" title="Link to this definition">#</a></dt>
+<dd><p>This option will be deprecated. Define the number of wells that
+are being used in ordinary leaching, by default 1. This value
+should always be 1 for withdrawal or leach-fill modes and for
+ordinary leaching where the cavern has already coallesced.</p>
+</dd></dl>
+
+<dl class="std confval">
+<dt class="sig sig-object std" id="confval-well-separation">
+<span class="sig-name descname"><span class="pre">well-separation</span></span><a class="headerlink" href="#confval-well-separation" title="Link to this definition">#</a></dt>
+<dd><p>This option will be deprecated. Define the distance between
+coallescing wells in ordinary leaching mode. If the number of
+wells is 1, then this value has no impact.</p>
+</dd></dl>
+
+<dl class="std confval">
+<dt class="sig sig-object std" id="confval-jet-model-version">
+<span class="sig-name descname"><span class="pre">jet-model-version</span></span><a class="headerlink" href="#confval-jet-model-version" title="Link to this definition">#</a></dt>
+<dd><p>The jet model is 1 by default. To turn it off and have the
+plume start at the <a class="reference internal" href="../nomenclature.html#term-EOT"><span class="xref std std-term">EOT</span></a>, use a value of 0. If and when
+the jet model is improved, it will be assigned a different version
+number, or possibly a name, that can be used to select it.</p>
+</dd></dl>
+
+<dl class="std confval">
+<dt class="sig sig-object std" id="confval-dissolution-factor">
+<span class="sig-name descname"><span class="pre">dissolution-factor</span></span><a class="headerlink" href="#confval-dissolution-factor" title="Link to this definition">#</a></dt>
+<dd><p>This value should nearly always be left alone with its default
+value of 1.0. This adjusts the rate of dissolution compared to
+standard dissolution of halite.</p>
+</dd></dl>
+
+<dl class="std confval">
+<dt class="sig sig-object std" id="confval-max-brine-sg">
+<span class="sig-name descname"><span class="pre">max-brine-sg</span></span><a class="headerlink" href="#confval-max-brine-sg" title="Link to this definition">#</a></dt>
+<dd><p>Override the maximum density (in specific gravity terms) of the
+brine in the cavern. This is only needed if the salt rock is not
+halite. The default is 1.2019 sg.</p>
+</dd></dl>
+
+<dl class="std confval">
+<dt class="sig sig-object std" id="confval-solid-density">
+<span class="sig-name descname"><span class="pre">solid-density</span></span><a class="headerlink" href="#confval-solid-density" title="Link to this definition">#</a></dt>
+<dd><p>Override the density of the surrounding rock salt (in g/cm3).
+This density sould be the bulk density of the salt, and should
+not include insoluble material (which will be accounted for
+volumetrically). Default value is 2.16 g/cm3.</p>
+</dd></dl>
+
+<dl class="std confval">
+<dt class="sig sig-object std" id="confval-entrainment-coeff">
+<span class="sig-name descname"><span class="pre">entrainment-coeff</span></span><a class="headerlink" href="#confval-entrainment-coeff" title="Link to this definition">#</a></dt>
+<dd><p>The entrainment coefficient ‘alpha’ in the dissolution equations.</p>
+</dd></dl>
+
+<dl class="std confval">
+<dt class="sig sig-object std" id="confval-molecular-diffusion">
+<span class="sig-name descname"><span class="pre">molecular-diffusion</span></span><a class="headerlink" href="#confval-molecular-diffusion" title="Link to this definition">#</a></dt>
+<dd><p>The molecular diffusion coefficient, D_mol.</p>
+</dd></dl>
+
+<dl class="std confval">
+<dt class="sig sig-object std" id="confval-eddy-coefficient">
+<span class="sig-name descname"><span class="pre">eddy-coefficient</span></span><a class="headerlink" href="#confval-eddy-coefficient" title="Link to this definition">#</a></dt>
+<dd><p>The eddy coefficient, D_0, for diffusion calculations.</p>
+</dd></dl>
+
+<dl class="std confval">
+<dt class="sig sig-object std" id="confval-diffusion-beta">
+<span class="sig-name descname"><span class="pre">diffusion-beta</span></span><a class="headerlink" href="#confval-diffusion-beta" title="Link to this definition">#</a></dt>
+<dd><p>The ‘beta’ coefficient in diffusion calculations.</p>
+</dd></dl>
+
+</section>
+<section id="stages">
+<h2><code class="docutils literal notranslate"><span class="pre">[[stages]]</span></code><a class="headerlink" href="#stages" title="Link to this heading">#</a></h2>
+<p>A new stage is defined by the <code class="docutils literal notranslate"><span class="pre">[[stages]]</span></code> table header.
+At least one stage is required, and there are no limits on the
+number of stages. A stage <strong>requires</strong> a title key.</p>
+<dl class="std confval">
+<dt class="sig sig-object std" id="confval-simulation-mode">
+<span class="sig-name descname"><span class="pre">simulation-mode</span></span><a class="headerlink" href="#confval-simulation-mode" title="Link to this definition">#</a></dt>
+<dd><p>Which fluid flow regime is being modeled. Valid options are</p>
+<dl class="simple">
+<dt>“ordinary”</dt><dd><p>Ordinary leaching with “brine” injection and production.</p>
+</dd>
+<dt>“withdrawal”</dt><dd><p>Withdrawal leach with “brine” injection and “product”
+production.</p>
+</dd>
+<dt>“leach-fill”</dt><dd><p>Leaching while filling, with “brine” injection and production and “prodcut” injection.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std confval">
+<dt class="sig sig-object std" id="confval-solver-timestep">
+<span class="sig-name descname"><span class="pre">solver-timestep</span></span><a class="headerlink" href="#confval-solver-timestep" title="Link to this definition">#</a></dt>
+<dd><p>Can also be set in the <code class="docutils literal notranslate"><span class="pre">[defaults]</span></code> section; if so, it will
+be overridden by a setting in the <code class="docutils literal notranslate"><span class="pre">[[stages]]</span></code> definition.
+If not provided a default value, it must be specified in each stage.</p>
+<p>The solver timestep is specified in decimal hours.</p>
+</dd></dl>
+
+<dl class="std confval">
+<dt class="sig sig-object std" id="confval-save-frequency">
+<span class="sig-name descname"><span class="pre">save-frequency</span></span><a class="headerlink" href="#confval-save-frequency" title="Link to this definition">#</a></dt>
+<dd><p>Can also be set in the <code class="docutils literal notranslate"><span class="pre">[defaults]</span></code> section; if so, it will
+be overridden by a setting in the <code class="docutils literal notranslate"><span class="pre">[[stages]]</span></code> definition.
+If not provided a default value, it must be specified in each stage.</p>
+<p>The save frequency is specified in integer number of <em>timesteps</em>.
+It can also be set with one of the following three strings</p>
+<dl class="simple">
+<dt>“hourly”</dt><dd><p>Save results every hour, where an “hour” is based on the
+rounded, integer value of the inverse of the solver timestep.
+If you want this to be exact, make sure that the timestep
+is exactly equal to an hour divided by an integer.
+Saving results every hour is likely overkill unless you are
+debugging.</p>
+</dd>
+<dt>“daily”</dt><dd><p>Save results every day, where “day” is calculated in the same
+way as an hour is for ‘hourly’. <em>This is the recommended option
+for most simulations.</em></p>
+</dd>
+<dt>“bystage”</dt><dd><p>Only save results at the end of each injection and each rest
+period. This is the most efficient method in terms of storage
+and processing time, but provides little data for debugging or
+careful analysis.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std confval">
+<dt class="sig sig-object std" id="confval-injection-duration">
+<span class="sig-name descname"><span class="pre">injection-duration</span></span><a class="headerlink" href="#confval-injection-duration" title="Link to this definition">#</a></dt>
+<dd><p>The duration of active injection activities, defined in fractional
+hours. This value cannot be 0. This value is required for all
+stages and cannot be given a default value.</p>
+</dd></dl>
+
+<dl class="std confval">
+<dt class="sig sig-object std" id="confval-rest-duration">
+<span class="sig-name descname"><span class="pre">rest-duration</span></span><a class="headerlink" href="#confval-rest-duration" title="Link to this definition">#</a></dt>
+<dd><p>The duration of the post-injection inactive or static period,
+defined in fractional hours. This value can be 0.
+This value is required for all stages and cannot be given a
+default value.</p>
+</dd></dl>
+
+<dl class="std confval">
+<dt class="sig sig-object std" id="confval-inner-tbg-inside-diam">
+<span class="sig-name descname"><span class="pre">inner-tbg-inside-diam</span></span><a class="headerlink" href="#confval-inner-tbg-inside-diam" title="Link to this definition">#</a></dt>
+<dd><p>Can also be set in the <code class="docutils literal notranslate"><span class="pre">[defaults]</span></code> section; if so, it will
+be overridden by a setting in the <code class="docutils literal notranslate"><span class="pre">[[stages]]</span></code> definition.
+If not provided a default value, it must be specified in every stage.</p>
+<p>The <a class="reference internal" href="../nomenclature.html#term-ID"><span class="xref std std-term">ID</span></a> of the innermost tubing for concentric completions,
+or for the brine string for single-string completions.
+Specified in decimal <a class="reference internal" href="../nomenclature.html#term-inch"><span class="xref std std-term">inch</span></a>.</p>
+</dd></dl>
+
+<dl class="std confval">
+<dt class="sig sig-object std" id="confval-inner-tbg-outside-diam">
+<span class="sig-name descname"><span class="pre">inner-tbg-outside-diam</span></span><a class="headerlink" href="#confval-inner-tbg-outside-diam" title="Link to this definition">#</a></dt>
+<dd><p>Can also be set in the <code class="docutils literal notranslate"><span class="pre">[defaults]</span></code> section; if so, it will
+be overridden by a setting in the <code class="docutils literal notranslate"><span class="pre">[[stages]]</span></code> definition.
+If not provided a default value, it must be specified in every stage.</p>
+<p>The <a class="reference internal" href="../nomenclature.html#term-OD"><span class="xref std std-term">OD</span></a> of the innermost tubing for concentric completions,
+or for the brine string for single-string completions.
+Specified in decimal <a class="reference internal" href="../nomenclature.html#term-inch"><span class="xref std std-term">inch</span></a>.</p>
+</dd></dl>
+
+<dl class="std confval">
+<dt class="sig sig-object std" id="confval-outer-csg-inside-diam">
+<span class="sig-name descname"><span class="pre">outer-csg-inside-diam</span></span><a class="headerlink" href="#confval-outer-csg-inside-diam" title="Link to this definition">#</a></dt>
+<dd><p>Can also be set in the <code class="docutils literal notranslate"><span class="pre">[defaults]</span></code> section; if so, it will
+be overridden by a setting in the <code class="docutils literal notranslate"><span class="pre">[[stages]]</span></code> definition.
+If not provided a default value, it must be specified in every stage.</p>
+<p>The <a class="reference internal" href="../nomenclature.html#term-ID"><span class="xref std std-term">ID</span></a> of the outermost tubing for concentric completions,
+or for the production casing for single-string/slick well
+completions. Specified in decimal <a class="reference internal" href="../nomenclature.html#term-inch"><span class="xref std std-term">inch</span></a>.</p>
+</dd></dl>
+
+<dl class="std confval">
+<dt class="sig sig-object std" id="confval-outer-csg-outside-diam">
+<span class="sig-name descname"><span class="pre">outer-csg-outside-diam</span></span><a class="headerlink" href="#confval-outer-csg-outside-diam" title="Link to this definition">#</a></dt>
+<dd><p>Can also be set in the <code class="docutils literal notranslate"><span class="pre">[defaults]</span></code> section; if so, it will
+be overridden by a setting in the <code class="docutils literal notranslate"><span class="pre">[[stages]]</span></code> definition.
+If not provided a default value, it must be specified in every stage.</p>
+<p>The <a class="reference internal" href="../nomenclature.html#term-OD"><span class="xref std std-term">OD</span></a> of the outermost tubing for concentric completions,
+or for the production casing for single-string/slick well
+completions. Specified in decimal <a class="reference internal" href="../nomenclature.html#term-inch"><span class="xref std std-term">inch</span></a>.</p>
+</dd></dl>
+
+<dl class="std confval">
+<dt class="sig sig-object std" id="confval-brine-injection-sg">
+<span class="sig-name descname"><span class="pre">brine-injection-sg</span></span><a class="headerlink" href="#confval-brine-injection-sg" title="Link to this definition">#</a></dt>
+<dd><p>The specific gravity of the water being injected, regardless of if
+is raw water or brine. This value cannot be less than 1.0 and is
+also limited by the <a class="reference internal" href="#confval-max-brine-sg"><code class="xref std std-confval docutils literal notranslate"><span class="pre">max-brine-sg</span></code></a>.</p>
+</dd></dl>
+
+<dl class="std confval">
+<dt class="sig sig-object std" id="confval-brine-injection-depth">
+<span class="sig-name descname"><span class="pre">brine-injection-depth</span></span><a class="headerlink" href="#confval-brine-injection-depth" title="Link to this definition">#</a></dt>
+<dd><p>The <em>height</em> above the original <a class="reference internal" href="#confval-floor-depth"><code class="xref std std-confval docutils literal notranslate"><span class="pre">floor-depth</span></code></a> of the cavern
+where the EOT for the injection string is located. If above the
+production depth, it will be assigned to the outer casing,
+otherwise it will apply to the inner casing.
+This value is specified in <a class="reference internal" href="../nomenclature.html#term-foot"><span class="xref std std-term">foot</span></a> above <a class="reference internal" href="#confval-floor-depth"><code class="xref std std-confval docutils literal notranslate"><span class="pre">floor-depth</span></code></a>.
+Changing depth values to handle measured depths below surface
+is the second-highest priority update.</p>
+</dd></dl>
+
+<dl class="std confval">
+<dt class="sig sig-object std" id="confval-brine-production-depth">
+<span class="sig-name descname"><span class="pre">brine-production-depth</span></span><a class="headerlink" href="#confval-brine-production-depth" title="Link to this definition">#</a></dt>
+<dd><p>The <em>height</em> above the original <a class="reference internal" href="#confval-floor-depth"><code class="xref std std-confval docutils literal notranslate"><span class="pre">floor-depth</span></code></a> of the cavern
+where the EOT for the injection string is located. If above the
+injection depth, it will be assigned to the outer casing,
+otherwise it will apply to the inner casing.
+This value is specified in <a class="reference internal" href="../nomenclature.html#term-foot"><span class="xref std std-term">foot</span></a> above <a class="reference internal" href="#confval-floor-depth"><code class="xref std std-confval docutils literal notranslate"><span class="pre">floor-depth</span></code></a>.
+Changing depth values to handle measured depths below surface
+is the second-highest priority update.</p>
+</dd></dl>
+
+<dl class="std confval">
+<dt class="sig sig-object std" id="confval-brine-injection-rate">
+<span class="sig-name descname"><span class="pre">brine-injection-rate</span></span><a class="headerlink" href="#confval-brine-injection-rate" title="Link to this definition">#</a></dt>
+<dd><p>The rate of brine injection in <em>barrels per day</em>.
+Variable injection rates are still in the process of being
+implemented. The brine/raw water is injected at a constant
+rate over the entire injection duration.</p>
+</dd></dl>
+
+<dl class="std confval">
+<dt class="sig sig-object std" id="confval-brine-interface-depth">
+<span class="sig-name descname"><span class="pre">brine-interface-depth</span></span><a class="headerlink" href="#confval-brine-interface-depth" title="Link to this definition">#</a></dt>
+<dd><p>The initial brine interface depth in <em>height</em> above the
+<a class="reference internal" href="#confval-floor-depth"><code class="xref std std-confval docutils literal notranslate"><span class="pre">floor-depth</span></code></a>. This is only required for the first stage, and
+should not be set in subsequent stages unless you <em>want</em> to
+manually reset the interface position. If so, you should also
+set <a class="reference internal" href="#confval-set-initial-conditions"><code class="xref std std-confval docutils literal notranslate"><span class="pre">set-initial-conditions</span></code></a> to true. If left blank or set
+to 0, it will behave as if unset and use the value from the
+previous stage.</p>
+<p>Specified in <a class="reference internal" href="../nomenclature.html#term-foot"><span class="xref std std-term">foot</span></a> above <a class="reference internal" href="#confval-floor-depth"><code class="xref std std-confval docutils literal notranslate"><span class="pre">floor-depth</span></code></a>.
+Changing depth values to handle measured depths below surface
+is the second-highest priority update.</p>
+</dd></dl>
+
+<dl class="std confval">
+<dt class="sig sig-object std" id="confval-set-cavern-sg">
+<span class="sig-name descname"><span class="pre">set-cavern-sg</span></span><a class="headerlink" href="#confval-set-cavern-sg" title="Link to this definition">#</a></dt>
+<dd><p>The initial specific gravity for the cavern brine. This is
+optional. If set for the first stage, then the cavern will
+be initialized to the specified brine sg value. If omitted
+for the first stage, it will be set to the maximum brine
+specific gravity.</p>
+<p>The SANSMIC user guide from 2015 had an error, and stated that
+subsequent stages did not use this value. In fact, this value
+was still being set unless it was set to 1.0 or less. This
+version of sansmic will give a warning when converting files
+but behave <em>as was described in the user manual</em>. If you want
+to replicate the old behavior, set <a class="reference internal" href="#confval-set-initial-conditions"><code class="xref std std-confval docutils literal notranslate"><span class="pre">set-initial-conditions</span></code></a>
+to true to force initialization of the cavern brine to the value
+you specify in this key. You can also set this to 0.0 in an
+old DAT file to force the proper behavior of continuing between
+stages.</p>
+</dd></dl>
+
+<dl class="std confval">
+<dt class="sig sig-object std" id="confval-set-initial-conditions">
+<span class="sig-name descname"><span class="pre">set-initial-conditions</span></span><a class="headerlink" href="#confval-set-initial-conditions" title="Link to this definition">#</a></dt>
+<dd><p>Force cavern specific gravity and/or the initial brine interface
+level to be set for subsequent (not the first) stages. By default
+false.</p>
+</dd></dl>
+
+<dl class="std confval">
+<dt class="sig sig-object std" id="confval-product-injection-rate">
+<span class="sig-name descname"><span class="pre">product-injection-rate</span></span><a class="headerlink" href="#confval-product-injection-rate" title="Link to this definition">#</a></dt>
+<dd><p>This option is defined in the same way as <a class="reference internal" href="#confval-brine-injection-rate"><code class="xref std std-confval docutils literal notranslate"><span class="pre">brine-injection-rate</span></code></a>,
+but applies only to the <cite>leach-fill</cite> simulation mode. It cannot
+be used to move the brine interface, currently, as it will cause
+significant (and non-physical) leaching at the brine injection
+location even when the brine injection rate is set to 0.0. This
+is in the list of issues to either fix or create a new simulation
+mode to handle.</p>
+</dd></dl>
+
+<dl class="std confval">
+<dt class="sig sig-object std" id="confval-stop-condition">
+<span class="sig-name descname"><span class="pre">stop-condition</span></span><a class="headerlink" href="#confval-stop-condition" title="Link to this definition">#</a></dt>
+<dd><p>It is possible to add a stop condition to an injection period
+based on either the brine interface location or the total cavern
+size specified in <a class="reference internal" href="#confval-stop-value"><code class="xref std std-confval docutils literal notranslate"><span class="pre">stop-value</span></code></a>.
+By default, the only stop condition is reaching the end of the
+injection period.</p>
+<p>This option was available in the old version of SANSMIC,
+were implemented in sansmic 1.0, but are not validated.</p>
+</dd></dl>
+
+<dl class="std confval">
+<dt class="sig sig-object std" id="confval-stop-value">
+<span class="sig-name descname"><span class="pre">stop-value</span></span><a class="headerlink" href="#confval-stop-value" title="Link to this definition">#</a></dt>
+<dd><p>The value for the stop condition, which is either a <em>height</em> above
+the floor or a volume in <em>barrels.</em></p>
+</dd></dl>
+
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="running-sansmic.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Running sansmic</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../references.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">References</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scenario-options">Scenario options</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#confval-title"><code class="docutils literal notranslate"><span class="pre">title</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#confval-comments"><code class="docutils literal notranslate"><span class="pre">comments</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#confval-num-cells"><code class="docutils literal notranslate"><span class="pre">num-cells</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#confval-geometry-format"><code class="docutils literal notranslate"><span class="pre">geometry-format</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#confval-geometry-data"><code class="docutils literal notranslate"><span class="pre">geometry-data</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#confval-geometry-data.radii"><code class="docutils literal notranslate"><span class="pre">geometry-data.radii</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#confval-geometry-data.volumes"><code class="docutils literal notranslate"><span class="pre">geometry-data.volumes</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#confval-geometry-data.depths"><code class="docutils literal notranslate"><span class="pre">geometry-data.depths</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#confval-cavern-height"><code class="docutils literal notranslate"><span class="pre">cavern-height</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#confval-floor-depth"><code class="docutils literal notranslate"><span class="pre">floor-depth</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#confval-ullage-standoff"><code class="docutils literal notranslate"><span class="pre">ullage-standoff</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#confval-insolubles-ratio"><code class="docutils literal notranslate"><span class="pre">insolubles-ratio</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#confval-units"><code class="docutils literal notranslate"><span class="pre">units</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#confval-defaults"><code class="docutils literal notranslate"><span class="pre">[defaults]</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#advanced"><code class="docutils literal notranslate"><span class="pre">[advanced]</span></code></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#confval-absolute-error"><code class="docutils literal notranslate"><span class="pre">absolute-error</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#confval-relative-error"><code class="docutils literal notranslate"><span class="pre">relative-error</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#confval-coallescing-wells"><code class="docutils literal notranslate"><span class="pre">coallescing-wells</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#confval-well-separation"><code class="docutils literal notranslate"><span class="pre">well-separation</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#confval-jet-model-version"><code class="docutils literal notranslate"><span class="pre">jet-model-version</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#confval-dissolution-factor"><code class="docutils literal notranslate"><span class="pre">dissolution-factor</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#confval-max-brine-sg"><code class="docutils literal notranslate"><span class="pre">max-brine-sg</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#confval-solid-density"><code class="docutils literal notranslate"><span class="pre">solid-density</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#confval-entrainment-coeff"><code class="docutils literal notranslate"><span class="pre">entrainment-coeff</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#confval-molecular-diffusion"><code class="docutils literal notranslate"><span class="pre">molecular-diffusion</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#confval-eddy-coefficient"><code class="docutils literal notranslate"><span class="pre">eddy-coefficient</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#confval-diffusion-beta"><code class="docutils literal notranslate"><span class="pre">diffusion-beta</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stages"><code class="docutils literal notranslate"><span class="pre">[[stages]]</span></code></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#confval-simulation-mode"><code class="docutils literal notranslate"><span class="pre">simulation-mode</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#confval-solver-timestep"><code class="docutils literal notranslate"><span class="pre">solver-timestep</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#confval-save-frequency"><code class="docutils literal notranslate"><span class="pre">save-frequency</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#confval-injection-duration"><code class="docutils literal notranslate"><span class="pre">injection-duration</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#confval-rest-duration"><code class="docutils literal notranslate"><span class="pre">rest-duration</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#confval-inner-tbg-inside-diam"><code class="docutils literal notranslate"><span class="pre">inner-tbg-inside-diam</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#confval-inner-tbg-outside-diam"><code class="docutils literal notranslate"><span class="pre">inner-tbg-outside-diam</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#confval-outer-csg-inside-diam"><code class="docutils literal notranslate"><span class="pre">outer-csg-inside-diam</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#confval-outer-csg-outside-diam"><code class="docutils literal notranslate"><span class="pre">outer-csg-outside-diam</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#confval-brine-injection-sg"><code class="docutils literal notranslate"><span class="pre">brine-injection-sg</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#confval-brine-injection-depth"><code class="docutils literal notranslate"><span class="pre">brine-injection-depth</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#confval-brine-production-depth"><code class="docutils literal notranslate"><span class="pre">brine-production-depth</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#confval-brine-injection-rate"><code class="docutils literal notranslate"><span class="pre">brine-injection-rate</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#confval-brine-interface-depth"><code class="docutils literal notranslate"><span class="pre">brine-interface-depth</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#confval-set-cavern-sg"><code class="docutils literal notranslate"><span class="pre">set-cavern-sg</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#confval-set-initial-conditions"><code class="docutils literal notranslate"><span class="pre">set-initial-conditions</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#confval-product-injection-rate"><code class="docutils literal notranslate"><span class="pre">product-injection-rate</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#confval-stop-condition"><code class="docutils literal notranslate"><span class="pre">stop-condition</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#confval-stop-value"><code class="docutils literal notranslate"><span class="pre">stop-value</span></code></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../_sources/um/scenarios.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2024 National Technology and Engineering Solutions of Sandia, LLC. Under the terms of Contract DE-NA0003525 with NTESS, the U.S. Government retains certain rights in this software..
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.0.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+.. _exhale_variable_libsansmic_8hpp_1a421a5bf73c6bebdda01605bd0dea0660:
+
+Variable sansmic::NDIV_CHANGES_THROUGHOUT_FILE
+==============================================
+
+- Defined in :ref:`file_libsansmic.hpp`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: sansmic::NDIV_CHANGES_THROUGHOUT_FILE
+   :project: libsansmic

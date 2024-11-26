@@ -1,0 +1,14 @@
+.. _exhale_variable_libsansmic_8hpp_1ae05f440aa5cf0cf27c924af6abd84429:
+
+Variable sansmic::_pi_
+======================
+
+- Defined in :ref:`file_libsansmic.hpp`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: sansmic::_pi_
+   :project: libsansmic

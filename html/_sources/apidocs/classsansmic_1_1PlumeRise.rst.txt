@@ -1,0 +1,26 @@
+.. _exhale_class_classsansmic_1_1PlumeRise:
+
+Class PlumeRise
+===============
+
+- Defined in :ref:`file_libsansmic.hpp`
+
+
+Inheritance Relationships
+-------------------------
+
+Base Type
+*********
+
+- ``public Derivable`` (:ref:`exhale_class_classsansmic_1_1Derivable`)
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: sansmic::PlumeRise
+   :project: libsansmic
+   :members:
+   :protected-members:
+   :undoc-members:

@@ -1,0 +1,871 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Struct Stage &#8212; Sansmic</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+
+    <script src="../_static/documentation_options.js?v=76e2d817"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-23TNKN36XM"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-23TNKN36XM');
+            </script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-23TNKN36XM');
+            </script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'apidocs/structsansmic_1_1Stage';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.0';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://sandialabs.github.io/sansmic/_static/switcher.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'v1.0.0';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner = true;
+        </script>
+    <script src="../_static/pypi-icon.js?v=74687d30"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Class Derivable" href="classsansmic_1_1Derivable.html" />
+    <link rel="prev" title="Struct Scenario" href="structsansmic_1_1Scenario.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="1.0.0" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Sansmic</p>
+  
+</a></div>
+    
+      <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../userman.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../refman.html">
+    API Reference
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/sandialabs/sansmic" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/sansmic/" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.sandia.gov" title="Sandia National Laboratories" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../_static/snl_logo.png" class="icon-link-image" alt="Sandia National Laboratories"/></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../userman.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../refman.html">
+    API Reference
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/sandialabs/sansmic" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/sansmic/" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.sandia.gov" title="Sandia National Laboratories" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../_static/snl_logo.png" class="icon-link-image" alt="Sandia National Laboratories"/></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">Python package</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="sansmic.html">sansmic</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="sansmic.app.html">sansmic.app</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.app.convert.html">convert</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.app.main.html">main</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.app.AboutAction.html">AboutAction</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="sansmic.empirical.html">sansmic.empirical</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.empirical.rho_NaCl_s.html">rho_NaCl_s</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.empirical.a.html">a</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.empirical.c.html">c</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.empirical.sg_matrix.html">sg_matrix</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.empirical.wt_pct_vec.html">wt_pct_vec</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.empirical.T_degC_vec.html">T_degC_vec</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.empirical.wt_pct_max.html">wt_pct_max</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.empirical.T_degC_max.html">T_degC_max</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.empirical.sg_max.html">sg_max</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="sansmic.io.html">sansmic.io</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.io.read_classic_out_ddl.html">read_classic_out_ddl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.io.read_dat.html">read_dat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.io.read_hdf_results.html">read_hdf_results</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.io.read_json_results.html">read_json_results</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.io.read_scenario.html">read_scenario</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.io.read_tst_file.html">read_tst_file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.io.write_csv_results.html">write_csv_results</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.io.write_hdf_results.html">write_hdf_results</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.io.write_json_results.html">write_json_results</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.io.write_scenario.html">write_scenario</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="sansmic.libsansmic.html">sansmic.libsansmic</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.libsansmic.CGeometryFormat.html">CGeometryFormat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.libsansmic.CModel.html">CModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.libsansmic.CResults.html">CResults</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.libsansmic.CRunMode.html">CRunMode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.libsansmic.CSalt.html">CSalt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.libsansmic.CScenario.html">CScenario</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.libsansmic.CStage.html">CStage</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="sansmic.model.html">sansmic.model</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.model.AdvancedOptions.html">AdvancedOptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.model.GeometryFormat.html">GeometryFormat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.model.RateScheduleType.html">RateScheduleType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.model.Results.html">Results</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.model.Scenario.html">Scenario</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.model.SimulationMode.html">SimulationMode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.model.Simulator.html">Simulator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.model.StageDefinition.html">StageDefinition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.model.StepwiseIterator.html">StepwiseIterator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.model.StopCondition.html">StopCondition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.model.Units.html">Units</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">C++ library</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">libsansmic</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="namespace_sansmic.html">Namespace sansmic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structsansmic_1_1Results.html">Struct Results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structsansmic_1_1Scenario.html">Struct Scenario</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Struct Stage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classsansmic_1_1Derivable.html">Class Derivable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classsansmic_1_1JetModel.html">Class JetModel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classsansmic_1_1Model.html">Class Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classsansmic_1_1ODESolver.html">Class ODESolver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classsansmic_1_1PlumeRise.html">Class PlumeRise</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classsansmic_1_1Salt.html">Class Salt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="enum_libsansmic_8hpp_1ae90439e1c23bb6f206956d15cacaaa41.html">Enum GeomFormat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="enum_libsansmic_8hpp_1a0ac474463be3271f78ea252870114800.html">Enum LeachMode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_libsansmic_8hpp_1af7843017d1ba247ba894354fd04066fd.html">Function sansmic::bound</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_libsansmic_8hpp_1abfcdec9ce8fcf3b394cc6f909dcfdadf.html">Function sansmic::dabs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_libsansmic_8hpp_1af835812a8204d3a9d032f4a82131a96b.html">Function sansmic::ddim</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_libsansmic_8hpp_1ad862c88ec431b0775d64800d4a79c4ac.html">Function sansmic::sign(double, double)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_libsansmic_8hpp_1ab33feadd6242c54d884b2877b48aede1.html">Function sansmic::sign(int, int)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_libsansmic_8hpp_1a9e5dc0ecd570d5b736f756b1da33158a.html">Function sansmic::sq</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_libsansmic_8hpp_1abd9435272066c6467cd42223a85ab523.html">Function sansmic::trigad</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_libsansmic_8hpp_1aebbfefaf337ee806ea88b6d52e36f905.html">Function sansmic::xnterp_dkr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1ae05f440aa5cf0cf27c924af6abd84429.html">Variable sansmic::_pi_</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1a5835f26770e6fcee73a6a866ba1a0ca3.html">Variable sansmic::bbl_to_cf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1a6509f1ad75d4faaef799a26d4963ed75.html">Variable sansmic::cf_to_bbl</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1a4097c0a08bdfca709ad6af1edbbae5cf.html">Variable sansmic::cubic_foot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1a1e9d11c00b0f8ab30e067f17b93b3a77.html">Variable sansmic::cubic_inch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1a6bf5141a96e95158acead28325d3ba7a.html">Variable sansmic::day</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1a35f688aef259e35313b3d8fb13215b04.html">Variable sansmic::degree_Fahrenheit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1a4d1216187d22cbd5da9dff170fcc6478.html">Variable sansmic::foot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1a4489ee3413eb2756ead2968898cc919e.html">Variable sansmic::ft_to_in</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1a09c047eba91ce1d85e4e7fdd4bafebe4.html">Variable sansmic::hour</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1ade5f8e06aa0040eaeff7a2faf8a53f84.html">Variable sansmic::in_to_ft</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1a65eb61864cca7f60402dca06829b0278.html">Variable sansmic::inch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1a3790b5abe2d5afc09d3952d7a215ae76.html">Variable sansmic::INVALID_LOG_FILE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1a680959cdfd3d7eb4a54cf899aed119e8.html">Variable sansmic::INVALID_OUT_FILE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1aa08e28983055aebd0561072245a9580e.html">Variable sansmic::INVALID_TST_FILE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1a516ec27e7553440120d43692295e16fd.html">Variable sansmic::julian_year</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1a8e6656a08a16d80623c90f0531fae06d.html">Variable sansmic::liquid_gallon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1a583f186218b8bf2ad5c54928a6c20134.html">Variable sansmic::minute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1a68a31f328274bc97dfa478bb42920449.html">Variable sansmic::MISSING_DAT_FILE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1a421a5bf73c6bebdda01605bd0dea0660.html">Variable sansmic::NDIV_CHANGES_THROUGHOUT_FILE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1aa33076a804fd17b06c540f5548faac0d.html">Variable sansmic::OBI_AT_CAVERN_FLOOR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1ade021519e336911922fb0b56739207b9.html">Variable sansmic::ODE_BAD_ABSERR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1a0eba3ceb565254ff682a2520ae565ad8.html">Variable sansmic::ODE_IFLAG_SEVEN</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1a4a9a89674d91f081c447f3e6326e3239.html">Variable sansmic::ODE_IFLAG_SIX</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1aff42d2545a2cb7a612252a8d6f1799da.html">Variable sansmic::oil_barrel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1a5f0f9ae5a5526c0a1ec6c58d0e6a6c1d.html">Variable sansmic::per_d_to_per_h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1a60f9a61a4a145f39de28d2db23619afc.html">Variable sansmic::per_h_to_per_d</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1ae1faba63a84df20abb428a8f0a473e64.html">Variable sansmic::pound_force</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1a2e2c0c62680e276009c4d14267633c96.html">Variable sansmic::pound_mass</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1a65d119aa16b025a2586c16bc1179ee58.html">Variable sansmic::square_foot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1aa8e12cd784414f4da441d6e5cd428176.html">Variable sansmic::square_inch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1a3672ba92add1b2550dbf908383a392cd.html">Variable sansmic::std_gravity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1a583d71ee41f917002e5274dc9e2dd828.html">Variable sansmic::UNIMPLEMENTED_FLOW_TABLES</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1a2f7db9be399d5ac9e2e7b21e5aff61df.html">Variable sansmic::UNIMPLEMENTED_GEOMETRY_IDATA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1acf7d3f4554cbe417c5e190b85a100894.html">Variable sansmic::zero_Fahrenheit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="define_model_8cpp_1a2d2b6ceee9d9602972e2de6426a3b9cf.html">Define VERSION_INFO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_jetmodel.cpp.html">File jetmodel.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_libsansmic.cpp.html">File libsansmic.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_libsansmic.hpp.html">File libsansmic.hpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_model.cpp.html">File model.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_odesolver.cpp.html">File odesolver.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_plumerise.cpp.html">File plumerise.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_salt.cpp.html">File salt.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_scenario.cpp.html">File scenario.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_stage.cpp.html">File stage.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_util.cpp.html">File util.cpp</a></li>
+</ul>
+</details></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item"><nav class="sidebar-indices-items" aria-labelledby="pst-indices-navigation-heading-2">
+  <p id="pst-indices-navigation-heading-2" class="sidebar-indices-items__title" role="heading" aria-level="1">Indices</p>
+  <ul class="indices-link">
+        <li class="toctree-l1">
+          <a class="reference internal"
+             href="../genindex.html"
+             accesskey="I">General Index</a>
+        </li>
+        <li class="toctree-l1">
+          <a class="reference internal" href="../py-modindex.html">Python Module Index</a>
+        </li>
+  </ul>
+</nav></div>
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../refman.html" class="nav-link">API Reference</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">libsansmic</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Struct Stage</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="struct-stage">
+<span id="exhale-struct-structsansmic-1-1stage"></span><h1>Struct Stage<a class="headerlink" href="#struct-stage" title="Link to this heading">#</a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_libsansmic.hpp.html#file-libsansmic-hpp"><span class="std std-ref">File libsansmic.hpp</span></a></p></li>
+</ul>
+<section id="struct-documentation">
+<h2>Struct Documentation<a class="headerlink" href="#struct-documentation" title="Link to this heading">#</a></h2>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N7sansmic5StageE">
+<span id="_CPPv3N7sansmic5StageE"></span><span id="_CPPv2N7sansmic5StageE"></span><span id="sansmic::Stage"></span><span class="target" id="structsansmic_1_1Stage"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Stage</span></span></span><a class="headerlink" href="#_CPPv4N7sansmic5StageE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Instructions and input values for a single stage of SANSMIC. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7sansmic5Stage5StageEv">
+<span id="_CPPv3N7sansmic5Stage5StageEv"></span><span id="_CPPv2N7sansmic5Stage5StageEv"></span><span id="sansmic::Stage::Stage"></span><span class="target" id="structsansmic_1_1Stage_1a549aad1b97cc13709c176212f25d2326"></span><span class="sig-name descname"><span class="n"><span class="pre">Stage</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7sansmic5Stage5StageEv" title="Link to this definition">#</a><br /></dt>
+<dd><p><a class="reference internal" href="#structsansmic_1_1Stage"><span class="std std-ref">Stage</span></a> constructor with default values. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7sansmic5Stage9debug_logER8ofstream">
+<span id="_CPPv3N7sansmic5Stage9debug_logER8ofstream"></span><span id="_CPPv2N7sansmic5Stage9debug_logER8ofstream"></span><span id="sansmic::Stage::debug_log__ofstreamR"></span><span class="target" id="structsansmic_1_1Stage_1ab1a29303c85f0ca68bd5a058a3fea0a6"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">debug_log</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">ofstream</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">fout</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7sansmic5Stage9debug_logER8ofstream" title="Link to this definition">#</a><br /></dt>
+<dd><p>Output debug data to a stream. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>fout</strong> – Open stream to output to </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7sansmic5Stage5titleE">
+<span id="_CPPv3N7sansmic5Stage5titleE"></span><span id="_CPPv2N7sansmic5Stage5titleE"></span><span id="sansmic::Stage::title__string"></span><span class="target" id="structsansmic_1_1Stage_1a43a5eafe64b96968035e5a4013e47c75"></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">title</span></span></span><a class="headerlink" href="#_CPPv4N7sansmic5Stage5titleE" title="Link to this definition">#</a><br /></dt>
+<dd><p>stage title </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7sansmic5Stage10leach_modeE">
+<span id="_CPPv3N7sansmic5Stage10leach_modeE"></span><span id="_CPPv2N7sansmic5Stage10leach_modeE"></span><span id="sansmic::Stage::leach_mode__LeachMode"></span><span class="target" id="structsansmic_1_1Stage_1aea816be75fd15a4dd56a901961a7fc85"></span><a class="reference internal" href="enum_libsansmic_8hpp_1a0ac474463be3271f78ea252870114800.html#_CPPv4N7sansmic9LeachModeE" title="sansmic::LeachMode"><span class="n"><span class="pre">LeachMode</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">leach_mode</span></span></span><a class="headerlink" href="#_CPPv4N7sansmic5Stage10leach_modeE" title="Link to this definition">#</a><br /></dt>
+<dd><p>the run mode (leaching mode) to use </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7sansmic5Stage10print_freqE">
+<span id="_CPPv3N7sansmic5Stage10print_freqE"></span><span id="_CPPv2N7sansmic5Stage10print_freqE"></span><span id="sansmic::Stage::print_freq__i"></span><span class="target" id="structsansmic_1_1Stage_1ab485db344e7fab88111236f05f6061d7"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">print_freq</span></span></span><a class="headerlink" href="#_CPPv4N7sansmic5Stage10print_freqE" title="Link to this definition">#</a><br /></dt>
+<dd><p>the number of timesteps (<em>not hours</em>) between output steps </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7sansmic5Stage13is_subsequentE">
+<span id="_CPPv3N7sansmic5Stage13is_subsequentE"></span><span id="_CPPv2N7sansmic5Stage13is_subsequentE"></span><span id="sansmic::Stage::is_subsequent__i"></span><span class="target" id="structsansmic_1_1Stage_1a92eafd63e3c375556f534f7a7f928559"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">is_subsequent</span></span></span><a class="headerlink" href="#_CPPv4N7sansmic5Stage13is_subsequentE" title="Link to this definition">#</a><br /></dt>
+<dd><p>false if this is the fisrt stage, true if a subsequent stage </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7sansmic5Stage6t_restE">
+<span id="_CPPv3N7sansmic5Stage6t_restE"></span><span id="_CPPv2N7sansmic5Stage6t_restE"></span><span id="sansmic::Stage::t_rest__double"></span><span class="target" id="structsansmic_1_1Stage_1ad954503a5f56f83041262e9ff2d9fab8"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">t_rest</span></span></span><a class="headerlink" href="#_CPPv4N7sansmic5Stage6t_restE" title="Link to this definition">#</a><br /></dt>
+<dd><p>the number of hours to wait at the end of the stage </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7sansmic5Stage13stop_cond_valE">
+<span id="_CPPv3N7sansmic5Stage13stop_cond_valE"></span><span id="_CPPv2N7sansmic5Stage13stop_cond_valE"></span><span id="sansmic::Stage::stop_cond_val__double"></span><span class="target" id="structsansmic_1_1Stage_1a0659e74740e9aaefc484d5401648e416"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">stop_cond_val</span></span></span><a class="headerlink" href="#_CPPv4N7sansmic5Stage13stop_cond_valE" title="Link to this definition">#</a><br /></dt>
+<dd><p>volume (&gt;0, in bbl) or OBI (&lt;0, in ft) to use as end-of-stage, 0 for time based </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7sansmic5Stage5h_injE">
+<span id="_CPPv3N7sansmic5Stage5h_injE"></span><span id="_CPPv2N7sansmic5Stage5h_injE"></span><span id="sansmic::Stage::h_inj__double"></span><span class="target" id="structsansmic_1_1Stage_1ad199f5202e18b049cc5c7831e14b9138"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">h_inj</span></span></span><a class="headerlink" href="#_CPPv4N7sansmic5Stage5h_injE" title="Link to this definition">#</a><br /></dt>
+<dd><p>height of the injection point above the floor (in feet) </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7sansmic5Stage6h_prodE">
+<span id="_CPPv3N7sansmic5Stage6h_prodE"></span><span id="_CPPv2N7sansmic5Stage6h_prodE"></span><span id="sansmic::Stage::h_prod__double"></span><span class="target" id="structsansmic_1_1Stage_1a7b94af13941efc6003b114920ac397f0"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">h_prod</span></span></span><a class="headerlink" href="#_CPPv4N7sansmic5Stage6h_prodE" title="Link to this definition">#</a><br /></dt>
+<dd><p>height of the production point above the floor (in feet) </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7sansmic5Stage5h_obiE">
+<span id="_CPPv3N7sansmic5Stage5h_obiE"></span><span id="_CPPv2N7sansmic5Stage5h_obiE"></span><span id="sansmic::Stage::h_obi__double"></span><span class="target" id="structsansmic_1_1Stage_1a634ce5eb6f26f75ff6075f609f93eb0f"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">h_obi</span></span></span><a class="headerlink" href="#_CPPv4N7sansmic5Stage5h_obiE" title="Link to this definition">#</a><br /></dt>
+<dd><p>height of the OBI above the floor (in feet) </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7sansmic5Stage5Q_rawE">
+<span id="_CPPv3N7sansmic5Stage5Q_rawE"></span><span id="_CPPv2N7sansmic5Stage5Q_rawE"></span><span id="sansmic::Stage::Q_raw__double"></span><span class="target" id="structsansmic_1_1Stage_1a47a7cb0f0c8c71d6c463d26abd14f4b6"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Q_raw</span></span></span><a class="headerlink" href="#_CPPv4N7sansmic5Stage5Q_rawE" title="Link to this definition">#</a><br /></dt>
+<dd><p>injcetion rate (in bbl/hr) </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7sansmic5Stage7r_tbgIDE">
+<span id="_CPPv3N7sansmic5Stage7r_tbgIDE"></span><span id="_CPPv2N7sansmic5Stage7r_tbgIDE"></span><span id="sansmic::Stage::r_tbgID__double"></span><span class="target" id="structsansmic_1_1Stage_1aa2bdf06f6f2f8209d6384a9f6f1b35f3"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">r_tbgID</span></span></span><a class="headerlink" href="#_CPPv4N7sansmic5Stage7r_tbgIDE" title="Link to this definition">#</a><br /></dt>
+<dd><p>radius (in inches) of the inside of the inner string </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7sansmic5Stage7r_tbgODE">
+<span id="_CPPv3N7sansmic5Stage7r_tbgODE"></span><span id="_CPPv2N7sansmic5Stage7r_tbgODE"></span><span id="sansmic::Stage::r_tbgOD__double"></span><span class="target" id="structsansmic_1_1Stage_1a500d397aeda096907d13c80de03f27ac"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">r_tbgOD</span></span></span><a class="headerlink" href="#_CPPv4N7sansmic5Stage7r_tbgODE" title="Link to this definition">#</a><br /></dt>
+<dd><p>radius (in inches) of the outside of the inner string </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7sansmic5Stage7r_csgIDE">
+<span id="_CPPv3N7sansmic5Stage7r_csgIDE"></span><span id="_CPPv2N7sansmic5Stage7r_csgIDE"></span><span id="sansmic::Stage::r_csgID__double"></span><span class="target" id="structsansmic_1_1Stage_1a69e3912f9a076a2ebd2cbe1641033a95"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">r_csgID</span></span></span><a class="headerlink" href="#_CPPv4N7sansmic5Stage7r_csgIDE" title="Link to this definition">#</a><br /></dt>
+<dd><p>radius (in inches) of the inside of the outer string </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7sansmic5Stage7r_csgODE">
+<span id="_CPPv3N7sansmic5Stage7r_csgODE"></span><span id="_CPPv2N7sansmic5Stage7r_csgODE"></span><span id="sansmic::Stage::r_csgOD__double"></span><span class="target" id="structsansmic_1_1Stage_1a0c267196e001edf6cff931e6533547e6"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">r_csgOD</span></span></span><a class="headerlink" href="#_CPPv4N7sansmic5Stage7r_csgODE" title="Link to this definition">#</a><br /></dt>
+<dd><p>radius (in inches) of the outside of the outer string </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7sansmic5Stage6sg_rawE">
+<span id="_CPPv3N7sansmic5Stage6sg_rawE"></span><span id="_CPPv2N7sansmic5Stage6sg_rawE"></span><span id="sansmic::Stage::sg_raw__double"></span><span class="target" id="structsansmic_1_1Stage_1af350b686e1fc5962f53f79513fa342ce"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">sg_raw</span></span></span><a class="headerlink" href="#_CPPv4N7sansmic5Stage6sg_rawE" title="Link to this definition">#</a><br /></dt>
+<dd><p>specific gravity of injected water </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7sansmic5Stage7sg_initE">
+<span id="_CPPv3N7sansmic5Stage7sg_initE"></span><span id="_CPPv2N7sansmic5Stage7sg_initE"></span><span id="sansmic::Stage::sg_init__double"></span><span class="target" id="structsansmic_1_1Stage_1aec2d246f28e7aa424a8319e3e12309c1"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">sg_init</span></span></span><a class="headerlink" href="#_CPPv4N7sansmic5Stage7sg_initE" title="Link to this definition">#</a><br /></dt>
+<dd><p>specific gravity of the cavern at the start of the stage </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7sansmic5Stage2dtE">
+<span id="_CPPv3N7sansmic5Stage2dtE"></span><span id="_CPPv2N7sansmic5Stage2dtE"></span><span id="sansmic::Stage::dt__double"></span><span class="target" id="structsansmic_1_1Stage_1a03e28be41881b703c836edbfe9b51b17"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">dt</span></span></span><a class="headerlink" href="#_CPPv4N7sansmic5Stage2dtE" title="Link to this definition">#</a><br /></dt>
+<dd><p>timestep (in hours) </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7sansmic5Stage7t_stageE">
+<span id="_CPPv3N7sansmic5Stage7t_stageE"></span><span id="_CPPv2N7sansmic5Stage7t_stageE"></span><span id="sansmic::Stage::t_stage__double"></span><span class="target" id="structsansmic_1_1Stage_1ab751eab0c10ac5990a535a5244d0d95e"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">t_stage</span></span></span><a class="headerlink" href="#_CPPv4N7sansmic5Stage7t_stageE" title="Link to this definition">#</a><br /></dt>
+<dd><p>injection duration (in hours) </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7sansmic5Stage5Q_oilE">
+<span id="_CPPv3N7sansmic5Stage5Q_oilE"></span><span id="_CPPv2N7sansmic5Stage5Q_oilE"></span><span id="sansmic::Stage::Q_oil__double"></span><span class="target" id="structsansmic_1_1Stage_1a9da5f0ccd70ef19e06dfd0671668fe8a"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Q_oil</span></span></span><a class="headerlink" href="#_CPPv4N7sansmic5Stage5Q_oilE" title="Link to this definition">#</a><br /></dt>
+<dd><p>fill rate for LeachFill mode (in bbl/hr) </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="structsansmic_1_1Scenario.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Struct Scenario</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="classsansmic_1_1Derivable.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Class Derivable</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#struct-documentation">Struct Documentation</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic5StageE"><code class="docutils literal notranslate"><span class="pre">Stage</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic5Stage5StageEv"><code class="docutils literal notranslate"><span class="pre">Stage()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic5Stage9debug_logER8ofstream"><code class="docutils literal notranslate"><span class="pre">debug_log()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic5Stage5titleE"><code class="docutils literal notranslate"><span class="pre">title</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic5Stage10leach_modeE"><code class="docutils literal notranslate"><span class="pre">leach_mode</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic5Stage10print_freqE"><code class="docutils literal notranslate"><span class="pre">print_freq</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic5Stage13is_subsequentE"><code class="docutils literal notranslate"><span class="pre">is_subsequent</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic5Stage6t_restE"><code class="docutils literal notranslate"><span class="pre">t_rest</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic5Stage13stop_cond_valE"><code class="docutils literal notranslate"><span class="pre">stop_cond_val</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic5Stage5h_injE"><code class="docutils literal notranslate"><span class="pre">h_inj</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic5Stage6h_prodE"><code class="docutils literal notranslate"><span class="pre">h_prod</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic5Stage5h_obiE"><code class="docutils literal notranslate"><span class="pre">h_obi</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic5Stage5Q_rawE"><code class="docutils literal notranslate"><span class="pre">Q_raw</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic5Stage7r_tbgIDE"><code class="docutils literal notranslate"><span class="pre">r_tbgID</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic5Stage7r_tbgODE"><code class="docutils literal notranslate"><span class="pre">r_tbgOD</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic5Stage7r_csgIDE"><code class="docutils literal notranslate"><span class="pre">r_csgID</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic5Stage7r_csgODE"><code class="docutils literal notranslate"><span class="pre">r_csgOD</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic5Stage6sg_rawE"><code class="docutils literal notranslate"><span class="pre">sg_raw</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic5Stage7sg_initE"><code class="docutils literal notranslate"><span class="pre">sg_init</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic5Stage2dtE"><code class="docutils literal notranslate"><span class="pre">dt</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic5Stage7t_stageE"><code class="docutils literal notranslate"><span class="pre">t_stage</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic5Stage5Q_oilE"><code class="docutils literal notranslate"><span class="pre">Q_oil</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../_sources/apidocs/structsansmic_1_1Stage.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2024 National Technology and Engineering Solutions of Sandia, LLC. Under the terms of Contract DE-NA0003525 with NTESS, the U.S. Government retains certain rights in this software..
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.0.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

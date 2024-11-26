@@ -1,0 +1,52 @@
+StageDefinition
+===============
+
+.. currentmodule:: sansmic.model
+
+.. autoclass:: StageDefinition
+
+
+   .. rubric:: Summary
+   .. autosummary::
+
+
+
+   
+      ~StageDefinition.from_dict
+      ~StageDefinition.to_dict
+      ~StageDefinition.validate
+
+
+
+
+
+   
+      ~StageDefinition.brine_injection_depth
+      ~StageDefinition.brine_injection_rate
+      ~StageDefinition.brine_injection_sg
+      ~StageDefinition.brine_interface_depth
+      ~StageDefinition.brine_production_depth
+      ~StageDefinition.defaults
+      ~StageDefinition.injection_duration
+      ~StageDefinition.inner_tbg_inside_diam
+      ~StageDefinition.inner_tbg_outside_diam
+      ~StageDefinition.outer_csg_inside_diam
+      ~StageDefinition.outer_csg_outside_diam
+      ~StageDefinition.product_injection_depth
+      ~StageDefinition.product_injection_rate
+      ~StageDefinition.product_production_depth
+      ~StageDefinition.rest_duration
+      ~StageDefinition.save_frequency
+      ~StageDefinition.set_cavern_sg
+      ~StageDefinition.set_initial_conditions
+      ~StageDefinition.simulation_mode
+      ~StageDefinition.solver_timestep
+      ~StageDefinition.stop_condition
+      ~StageDefinition.stop_value
+      ~StageDefinition.title
+      ~StageDefinition.valid_default_keys
+
+
+
+   .. rubric:: Details
+

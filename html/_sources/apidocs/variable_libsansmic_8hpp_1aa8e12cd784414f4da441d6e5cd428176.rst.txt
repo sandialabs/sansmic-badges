@@ -1,0 +1,14 @@
+.. _exhale_variable_libsansmic_8hpp_1aa8e12cd784414f4da441d6e5cd428176:
+
+Variable sansmic::square_inch
+=============================
+
+- Defined in :ref:`file_libsansmic.hpp`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: sansmic::square_inch
+   :project: libsansmic

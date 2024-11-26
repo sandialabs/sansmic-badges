@@ -1,0 +1,10 @@
+
+
+read\_tst\_file
+===============
+
+.. currentmodule:: sansmic.io
+
+
+
+.. autofunction:: sansmic.io::read_tst_file

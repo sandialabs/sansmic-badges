@@ -1,0 +1,42 @@
+Scenario
+========
+
+.. currentmodule:: sansmic.model
+
+.. autoclass:: Scenario
+
+
+   .. rubric:: Summary
+   .. autosummary::
+
+
+
+   
+      ~Scenario.from_dict
+      ~Scenario.new_simulation
+      ~Scenario.new_stage
+      ~Scenario.to_dict
+
+
+
+
+
+   
+      ~Scenario.cavern_height
+      ~Scenario.comments
+      ~Scenario.floor_depth
+      ~Scenario.geometry_data
+      ~Scenario.geometry_format
+      ~Scenario.insolubles_ratio
+      ~Scenario.num_cells
+      ~Scenario.stages
+      ~Scenario.title
+      ~Scenario.ullage_standoff
+      ~Scenario.units
+      ~Scenario.defaults
+      ~Scenario.advanced
+
+
+
+   .. rubric:: Details
+

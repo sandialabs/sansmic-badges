@@ -1,0 +1,10 @@
+
+
+read\_scenario
+==============
+
+.. currentmodule:: sansmic.io
+
+
+
+.. autofunction:: sansmic.io::read_scenario

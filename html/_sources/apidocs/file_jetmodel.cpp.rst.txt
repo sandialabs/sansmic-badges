@@ -1,0 +1,28 @@
+
+.. _file_jetmodel.cpp:
+
+File jetmodel.cpp
+=================
+
+
+Jet model implementation. 
+
+
+Definition (``jetmodel.cpp``)
+-----------------------------
+
+
+
+
+
+
+Includes
+--------
+
+
+- ``libsansmic.hpp`` (:ref:`file_libsansmic.hpp`)
+
+
+
+
+

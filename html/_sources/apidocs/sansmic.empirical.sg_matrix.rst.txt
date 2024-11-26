@@ -1,0 +1,10 @@
+
+
+sg\_matrix
+==========
+
+.. currentmodule:: sansmic.empirical
+
+
+
+.. autodata:: sansmic.empirical::sg_matrix

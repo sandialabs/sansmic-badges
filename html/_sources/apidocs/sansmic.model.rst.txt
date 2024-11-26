@@ -1,0 +1,43 @@
+sansmic.model
+=============
+
+.. automodule:: sansmic.model
+   :exclude-members: AdvancedOptions, GeometryFormat, RateScheduleType, Results, Scenario, SimulationMode, Simulator, StageDefinition, StepwiseIterator, StopCondition, Units, 
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+      :nosignatures:
+      :toctree:
+      :template: autosummary/class.rst
+   
+      AdvancedOptions
+      GeometryFormat
+      RateScheduleType
+      Results
+      Scenario
+      SimulationMode
+      Simulator
+      StageDefinition
+      StepwiseIterator
+      StopCondition
+      Units
+   
+   
+
+   
+   
+   
+
+
+

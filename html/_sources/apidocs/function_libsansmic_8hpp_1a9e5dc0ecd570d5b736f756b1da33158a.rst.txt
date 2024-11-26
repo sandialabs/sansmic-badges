@@ -1,0 +1,14 @@
+.. _exhale_function_libsansmic_8hpp_1a9e5dc0ecd570d5b736f756b1da33158a:
+
+Function sansmic::sq
+====================
+
+- Defined in :ref:`file_libsansmic.hpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: sansmic::sq(double)
+   :project: libsansmic

@@ -1,0 +1,24 @@
+AboutAction
+===========
+
+.. currentmodule:: sansmic.app
+
+.. autoclass:: AboutAction
+
+
+   .. rubric:: Summary
+   .. autosummary::
+
+
+
+   
+      ~AboutAction.add_to_parser
+
+
+
+
+
+
+
+   .. rubric:: Details
+

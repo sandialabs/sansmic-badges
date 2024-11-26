@@ -1,0 +1,10 @@
+
+
+read\_classic\_out\_ddl
+=======================
+
+.. currentmodule:: sansmic.io
+
+
+
+.. autofunction:: sansmic.io::read_classic_out_ddl

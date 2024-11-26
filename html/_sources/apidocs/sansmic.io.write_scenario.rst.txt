@@ -1,0 +1,10 @@
+
+
+write\_scenario
+===============
+
+.. currentmodule:: sansmic.io
+
+
+
+.. autofunction:: sansmic.io::write_scenario

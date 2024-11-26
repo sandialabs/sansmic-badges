@@ -1,0 +1,17 @@
+.. _exhale_class_classsansmic_1_1Model:
+
+Class Model
+===========
+
+- Defined in :ref:`file_libsansmic.hpp`
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: sansmic::Model
+   :project: libsansmic
+   :members:
+   :protected-members:
+   :undoc-members:

@@ -1,0 +1,41 @@
+AdvancedOptions
+===============
+
+.. currentmodule:: sansmic.model
+
+.. autoclass:: AdvancedOptions
+
+
+   .. rubric:: Summary
+   .. autosummary::
+
+
+
+   
+      ~AdvancedOptions.from_dict
+      ~AdvancedOptions.to_dict
+
+
+
+
+
+   
+      ~AdvancedOptions.absolute_error
+      ~AdvancedOptions.coallescing_wells
+      ~AdvancedOptions.diffusion_beta
+      ~AdvancedOptions.dissolution_factor
+      ~AdvancedOptions.eddy_coefficient
+      ~AdvancedOptions.entrainment_coeff
+      ~AdvancedOptions.jet_model_version
+      ~AdvancedOptions.max_brine_sg
+      ~AdvancedOptions.molecular_diffusion
+      ~AdvancedOptions.plume_model_version
+      ~AdvancedOptions.relative_error
+      ~AdvancedOptions.solid_density
+      ~AdvancedOptions.temperature_model_version
+      ~AdvancedOptions.well_separation
+
+
+
+   .. rubric:: Details
+

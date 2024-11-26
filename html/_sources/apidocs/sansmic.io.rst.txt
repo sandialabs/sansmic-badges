@@ -1,0 +1,42 @@
+sansmic.io
+==========
+
+.. automodule:: sansmic.io
+   :exclude-members: read_classic_out_ddl, read_dat, read_hdf_results, read_json_results, read_scenario, read_tst_file, write_csv_results, write_hdf_results, write_json_results, write_scenario, 
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+      :nosignatures:
+      :toctree:
+      :template: autosummary/base.rst
+   
+      read_classic_out_ddl
+      read_dat
+      read_hdf_results
+      read_json_results
+      read_scenario
+      read_tst_file
+      write_csv_results
+      write_hdf_results
+      write_json_results
+      write_scenario
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+
+

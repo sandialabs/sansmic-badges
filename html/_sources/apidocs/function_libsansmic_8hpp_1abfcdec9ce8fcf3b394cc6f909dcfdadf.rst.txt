@@ -1,0 +1,14 @@
+.. _exhale_function_libsansmic_8hpp_1abfcdec9ce8fcf3b394cc6f909dcfdadf:
+
+Function sansmic::dabs
+======================
+
+- Defined in :ref:`file_libsansmic.hpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: sansmic::dabs(double)
+   :project: libsansmic

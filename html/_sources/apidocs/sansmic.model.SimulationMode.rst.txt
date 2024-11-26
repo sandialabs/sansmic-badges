@@ -1,0 +1,29 @@
+SimulationMode
+==============
+
+.. currentmodule:: sansmic.model
+
+.. autoclass:: SimulationMode
+
+
+   .. rubric:: Summary
+   .. autosummary::
+
+
+
+   
+
+
+
+
+
+   
+      ~SimulationMode.ORDINARY
+      ~SimulationMode.WITHDRAWAL
+      ~SimulationMode.LEACH_FILL
+      ~SimulationMode.STORAGE_FILL
+
+
+
+   .. rubric:: Details
+

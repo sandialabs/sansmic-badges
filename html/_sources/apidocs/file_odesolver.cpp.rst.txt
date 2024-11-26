@@ -1,0 +1,38 @@
+
+.. _file_odesolver.cpp:
+
+File odesolver.cpp
+==================
+
+
+The ODESolver class implementation. 
+
+
+Definition (``odesolver.cpp``)
+------------------------------
+
+
+
+
+Detailed Description
+--------------------
+
+The function of this code is completely explained and documented in the text, *Computer solution of ordinary differential equations, the initial value problem* by L. F. Shampine and M. K. Gordon. Further details on use of this code are available in ``Solving ordinary differential equations with ODE, STEP, and INTRP``, by L. F. Shampine and M. K. Gordon, SLA-73-1060. 
+
+
+
+
+Includes
+--------
+
+
+- ``iostream``
+
+- ``libsansmic.hpp`` (:ref:`file_libsansmic.hpp`)
+
+- ``vector``
+
+
+
+
+

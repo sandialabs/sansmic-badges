@@ -1,0 +1,10 @@
+
+
+read\_hdf\_results
+==================
+
+.. currentmodule:: sansmic.io
+
+
+
+.. autofunction:: sansmic.io::read_hdf_results

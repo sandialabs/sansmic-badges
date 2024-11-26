@@ -1,0 +1,78 @@
+Results
+=======
+
+.. currentmodule:: sansmic.model
+
+.. autoclass:: Results
+
+
+   .. rubric:: Summary
+   .. autosummary::
+
+
+
+   
+      ~Results.from_dict
+      ~Results.from_hdf
+      ~Results.to_dict
+      ~Results.to_hdf
+
+
+
+
+
+   
+      ~Results.brine_production_rate
+      ~Results.brine_production_sg
+      ~Results.cavern_average_brine_sg
+      ~Results.cavern_total_depth
+      ~Results.cavern_volume
+      ~Results.cell_injection_rate
+      ~Results.cell_sg
+      ~Results.cell_volume
+      ~Results.change_in_radius
+      ~Results.cumulative_fill_volume
+      ~Results.cumulative_injection_volume
+      ~Results.cumulative_insoluble_material_vented
+      ~Results.cumulative_insoluble_material_volume
+      ~Results.depths
+      ~Results.effective_diffusion_coefficient
+      ~Results.effective_dissolution_factor
+      ~Results.hours
+      ~Results.injection_cell
+      ~Results.injection_depth
+      ~Results.injection_phase
+      ~Results.insoluble_material_height
+      ~Results.interface_cell
+      ~Results.interface_depth
+      ~Results.jet_length
+      ~Results.jet_radius
+      ~Results.jet_velocity
+      ~Results.node_heights
+      ~Results.ode_convergence
+      ~Results.plume_radius
+      ~Results.plume_sg
+      ~Results.plume_stagnation_cell
+      ~Results.plume_stagnation_depth
+      ~Results.plume_velocity
+      ~Results.production_cell
+      ~Results.production_depth
+      ~Results.radius
+      ~Results.rate_of_change_in_radius
+      ~Results.rate_of_change_in_sg
+      ~Results.stage_number
+      ~Results.state_indicator
+      ~Results.step_number
+      ~Results.step_size
+      ~Results.time
+      ~Results.vertical_diffusion_rate
+      ~Results.wall_angle
+      ~Results.wall_factor
+      ~Results.df_t_1D
+      ~Results.df_z_1D
+      ~Results.df_t_z_2D
+
+
+
+   .. rubric:: Details
+

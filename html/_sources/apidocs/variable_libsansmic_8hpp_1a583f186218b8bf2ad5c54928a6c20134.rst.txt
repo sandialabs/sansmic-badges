@@ -1,0 +1,14 @@
+.. _exhale_variable_libsansmic_8hpp_1a583f186218b8bf2ad5c54928a6c20134:
+
+Variable sansmic::minute
+========================
+
+- Defined in :ref:`file_libsansmic.hpp`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: sansmic::minute
+   :project: libsansmic

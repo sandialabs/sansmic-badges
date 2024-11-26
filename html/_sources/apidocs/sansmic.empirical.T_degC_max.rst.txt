@@ -1,0 +1,10 @@
+
+
+T\_degC\_max
+============
+
+.. currentmodule:: sansmic.empirical
+
+
+
+.. autodata:: sansmic.empirical::T_degC_max

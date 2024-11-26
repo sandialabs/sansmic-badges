@@ -1,0 +1,33 @@
+CModel
+======
+
+.. currentmodule:: sansmic.libsansmic
+
+.. autoclass:: CModel
+
+
+   .. rubric:: Summary
+   .. autosummary::
+
+
+
+   
+      ~CModel.close_outfiles
+      ~CModel.configure
+      ~CModel.generate_out_file
+      ~CModel.generate_tst_file
+      ~CModel.is_running
+      ~CModel.num_stages
+      ~CModel.open_outfiles
+      ~CModel.run_next_step
+      ~CModel.run_sim
+      ~CModel.set_verbosity_level
+
+
+
+
+
+
+
+   .. rubric:: Details
+

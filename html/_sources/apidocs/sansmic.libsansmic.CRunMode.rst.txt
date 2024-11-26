@@ -1,0 +1,31 @@
+CRunMode
+========
+
+.. currentmodule:: sansmic.libsansmic
+
+.. autoclass:: CRunMode
+
+
+   .. rubric:: Summary
+   .. autosummary::
+
+
+
+   
+
+
+
+
+
+   
+      ~CRunMode.LEACH_FILL
+      ~CRunMode.OIL_FILL
+      ~CRunMode.ORDINARY
+      ~CRunMode.WITHDRAWAL
+      ~CRunMode.name
+      ~CRunMode.value
+
+
+
+   .. rubric:: Details
+

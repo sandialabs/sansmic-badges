@@ -1,0 +1,1059 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Struct Results &#8212; Sansmic</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+
+    <script src="../_static/documentation_options.js?v=76e2d817"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-23TNKN36XM"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-23TNKN36XM');
+            </script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-23TNKN36XM');
+            </script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'apidocs/structsansmic_1_1Results';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.0';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://sandialabs.github.io/sansmic/_static/switcher.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'v1.0.0';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner = true;
+        </script>
+    <script src="../_static/pypi-icon.js?v=74687d30"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Struct Scenario" href="structsansmic_1_1Scenario.html" />
+    <link rel="prev" title="Namespace sansmic" href="namespace_sansmic.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="1.0.0" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Sansmic</p>
+  
+</a></div>
+    
+      <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../userman.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../refman.html">
+    API Reference
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/sandialabs/sansmic" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/sansmic/" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.sandia.gov" title="Sandia National Laboratories" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../_static/snl_logo.png" class="icon-link-image" alt="Sandia National Laboratories"/></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../userman.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../refman.html">
+    API Reference
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/sandialabs/sansmic" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/sansmic/" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.sandia.gov" title="Sandia National Laboratories" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../_static/snl_logo.png" class="icon-link-image" alt="Sandia National Laboratories"/></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">Python package</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="sansmic.html">sansmic</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="sansmic.app.html">sansmic.app</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.app.convert.html">convert</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.app.main.html">main</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.app.AboutAction.html">AboutAction</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="sansmic.empirical.html">sansmic.empirical</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.empirical.rho_NaCl_s.html">rho_NaCl_s</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.empirical.a.html">a</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.empirical.c.html">c</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.empirical.sg_matrix.html">sg_matrix</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.empirical.wt_pct_vec.html">wt_pct_vec</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.empirical.T_degC_vec.html">T_degC_vec</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.empirical.wt_pct_max.html">wt_pct_max</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.empirical.T_degC_max.html">T_degC_max</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.empirical.sg_max.html">sg_max</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="sansmic.io.html">sansmic.io</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.io.read_classic_out_ddl.html">read_classic_out_ddl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.io.read_dat.html">read_dat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.io.read_hdf_results.html">read_hdf_results</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.io.read_json_results.html">read_json_results</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.io.read_scenario.html">read_scenario</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.io.read_tst_file.html">read_tst_file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.io.write_csv_results.html">write_csv_results</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.io.write_hdf_results.html">write_hdf_results</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.io.write_json_results.html">write_json_results</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.io.write_scenario.html">write_scenario</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="sansmic.libsansmic.html">sansmic.libsansmic</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.libsansmic.CGeometryFormat.html">CGeometryFormat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.libsansmic.CModel.html">CModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.libsansmic.CResults.html">CResults</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.libsansmic.CRunMode.html">CRunMode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.libsansmic.CSalt.html">CSalt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.libsansmic.CScenario.html">CScenario</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.libsansmic.CStage.html">CStage</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="sansmic.model.html">sansmic.model</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.model.AdvancedOptions.html">AdvancedOptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.model.GeometryFormat.html">GeometryFormat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.model.RateScheduleType.html">RateScheduleType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.model.Results.html">Results</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.model.Scenario.html">Scenario</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.model.SimulationMode.html">SimulationMode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.model.Simulator.html">Simulator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.model.StageDefinition.html">StageDefinition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.model.StepwiseIterator.html">StepwiseIterator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.model.StopCondition.html">StopCondition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sansmic.model.Units.html">Units</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">C++ library</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">libsansmic</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="namespace_sansmic.html">Namespace sansmic</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Struct Results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structsansmic_1_1Scenario.html">Struct Scenario</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structsansmic_1_1Stage.html">Struct Stage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classsansmic_1_1Derivable.html">Class Derivable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classsansmic_1_1JetModel.html">Class JetModel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classsansmic_1_1Model.html">Class Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classsansmic_1_1ODESolver.html">Class ODESolver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classsansmic_1_1PlumeRise.html">Class PlumeRise</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classsansmic_1_1Salt.html">Class Salt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="enum_libsansmic_8hpp_1ae90439e1c23bb6f206956d15cacaaa41.html">Enum GeomFormat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="enum_libsansmic_8hpp_1a0ac474463be3271f78ea252870114800.html">Enum LeachMode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_libsansmic_8hpp_1af7843017d1ba247ba894354fd04066fd.html">Function sansmic::bound</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_libsansmic_8hpp_1abfcdec9ce8fcf3b394cc6f909dcfdadf.html">Function sansmic::dabs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_libsansmic_8hpp_1af835812a8204d3a9d032f4a82131a96b.html">Function sansmic::ddim</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_libsansmic_8hpp_1ad862c88ec431b0775d64800d4a79c4ac.html">Function sansmic::sign(double, double)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_libsansmic_8hpp_1ab33feadd6242c54d884b2877b48aede1.html">Function sansmic::sign(int, int)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_libsansmic_8hpp_1a9e5dc0ecd570d5b736f756b1da33158a.html">Function sansmic::sq</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_libsansmic_8hpp_1abd9435272066c6467cd42223a85ab523.html">Function sansmic::trigad</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_libsansmic_8hpp_1aebbfefaf337ee806ea88b6d52e36f905.html">Function sansmic::xnterp_dkr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1ae05f440aa5cf0cf27c924af6abd84429.html">Variable sansmic::_pi_</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1a5835f26770e6fcee73a6a866ba1a0ca3.html">Variable sansmic::bbl_to_cf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1a6509f1ad75d4faaef799a26d4963ed75.html">Variable sansmic::cf_to_bbl</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1a4097c0a08bdfca709ad6af1edbbae5cf.html">Variable sansmic::cubic_foot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1a1e9d11c00b0f8ab30e067f17b93b3a77.html">Variable sansmic::cubic_inch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1a6bf5141a96e95158acead28325d3ba7a.html">Variable sansmic::day</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1a35f688aef259e35313b3d8fb13215b04.html">Variable sansmic::degree_Fahrenheit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1a4d1216187d22cbd5da9dff170fcc6478.html">Variable sansmic::foot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1a4489ee3413eb2756ead2968898cc919e.html">Variable sansmic::ft_to_in</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1a09c047eba91ce1d85e4e7fdd4bafebe4.html">Variable sansmic::hour</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1ade5f8e06aa0040eaeff7a2faf8a53f84.html">Variable sansmic::in_to_ft</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1a65eb61864cca7f60402dca06829b0278.html">Variable sansmic::inch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1a3790b5abe2d5afc09d3952d7a215ae76.html">Variable sansmic::INVALID_LOG_FILE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1a680959cdfd3d7eb4a54cf899aed119e8.html">Variable sansmic::INVALID_OUT_FILE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1aa08e28983055aebd0561072245a9580e.html">Variable sansmic::INVALID_TST_FILE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1a516ec27e7553440120d43692295e16fd.html">Variable sansmic::julian_year</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1a8e6656a08a16d80623c90f0531fae06d.html">Variable sansmic::liquid_gallon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1a583f186218b8bf2ad5c54928a6c20134.html">Variable sansmic::minute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1a68a31f328274bc97dfa478bb42920449.html">Variable sansmic::MISSING_DAT_FILE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1a421a5bf73c6bebdda01605bd0dea0660.html">Variable sansmic::NDIV_CHANGES_THROUGHOUT_FILE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1aa33076a804fd17b06c540f5548faac0d.html">Variable sansmic::OBI_AT_CAVERN_FLOOR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1ade021519e336911922fb0b56739207b9.html">Variable sansmic::ODE_BAD_ABSERR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1a0eba3ceb565254ff682a2520ae565ad8.html">Variable sansmic::ODE_IFLAG_SEVEN</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1a4a9a89674d91f081c447f3e6326e3239.html">Variable sansmic::ODE_IFLAG_SIX</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1aff42d2545a2cb7a612252a8d6f1799da.html">Variable sansmic::oil_barrel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1a5f0f9ae5a5526c0a1ec6c58d0e6a6c1d.html">Variable sansmic::per_d_to_per_h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1a60f9a61a4a145f39de28d2db23619afc.html">Variable sansmic::per_h_to_per_d</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1ae1faba63a84df20abb428a8f0a473e64.html">Variable sansmic::pound_force</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1a2e2c0c62680e276009c4d14267633c96.html">Variable sansmic::pound_mass</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1a65d119aa16b025a2586c16bc1179ee58.html">Variable sansmic::square_foot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1aa8e12cd784414f4da441d6e5cd428176.html">Variable sansmic::square_inch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1a3672ba92add1b2550dbf908383a392cd.html">Variable sansmic::std_gravity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1a583d71ee41f917002e5274dc9e2dd828.html">Variable sansmic::UNIMPLEMENTED_FLOW_TABLES</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1a2f7db9be399d5ac9e2e7b21e5aff61df.html">Variable sansmic::UNIMPLEMENTED_GEOMETRY_IDATA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1acf7d3f4554cbe417c5e190b85a100894.html">Variable sansmic::zero_Fahrenheit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="define_model_8cpp_1a2d2b6ceee9d9602972e2de6426a3b9cf.html">Define VERSION_INFO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_jetmodel.cpp.html">File jetmodel.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_libsansmic.cpp.html">File libsansmic.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_libsansmic.hpp.html">File libsansmic.hpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_model.cpp.html">File model.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_odesolver.cpp.html">File odesolver.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_plumerise.cpp.html">File plumerise.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_salt.cpp.html">File salt.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_scenario.cpp.html">File scenario.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_stage.cpp.html">File stage.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_util.cpp.html">File util.cpp</a></li>
+</ul>
+</details></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item"><nav class="sidebar-indices-items" aria-labelledby="pst-indices-navigation-heading-2">
+  <p id="pst-indices-navigation-heading-2" class="sidebar-indices-items__title" role="heading" aria-level="1">Indices</p>
+  <ul class="indices-link">
+        <li class="toctree-l1">
+          <a class="reference internal"
+             href="../genindex.html"
+             accesskey="I">General Index</a>
+        </li>
+        <li class="toctree-l1">
+          <a class="reference internal" href="../py-modindex.html">Python Module Index</a>
+        </li>
+  </ul>
+</nav></div>
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../refman.html" class="nav-link">API Reference</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">libsansmic</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Struct Results</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="struct-results">
+<span id="exhale-struct-structsansmic-1-1results"></span><h1>Struct Results<a class="headerlink" href="#struct-results" title="Link to this heading">#</a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_libsansmic.hpp.html#file-libsansmic-hpp"><span class="std std-ref">File libsansmic.hpp</span></a></p></li>
+</ul>
+<section id="struct-documentation">
+<h2>Struct Documentation<a class="headerlink" href="#struct-documentation" title="Link to this heading">#</a></h2>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N7sansmic7ResultsE">
+<span id="_CPPv3N7sansmic7ResultsE"></span><span id="_CPPv2N7sansmic7ResultsE"></span><span id="sansmic::Results"></span><span class="target" id="structsansmic_1_1Results"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Results</span></span></span><a class="headerlink" href="#_CPPv4N7sansmic7ResultsE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Structure containing the results of the simulation. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7sansmic7Results3r_0E">
+<span id="_CPPv3N7sansmic7Results3r_0E"></span><span id="_CPPv2N7sansmic7Results3r_0E"></span><span id="sansmic::Results::r_0__vector:double:"></span><span class="target" id="structsansmic_1_1Results_1a4cbe0a0ff98c0a88151cefc039d8d862"></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">r_0</span></span></span><a class="headerlink" href="#_CPPv4N7sansmic7Results3r_0E" title="Link to this definition">#</a><br /></dt>
+<dd><p>initial radius by node </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7sansmic7Results3z_0E">
+<span id="_CPPv3N7sansmic7Results3z_0E"></span><span id="_CPPv2N7sansmic7Results3z_0E"></span><span id="sansmic::Results::z_0__vector:double:"></span><span class="target" id="structsansmic_1_1Results_1ac63e31816e6218fa5dba4a0ac462352b"></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">z_0</span></span></span><a class="headerlink" href="#_CPPv4N7sansmic7Results3z_0E" title="Link to this definition">#</a><br /></dt>
+<dd><p>node depth </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7sansmic7Results3h_0E">
+<span id="_CPPv3N7sansmic7Results3h_0E"></span><span id="_CPPv2N7sansmic7Results3h_0E"></span><span id="sansmic::Results::h_0__vector:double:"></span><span class="target" id="structsansmic_1_1Results_1a72f2698b4f75ec66dc29929868922256"></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">h_0</span></span></span><a class="headerlink" href="#_CPPv4N7sansmic7Results3h_0E" title="Link to this definition">#</a><br /></dt>
+<dd><p>node height </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7sansmic7Results4stepE">
+<span id="_CPPv3N7sansmic7Results4stepE"></span><span id="_CPPv2N7sansmic7Results4stepE"></span><span id="sansmic::Results::step__vector:i:"></span><span class="target" id="structsansmic_1_1Results_1a8087b6ecce8d4da7b6963a830a298bf0"></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">step</span></span></span><a class="headerlink" href="#_CPPv4N7sansmic7Results4stepE" title="Link to this definition">#</a><br /></dt>
+<dd><p>the step number </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7sansmic7Results5stageE">
+<span id="_CPPv3N7sansmic7Results5stageE"></span><span id="_CPPv2N7sansmic7Results5stageE"></span><span id="sansmic::Results::stage__vector:i:"></span><span class="target" id="structsansmic_1_1Results_1af1f6b6dd0aebfbda217251b57ff4a940"></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">stage</span></span></span><a class="headerlink" href="#_CPPv4N7sansmic7Results5stageE" title="Link to this definition">#</a><br /></dt>
+<dd><p>stage number </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7sansmic7Results5phaseE">
+<span id="_CPPv3N7sansmic7Results5phaseE"></span><span id="_CPPv2N7sansmic7Results5phaseE"></span><span id="sansmic::Results::phase__vector:i:"></span><span class="target" id="structsansmic_1_1Results_1a521622be01ea0b6bf8c68648a8ad106b"></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">phase</span></span></span><a class="headerlink" href="#_CPPv4N7sansmic7Results5phaseE" title="Link to this definition">#</a><br /></dt>
+<dd><p>phase 1 (inject), phase 0 (static) </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7sansmic7Results7injCellE">
+<span id="_CPPv3N7sansmic7Results7injCellE"></span><span id="_CPPv2N7sansmic7Results7injCellE"></span><span id="sansmic::Results::injCell__vector:i:"></span><span class="target" id="structsansmic_1_1Results_1a08a060e3e535a965dbf98e7650352a98"></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">injCell</span></span></span><a class="headerlink" href="#_CPPv4N7sansmic7Results7injCellE" title="Link to this definition">#</a><br /></dt>
+<dd><p>cell containing EOT </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7sansmic7Results8prodCellE">
+<span id="_CPPv3N7sansmic7Results8prodCellE"></span><span id="_CPPv2N7sansmic7Results8prodCellE"></span><span id="sansmic::Results::prodCell__vector:i:"></span><span class="target" id="structsansmic_1_1Results_1a42a99e3a6ff4741bea0db73fc29e2c2e"></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">prodCell</span></span></span><a class="headerlink" href="#_CPPv4N7sansmic7Results8prodCellE" title="Link to this definition">#</a><br /></dt>
+<dd><p>cell containing production </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7sansmic7Results7obiCellE">
+<span id="_CPPv3N7sansmic7Results7obiCellE"></span><span id="_CPPv2N7sansmic7Results7obiCellE"></span><span id="sansmic::Results::obiCell__vector:i:"></span><span class="target" id="structsansmic_1_1Results_1aeb6c13719a00aa3169ef9e32a7a7c042"></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">obiCell</span></span></span><a class="headerlink" href="#_CPPv4N7sansmic7Results7obiCellE" title="Link to this definition">#</a><br /></dt>
+<dd><p>cell containing OBI </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7sansmic7Results7plmCellE">
+<span id="_CPPv3N7sansmic7Results7plmCellE"></span><span id="_CPPv2N7sansmic7Results7plmCellE"></span><span id="sansmic::Results::plmCell__vector:i:"></span><span class="target" id="structsansmic_1_1Results_1aa637a07a07d95ffafd7199c34862b721"></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">plmCell</span></span></span><a class="headerlink" href="#_CPPv4N7sansmic7Results7plmCellE" title="Link to this definition">#</a><br /></dt>
+<dd><p>cell containing plume stagnation </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7sansmic7Results1tE">
+<span id="_CPPv3N7sansmic7Results1tE"></span><span id="_CPPv2N7sansmic7Results1tE"></span><span id="sansmic::Results::t__vector:double:"></span><span class="target" id="structsansmic_1_1Results_1a066168db42743773cb59887ab594ae56"></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">t</span></span></span><a class="headerlink" href="#_CPPv4N7sansmic7Results1tE" title="Link to this definition">#</a><br /></dt>
+<dd><p>time of output </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7sansmic7Results3errE">
+<span id="_CPPv3N7sansmic7Results3errE"></span><span id="_CPPv2N7sansmic7Results3errE"></span><span id="sansmic::Results::err__vector:double:"></span><span class="target" id="structsansmic_1_1Results_1a39aa907c707b1f98dc7111704acbb162"></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">err</span></span></span><a class="headerlink" href="#_CPPv4N7sansmic7Results3errE" title="Link to this definition">#</a><br /></dt>
+<dd><p>mass ballance ratio </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7sansmic7Results5z_obiE">
+<span id="_CPPv3N7sansmic7Results5z_obiE"></span><span id="_CPPv2N7sansmic7Results5z_obiE"></span><span id="sansmic::Results::z_obi__vector:double:"></span><span class="target" id="structsansmic_1_1Results_1ac264f9cb68b87da20d9ce9a6c23ddeef"></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">z_obi</span></span></span><a class="headerlink" href="#_CPPv4N7sansmic7Results5z_obiE" title="Link to this definition">#</a><br /></dt>
+<dd><p>obi <em>depth</em></p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7sansmic7Results5z_injE">
+<span id="_CPPv3N7sansmic7Results5z_injE"></span><span id="_CPPv2N7sansmic7Results5z_injE"></span><span id="sansmic::Results::z_inj__vector:double:"></span><span class="target" id="structsansmic_1_1Results_1a364cd266f83cb7f5e7fae132b6193f39"></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">z_inj</span></span></span><a class="headerlink" href="#_CPPv4N7sansmic7Results5z_injE" title="Link to this definition">#</a><br /></dt>
+<dd><p>injection point <em>depth</em></p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7sansmic7Results6z_prodE">
+<span id="_CPPv3N7sansmic7Results6z_prodE"></span><span id="_CPPv2N7sansmic7Results6z_prodE"></span><span id="sansmic::Results::z_prod__vector:double:"></span><span class="target" id="structsansmic_1_1Results_1a7db22c59a76eb26f40ac47cde4d3cc5e"></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">z_prod</span></span></span><a class="headerlink" href="#_CPPv4N7sansmic7Results6z_prodE" title="Link to this definition">#</a><br /></dt>
+<dd><p>production point <em>depth</em></p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7sansmic7Results5z_plmE">
+<span id="_CPPv3N7sansmic7Results5z_plmE"></span><span id="_CPPv2N7sansmic7Results5z_plmE"></span><span id="sansmic::Results::z_plm__vector:double:"></span><span class="target" id="structsansmic_1_1Results_1acfba6476d261cac54b415ad317a13536"></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">z_plm</span></span></span><a class="headerlink" href="#_CPPv4N7sansmic7Results5z_plmE" title="Link to this definition">#</a><br /></dt>
+<dd><p>plume stagnation <em>depth</em></p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7sansmic7Results7z_insolE">
+<span id="_CPPv3N7sansmic7Results7z_insolE"></span><span id="_CPPv2N7sansmic7Results7z_insolE"></span><span id="sansmic::Results::z_insol__vector:double:"></span><span class="target" id="structsansmic_1_1Results_1a18dde540e42673a9452a90b8563aacaa"></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">z_insol</span></span></span><a class="headerlink" href="#_CPPv4N7sansmic7Results7z_insolE" title="Link to this definition">#</a><br /></dt>
+<dd><p>insoluble top <em>depth</em></p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7sansmic7Results7h_insolE">
+<span id="_CPPv3N7sansmic7Results7h_insolE"></span><span id="_CPPv2N7sansmic7Results7h_insolE"></span><span id="sansmic::Results::h_insol__vector:double:"></span><span class="target" id="structsansmic_1_1Results_1a33c1aef448c1b480665cdbc2f85f1d86"></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">h_insol</span></span></span><a class="headerlink" href="#_CPPv4N7sansmic7Results7h_insolE" title="Link to this definition">#</a><br /></dt>
+<dd><p>insoluble <em>height</em></p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7sansmic7Results5l_jetE">
+<span id="_CPPv3N7sansmic7Results5l_jetE"></span><span id="_CPPv2N7sansmic7Results5l_jetE"></span><span id="sansmic::Results::l_jet__vector:double:"></span><span class="target" id="structsansmic_1_1Results_1ac6d7440afb322f613f0a994cd0e5e43e"></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">l_jet</span></span></span><a class="headerlink" href="#_CPPv4N7sansmic7Results5l_jetE" title="Link to this definition">#</a><br /></dt>
+<dd><p>injection jet length </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7sansmic7Results5r_jetE">
+<span id="_CPPv3N7sansmic7Results5r_jetE"></span><span id="_CPPv2N7sansmic7Results5r_jetE"></span><span id="sansmic::Results::r_jet__vector:double:"></span><span class="target" id="structsansmic_1_1Results_1acd0f95da0b40172fcc5c6770ac61043e"></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">r_jet</span></span></span><a class="headerlink" href="#_CPPv4N7sansmic7Results5r_jetE" title="Link to this definition">#</a><br /></dt>
+<dd><p>injection radius </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7sansmic7Results5u_jetE">
+<span id="_CPPv3N7sansmic7Results5u_jetE"></span><span id="_CPPv2N7sansmic7Results5u_jetE"></span><span id="sansmic::Results::u_jet__vector:double:"></span><span class="target" id="structsansmic_1_1Results_1a3fd87b2561b994993490f886c72a3eda"></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">u_jet</span></span></span><a class="headerlink" href="#_CPPv4N7sansmic7Results5u_jetE" title="Link to this definition">#</a><br /></dt>
+<dd><p>injection point velocity </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7sansmic7Results8V_injTotE">
+<span id="_CPPv3N7sansmic7Results8V_injTotE"></span><span id="_CPPv2N7sansmic7Results8V_injTotE"></span><span id="sansmic::Results::V_injTot__vector:double:"></span><span class="target" id="structsansmic_1_1Results_1a5bcfbcf0d270d15158d815c2850921fa"></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">V_injTot</span></span></span><a class="headerlink" href="#_CPPv4N7sansmic7Results8V_injTotE" title="Link to this definition">#</a><br /></dt>
+<dd><p>total injected volume </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7sansmic7Results9V_fillTotE">
+<span id="_CPPv3N7sansmic7Results9V_fillTotE"></span><span id="_CPPv2N7sansmic7Results9V_fillTotE"></span><span id="sansmic::Results::V_fillTot__vector:double:"></span><span class="target" id="structsansmic_1_1Results_1aa34065d1fc09db6719a5d96b13e353b2"></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">V_fillTot</span></span></span><a class="headerlink" href="#_CPPv4N7sansmic7Results9V_fillTotE" title="Link to this definition">#</a><br /></dt>
+<dd><p>total fill/withdraw (oil) volume </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7sansmic7Results8V_cavTotE">
+<span id="_CPPv3N7sansmic7Results8V_cavTotE"></span><span id="_CPPv2N7sansmic7Results8V_cavTotE"></span><span id="sansmic::Results::V_cavTot__vector:double:"></span><span class="target" id="structsansmic_1_1Results_1aa9e9dc4b1cad629b31c46d85042b6e2a"></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">V_cavTot</span></span></span><a class="headerlink" href="#_CPPv4N7sansmic7Results8V_cavTotE" title="Link to this definition">#</a><br /></dt>
+<dd><p>total cavern volume </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7sansmic7Results10V_insolTotE">
+<span id="_CPPv3N7sansmic7Results10V_insolTotE"></span><span id="_CPPv2N7sansmic7Results10V_insolTotE"></span><span id="sansmic::Results::V_insolTot__vector:double:"></span><span class="target" id="structsansmic_1_1Results_1a39fa3e3e8dc52468498eb86ca236eea2"></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">V_insolTot</span></span></span><a class="headerlink" href="#_CPPv4N7sansmic7Results10V_insolTotE" title="Link to this definition">#</a><br /></dt>
+<dd><p>total insolubles created </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7sansmic7Results11V_insolVentE">
+<span id="_CPPv3N7sansmic7Results11V_insolVentE"></span><span id="_CPPv2N7sansmic7Results11V_insolVentE"></span><span id="sansmic::Results::V_insolVent__vector:double:"></span><span class="target" id="structsansmic_1_1Results_1adeb009a6bb0fc4b364646cf00144cd21"></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">V_insolVent</span></span></span><a class="headerlink" href="#_CPPv4N7sansmic7Results11V_insolVentE" title="Link to this definition">#</a><br /></dt>
+<dd><p>volume insolubles vented </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7sansmic7Results5Q_outE">
+<span id="_CPPv3N7sansmic7Results5Q_outE"></span><span id="_CPPv2N7sansmic7Results5Q_outE"></span><span id="sansmic::Results::Q_out__vector:double:"></span><span class="target" id="structsansmic_1_1Results_1ade2df460b280f566f1f77544e51ace52"></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Q_out</span></span></span><a class="headerlink" href="#_CPPv4N7sansmic7Results5Q_outE" title="Link to this definition">#</a><br /></dt>
+<dd><p>current production rate </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7sansmic7Results6sg_outE">
+<span id="_CPPv3N7sansmic7Results6sg_outE"></span><span id="_CPPv2N7sansmic7Results6sg_outE"></span><span id="sansmic::Results::sg_out__vector:double:"></span><span class="target" id="structsansmic_1_1Results_1a673a6bde945fbccbd164576af9211580"></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">sg_out</span></span></span><a class="headerlink" href="#_CPPv4N7sansmic7Results6sg_outE" title="Link to this definition">#</a><br /></dt>
+<dd><p>outlet specific gravity </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7sansmic7Results9sg_cavAveE">
+<span id="_CPPv3N7sansmic7Results9sg_cavAveE"></span><span id="_CPPv2N7sansmic7Results9sg_cavAveE"></span><span id="sansmic::Results::sg_cavAve__vector:double:"></span><span class="target" id="structsansmic_1_1Results_1ad9b32d858024e7369e64d35fbf203e0b"></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">sg_cavAve</span></span></span><a class="headerlink" href="#_CPPv4N7sansmic7Results9sg_cavAveE" title="Link to this definition">#</a><br /></dt>
+<dd><p>cavern average specific gravity </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7sansmic7Results2dtE">
+<span id="_CPPv3N7sansmic7Results2dtE"></span><span id="_CPPv2N7sansmic7Results2dtE"></span><span id="sansmic::Results::dt__vector:double:"></span><span class="target" id="structsansmic_1_1Results_1a9d528ad5effab94f2c8e6a50ef15e3fb"></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">dt</span></span></span><a class="headerlink" href="#_CPPv4N7sansmic7Results2dtE" title="Link to this definition">#</a><br /></dt>
+<dd><p>timestep (in case stage changes) </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7sansmic7Results5r_cavE">
+<span id="_CPPv3N7sansmic7Results5r_cavE"></span><span id="_CPPv2N7sansmic7Results5r_cavE"></span><span id="sansmic::Results::r_cav__vector:vector:double::"></span><span class="target" id="structsansmic_1_1Results_1adb583f3bf3db3e09b260f3b6508a9d44"></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">r_cav</span></span></span><a class="headerlink" href="#_CPPv4N7sansmic7Results5r_cavE" title="Link to this definition">#</a><br /></dt>
+<dd><p>cavern radius </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7sansmic7Results6dr_cavE">
+<span id="_CPPv3N7sansmic7Results6dr_cavE"></span><span id="_CPPv2N7sansmic7Results6dr_cavE"></span><span id="sansmic::Results::dr_cav__vector:vector:double::"></span><span class="target" id="structsansmic_1_1Results_1a08cd7af4f755c249f5ddc67b1d9577d3"></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">dr_cav</span></span></span><a class="headerlink" href="#_CPPv4N7sansmic7Results6dr_cavE" title="Link to this definition">#</a><br /></dt>
+<dd><p>change in radius </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7sansmic7Results2sgE">
+<span id="_CPPv3N7sansmic7Results2sgE"></span><span id="_CPPv2N7sansmic7Results2sgE"></span><span id="sansmic::Results::sg__vector:vector:double::"></span><span class="target" id="structsansmic_1_1Results_1a07c124acd34eb6218e04e7b8200f1edc"></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">sg</span></span></span><a class="headerlink" href="#_CPPv4N7sansmic7Results2sgE" title="Link to this definition">#</a><br /></dt>
+<dd><p>specific gravity </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7sansmic7Results5thetaE">
+<span id="_CPPv3N7sansmic7Results5thetaE"></span><span id="_CPPv2N7sansmic7Results5thetaE"></span><span id="sansmic::Results::theta__vector:vector:double::"></span><span class="target" id="structsansmic_1_1Results_1a78a084ac46eb8a0a063a915b91892b53"></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">theta</span></span></span><a class="headerlink" href="#_CPPv4N7sansmic7Results5thetaE" title="Link to this definition">#</a><br /></dt>
+<dd><p>wall angle </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7sansmic7Results5Q_injE">
+<span id="_CPPv3N7sansmic7Results5Q_injE"></span><span id="_CPPv2N7sansmic7Results5Q_injE"></span><span id="sansmic::Results::Q_inj__vector:vector:double::"></span><span class="target" id="structsansmic_1_1Results_1afce3f54d0112f5e1fb1665e8c0d1c864"></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Q_inj</span></span></span><a class="headerlink" href="#_CPPv4N7sansmic7Results5Q_injE" title="Link to this definition">#</a><br /></dt>
+<dd><p>injection volume </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7sansmic7Results1VE">
+<span id="_CPPv3N7sansmic7Results1VE"></span><span id="_CPPv2N7sansmic7Results1VE"></span><span id="sansmic::Results::V__vector:vector:double::"></span><span class="target" id="structsansmic_1_1Results_1a2164d8f012fc2d9560746a53b5eadee6"></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">V</span></span></span><a class="headerlink" href="#_CPPv4N7sansmic7Results1VE" title="Link to this definition">#</a><br /></dt>
+<dd><p>cell volume </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7sansmic7Results5f_disE">
+<span id="_CPPv3N7sansmic7Results5f_disE"></span><span id="_CPPv2N7sansmic7Results5f_disE"></span><span id="sansmic::Results::f_dis__vector:vector:double::"></span><span class="target" id="structsansmic_1_1Results_1a8f186f762ad455091bbcf23920008515"></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">f_dis</span></span></span><a class="headerlink" href="#_CPPv4N7sansmic7Results5f_disE" title="Link to this definition">#</a><br /></dt>
+<dd><p>dissolution factor </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7sansmic7Results6f_flagE">
+<span id="_CPPv3N7sansmic7Results6f_flagE"></span><span id="_CPPv2N7sansmic7Results6f_flagE"></span><span id="sansmic::Results::f_flag__vector:vector:double::"></span><span class="target" id="structsansmic_1_1Results_1a05a07a68085d31ea8622704f31f60bf8"></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">f_flag</span></span></span><a class="headerlink" href="#_CPPv4N7sansmic7Results6f_flagE" title="Link to this definition">#</a><br /></dt>
+<dd><p>factor type flag </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7sansmic7Results5xinclE">
+<span id="_CPPv3N7sansmic7Results5xinclE"></span><span id="_CPPv2N7sansmic7Results5xinclE"></span><span id="sansmic::Results::xincl__vector:vector:double::"></span><span class="target" id="structsansmic_1_1Results_1a2d84de3ac0db697eda1f9b4de1f3cd20"></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">xincl</span></span></span><a class="headerlink" href="#_CPPv4N7sansmic7Results5xinclE" title="Link to this definition">#</a><br /></dt>
+<dd><p>wall angle correction </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7sansmic7Results3amdE">
+<span id="_CPPv3N7sansmic7Results3amdE"></span><span id="_CPPv2N7sansmic7Results3amdE"></span><span id="sansmic::Results::amd__vector:vector:double::"></span><span class="target" id="structsansmic_1_1Results_1a8c5c86ec2d18aa426535ce894fd15bef"></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">amd</span></span></span><a class="headerlink" href="#_CPPv4N7sansmic7Results3amdE" title="Link to this definition">#</a><br /></dt>
+<dd><p>debug </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7sansmic7Results7D_coeffE">
+<span id="_CPPv3N7sansmic7Results7D_coeffE"></span><span id="_CPPv2N7sansmic7Results7D_coeffE"></span><span id="sansmic::Results::D_coeff__vector:vector:double::"></span><span class="target" id="structsansmic_1_1Results_1a9bc8bb109ec8ab276ee08687114cd520"></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">D_coeff</span></span></span><a class="headerlink" href="#_CPPv4N7sansmic7Results7D_coeffE" title="Link to this definition">#</a><br /></dt>
+<dd><p>diffusion coefficient </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7sansmic7Results5dC_dzE">
+<span id="_CPPv3N7sansmic7Results5dC_dzE"></span><span id="_CPPv2N7sansmic7Results5dC_dzE"></span><span id="sansmic::Results::dC_dz__vector:vector:double::"></span><span class="target" id="structsansmic_1_1Results_1a8547e3b2ff3e3e29571f94555b46b20f"></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">dC_dz</span></span></span><a class="headerlink" href="#_CPPv4N7sansmic7Results5dC_dzE" title="Link to this definition">#</a><br /></dt>
+<dd><p>change in sg vertically </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7sansmic7Results5C_oldE">
+<span id="_CPPv3N7sansmic7Results5C_oldE"></span><span id="_CPPv2N7sansmic7Results5C_oldE"></span><span id="sansmic::Results::C_old__vector:vector:double::"></span><span class="target" id="structsansmic_1_1Results_1a0bbb343274519aeaa87cb3962bf961a3"></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">C_old</span></span></span><a class="headerlink" href="#_CPPv4N7sansmic7Results5C_oldE" title="Link to this definition">#</a><br /></dt>
+<dd><p>previous SG </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7sansmic7Results5C_newE">
+<span id="_CPPv3N7sansmic7Results5C_newE"></span><span id="_CPPv2N7sansmic7Results5C_newE"></span><span id="sansmic::Results::C_new__vector:vector:double::"></span><span class="target" id="structsansmic_1_1Results_1ac70ce8777d3a2cdd3b7090c9138513d9"></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">C_new</span></span></span><a class="headerlink" href="#_CPPv4N7sansmic7Results5C_newE" title="Link to this definition">#</a><br /></dt>
+<dd><p>current SG </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7sansmic7Results5dC_dtE">
+<span id="_CPPv3N7sansmic7Results5dC_dtE"></span><span id="_CPPv2N7sansmic7Results5dC_dtE"></span><span id="sansmic::Results::dC_dt__vector:vector:double::"></span><span class="target" id="structsansmic_1_1Results_1a43fa3fecf3a996c1409be8cee8e7d51b"></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">dC_dt</span></span></span><a class="headerlink" href="#_CPPv4N7sansmic7Results5dC_dtE" title="Link to this definition">#</a><br /></dt>
+<dd><p>C_old - C_new. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7sansmic7Results5dr_dtE">
+<span id="_CPPv3N7sansmic7Results5dr_dtE"></span><span id="_CPPv2N7sansmic7Results5dr_dtE"></span><span id="sansmic::Results::dr_dt__vector:vector:double::"></span><span class="target" id="structsansmic_1_1Results_1a192904bc49528885d8d645852465b20c"></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">dr_dt</span></span></span><a class="headerlink" href="#_CPPv4N7sansmic7Results5dr_dtE" title="Link to this definition">#</a><br /></dt>
+<dd><p>recession rate </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7sansmic7Results5C_plmE">
+<span id="_CPPv3N7sansmic7Results5C_plmE"></span><span id="_CPPv2N7sansmic7Results5C_plmE"></span><span id="sansmic::Results::C_plm__vector:vector:double::"></span><span class="target" id="structsansmic_1_1Results_1ab44ac9a8771262734c651a0af469d28c"></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">C_plm</span></span></span><a class="headerlink" href="#_CPPv4N7sansmic7Results5C_plmE" title="Link to this definition">#</a><br /></dt>
+<dd><p>plume sg </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7sansmic7Results5u_plmE">
+<span id="_CPPv3N7sansmic7Results5u_plmE"></span><span id="_CPPv2N7sansmic7Results5u_plmE"></span><span id="sansmic::Results::u_plm__vector:vector:double::"></span><span class="target" id="structsansmic_1_1Results_1a7da0ad66c569d13620352c93a0231f4e"></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">u_plm</span></span></span><a class="headerlink" href="#_CPPv4N7sansmic7Results5u_plmE" title="Link to this definition">#</a><br /></dt>
+<dd><p>plume veloctiy </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7sansmic7Results5r_plmE">
+<span id="_CPPv3N7sansmic7Results5r_plmE"></span><span id="_CPPv2N7sansmic7Results5r_plmE"></span><span id="sansmic::Results::r_plm__vector:vector:double::"></span><span class="target" id="structsansmic_1_1Results_1a35c1ad17da1fc512e79a630284159697"></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">r_plm</span></span></span><a class="headerlink" href="#_CPPv4N7sansmic7Results5r_plmE" title="Link to this definition">#</a><br /></dt>
+<dd><p>plume radius </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="namespace_sansmic.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Namespace sansmic</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="structsansmic_1_1Scenario.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Struct Scenario</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#struct-documentation">Struct Documentation</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic7ResultsE"><code class="docutils literal notranslate"><span class="pre">Results</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic7Results3r_0E"><code class="docutils literal notranslate"><span class="pre">r_0</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic7Results3z_0E"><code class="docutils literal notranslate"><span class="pre">z_0</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic7Results3h_0E"><code class="docutils literal notranslate"><span class="pre">h_0</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic7Results4stepE"><code class="docutils literal notranslate"><span class="pre">step</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic7Results5stageE"><code class="docutils literal notranslate"><span class="pre">stage</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic7Results5phaseE"><code class="docutils literal notranslate"><span class="pre">phase</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic7Results7injCellE"><code class="docutils literal notranslate"><span class="pre">injCell</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic7Results8prodCellE"><code class="docutils literal notranslate"><span class="pre">prodCell</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic7Results7obiCellE"><code class="docutils literal notranslate"><span class="pre">obiCell</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic7Results7plmCellE"><code class="docutils literal notranslate"><span class="pre">plmCell</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic7Results1tE"><code class="docutils literal notranslate"><span class="pre">t</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic7Results3errE"><code class="docutils literal notranslate"><span class="pre">err</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic7Results5z_obiE"><code class="docutils literal notranslate"><span class="pre">z_obi</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic7Results5z_injE"><code class="docutils literal notranslate"><span class="pre">z_inj</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic7Results6z_prodE"><code class="docutils literal notranslate"><span class="pre">z_prod</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic7Results5z_plmE"><code class="docutils literal notranslate"><span class="pre">z_plm</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic7Results7z_insolE"><code class="docutils literal notranslate"><span class="pre">z_insol</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic7Results7h_insolE"><code class="docutils literal notranslate"><span class="pre">h_insol</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic7Results5l_jetE"><code class="docutils literal notranslate"><span class="pre">l_jet</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic7Results5r_jetE"><code class="docutils literal notranslate"><span class="pre">r_jet</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic7Results5u_jetE"><code class="docutils literal notranslate"><span class="pre">u_jet</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic7Results8V_injTotE"><code class="docutils literal notranslate"><span class="pre">V_injTot</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic7Results9V_fillTotE"><code class="docutils literal notranslate"><span class="pre">V_fillTot</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic7Results8V_cavTotE"><code class="docutils literal notranslate"><span class="pre">V_cavTot</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic7Results10V_insolTotE"><code class="docutils literal notranslate"><span class="pre">V_insolTot</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic7Results11V_insolVentE"><code class="docutils literal notranslate"><span class="pre">V_insolVent</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic7Results5Q_outE"><code class="docutils literal notranslate"><span class="pre">Q_out</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic7Results6sg_outE"><code class="docutils literal notranslate"><span class="pre">sg_out</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic7Results9sg_cavAveE"><code class="docutils literal notranslate"><span class="pre">sg_cavAve</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic7Results2dtE"><code class="docutils literal notranslate"><span class="pre">dt</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic7Results5r_cavE"><code class="docutils literal notranslate"><span class="pre">r_cav</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic7Results6dr_cavE"><code class="docutils literal notranslate"><span class="pre">dr_cav</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic7Results2sgE"><code class="docutils literal notranslate"><span class="pre">sg</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic7Results5thetaE"><code class="docutils literal notranslate"><span class="pre">theta</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic7Results5Q_injE"><code class="docutils literal notranslate"><span class="pre">Q_inj</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic7Results1VE"><code class="docutils literal notranslate"><span class="pre">V</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic7Results5f_disE"><code class="docutils literal notranslate"><span class="pre">f_dis</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic7Results6f_flagE"><code class="docutils literal notranslate"><span class="pre">f_flag</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic7Results5xinclE"><code class="docutils literal notranslate"><span class="pre">xincl</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic7Results3amdE"><code class="docutils literal notranslate"><span class="pre">amd</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic7Results7D_coeffE"><code class="docutils literal notranslate"><span class="pre">D_coeff</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic7Results5dC_dzE"><code class="docutils literal notranslate"><span class="pre">dC_dz</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic7Results5C_oldE"><code class="docutils literal notranslate"><span class="pre">C_old</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic7Results5C_newE"><code class="docutils literal notranslate"><span class="pre">C_new</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic7Results5dC_dtE"><code class="docutils literal notranslate"><span class="pre">dC_dt</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic7Results5dr_dtE"><code class="docutils literal notranslate"><span class="pre">dr_dt</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic7Results5C_plmE"><code class="docutils literal notranslate"><span class="pre">C_plm</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic7Results5u_plmE"><code class="docutils literal notranslate"><span class="pre">u_plm</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic7Results5r_plmE"><code class="docutils literal notranslate"><span class="pre">r_plm</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../_sources/apidocs/structsansmic_1_1Results.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2024 National Technology and Engineering Solutions of Sandia, LLC. Under the terms of Contract DE-NA0003525 with NTESS, the U.S. Government retains certain rights in this software..
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.0.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

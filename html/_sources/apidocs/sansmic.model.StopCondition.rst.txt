@@ -1,0 +1,28 @@
+StopCondition
+=============
+
+.. currentmodule:: sansmic.model
+
+.. autoclass:: StopCondition
+
+
+   .. rubric:: Summary
+   .. autosummary::
+
+
+
+   
+
+
+
+
+
+   
+      ~StopCondition.DEPTH
+      ~StopCondition.DURATION
+      ~StopCondition.VOLUME
+
+
+
+   .. rubric:: Details
+
