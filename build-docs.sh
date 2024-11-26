@@ -33,5 +33,4 @@ export SANSMIC_SPHINX_VERSION=dev
 cp -f sansmic-ci/docs/_static/* docs/_static/
 cp html/_static/switcher.json docs/_static/
 cp -f sansmic-ci/docs/conf.py docs/conf.py
-# sphinx-build -b html -d doctrees/latest docs/ html/latest
-jupyter-book build --path-output html/latest docs/
+sphinx-build -b html -d doctrees/latest docs/ html/latest

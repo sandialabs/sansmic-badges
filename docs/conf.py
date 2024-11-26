@@ -62,6 +62,7 @@ extensions.extend(
         "sphinx_design",
         "sphinx_click" if not version.startswith("1.0.0") else "sphinxarg.ext",
         "sphinxcontrib.bibtex",
+        "nbsphinx",
     ]
 )
 
