@@ -38,7 +38,7 @@
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
 
-    <script src="../../_static/documentation_options.js?v=8a93c2b0"></script>
+    <script src="../../_static/documentation_options.js?v=2eeb46a9"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/design-tabs.js?v=f930bc37"></script>
@@ -59,7 +59,7 @@
     <script>
         DOCUMENTATION_OPTIONS.theme_version = '0.16.0';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://sandialabs.github.io/sansmic/_static/switcher.json';
-        DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'v1.0.4';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'v1.0.5';
         DOCUMENTATION_OPTIONS.show_version_warning_banner = true;
         </script>
     <script src="../../_static/pypi-icon.js?v=74687d30"></script>
@@ -67,7 +67,7 @@
     <link rel="search" title="Search" href="../../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="1.0.4" />
+  <meta name="docsearch:version" content="1.0.5" />
   </head>
   
   
@@ -573,10 +573,7 @@
 <span class="sd">    string) and product produced from top of cavern.&quot;&quot;&quot;</span>
     <span class="n">LEACH_FILL</span> <span class="o">=</span> <span class="mi">2</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Simultaneous leaching (water/brine injection and brine production) and</span>
-<span class="sd">    product injection from the top.&quot;&quot;&quot;</span>
-    <span class="n">STORAGE_FILL</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Storage fill, with product injected from the top of the cavern and brine</span>
-<span class="sd">    produced from the suspended tubing/hanging string.&quot;&quot;&quot;</span></div>
+<span class="sd">    product injection from the top.&quot;&quot;&quot;</span></div>
 
 
 
@@ -735,59 +732,6 @@
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;The depth below surface/:term:`ZDP` where the end of the production string/casing/tubing is positioned.&quot;&quot;&quot;</span>
     <span class="n">brine_injection_rate</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;The meaning of this field is based on the type of data that is provided (a value of 0 means off).&quot;&quot;&quot;</span>
-    <span class="c1"># &quot;&quot;&quot;</span>
-    <span class="c1"># float : constant rate</span>
-    <span class="c1">#     Injection occurs at a constant rate for the duration of the</span>
-    <span class="c1">#     :attr:`injection_duration`.</span>
-
-    <span class="c1"># str : file path</span>
-    <span class="c1">#     Injection rates should be read from a file. The file can be any type that can</span>
-    <span class="c1">#     be read into a pd DataFrame. An &#39;index&#39; column is optional, but if not provided,</span>
-    <span class="c1">#     then all data is assumed to be pre-sorted. In addition to the</span>
-    <span class="c1">#     &#39;index&#39; column, files may contain exactly one set of the following columns:</span>
-
-    <span class="c1">#     [&#39;rate&#39;, &#39;duration&#39;]</span>
-    <span class="c1">#         This style gives a list of rates and how long they should continue for.</span>
-    <span class="c1">#         Durations are provided in decimal hours. If the sum of durations is greater</span>
-    <span class="c1">#         than :attr:`injection_duration`, an error will be raised. If the</span>
-    <span class="c1">#         sum of durations is less than :attr:`injection_duration`, the remaining</span>
-    <span class="c1">#         time will be assumed to be no-flow.</span>
-
-    <span class="c1">#     [&#39;time&#39;, &#39;rate&#39;]</span>
-    <span class="c1">#         This style gives a list of new rate values that start at the given time</span>
-    <span class="c1">#         after the start of the stage. The &#39;time&#39; values must be increasing and</span>
-    <span class="c1">#         never duplicate. Times are in decimal hours since the start of the stage.</span>
-    <span class="c1">#         The last rate will be used up until the end of the</span>
-    <span class="c1">#         :attr:`injection_duration`. If a time is given that is after the</span>
-    <span class="c1">#         :attr:`injection_duration`, then an error will be raised.</span>
-
-    <span class="c1">#     [&#39;hourly&#39;]</span>
-    <span class="c1">#         This style specifies a new rate for each hour of the stage. There must be</span>
-    <span class="c1">#         a value specified for each hour of the :attr`injection_duration`, or an</span>
-    <span class="c1">#         error will be raised.</span>
-
-    <span class="c1">#     The optional column [&#39;sg&#39;] can be provided to change the injection water/brine</span>
-    <span class="c1">#     specific gravity; however, if provided, it must contain a value for every row.</span>
-
-    <span class="c1">#     If &#39;duration&#39; and &#39;time&#39; occur in the same file, an error will be raised.</span>
-    <span class="c1">#     If &#39;time&#39;, &#39;rate&#39;, or &#39;duration&#39; occur in the same file as &#39;hourly&#39;, then</span>
-    <span class="c1">#     an error will be raised.</span>
-
-    <span class="c1">#     Columns with names other than those described above will be ignored.</span>
-
-    <span class="c1">#     .. attention::</span>
-
-    <span class="c1">#         In all cases, a no-flow, leaching-only period will occur for</span>
-    <span class="c1">#         :attr:`rest_duration` hours **after** all injection data</span>
-    <span class="c1">#         is processed -- this means that if an injection file finishes with 0s</span>
-    <span class="c1">#         that there will be an additional :attr:`rest_duration` hours added to the</span>
-    <span class="c1">#         end of the stage.</span>
-
-    <span class="c1">#     .. warning::</span>
-
-    <span class="c1">#         The same file cnnot be used for both brine injection and product</span>
-    <span class="c1">#         injection data.</span>
-    <span class="c1"># &quot;&quot;&quot;</span>
 
     <span class="n">set_initial_conditions</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">None</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Unlink initial cavern brine gravity and interface level from previous stage.</span>
@@ -798,9 +742,6 @@
     <span class="n">brine_interface_depth</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Set the initial oil-brine interface or blanket level. By default None, which</span>
 <span class="sd">    will link to the previous stage (as will a value of 0).&quot;&quot;&quot;</span>
-    <span class="c1"># set_cavern_temp: float = None</span>
-    <span class="c1"># &quot;&quot;&quot;Set the initial temperature for all brine-filled cells of the cavern; by</span>
-    <span class="c1"># default None, which will link to the previous stage.&quot;&quot;&quot;</span>
 
     <span class="n">product_injection_rate</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.0</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Either a constant rate of product injection or a file with an injection schedule, by default 0.&quot;&quot;&quot;</span>
@@ -817,6 +758,10 @@
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;If the :attr:`stop_condition` is not :attr:`~StopCondition.DURATION`, then the depth or volume value.&quot;&quot;&quot;</span>
 
     <span class="n">defaults</span><span class="p">:</span> <span class="n">InitVar</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">blanket_depth</span><span class="p">:</span> <span class="n">InitVar</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">brine_injection_height</span><span class="p">:</span> <span class="n">InitVar</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">brine_production_height</span><span class="p">:</span> <span class="n">InitVar</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">brine_interface_height</span><span class="p">:</span> <span class="n">InitVar</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
 
     <span class="n">valid_default_keys</span> <span class="o">=</span> <span class="p">[</span>
         <span class="s2">&quot;solver_timestep&quot;</span><span class="p">,</span>
@@ -827,7 +772,14 @@
         <span class="s2">&quot;outer_csg_outside_diam&quot;</span><span class="p">,</span>
     <span class="p">]</span>
 
-    <span class="k">def</span> <span class="nf">__post_init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">defaults</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__post_init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">defaults</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">blanket_depth</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">brine_injection_height</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">brine_production_height</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">brine_interface_height</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="p">):</span>
         <span class="k">if</span> <span class="n">defaults</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">return</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">defaults</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
@@ -842,6 +794,17 @@
                 <span class="p">)</span>
             <span class="k">elif</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">k2</span><span class="p">)</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
                 <span class="nb">setattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">k2</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">blanket_depth</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">brine_interface_depth</span> <span class="o">=</span> <span class="n">blanket_depth</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">brine_injection_height</span><span class="p">,</span> <span class="nb">float</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">brine_injection_depth</span> <span class="o">=</span> <span class="o">-</span><span class="nb">abs</span><span class="p">(</span><span class="n">brine_injection_height</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">brine_production_height</span><span class="p">,</span> <span class="nb">float</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">brine_production_depth</span> <span class="o">=</span> <span class="o">-</span><span class="nb">abs</span><span class="p">(</span><span class="n">brine_production_height</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">brine_interface_height</span><span class="p">,</span> <span class="nb">float</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">brine_interface_depth</span> <span class="o">=</span> <span class="o">-</span><span class="nb">abs</span><span class="p">(</span><span class="n">brine_interface_height</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">brine_injection_height</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="n">_brine_injection_height</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">brine_production_height</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="n">_brine_production_height</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">brine_interface_height</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="n">_brine_interface_height</span>
 
     <span class="k">def</span> <span class="fm">__setattr__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span> <span class="ow">and</span> <span class="n">value</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
@@ -872,6 +835,60 @@
         <span class="c1">#     self.set_cavern_sg = None</span>
         <span class="c1">#     self.brine_interface_depth = None</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__setattr__</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">_blanket_depth</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Alias for :attr:`brine_interface_depth`&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">brine_interface_depth</span>
+
+    <span class="nd">@_blanket_depth</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">_blanket_depth</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">brine_interface_depth</span> <span class="o">=</span> <span class="n">value</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">_brine_injection_height</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Height above floor where brine is injected. The :attr:`brine_injection_depth` will be a negative value if set using this property.&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">brine_injection_depth</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">None</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">brine_injection_depth</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="nb">abs</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">brine_injection_depth</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+            <span class="s2">&quot;Cannot calculate height above floor when a depth was used to set this value&quot;</span>
+        <span class="p">)</span>
+
+    <span class="nd">@_brine_injection_height</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">_brine_injection_height</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">brine_injection_depth</span> <span class="o">=</span> <span class="o">-</span><span class="nb">abs</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">_brine_production_height</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Height above floor where brine is produced. The :attr:`brine_production_depth` will be a negative value if set using this property.&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">brine_production_depth</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">None</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">brine_production_depth</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="nb">abs</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">brine_production_depth</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+            <span class="s2">&quot;Cannot calculate height above floor when a depth was used to set this value&quot;</span>
+        <span class="p">)</span>
+
+    <span class="nd">@_brine_production_height</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">_brine_production_height</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">brine_production_depth</span> <span class="o">=</span> <span class="o">-</span><span class="nb">abs</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">_brine_interface_height</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Height above floor where interface starts. The :attr:`brine_interface_depth` will be a negative value if set using this property.&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">brine_interface_depth</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">None</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">brine_interface_depth</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="nb">abs</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">brine_interface_depth</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+            <span class="s2">&quot;Cannot calculate height above floor when a depth was used to set this value&quot;</span>
+        <span class="p">)</span>
+
+    <span class="nd">@_brine_interface_height</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">_brine_interface_height</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">brine_interface_depth</span> <span class="o">=</span> <span class="o">-</span><span class="nb">abs</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
 
 <div class="viewcode-block" id="StageDefinition.from_dict">
 <a class="viewcode-back" href="../../apidocs/sansmic.model.StageDefinition.html#sansmic.model.StageDefinition.from_dict">[docs]</a>
@@ -985,7 +1002,6 @@
             <span class="ow">in</span> <span class="p">[</span>
                 <span class="n">SimulationMode</span><span class="o">.</span><span class="n">ORDINARY</span><span class="p">,</span>
                 <span class="n">SimulationMode</span><span class="o">.</span><span class="n">LEACH_FILL</span><span class="p">,</span>
-                <span class="n">SimulationMode</span><span class="o">.</span><span class="n">STORAGE_FILL</span><span class="p">,</span>
             <span class="p">]</span>
             <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">brine_production_depth</span> <span class="ow">is</span> <span class="kc">None</span>
         <span class="p">):</span>
@@ -1044,7 +1060,6 @@
                 <span class="n">SimulationMode</span><span class="o">.</span><span class="n">ORDINARY</span><span class="p">,</span>
                 <span class="n">SimulationMode</span><span class="o">.</span><span class="n">LEACH_FILL</span><span class="p">,</span>
                 <span class="n">SimulationMode</span><span class="o">.</span><span class="n">WITHDRAWAL</span><span class="p">,</span>
-                <span class="n">SimulationMode</span><span class="o">.</span><span class="n">STORAGE_FILL</span><span class="p">,</span>
             <span class="p">]</span>
             <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">inner_tbg_inside_diam</span> <span class="ow">is</span> <span class="kc">None</span>
         <span class="p">):</span>
@@ -1059,7 +1074,6 @@
                 <span class="n">SimulationMode</span><span class="o">.</span><span class="n">ORDINARY</span><span class="p">,</span>
                 <span class="n">SimulationMode</span><span class="o">.</span><span class="n">LEACH_FILL</span><span class="p">,</span>
                 <span class="n">SimulationMode</span><span class="o">.</span><span class="n">WITHDRAWAL</span><span class="p">,</span>
-                <span class="n">SimulationMode</span><span class="o">.</span><span class="n">STORAGE_FILL</span><span class="p">,</span>
             <span class="p">]</span>
             <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">inner_tbg_outside_diam</span> <span class="ow">is</span> <span class="kc">None</span>
         <span class="p">):</span>
@@ -1094,8 +1108,7 @@
         <span class="c1"># ):</span>
         <span class="c1">#     self.product_injection_depth = 0.0</span>
         <span class="k">if</span> <span class="p">(</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">simulation_mode</span>
-            <span class="ow">in</span> <span class="p">[</span><span class="n">SimulationMode</span><span class="o">.</span><span class="n">LEACH_FILL</span><span class="p">,</span> <span class="n">SimulationMode</span><span class="o">.</span><span class="n">STORAGE_FILL</span><span class="p">]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">simulation_mode</span> <span class="ow">is</span> <span class="n">SimulationMode</span><span class="o">.</span><span class="n">LEACH_FILL</span>
             <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">product_injection_rate</span> <span class="ow">is</span> <span class="kc">None</span>
         <span class="p">):</span>
             <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span>
@@ -1143,15 +1156,15 @@
             <span class="k">else</span> <span class="mi">0</span>
         <span class="p">)</span>
         <span class="n">stage</span><span class="o">.</span><span class="n">injection_depth</span> <span class="o">=</span> <span class="p">(</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">brine_injection_depth</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">brine_injection_depth</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="mi">0</span>
+            <span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">brine_injection_depth</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">brine_injection_depth</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="mi">0</span>
         <span class="p">)</span>
         <span class="n">stage</span><span class="o">.</span><span class="n">production_depth</span> <span class="o">=</span> <span class="p">(</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">brine_production_depth</span>
+            <span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">brine_production_depth</span>
             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">brine_production_depth</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
             <span class="k">else</span> <span class="mi">0</span>
         <span class="p">)</span>
         <span class="n">stage</span><span class="o">.</span><span class="n">interface_depth</span> <span class="o">=</span> <span class="p">(</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">brine_interface_depth</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">brine_interface_depth</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="mi">0</span>
+            <span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">brine_interface_depth</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">brine_interface_depth</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="mi">0</span>
         <span class="p">)</span>
         <span class="n">stage</span><span class="o">.</span><span class="n">injection_rate</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">brine_injection_rate</span>
         <span class="n">stage</span><span class="o">.</span><span class="n">inn_tbg_inside_radius</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">inner_tbg_inside_diam</span> <span class="o">/</span> <span class="mf">2.0</span>

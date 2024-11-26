@@ -38,7 +38,7 @@
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
 <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
 
-    <script src="_static/documentation_options.js?v=8a93c2b0"></script>
+    <script src="_static/documentation_options.js?v=2eeb46a9"></script>
     <script src="_static/doctools.js?v=9bcbadda"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/design-tabs.js?v=f930bc37"></script>
@@ -59,7 +59,7 @@
     <script>
         DOCUMENTATION_OPTIONS.theme_version = '0.16.0';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://sandialabs.github.io/sansmic/_static/switcher.json';
-        DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'v1.0.4';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'v1.0.5';
         DOCUMENTATION_OPTIONS.show_version_warning_banner = true;
         </script>
     <script src="_static/pypi-icon.js?v=74687d30"></script>
@@ -67,7 +67,7 @@
     <link rel="search" title="Search" href="search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="1.0.4" />
+  <meta name="docsearch:version" content="1.0.5" />
   </head>
   
   
@@ -662,6 +662,8 @@
 </li>
       <li><a href="nomenclature.html#term-bbl"><strong>bbl</strong></a>
 </li>
+      <li><a href="apidocs/sansmic.model.StageDefinition.html#sansmic.model.StageDefinition.blanket_depth">blanket_depth (StageDefinition attribute)</a>
+</li>
       <li><a href="nomenclature.html#term-BPD"><strong>BPD</strong></a>
 </li>
       <li>
@@ -685,8 +687,6 @@
         <li><a href="um/scenarios.html#confval-brine-injection-sg">configuration value</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li>
     brine-interface-depth
 
@@ -694,6 +694,8 @@
         <li><a href="um/scenarios.html#confval-brine-interface-depth">configuration value</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li>
     brine-production-depth
 
@@ -703,13 +705,19 @@
       </ul></li>
       <li><a href="apidocs/sansmic.model.StageDefinition.html#sansmic.model.StageDefinition.brine_injection_depth">brine_injection_depth (StageDefinition attribute)</a>
 </li>
+      <li><a href="apidocs/sansmic.model.StageDefinition.html#sansmic.model.StageDefinition.brine_injection_height">brine_injection_height (StageDefinition attribute)</a>
+</li>
       <li><a href="apidocs/sansmic.model.StageDefinition.html#sansmic.model.StageDefinition.brine_injection_rate">brine_injection_rate (StageDefinition attribute)</a>
 </li>
       <li><a href="apidocs/sansmic.model.StageDefinition.html#sansmic.model.StageDefinition.brine_injection_sg">brine_injection_sg (StageDefinition attribute)</a>
 </li>
       <li><a href="apidocs/sansmic.model.StageDefinition.html#sansmic.model.StageDefinition.brine_interface_depth">brine_interface_depth (StageDefinition attribute)</a>
 </li>
+      <li><a href="apidocs/sansmic.model.StageDefinition.html#sansmic.model.StageDefinition.brine_interface_height">brine_interface_height (StageDefinition attribute)</a>
+</li>
       <li><a href="apidocs/sansmic.model.StageDefinition.html#sansmic.model.StageDefinition.brine_production_depth">brine_production_depth (StageDefinition attribute)</a>
+</li>
+      <li><a href="apidocs/sansmic.model.StageDefinition.html#sansmic.model.StageDefinition.brine_production_height">brine_production_height (StageDefinition attribute)</a>
 </li>
       <li><a href="apidocs/sansmic.model.Results.html#sansmic.model.Results.brine_production_rate">brine_production_rate (Results property)</a>
 </li>
@@ -1463,8 +1471,6 @@
 </li>
       <li><a href="nomenclature.html#term-oil-barrel"><strong>oil barrel</strong></a>
 </li>
-      <li><a href="apidocs/sansmic.libsansmic.CRunMode.html#sansmic.libsansmic.CRunMode.OIL_FILL">OIL_FILL (CRunMode attribute)</a>
-</li>
       <li><a href="nomenclature.html#term-OL"><strong>OL</strong></a>
 </li>
       <li><a href="apidocs/sansmic.model.Simulator.html#sansmic.model.Simulator.open">open() (Simulator method)</a>
@@ -2063,13 +2069,11 @@
 </li>
       <li><a href="apidocs/enum_libsansmic_8hpp_1a0ac474463be3271f78ea252870114800.html#_CPPv4N7sansmic9LeachModeE">sansmic::LeachMode (C++ enum)</a>
 </li>
-      <li><a href="apidocs/enum_libsansmic_8hpp_1a0ac474463be3271f78ea252870114800.html#_CPPv4N7sansmic9LeachMode9LeachFillE">sansmic::LeachMode::LeachFill (C++ enumerator)</a>
+      <li><a href="apidocs/enum_libsansmic_8hpp_1a0ac474463be3271f78ea252870114800.html#_CPPv4N7sansmic9LeachMode10LEACH_FILLE">sansmic::LeachMode::LEACH_FILL (C++ enumerator)</a>
 </li>
-      <li><a href="apidocs/enum_libsansmic_8hpp_1a0ac474463be3271f78ea252870114800.html#_CPPv4N7sansmic9LeachMode7OilFillE">sansmic::LeachMode::OilFill (C++ enumerator)</a>
+      <li><a href="apidocs/enum_libsansmic_8hpp_1a0ac474463be3271f78ea252870114800.html#_CPPv4N7sansmic9LeachMode8ORDINARYE">sansmic::LeachMode::ORDINARY (C++ enumerator)</a>
 </li>
-      <li><a href="apidocs/enum_libsansmic_8hpp_1a0ac474463be3271f78ea252870114800.html#_CPPv4N7sansmic9LeachMode8OrdinaryE">sansmic::LeachMode::Ordinary (C++ enumerator)</a>
-</li>
-      <li><a href="apidocs/enum_libsansmic_8hpp_1a0ac474463be3271f78ea252870114800.html#_CPPv4N7sansmic9LeachMode10WithdrawalE">sansmic::LeachMode::Withdrawal (C++ enumerator)</a>
+      <li><a href="apidocs/enum_libsansmic_8hpp_1a0ac474463be3271f78ea252870114800.html#_CPPv4N7sansmic9LeachMode10WITHDRAWALE">sansmic::LeachMode::WITHDRAWAL (C++ enumerator)</a>
 </li>
       <li><a href="apidocs/variable_libsansmic_8hpp_1a8e6656a08a16d80623c90f0531fae06d.html#_CPPv4N7sansmic13liquid_gallonE">sansmic::liquid_gallon (C++ member)</a>
 </li>
@@ -2089,10 +2093,10 @@
 </li>
       <li><a href="apidocs/classsansmic_1_1Model.html#_CPPv4N7sansmic5Model5ModelE6string">sansmic::Model::Model (C++ function)</a>, <a href="apidocs/classsansmic_1_1Model.html#_CPPv4N7sansmic5Model5ModelEv">[1]</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="apidocs/classsansmic_1_1Model.html#_CPPv4N7sansmic5Model13open_outfilesEb">sansmic::Model::open_outfiles (C++ function)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="apidocs/classsansmic_1_1Model.html#_CPPv4N7sansmic5Model7run_simEv">sansmic::Model::run_sim (C++ function)</a>
 </li>
       <li><a href="apidocs/classsansmic_1_1Model.html#_CPPv4N7sansmic5Model9run_stageEv">sansmic::Model::run_stage (C++ function)</a>
@@ -2532,10 +2536,10 @@
 </li>
       <li><a href="apidocs/sansmic.model.Results.html#sansmic.model.Results.state_indicator">state_indicator (Results property)</a>
 </li>
-      <li><a href="apidocs/sansmic.libsansmic.CResults.html#sansmic.libsansmic.CResults.step">step (CResults property)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidocs/sansmic.libsansmic.CResults.html#sansmic.libsansmic.CResults.step">step (CResults property)</a>
+</li>
       <li><a href="apidocs/sansmic.model.Results.html#sansmic.model.Results.step_number">step_number (Results property)</a>
 </li>
       <li><a href="apidocs/sansmic.model.Results.html#sansmic.model.Results.step_size">step_size (Results property)</a>
@@ -2567,8 +2571,6 @@
 </li>
       </ul></li>
       <li><a href="apidocs/sansmic.model.StopCondition.html#sansmic.model.StopCondition">StopCondition (class in sansmic.model)</a>
-</li>
-      <li><a href="apidocs/sansmic.model.SimulationMode.html#sansmic.model.SimulationMode.STORAGE_FILL">STORAGE_FILL (SimulationMode attribute)</a>
 </li>
       <li><a href="apidocs/sansmic.libsansmic.CStage.html#sansmic.libsansmic.CStage.subsequent">subsequent (CStage property)</a>
 </li>

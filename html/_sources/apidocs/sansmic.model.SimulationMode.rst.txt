@@ -21,7 +21,6 @@ SimulationMode
       ~SimulationMode.ORDINARY
       ~SimulationMode.WITHDRAWAL
       ~SimulationMode.LEACH_FILL
-      ~SimulationMode.STORAGE_FILL
 
 
 

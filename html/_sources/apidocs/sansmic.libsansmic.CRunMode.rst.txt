@@ -19,7 +19,6 @@ CRunMode
 
    
       ~CRunMode.LEACH_FILL
-      ~CRunMode.OIL_FILL
       ~CRunMode.ORDINARY
       ~CRunMode.WITHDRAWAL
       ~CRunMode.name

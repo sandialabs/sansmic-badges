@@ -21,11 +21,15 @@ StageDefinition
 
 
    
+      ~StageDefinition.blanket_depth
       ~StageDefinition.brine_injection_depth
+      ~StageDefinition.brine_injection_height
       ~StageDefinition.brine_injection_rate
       ~StageDefinition.brine_injection_sg
       ~StageDefinition.brine_interface_depth
+      ~StageDefinition.brine_interface_height
       ~StageDefinition.brine_production_depth
+      ~StageDefinition.brine_production_height
       ~StageDefinition.defaults
       ~StageDefinition.injection_duration
       ~StageDefinition.inner_tbg_inside_diam
