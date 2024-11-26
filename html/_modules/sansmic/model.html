@@ -38,7 +38,7 @@
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
 
-    <script src="../../_static/documentation_options.js?v=d29a5c0e"></script>
+    <script src="../../_static/documentation_options.js?v=e562d664"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/design-tabs.js?v=f930bc37"></script>
@@ -59,7 +59,7 @@
     <script>
         DOCUMENTATION_OPTIONS.theme_version = '0.16.0';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://sandialabs.github.io/sansmic/_static/switcher.json';
-        DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'v1.0.1';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'v1.0.2';
         DOCUMENTATION_OPTIONS.show_version_warning_banner = true;
         </script>
     <script src="../../_static/pypi-icon.js?v=74687d30"></script>
@@ -67,7 +67,7 @@
     <link rel="search" title="Search" href="../../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="1.0.1" />
+  <meta name="docsearch:version" content="1.0.2" />
   </head>
   
   
@@ -711,8 +711,8 @@
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;The simulation mode used in this stage.&quot;&quot;&quot;</span>
     <span class="n">solver_timestep</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;The solver timestep in hours.&quot;&quot;&quot;</span>
-    <span class="n">save_frequency</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;hourly&quot;</span><span class="p">,</span> <span class="s2">&quot;daily&quot;</span><span class="p">,</span> <span class="s2">&quot;bystage&quot;</span><span class="p">]]</span> <span class="o">=</span> <span class="s2">&quot;daily&quot;</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;The save frequency in number of timesteps or one of {&quot;hourly&quot;, &quot;daily&quot;, &quot;bystage&quot;}, by default &quot;daily&quot;.&quot;&quot;&quot;</span>
+    <span class="n">save_frequency</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;hourly&quot;</span><span class="p">,</span> <span class="s2">&quot;daily&quot;</span><span class="p">,</span> <span class="s2">&quot;bystage&quot;</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The save frequency in number of timesteps, or one of &quot;hourly&quot;, &quot;daily&quot;, or &quot;bystage&quot;, by default &quot;bystage&quot;.&quot;&quot;&quot;</span>
     <span class="n">injection_duration</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;The duration of the injection phase of the stage.&quot;&quot;&quot;</span>
     <span class="n">rest_duration</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span>
@@ -1128,19 +1128,13 @@
             <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">save_frequency</span> <span class="o">==</span> <span class="s2">&quot;daily&quot;</span><span class="p">:</span>
                 <span class="n">stage</span><span class="o">.</span><span class="n">print_interval</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mf">24.0</span> <span class="o">/</span> <span class="n">stage</span><span class="o">.</span><span class="n">timestep</span><span class="p">))</span>
             <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">save_frequency</span> <span class="o">==</span> <span class="s2">&quot;bystage&quot;</span><span class="p">:</span>
-                <span class="n">stage</span><span class="o">.</span><span class="n">print_interval</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span>
-                    <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span>
-                        <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">injection_duration</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">rest_duration</span><span class="p">)</span> <span class="o">/</span> <span class="n">stage</span><span class="o">.</span><span class="n">timestep</span>
-                    <span class="p">)</span>
-                <span class="p">)</span>
+                <span class="n">stage</span><span class="o">.</span><span class="n">print_interval</span> <span class="o">=</span> <span class="mi">0</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="n">stage</span><span class="o">.</span><span class="n">print_interval</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">save_frequency</span><span class="p">)</span>
         <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">save_frequency</span><span class="p">,</span> <span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">)):</span>
             <span class="n">stage</span><span class="o">.</span><span class="n">print_interval</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">save_frequency</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="n">stage</span><span class="o">.</span><span class="n">print_interval</span> <span class="o">=</span> <span class="n">defaults</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
-                <span class="s2">&quot;save_frequency&quot;</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mf">24.0</span> <span class="o">/</span> <span class="n">stage</span><span class="o">.</span><span class="n">timestep</span><span class="p">))</span>
-            <span class="p">)</span>
+            <span class="n">stage</span><span class="o">.</span><span class="n">print_interval</span> <span class="o">=</span> <span class="n">defaults</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;save_frequency&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
         <span class="n">stage</span><span class="o">.</span><span class="n">subsequent</span> <span class="o">=</span> <span class="mi">0</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">set_initial_conditions</span> <span class="k">else</span> <span class="mi">1</span>
         <span class="n">stage</span><span class="o">.</span><span class="n">rest_duration</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">rest_duration</span>
         <span class="n">stage</span><span class="o">.</span><span class="n">stop_value</span> <span class="o">=</span> <span class="p">(</span>
@@ -1582,9 +1576,6 @@
 
     <span class="k">def</span> <span class="fm">__enter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_prefix</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_cmodel</span><span class="o">.</span><span class="n">set_verbosity_level</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_verbosity</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_cmodel</span><span class="o">.</span><span class="n">generate_tst_file</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_b_use_tstfile</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_cmodel</span><span class="o">.</span><span class="n">generate_out_file</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_b_use_outfile</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span>
 
     <span class="k">def</span> <span class="fm">__exit__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">exc_type</span><span class="p">,</span> <span class="n">exc_val</span><span class="p">,</span> <span class="n">exc_tb</span><span class="p">):</span>
@@ -1703,6 +1694,9 @@
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cmodel</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">_scenario</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">cscenario</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_scenario</span><span class="o">.</span><span class="n">_to_cscenario</span><span class="p">()</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_cmodel</span> <span class="o">=</span> <span class="n">_ext</span><span class="o">.</span><span class="n">CModel</span><span class="p">(</span><span class="n">prefix</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_cmodel</span><span class="o">.</span><span class="n">set_verbosity_level</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_verbosity</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_cmodel</span><span class="o">.</span><span class="n">generate_tst_file</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_b_use_tstfile</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_cmodel</span><span class="o">.</span><span class="n">generate_out_file</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_b_use_outfile</span><span class="p">)</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_cmodel</span><span class="o">.</span><span class="n">configure</span><span class="p">(</span><span class="n">cscenario</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__results</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_is_open</span> <span class="o">=</span> <span class="kc">True</span></div>
@@ -2169,8 +2163,6 @@
 
         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">h5py</span><span class="p">,</span> <span class="ne">ImportError</span><span class="p">):</span>
             <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;Optional dependency not installed: h5py&quot;</span><span class="p">)</span> <span class="kn">from</span> <span class="nn">h5py</span>
-        <span class="k">if</span> <span class="ow">not</span> <span class="n">filename</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;.h5&quot;</span><span class="p">):</span>
-            <span class="n">filename</span> <span class="o">=</span> <span class="n">filename</span> <span class="o">+</span> <span class="s2">&quot;.h5&quot;</span>
         <span class="k">with</span> <span class="n">h5py</span><span class="o">.</span><span class="n">File</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
             <span class="n">f</span><span class="o">.</span><span class="n">create_dataset</span><span class="p">(</span>
                 <span class="s2">&quot;df_t_1D&quot;</span><span class="p">,</span>

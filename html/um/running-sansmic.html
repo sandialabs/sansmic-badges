@@ -39,7 +39,7 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
 
-    <script src="../_static/documentation_options.js?v=d29a5c0e"></script>
+    <script src="../_static/documentation_options.js?v=e562d664"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
@@ -60,7 +60,7 @@
     <script>
         DOCUMENTATION_OPTIONS.theme_version = '0.16.0';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://sandialabs.github.io/sansmic/_static/switcher.json';
-        DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'v1.0.1';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'v1.0.2';
         DOCUMENTATION_OPTIONS.show_version_warning_banner = true;
         </script>
     <script src="../_static/pypi-icon.js?v=74687d30"></script>
@@ -70,7 +70,7 @@
     <link rel="prev" title="Getting started" href="getting-started.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="1.0.1" />
+  <meta name="docsearch:version" content="1.0.2" />
   </head>
   
   
@@ -458,14 +458,14 @@ available if you have not installed the appropriate packages (see Advanced Insta
 <p class="rubric">Options</p>
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-sansmic-o">
-<span id="cmdoption-sansmic-prefix"></span><span class="sig-name descname"><span class="pre">-o</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--prefix</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;prefix&gt;</span></span><a class="headerlink" href="#cmdoption-sansmic-o" title="Link to this definition">#</a></dt>
-<dd><p>Prefix for output files.  [default: from SCENARIO_FILE]</p>
+<span id="cmdoption-sansmic-output-name"></span><span class="sig-name descname"><span class="pre">-o</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--output-name</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;prefix&gt;</span></span><a class="headerlink" href="#cmdoption-sansmic-o" title="Link to this definition">#</a></dt>
+<dd><p>Filename stem for output files. Should NOT include a directory path (use -O to specify the output directory).  [default: stem of SCENARIO_FILE]</p>
 </dd></dl>
 
 <dl class="std option">
-<dt class="sig sig-object std" id="cmdoption-sansmic-toml">
-<span id="cmdoption-sansmic-no-toml"></span><span class="sig-name descname"><span class="pre">--toml</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--no-toml</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-sansmic-toml" title="Link to this definition">#</a></dt>
-<dd><p>Create a TOML scenario file.  [default: iff SCENARIO_FILE is .DAT format or PREFIX is set]</p>
+<dt class="sig sig-object std" id="cmdoption-sansmic-O">
+<span id="cmdoption-sansmic-output-path"></span><span class="sig-name descname"><span class="pre">-O</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--output-path</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;opath&gt;</span></span><a class="headerlink" href="#cmdoption-sansmic-O" title="Link to this definition">#</a></dt>
+<dd><p>Directory for output files. Directory must already exist.  [default: current directory]</p>
 </dd></dl>
 
 <dl class="std option">

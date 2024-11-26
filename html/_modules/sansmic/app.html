@@ -38,7 +38,7 @@
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
 
-    <script src="../../_static/documentation_options.js?v=d29a5c0e"></script>
+    <script src="../../_static/documentation_options.js?v=e562d664"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/design-tabs.js?v=f930bc37"></script>
@@ -59,7 +59,7 @@
     <script>
         DOCUMENTATION_OPTIONS.theme_version = '0.16.0';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://sandialabs.github.io/sansmic/_static/switcher.json';
-        DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'v1.0.1';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'v1.0.2';
         DOCUMENTATION_OPTIONS.show_version_warning_banner = true;
         </script>
     <script src="../../_static/pypi-icon.js?v=74687d30"></script>
@@ -67,7 +67,7 @@
     <link rel="search" title="Search" href="../../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="1.0.1" />
+  <meta name="docsearch:version" content="1.0.2" />
   </head>
   
   
@@ -440,13 +440,13 @@
 <span class="sd">&quot;&quot;&quot;</span>
 
 <span class="kn">import</span> <span class="nn">logging</span>
-<span class="kn">from</span> <span class="nn">argparse</span> <span class="kn">import</span> <span class="n">ArgumentParser</span><span class="p">,</span> <span class="n">Action</span>
-<span class="kn">from</span> <span class="nn">os.path</span> <span class="kn">import</span> <span class="n">splitext</span>
-<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span> <span class="k">as</span> <span class="n">dt</span>
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
 
 <span class="kn">import</span> <span class="nn">click</span>
 <span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="nb">round</span>
 <span class="kn">from</span> <span class="nn">pip._vendor.rich.progress</span> <span class="kn">import</span> <span class="n">Progress</span>
+
 <span class="kn">import</span> <span class="nn">sansmic.io</span>
 
 <span class="k">try</span><span class="p">:</span>  <span class="c1"># pragma: no cover</span>
@@ -454,8 +454,10 @@
 <span class="k">except</span> <span class="ne">ImportError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
     <span class="n">h5py</span> <span class="o">=</span> <span class="n">e</span>
 
-<span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">()</span>
+<span class="n">startup</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">isoformat</span><span class="p">()</span>
 <span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s2">&quot;sansmic&quot;</span><span class="p">)</span>
+<span class="n">logger</span><span class="o">.</span><span class="n">addHandler</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">NullHandler</span><span class="p">())</span>
+<span class="n">logger</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">)</span>
 
 
 <div class="viewcode-block" id="print_license">
@@ -492,26 +494,119 @@
 
 
 
+<span class="k">class</span> <span class="nc">_Echo</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Filter messages output using ``click.secho``.</span>
+
+<span class="sd">    Output is determined by comparing the verbosity level and quiet-mode flag</span>
+<span class="sd">    to the rules for for the method used.</span>
+
+<span class="sd">    .. rubric:: Rules</span>
+
+<span class="sd">    ``__call__(...)``</span>
+<span class="sd">        Output message if not in quiet mode.</span>
+<span class="sd">    ``verbose(...)``</span>
+<span class="sd">        Output message only if verbose is non-zero.</span>
+<span class="sd">    ``force(...)``</span>
+<span class="sd">        Always output the message.</span>
+
+<span class="sd">    The parameters for each of the calls is the same as :meth:`click.echo`.</span>
+
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    verbosity : int</span>
+<span class="sd">        The verbosity level, by default 0.</span>
+<span class="sd">    quiet : bool</span>
+<span class="sd">        Quiet-mode flag, by default False.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">verbosity</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">quiet</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">verbosity</span> <span class="o">=</span> <span class="n">verbosity</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">quiet</span> <span class="o">=</span> <span class="n">quiet</span>
+
+    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">message</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">file</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">nl</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="n">err</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">color</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="o">**</span><span class="n">styles</span><span class="p">,</span>
+    <span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Output message unless :attr:`quiet` was set to True.&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">quiet</span><span class="p">:</span>
+            <span class="k">return</span>
+        <span class="n">click</span><span class="o">.</span><span class="n">secho</span><span class="p">(</span><span class="n">message</span><span class="o">=</span><span class="n">message</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="n">file</span><span class="p">,</span> <span class="n">nl</span><span class="o">=</span><span class="n">nl</span><span class="p">,</span> <span class="n">err</span><span class="o">=</span><span class="n">err</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">,</span> <span class="o">**</span><span class="n">styles</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">verbose</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">message</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">file</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">nl</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="n">err</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">color</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="o">**</span><span class="n">styles</span><span class="p">,</span>
+    <span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Output message iff :attr:`verbose` &gt;= 1.&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">verbosity</span><span class="p">:</span>
+            <span class="k">return</span>
+        <span class="n">click</span><span class="o">.</span><span class="n">secho</span><span class="p">(</span><span class="n">message</span><span class="o">=</span><span class="n">message</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="n">file</span><span class="p">,</span> <span class="n">nl</span><span class="o">=</span><span class="n">nl</span><span class="p">,</span> <span class="n">err</span><span class="o">=</span><span class="n">err</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">,</span> <span class="o">**</span><span class="n">styles</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">force</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">message</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">file</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">nl</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="n">err</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">color</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="o">**</span><span class="n">styles</span><span class="p">,</span>
+    <span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Output message even if :attr:`quiet` was set to True.&quot;&quot;&quot;</span>
+        <span class="n">click</span><span class="o">.</span><span class="n">secho</span><span class="p">(</span><span class="n">message</span><span class="o">=</span><span class="n">message</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="n">file</span><span class="p">,</span> <span class="n">nl</span><span class="o">=</span><span class="n">nl</span><span class="p">,</span> <span class="n">err</span><span class="o">=</span><span class="n">err</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">,</span> <span class="o">**</span><span class="n">styles</span><span class="p">)</span>
+
+
 <span class="nd">@click</span><span class="o">.</span><span class="n">group</span><span class="p">()</span>
 <span class="k">def</span> <span class="nf">cli</span><span class="p">():</span>
     <span class="k">pass</span>
 
 
-<span class="nd">@click</span><span class="o">.</span><span class="n">command</span><span class="p">()</span>
-<span class="nd">@click</span><span class="o">.</span><span class="n">argument</span><span class="p">(</span><span class="s2">&quot;scenario_file&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="n">click</span><span class="o">.</span><span class="n">Path</span><span class="p">(</span><span class="n">exists</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
+<span class="nd">@click</span><span class="o">.</span><span class="n">command</span><span class="p">(</span><span class="s2">&quot;run&quot;</span><span class="p">)</span>
+<span class="nd">@click</span><span class="o">.</span><span class="n">argument</span><span class="p">(</span>
+    <span class="s2">&quot;scenario_file&quot;</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="n">click</span><span class="o">.</span><span class="n">Path</span><span class="p">(</span>
+        <span class="n">exists</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">dir_okay</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">resolve_path</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">path_type</span><span class="o">=</span><span class="n">Path</span><span class="p">,</span>
+    <span class="p">),</span>
+<span class="p">)</span>
 <span class="nd">@click</span><span class="o">.</span><span class="n">option</span><span class="p">(</span>
     <span class="s2">&quot;-o&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;--prefix&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;--output-name&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;prefix&quot;</span><span class="p">,</span>
     <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-    <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Prefix for output files.  [default: from SCENARIO_FILE]&quot;</span><span class="p">,</span>
+    <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Filename stem for output files. Should NOT include a directory path (use -O to specify the output directory).  [default: stem of SCENARIO_FILE]&quot;</span><span class="p">,</span>
 <span class="p">)</span>
 <span class="nd">@click</span><span class="o">.</span><span class="n">option</span><span class="p">(</span>
-    <span class="s2">&quot;--toml/--no-toml&quot;</span><span class="p">,</span>
-    <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-    <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Create a TOML scenario file.  [default: iff SCENARIO_FILE is .DAT format or PREFIX is set]&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;-O&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;--output-path&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;opath&quot;</span><span class="p">,</span>
+    <span class="n">default</span><span class="o">=</span><span class="s2">&quot;.&quot;</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="n">click</span><span class="o">.</span><span class="n">Path</span><span class="p">(</span>
+        <span class="n">exists</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">writable</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">dir_okay</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">file_okay</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">resolve_path</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">path_type</span><span class="o">=</span><span class="n">Path</span><span class="p">,</span>
+    <span class="p">),</span>
+    <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Directory for output files. Directory must already exist.  [default: current directory]&quot;</span><span class="p">,</span>
 <span class="p">)</span>
 <span class="nd">@click</span><span class="o">.</span><span class="n">option</span><span class="p">(</span>
-    <span class="s2">&quot;--csv/--no-csv&quot;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Create CSV output files.&quot;</span><span class="p">,</span> <span class="n">show_default</span><span class="o">=</span><span class="kc">True</span>
+    <span class="s2">&quot;--csv/--no-csv&quot;</span><span class="p">,</span>
+    <span class="n">default</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Create CSV output files.&quot;</span><span class="p">,</span>
+    <span class="n">show_default</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
 <span class="p">)</span>
 <span class="nd">@click</span><span class="o">.</span><span class="n">option</span><span class="p">(</span>
     <span class="s2">&quot;--hdf/--no-hdf&quot;</span><span class="p">,</span>
@@ -541,7 +636,11 @@
     <span class="n">show_default</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
 <span class="p">)</span>
 <span class="nd">@click</span><span class="o">.</span><span class="n">option</span><span class="p">(</span>
-    <span class="s2">&quot;-v&quot;</span><span class="p">,</span> <span class="s2">&quot;--verbose&quot;</span><span class="p">,</span> <span class="n">count</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Increase log details.&quot;</span><span class="p">,</span> <span class="n">show_default</span><span class="o">=</span><span class="kc">True</span>
+    <span class="s2">&quot;-v&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;--verbose&quot;</span><span class="p">,</span>
+    <span class="n">count</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Increase log details.&quot;</span><span class="p">,</span>
+    <span class="n">show_default</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
 <span class="p">)</span>
 <span class="nd">@click</span><span class="o">.</span><span class="n">option</span><span class="p">(</span>
     <span class="s2">&quot;-q&quot;</span><span class="p">,</span>
@@ -576,61 +675,98 @@
     <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Print copyright and exit.&quot;</span><span class="p">,</span>
 <span class="p">)</span>
 <span class="k">def</span> <span class="nf">run</span><span class="p">(</span>
-    <span class="n">scenario_file</span><span class="p">,</span>
+    <span class="n">scenario_file</span><span class="p">:</span> <span class="n">Path</span><span class="p">,</span>
     <span class="o">*</span><span class="p">,</span>
-    <span class="n">prefix</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-    <span class="n">toml</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-    <span class="n">csv</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-    <span class="n">hdf</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-    <span class="n">tst</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-    <span class="n">oldout</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-    <span class="n">verbose</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
-    <span class="n">quiet</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-    <span class="n">debug</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-    <span class="n">json</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">prefix</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">opath</span><span class="p">:</span> <span class="n">Path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">),</span>
+    <span class="n">toml</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="n">csv</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="n">hdf</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="n">tst</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="n">oldout</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="n">verbose</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="n">quiet</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="n">debug</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="n">json</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
 <span class="p">):</span>
     <span class="kn">from</span> <span class="nn">sansmic</span> <span class="kn">import</span> <span class="n">__version__</span>
 
+    <span class="n">echo</span> <span class="o">=</span> <span class="n">_Echo</span><span class="p">(</span><span class="n">verbosity</span><span class="o">=</span><span class="n">verbose</span><span class="p">,</span> <span class="n">quiet</span><span class="o">=</span><span class="n">quiet</span><span class="p">)</span>
+    <span class="n">echo</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;sansmic v</span><span class="si">{</span><span class="n">__version__</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">prefix</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">prefix</span> <span class="o">=</span> <span class="n">scenario_file</span><span class="o">.</span><span class="n">stem</span>
+    <span class="n">pprefix</span> <span class="o">=</span> <span class="n">opath</span><span class="o">.</span><span class="n">joinpath</span><span class="p">(</span><span class="n">prefix</span><span class="p">)</span>
+
+    <span class="n">log_file</span> <span class="o">=</span> <span class="n">opath</span><span class="o">.</span><span class="n">joinpath</span><span class="p">(</span><span class="n">prefix</span><span class="p">)</span><span class="o">.</span><span class="n">with_suffix</span><span class="p">(</span><span class="s2">&quot;.log&quot;</span><span class="p">)</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">log_file</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">flog</span><span class="p">:</span>
+        <span class="n">flog</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;program:  sansmic v</span><span class="si">{</span><span class="n">sansmic</span><span class="o">.</span><span class="n">__version__</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">flog</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;startup:  </span><span class="si">{</span><span class="n">startup</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">flog</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;input:    </span><span class="si">{</span><span class="n">scenario_file</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">flog</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;output:   </span><span class="si">{</span><span class="n">pprefix</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">flog</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;run-log:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="n">file_log</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">FileHandler</span><span class="p">(</span><span class="n">log_file</span><span class="p">)</span>
+    <span class="n">file_log</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">INFO</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">debug</span><span class="p">:</span>
-        <span class="n">logger</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">)</span>
-        <span class="n">verbose</span> <span class="o">=</span> <span class="mi">3</span>
+        <span class="n">file_log</span><span class="o">.</span><span class="n">setFormatter</span><span class="p">(</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">Formatter</span><span class="p">(</span>
+                <span class="s2">&quot;- time: </span><span class="si">%(asctime)s</span><span class="se">\n</span><span class="s2">  level: </span><span class="si">%(levelname)s</span><span class="se">\n</span><span class="s2">  file: </span><span class="si">%(filename)s</span><span class="s2">:</span><span class="si">%(lineno)d</span><span class="se">\n</span><span class="s2">  funcName: </span><span class="si">%(funcName)s</span><span class="se">\n</span><span class="s2">  message: </span><span class="si">%(message)s</span><span class="s2">&quot;</span><span class="p">,</span>
+                <span class="n">datefmt</span><span class="o">=</span><span class="s2">&quot;%Y-%m-</span><span class="si">%d</span><span class="s2">T%H:%M:%S&quot;</span><span class="p">,</span>
+            <span class="p">)</span>
+        <span class="p">)</span>
+    <span class="k">elif</span> <span class="n">verbose</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="n">file_log</span><span class="o">.</span><span class="n">setFormatter</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">Formatter</span><span class="p">(</span><span class="s2">&quot;- </span><span class="si">%(message)s</span><span class="s2">&quot;</span><span class="p">))</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">file_log</span><span class="o">.</span><span class="n">setFormatter</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">Formatter</span><span class="p">(</span><span class="s2">&quot;- message: </span><span class="si">%(message)s</span><span class="s2">&quot;</span><span class="p">))</span>
+
+    <span class="k">if</span> <span class="n">debug</span><span class="p">:</span>
+        <span class="n">file_log</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">)</span>
+        <span class="n">verbose</span> <span class="o">=</span> <span class="mi">4</span>
+        <span class="n">echo</span><span class="o">.</span><span class="n">verbosity</span> <span class="o">=</span> <span class="mi">3</span>
+    <span class="k">elif</span> <span class="n">verbose</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="n">file_log</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">)</span>
+        <span class="n">echo</span><span class="o">.</span><span class="n">verbosity</span> <span class="o">=</span> <span class="mi">2</span>
     <span class="k">elif</span> <span class="n">verbose</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
-        <span class="n">logger</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">INFO</span><span class="p">)</span>
+        <span class="n">file_log</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">INFO</span><span class="p">)</span>
+        <span class="n">echo</span><span class="o">.</span><span class="n">verbosity</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="k">elif</span> <span class="n">verbose</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">file_log</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">INFO</span><span class="p">)</span>
     <span class="k">elif</span> <span class="n">quiet</span><span class="p">:</span>
-        <span class="n">logger</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">ERROR</span><span class="p">)</span>
+        <span class="n">file_log</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">WARNING</span><span class="p">)</span>
+
+    <span class="n">logger</span><span class="o">.</span><span class="n">addHandler</span><span class="p">(</span><span class="n">file_log</span><span class="p">)</span>
+
+    <span class="n">toml_file</span> <span class="o">=</span> <span class="n">opath</span><span class="o">.</span><span class="n">joinpath</span><span class="p">(</span><span class="n">prefix</span><span class="p">)</span><span class="o">.</span><span class="n">with_suffix</span><span class="p">(</span><span class="s2">&quot;.toml&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">toml_file</span><span class="o">.</span><span class="n">exists</span><span class="p">()</span> <span class="ow">and</span> <span class="n">toml_file</span> <span class="o">==</span> <span class="n">scenario_file</span><span class="p">:</span>
+        <span class="n">toml</span> <span class="o">=</span> <span class="kc">False</span>
+
     <span class="k">try</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">prefix</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">prefix</span> <span class="o">=</span> <span class="n">splitext</span><span class="p">(</span><span class="n">scenario_file</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
-        <span class="n">verbosity</span> <span class="o">=</span> <span class="n">verbose</span>
         <span class="n">model</span> <span class="o">=</span> <span class="n">sansmic</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">read_scenario</span><span class="p">(</span><span class="n">scenario_file</span><span class="p">,</span> <span class="n">warn</span><span class="o">=</span><span class="ow">not</span> <span class="n">quiet</span><span class="p">)</span>
-        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Successfully created scenario from </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">scenario_file</span><span class="p">))</span>
-        <span class="k">if</span> <span class="n">toml</span> <span class="ow">is</span> <span class="kc">False</span><span class="p">:</span>
-            <span class="k">pass</span>
-        <span class="k">elif</span> <span class="p">(</span><span class="n">toml</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">prefix</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">)</span> <span class="ow">or</span> <span class="n">scenario_file</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span>
-            <span class="s2">&quot;.dat&quot;</span>
-        <span class="p">):</span>
-            <span class="n">toml</span> <span class="o">=</span> <span class="kc">True</span>
-        <span class="k">elif</span> <span class="n">toml</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">prefix</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">toml</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="n">echo</span><span class="o">.</span><span class="n">verbose</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Loaded scenario &quot;</span><span class="si">{</span><span class="n">scenario_file</span><span class="si">}</span><span class="s1">&quot;&#39;</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">toml</span><span class="p">:</span>
-            <span class="n">sansmic</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">write_scenario</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">prefix</span> <span class="o">+</span> <span class="s2">&quot;.toml&quot;</span><span class="p">)</span>
-            <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Wrote scenario to </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">prefix</span> <span class="o">+</span> <span class="s2">&quot;.toml&quot;</span><span class="p">))</span>
+            <span class="n">sansmic</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">write_scenario</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">toml_file</span><span class="p">)</span>
+            <span class="n">echo</span><span class="o">.</span><span class="n">verbose</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Wrote scenario &quot;</span><span class="si">{</span><span class="n">toml_file</span><span class="si">}</span><span class="s1">&quot;&#39;</span><span class="p">)</span>
+        <span class="n">file_log</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
     <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
         <span class="n">logger</span><span class="o">.</span><span class="n">critical</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">))</span>
+        <span class="n">file_log</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
+        <span class="n">file_log</span><span class="o">.</span><span class="n">stream</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
         <span class="k">raise</span> <span class="n">e</span>
 
-    <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Running simulation&quot;</span><span class="p">)</span>
-    <span class="k">with</span> <span class="n">model</span><span class="o">.</span><span class="n">new_simulation</span><span class="p">(</span><span class="n">prefix</span><span class="p">,</span> <span class="n">verbosity</span><span class="p">,</span> <span class="n">tst</span><span class="p">,</span> <span class="n">oldout</span><span class="p">)</span> <span class="k">as</span> <span class="n">sim</span><span class="p">:</span>
-        <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Created new simulation&quot;</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">quiet</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">verbose</span><span class="p">:</span>
-            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Running in batch mode&quot;</span><span class="p">)</span>
-            <span class="k">if</span> <span class="ow">not</span> <span class="n">quiet</span><span class="p">:</span>
-                <span class="n">click</span><span class="o">.</span><span class="n">echo</span><span class="p">(</span>
-                    <span class="s2">&quot;Running sansmic in batch mode from </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">scenario_file</span><span class="p">))</span>
+    <span class="k">with</span> <span class="n">model</span><span class="o">.</span><span class="n">new_simulation</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">pprefix</span><span class="o">.</span><span class="n">absolute</span><span class="p">()),</span> <span class="n">verbose</span><span class="p">,</span> <span class="n">tst</span><span class="p">,</span> <span class="n">oldout</span><span class="p">)</span> <span class="k">as</span> <span class="n">sim</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Created new simulation object&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">verbose</span> <span class="o">&gt;=</span> <span class="mi">2</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">debug</span><span class="p">:</span>
+            <span class="n">file_log</span><span class="o">.</span><span class="n">setFormatter</span><span class="p">(</span>
+                <span class="n">logging</span><span class="o">.</span><span class="n">Formatter</span><span class="p">(</span>
+                    <span class="s2">&quot;- message: </span><span class="si">%(message)s</span><span class="se">\n</span><span class="s2">  elapsed: </span><span class="si">%(relativeCreated).0f</span><span class="s2"> ms&quot;</span>
                 <span class="p">)</span>
+            <span class="p">)</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Running simulation&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">verbose</span><span class="p">:</span>
+            <span class="n">echo</span><span class="p">(</span><span class="s2">&quot;Running sansmic simulation...&quot;</span><span class="p">)</span>
             <span class="n">sim</span><span class="o">.</span><span class="n">run_sim</span><span class="p">()</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Running in stepwise mode&quot;</span><span class="p">)</span>
             <span class="n">last_stage</span> <span class="o">=</span> <span class="mi">0</span>
             <span class="n">last_step</span> <span class="o">=</span> <span class="mi">0</span>
             <span class="n">n_stages</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">stages</span><span class="p">)</span>
@@ -643,16 +779,18 @@
             <span class="p">]</span>
             <span class="n">n_steps</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">stage_sizes</span><span class="p">)</span>
             <span class="n">p_freq</span> <span class="o">=</span> <span class="n">day_size</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-            <span class="n">click</span><span class="o">.</span><span class="n">echo</span><span class="p">(</span>
-                <span class="s2">&quot;Running sansmic scenario: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
-                    <span class="n">scenario_file</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">model</span><span class="o">.</span><span class="n">title</span> <span class="k">else</span> <span class="n">model</span><span class="o">.</span><span class="n">title</span>
+            <span class="n">echo</span><span class="p">(</span>
+                <span class="s2">&quot;Running </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                    <span class="s2">&quot;sansmic simulation...&quot;</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">model</span><span class="o">.</span><span class="n">title</span> <span class="k">else</span> <span class="n">model</span><span class="o">.</span><span class="n">title</span>
                 <span class="p">)</span>
             <span class="p">)</span>
             <span class="n">stage</span> <span class="o">=</span> <span class="mi">0</span>
             <span class="k">with</span> <span class="n">Progress</span><span class="p">()</span> <span class="k">as</span> <span class="n">progress</span><span class="p">:</span>
+                <span class="n">file_log</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
                 <span class="k">if</span> <span class="n">verbose</span> <span class="o">&gt;=</span> <span class="mi">1</span><span class="p">:</span>
                     <span class="n">task</span> <span class="o">=</span> <span class="n">progress</span><span class="o">.</span><span class="n">add_task</span><span class="p">(</span><span class="s2">&quot;Progress...&quot;</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="n">n_steps</span><span class="p">)</span>
                 <span class="k">if</span> <span class="n">verbose</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="p">:</span>
+                    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Starting stage </span><span class="si">{</span><span class="n">stage</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
                     <span class="n">task_S</span> <span class="o">=</span> <span class="n">progress</span><span class="o">.</span><span class="n">add_task</span><span class="p">(</span>
                         <span class="s2">&quot;[red]Stage </span><span class="si">{}</span><span class="s2">...&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">stage</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span> <span class="n">total</span><span class="o">=</span><span class="n">stage_sizes</span><span class="p">[</span><span class="n">stage</span><span class="p">]</span>
                     <span class="p">)</span>
@@ -665,11 +803,13 @@
                                     <span class="n">completed</span><span class="o">=</span><span class="n">n_steps</span><span class="p">,</span>
                                 <span class="p">)</span>
                             <span class="k">if</span> <span class="n">verbose</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="p">:</span>
+                                <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Stage </span><span class="si">{</span><span class="n">stage</span><span class="si">}</span><span class="s2"> complete&quot;</span><span class="p">)</span>
                                 <span class="n">progress</span><span class="o">.</span><span class="n">update</span><span class="p">(</span>
                                     <span class="n">task_S</span><span class="p">,</span>
                                     <span class="n">completed</span><span class="o">=</span><span class="n">n_steps</span><span class="p">,</span>
                                 <span class="p">)</span>
-                                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;All stages complete.&quot;</span><span class="p">)</span>
+                            <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;All stages complete&quot;</span><span class="p">)</span>
+                            <span class="n">file_log</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
                         <span class="k">else</span><span class="p">:</span>
                             <span class="n">last_stage</span> <span class="o">=</span> <span class="n">stage</span>
                             <span class="n">last_step</span> <span class="o">=</span> <span class="n">step</span>
@@ -679,6 +819,9 @@
                                     <span class="n">task_S</span><span class="p">,</span>
                                     <span class="n">completed</span><span class="o">=</span><span class="n">n_steps</span><span class="p">,</span>
                                 <span class="p">)</span>
+                                <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Stage </span><span class="si">{</span><span class="n">stage</span><span class="si">}</span><span class="s2"> complete&quot;</span><span class="p">)</span>
+                                <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Starting stage </span><span class="si">{</span><span class="n">stage</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+                                <span class="n">file_log</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
                                 <span class="n">task_S</span> <span class="o">=</span> <span class="n">progress</span><span class="o">.</span><span class="n">add_task</span><span class="p">(</span>
                                     <span class="s2">&quot;[red]Stage </span><span class="si">{}</span><span class="s2">...&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">stage</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span>
                                     <span class="n">total</span><span class="o">=</span><span class="n">stage_sizes</span><span class="p">[</span><span class="n">stage</span><span class="p">],</span>
@@ -694,29 +837,50 @@
                                 <span class="n">task_S</span><span class="p">,</span>
                                 <span class="n">advance</span><span class="o">=</span><span class="n">p_freq</span><span class="p">,</span>
                             <span class="p">)</span>
-        <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Simulation complete&quot;</span><span class="p">)</span>
+        <span class="n">echo</span><span class="p">(</span><span class="s2">&quot;Simulation complete.&quot;</span><span class="p">)</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Simulation complete - writing results&quot;</span><span class="p">)</span>
+    <span class="n">file_log</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
+
     <span class="n">res</span> <span class="o">=</span> <span class="n">sim</span><span class="o">.</span><span class="n">results</span>
-    <span class="k">if</span> <span class="ow">not</span> <span class="n">quiet</span><span class="p">:</span>
-        <span class="n">click</span><span class="o">.</span><span class="n">echo</span><span class="p">(</span><span class="s2">&quot;Initial and final results:&quot;</span><span class="p">)</span>
-        <span class="n">click</span><span class="o">.</span><span class="n">echo</span><span class="p">(</span>
-            <span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">df_t_1D</span><span class="o">.</span><span class="n">iloc</span><span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">26</span><span class="p">]])</span><span class="o">.</span><span class="n">to_string</span><span class="p">(</span>
-                <span class="n">index</span><span class="o">=</span><span class="kc">False</span>
-            <span class="p">)</span>
+    <span class="n">echo</span><span class="p">(</span><span class="s2">&quot;Starting and ending cavern state: &quot;</span><span class="p">)</span>
+    <span class="n">echo</span><span class="p">(</span>
+        <span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">df_t_1D</span><span class="o">.</span><span class="n">iloc</span><span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">26</span><span class="p">]])</span><span class="o">.</span><span class="n">to_string</span><span class="p">(</span>
+            <span class="n">index</span><span class="o">=</span><span class="kc">False</span>
         <span class="p">)</span>
+    <span class="p">)</span>
 
     <span class="c1"># Wrap the outputs in a try/except block</span>
     <span class="k">try</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">csv</span><span class="p">:</span>
-            <span class="n">sansmic</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">write_csv_results</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="n">prefix</span><span class="p">)</span>
+            <span class="n">sansmic</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">write_csv_results</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="n">opath</span><span class="o">.</span><span class="n">joinpath</span><span class="p">(</span><span class="n">prefix</span><span class="p">))</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Wrote results to &quot;</span><span class="si">{</span><span class="n">prefix</span><span class="si">}</span><span class="s1">.*.csv&quot;&#39;</span><span class="p">)</span>
+            <span class="n">echo</span><span class="p">(</span><span class="s2">&quot;CSV result files written to </span><span class="si">{}</span><span class="s2">.*.csv&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">opath</span><span class="o">.</span><span class="n">joinpath</span><span class="p">(</span><span class="n">prefix</span><span class="p">)))</span>
         <span class="k">if</span> <span class="n">json</span><span class="p">:</span>
-            <span class="n">sansmic</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">write_json_results</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="n">prefix</span> <span class="o">+</span> <span class="s2">&quot;.json&quot;</span><span class="p">)</span>
+            <span class="n">sansmic</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">write_json_results</span><span class="p">(</span>
+                <span class="n">res</span><span class="p">,</span> <span class="n">opath</span><span class="o">.</span><span class="n">joinpath</span><span class="p">(</span><span class="n">prefix</span><span class="p">)</span><span class="o">.</span><span class="n">with_suffix</span><span class="p">(</span><span class="s2">&quot;.json&quot;</span><span class="p">)</span>
+            <span class="p">)</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Wrote results to &quot;</span><span class="si">{</span><span class="n">prefix</span><span class="si">}</span><span class="s1">.json&quot;&#39;</span><span class="p">)</span>
+            <span class="n">echo</span><span class="p">(</span>
+                <span class="s2">&quot;JSON results file written to </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                    <span class="n">opath</span><span class="o">.</span><span class="n">joinpath</span><span class="p">(</span><span class="n">prefix</span><span class="p">)</span><span class="o">.</span><span class="n">with_suffix</span><span class="p">(</span><span class="s2">&quot;.json&quot;</span><span class="p">)</span>
+                <span class="p">)</span>
+            <span class="p">)</span>
         <span class="k">if</span> <span class="n">hdf</span><span class="p">:</span>
-            <span class="n">sansmic</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">write_hdf_results</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="n">prefix</span> <span class="o">+</span> <span class="s2">&quot;.h5&quot;</span><span class="p">)</span>
-        <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Sansmic complete&quot;</span><span class="p">)</span>
+            <span class="n">sansmic</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">write_hdf_results</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="n">opath</span><span class="o">.</span><span class="n">joinpath</span><span class="p">(</span><span class="n">prefix</span><span class="p">)</span><span class="o">.</span><span class="n">with_suffix</span><span class="p">(</span><span class="s2">&quot;.h5&quot;</span><span class="p">))</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Wrote results to &quot;</span><span class="si">{</span><span class="n">prefix</span><span class="si">}</span><span class="s1">.h5&quot;&#39;</span><span class="p">)</span>
+            <span class="n">echo</span><span class="p">(</span>
+                <span class="s2">&quot;HDF5 results file written to </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                    <span class="n">opath</span><span class="o">.</span><span class="n">joinpath</span><span class="p">(</span><span class="n">prefix</span><span class="p">)</span><span class="o">.</span><span class="n">with_suffix</span><span class="p">(</span><span class="s2">&quot;.h5&quot;</span><span class="p">)</span>
+                <span class="p">)</span>
+            <span class="p">)</span>
     <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>  <span class="c1"># pragma: no cover</span>
         <span class="n">logger</span><span class="o">.</span><span class="n">critical</span><span class="p">(</span><span class="s2">&quot;Error while writing results - some results may be missing&quot;</span><span class="p">)</span>
+        <span class="n">file_log</span><span class="o">.</span><span class="n">stream</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
         <span class="k">raise</span> <span class="n">e</span>
-
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;All processes complete&quot;</span><span class="p">)</span>
+    <span class="n">file_log</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
+    <span class="n">file_log</span><span class="o">.</span><span class="n">stream</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;shutdown: </span><span class="si">{</span><span class="n">dt</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">isoformat</span><span class="p">()</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">file_log</span><span class="o">.</span><span class="n">stream</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
     <span class="k">return</span> <span class="n">res</span>
 
 
