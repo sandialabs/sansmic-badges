@@ -23,6 +23,8 @@ cat sansmic-ci/docs/index.tpl | sed s/BUILD_SCRIPT_REPLACE/$SANSMIC_STABLE_VERSI
 export SANSMIC_SPHINX_VERSION=root
 sphinx-build -b html -d doctrees/root/ sansmic-ci/docs/ html/
 
+rm -rf html/$SANSMIC_STABLE_VERSION
+
 # Build the dev documentations from the current, checked out
 # codebase
 mkdir docs/_build
