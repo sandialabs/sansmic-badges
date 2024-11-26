@@ -39,7 +39,7 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
 
-    <script src="../_static/documentation_options.js?v=2eeb46a9"></script>
+    <script src="../_static/documentation_options.js?v=1913ccc3"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
@@ -60,7 +60,7 @@
     <script>
         DOCUMENTATION_OPTIONS.theme_version = '0.16.0';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://sandialabs.github.io/sansmic/_static/switcher.json';
-        DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'v1.0.5';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'v1.0.6';
         DOCUMENTATION_OPTIONS.show_version_warning_banner = true;
         </script>
     <script src="../_static/pypi-icon.js?v=74687d30"></script>
@@ -70,7 +70,7 @@
     <link rel="prev" title="Simulator" href="sansmic.model.Simulator.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="1.0.5" />
+  <meta name="docsearch:version" content="1.0.6" />
   </head>
   
   
@@ -582,7 +582,7 @@
 <h1>StageDefinition<a class="headerlink" href="#stagedefinition" title="Link to this heading">#</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="sansmic.model.StageDefinition">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">StageDefinition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">simulation_mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">solver_timestep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_frequency</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">injection_duration</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rest_duration</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inner_tbg_inside_diam</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inner_tbg_outside_diam</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outer_csg_inside_diam</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outer_csg_outside_diam</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">brine_injection_sg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">brine_injection_depth</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">brine_production_depth</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">brine_injection_rate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">set_initial_conditions</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">set_cavern_sg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">brine_interface_depth</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">product_injection_rate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">product_injection_depth</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">product_production_depth</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stop_condition</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">StopCondition.DURATION</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stop_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">defaults</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">blanket_depth</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">brine_injection_height</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">brine_production_height</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">brine_interface_height</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sansmic/model.html#StageDefinition"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sansmic.model.StageDefinition" title="Link to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">StageDefinition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">title=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">simulation_mode=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">solver_timestep=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_frequency=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">injection_duration=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rest_duration=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inner_tbg_inside_diam=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inner_tbg_outside_diam=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outer_csg_inside_diam=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outer_csg_outside_diam=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">brine_injection_sg=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">brine_injection_depth=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">brine_production_depth=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">brine_injection_rate=0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">set_initial_conditions=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">set_cavern_sg=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">brine_interface_depth=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">product_injection_rate=0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">product_injection_depth=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">product_production_depth=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stop_condition=StopCondition.DURATION</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stop_value=0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">defaults=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">blanket_depth=&lt;property</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">brine_injection_height=&lt;property</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">brine_production_height=&lt;property</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">brine_interface_height=&lt;property</span> <span class="pre">object&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sansmic/model.html#StageDefinition"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sansmic.model.StageDefinition" title="Link to this definition">#</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>Defines a SANSMIC simulation stage which is an injection period followed by a rest period.</p>
 <p class="rubric">Summary</p>
@@ -598,13 +598,13 @@
 <td><p>Validate that all required options have been selected.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#sansmic.model.StageDefinition.blanket_depth" title="sansmic.model.StageDefinition.blanket_depth"><code class="xref py py-obj docutils literal notranslate"><span class="pre">blanket_depth</span></code></a></p></td>
-<td><p></p></td>
+<td><p>Alias for <a class="reference internal" href="#sansmic.model.StageDefinition.brine_interface_depth" title="sansmic.model.StageDefinition.brine_interface_depth"><code class="xref py py-attr docutils literal notranslate"><span class="pre">brine_interface_depth</span></code></a></p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#sansmic.model.StageDefinition.brine_injection_depth" title="sansmic.model.StageDefinition.brine_injection_depth"><code class="xref py py-obj docutils literal notranslate"><span class="pre">brine_injection_depth</span></code></a></p></td>
 <td><p>The depth below surface/<a class="reference internal" href="../nomenclature.html#term-ZDP"><span class="xref std std-term">ZDP</span></a> where the end of the injection string/casing/tubing is positioned.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#sansmic.model.StageDefinition.brine_injection_height" title="sansmic.model.StageDefinition.brine_injection_height"><code class="xref py py-obj docutils literal notranslate"><span class="pre">brine_injection_height</span></code></a></p></td>
-<td><p></p></td>
+<td><p>Height above floor where brine is injected.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#sansmic.model.StageDefinition.brine_injection_rate" title="sansmic.model.StageDefinition.brine_injection_rate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">brine_injection_rate</span></code></a></p></td>
 <td><p>The meaning of this field is based on the type of data that is provided (a value of 0 means off).</p></td>
@@ -616,13 +616,13 @@
 <td><p>Set the initial oil-brine interface or blanket level.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#sansmic.model.StageDefinition.brine_interface_height" title="sansmic.model.StageDefinition.brine_interface_height"><code class="xref py py-obj docutils literal notranslate"><span class="pre">brine_interface_height</span></code></a></p></td>
-<td><p></p></td>
+<td><p>Height above floor where interface starts.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#sansmic.model.StageDefinition.brine_production_depth" title="sansmic.model.StageDefinition.brine_production_depth"><code class="xref py py-obj docutils literal notranslate"><span class="pre">brine_production_depth</span></code></a></p></td>
 <td><p>The depth below surface/<a class="reference internal" href="../nomenclature.html#term-ZDP"><span class="xref std std-term">ZDP</span></a> where the end of the production string/casing/tubing is positioned.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#sansmic.model.StageDefinition.brine_production_height" title="sansmic.model.StageDefinition.brine_production_height"><code class="xref py py-obj docutils literal notranslate"><span class="pre">brine_production_height</span></code></a></p></td>
-<td><p></p></td>
+<td><p>Height above floor where brine is produced.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#sansmic.model.StageDefinition.defaults" title="sansmic.model.StageDefinition.defaults"><code class="xref py py-obj docutils literal notranslate"><span class="pre">defaults</span></code></a></p></td>
 <td><p></p></td>
@@ -745,10 +745,11 @@ when creating TOML, JSON and YAML files.</p>
 </dl>
 </dd></dl>
 
-<dl class="py attribute">
+<dl class="py property">
 <dt class="sig sig-object py" id="sansmic.model.StageDefinition.blanket_depth">
-<span class="sig-name descname"><span class="pre">blanket_depth</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dataclasses.InitVar</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sansmic.model.StageDefinition.blanket_depth" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">blanket_depth</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></em><a class="headerlink" href="#sansmic.model.StageDefinition.blanket_depth" title="Link to this definition">#</a></dt>
+<dd><p>Alias for <a class="reference internal" href="#sansmic.model.StageDefinition.brine_interface_depth" title="sansmic.model.StageDefinition.brine_interface_depth"><code class="xref py py-attr docutils literal notranslate"><span class="pre">brine_interface_depth</span></code></a></p>
+</dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="sansmic.model.StageDefinition.brine_injection_depth">
@@ -756,10 +757,11 @@ when creating TOML, JSON and YAML files.</p>
 <dd><p>The depth below surface/<a class="reference internal" href="../nomenclature.html#term-ZDP"><span class="xref std std-term">ZDP</span></a> where the end of the injection string/casing/tubing is positioned.</p>
 </dd></dl>
 
-<dl class="py attribute">
+<dl class="py property">
 <dt class="sig sig-object py" id="sansmic.model.StageDefinition.brine_injection_height">
-<span class="sig-name descname"><span class="pre">brine_injection_height</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dataclasses.InitVar</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sansmic.model.StageDefinition.brine_injection_height" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">brine_injection_height</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></em><a class="headerlink" href="#sansmic.model.StageDefinition.brine_injection_height" title="Link to this definition">#</a></dt>
+<dd><p>Height above floor where brine is injected. The <a class="reference internal" href="#sansmic.model.StageDefinition.brine_injection_depth" title="sansmic.model.StageDefinition.brine_injection_depth"><code class="xref py py-attr docutils literal notranslate"><span class="pre">brine_injection_depth</span></code></a> will be a negative value if set using this property.</p>
+</dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="sansmic.model.StageDefinition.brine_injection_rate">
@@ -780,10 +782,11 @@ when creating TOML, JSON and YAML files.</p>
 will link to the previous stage (as will a value of 0).</p>
 </dd></dl>
 
-<dl class="py attribute">
+<dl class="py property">
 <dt class="sig sig-object py" id="sansmic.model.StageDefinition.brine_interface_height">
-<span class="sig-name descname"><span class="pre">brine_interface_height</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dataclasses.InitVar</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sansmic.model.StageDefinition.brine_interface_height" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">brine_interface_height</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></em><a class="headerlink" href="#sansmic.model.StageDefinition.brine_interface_height" title="Link to this definition">#</a></dt>
+<dd><p>Height above floor where interface starts. The <a class="reference internal" href="#sansmic.model.StageDefinition.brine_interface_depth" title="sansmic.model.StageDefinition.brine_interface_depth"><code class="xref py py-attr docutils literal notranslate"><span class="pre">brine_interface_depth</span></code></a> will be a negative value if set using this property.</p>
+</dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="sansmic.model.StageDefinition.brine_production_depth">
@@ -791,10 +794,11 @@ will link to the previous stage (as will a value of 0).</p>
 <dd><p>The depth below surface/<a class="reference internal" href="../nomenclature.html#term-ZDP"><span class="xref std std-term">ZDP</span></a> where the end of the production string/casing/tubing is positioned.</p>
 </dd></dl>
 
-<dl class="py attribute">
+<dl class="py property">
 <dt class="sig sig-object py" id="sansmic.model.StageDefinition.brine_production_height">
-<span class="sig-name descname"><span class="pre">brine_production_height</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dataclasses.InitVar</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sansmic.model.StageDefinition.brine_production_height" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">brine_production_height</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></em><a class="headerlink" href="#sansmic.model.StageDefinition.brine_production_height" title="Link to this definition">#</a></dt>
+<dd><p>Height above floor where brine is produced. The <a class="reference internal" href="#sansmic.model.StageDefinition.brine_production_depth" title="sansmic.model.StageDefinition.brine_production_depth"><code class="xref py py-attr docutils literal notranslate"><span class="pre">brine_production_depth</span></code></a> will be a negative value if set using this property.</p>
+</dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="sansmic.model.StageDefinition.defaults">
