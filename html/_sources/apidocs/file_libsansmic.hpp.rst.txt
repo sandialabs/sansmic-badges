@@ -36,6 +36,8 @@ Included By
 -----------
 
 
+- :ref:`file_basemodel.cpp`
+
 - :ref:`file_jetmodel.cpp`
 
 - :ref:`file_libsansmic.cpp`
@@ -73,6 +75,8 @@ Classes
 - :ref:`exhale_struct_structsansmic_1_1Scenario`
 
 - :ref:`exhale_struct_structsansmic_1_1Stage`
+
+- :ref:`exhale_class_classsansmic_1_1BaseModel`
 
 - :ref:`exhale_class_classsansmic_1_1Derivable`
 

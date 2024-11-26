@@ -1,7 +1,7 @@
-.. _exhale_class_classsansmic_1_1Model:
+.. _exhale_class_classsansmic_1_1BaseModel:
 
-Class Model
-===========
+Class BaseModel
+===============
 
 - Defined in :ref:`file_libsansmic.hpp`
 
@@ -9,17 +9,17 @@ Class Model
 Inheritance Relationships
 -------------------------
 
-Base Type
-*********
+Derived Type
+************
 
-- ``public BaseModel`` (:ref:`exhale_class_classsansmic_1_1BaseModel`)
+- ``public Model`` (:ref:`exhale_class_classsansmic_1_1Model`)
 
 
 Class Documentation
 -------------------
 
 
-.. doxygenclass:: sansmic::Model
+.. doxygenclass:: sansmic::BaseModel
    :project: libsansmic
    :members:
    :protected-members:

@@ -1,0 +1,53 @@
+
+.. _file_basemodel.cpp:
+
+File basemodel.cpp
+==================
+
+
+Base sansmic model class. 
+
+
+Definition (``basemodel.cpp``)
+------------------------------
+
+
+
+
+
+
+Includes
+--------
+
+
+- ``algorithm``
+
+- ``array``
+
+- ``cmath``
+
+- ``cstdlib``
+
+- ``fstream``
+
+- ``iomanip``
+
+- ``iostream``
+
+- ``libsansmic.hpp`` (:ref:`file_libsansmic.hpp`)
+
+- ``string``
+
+- ``vector``
+
+
+
+
+
+
+Defines
+-------
+
+
+- :ref:`exhale_define_basemodel_8cpp_1a2d2b6ceee9d9602972e2de6426a3b9cf`
+

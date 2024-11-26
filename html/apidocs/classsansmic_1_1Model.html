@@ -39,7 +39,7 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
 
-    <script src="../_static/documentation_options.js?v=e562d664"></script>
+    <script src="../_static/documentation_options.js?v=411a527d"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
@@ -60,7 +60,7 @@
     <script>
         DOCUMENTATION_OPTIONS.theme_version = '0.16.0';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://sandialabs.github.io/sansmic/_static/switcher.json';
-        DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'v1.0.2';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'v1.0.3';
         DOCUMENTATION_OPTIONS.show_version_warning_banner = true;
         </script>
     <script src="../_static/pypi-icon.js?v=74687d30"></script>
@@ -70,7 +70,7 @@
     <link rel="prev" title="Class JetModel" href="classsansmic_1_1JetModel.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="1.0.2" />
+  <meta name="docsearch:version" content="1.0.3" />
   </head>
   
   
@@ -437,6 +437,7 @@
 <li class="toctree-l2"><a class="reference internal" href="structsansmic_1_1Results.html">Struct Results</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structsansmic_1_1Scenario.html">Struct Scenario</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structsansmic_1_1Stage.html">Struct Stage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classsansmic_1_1BaseModel.html">Class BaseModel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classsansmic_1_1Derivable.html">Class Derivable</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classsansmic_1_1JetModel.html">Class JetModel</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Class Model</a></li>
@@ -488,7 +489,9 @@
 <li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1a583d71ee41f917002e5274dc9e2dd828.html">Variable sansmic::UNIMPLEMENTED_FLOW_TABLES</a></li>
 <li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1a2f7db9be399d5ac9e2e7b21e5aff61df.html">Variable sansmic::UNIMPLEMENTED_GEOMETRY_IDATA</a></li>
 <li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1acf7d3f4554cbe417c5e190b85a100894.html">Variable sansmic::zero_Fahrenheit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="define_basemodel_8cpp_1a2d2b6ceee9d9602972e2de6426a3b9cf.html">Define VERSION_INFO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="define_model_8cpp_1a2d2b6ceee9d9602972e2de6426a3b9cf.html">Define VERSION_INFO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_basemodel.cpp.html">File basemodel.cpp</a></li>
 <li class="toctree-l2"><a class="reference internal" href="file_jetmodel.cpp.html">File jetmodel.cpp</a></li>
 <li class="toctree-l2"><a class="reference internal" href="file_libsansmic.cpp.html">File libsansmic.cpp</a></li>
 <li class="toctree-l2"><a class="reference internal" href="file_libsansmic.hpp.html">File libsansmic.hpp</a></li>
@@ -577,11 +580,20 @@
 <ul class="simple">
 <li><p>Defined in <a class="reference internal" href="file_libsansmic.hpp.html#file-libsansmic-hpp"><span class="std std-ref">File libsansmic.hpp</span></a></p></li>
 </ul>
+<section id="inheritance-relationships">
+<h2>Inheritance Relationships<a class="headerlink" href="#inheritance-relationships" title="Link to this heading">#</a></h2>
+<section id="base-type">
+<h3>Base Type<a class="headerlink" href="#base-type" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">BaseModel</span></code> (<a class="reference internal" href="classsansmic_1_1BaseModel.html#exhale-class-classsansmic-1-1basemodel"><span class="std std-ref">Class BaseModel</span></a>)</p></li>
+</ul>
+</section>
+</section>
 <section id="class-documentation">
 <h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Link to this heading">#</a></h2>
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv4N7sansmic5ModelE">
-<span id="_CPPv3N7sansmic5ModelE"></span><span id="_CPPv2N7sansmic5ModelE"></span><span id="sansmic::Model"></span><span class="target" id="classsansmic_1_1Model"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Model</span></span></span><a class="headerlink" href="#_CPPv4N7sansmic5ModelE" title="Link to this definition">#</a><br /></dt>
+<span id="_CPPv3N7sansmic5ModelE"></span><span id="_CPPv2N7sansmic5ModelE"></span><span id="sansmic::Model"></span><span class="target" id="classsansmic_1_1Model"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Model</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><a class="reference internal" href="classsansmic_1_1BaseModel.html#_CPPv4N7sansmic9BaseModelE" title="sansmic::BaseModel"><span class="n"><span class="pre">BaseModel</span></span></a><a class="headerlink" href="#_CPPv4N7sansmic5ModelE" title="Link to this definition">#</a><br /></dt>
 <dd><p>The main SANSMIC model class. </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
@@ -658,39 +670,6 @@
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N7sansmic5Model17generate_tst_fileEb">
-<span id="_CPPv3N7sansmic5Model17generate_tst_fileEb"></span><span id="_CPPv2N7sansmic5Model17generate_tst_fileEb"></span><span id="sansmic::Model::generate_tst_file__b"></span><span class="target" id="classsansmic_1_1Model_1ab44152ddd1f7e688ca259df93b49a5f9"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">generate_tst_file</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">use_file</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7sansmic5Model17generate_tst_fileEb" title="Link to this definition">#</a><br /></dt>
-<dd><p>Choose whether the .TST file should be written. </p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>use_file</strong> – the choice </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N7sansmic5Model17generate_out_fileEb">
-<span id="_CPPv3N7sansmic5Model17generate_out_fileEb"></span><span id="_CPPv2N7sansmic5Model17generate_out_fileEb"></span><span id="sansmic::Model::generate_out_file__b"></span><span class="target" id="classsansmic_1_1Model_1adf4fb7c56253480587dfa9bb0d614de4"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">generate_out_file</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">use_file</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7sansmic5Model17generate_out_fileEb" title="Link to this definition">#</a><br /></dt>
-<dd><p>Choose whether the .OUT file should be written. </p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>use_file</strong> – the choice </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N7sansmic5Model19set_verbosity_levelEi">
-<span id="_CPPv3N7sansmic5Model19set_verbosity_levelEi"></span><span id="_CPPv2N7sansmic5Model19set_verbosity_levelEi"></span><span id="sansmic::Model::set_verbosity_level__i"></span><span class="target" id="classsansmic_1_1Model_1a930ff68864d0bf20cc2cc03b05385477"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_verbosity_level</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">verb</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7sansmic5Model19set_verbosity_levelEi" title="Link to this definition">#</a><br /></dt>
-<dd><p>Set the verbosity output level for cout/cerr. </p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>verb</strong> – the verbosity level </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N7sansmic5Model13open_outfilesEb">
 <span id="_CPPv3N7sansmic5Model13open_outfilesEb"></span><span id="_CPPv2N7sansmic5Model13open_outfilesEb"></span><span id="sansmic::Model::open_outfiles__b"></span><span class="target" id="classsansmic_1_1Model_1a4d01afa742cb35483d3069468440c062"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">open_outfiles</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">append</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7sansmic5Model13open_outfilesEb" title="Link to this definition">#</a><br /></dt>
 <dd><p>Open output files and initialize the headers. </p>
@@ -708,115 +687,6 @@
 <dt class="sig sig-object cpp" id="_CPPv4N7sansmic5Model14close_outfilesEv">
 <span id="_CPPv3N7sansmic5Model14close_outfilesEv"></span><span id="_CPPv2N7sansmic5Model14close_outfilesEv"></span><span id="sansmic::Model::close_outfiles__void"></span><span class="target" id="classsansmic_1_1Model_1a7e298d48702555c0203074b0c15cabeb"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">close_outfiles</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7sansmic5Model14close_outfilesEv" title="Link to this definition">#</a><br /></dt>
 <dd><p>Close the file handles for output files. </p>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N7sansmic5Model18get_running_statusEv">
-<span id="_CPPv3N7sansmic5Model18get_running_statusEv"></span><span id="_CPPv2N7sansmic5Model18get_running_statusEv"></span><span id="sansmic::Model::get_running_status__void"></span><span class="target" id="classsansmic_1_1Model_1a79d8655c631e5e5bf0efb2397617a5ab"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_running_status</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7sansmic5Model18get_running_statusEv" title="Link to this definition">#</a><br /></dt>
-<dd><p>Is this model currently running? </p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>running status </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N7sansmic5Model14get_num_stagesEv">
-<span id="_CPPv3N7sansmic5Model14get_num_stagesEv"></span><span id="_CPPv2N7sansmic5Model14get_num_stagesEv"></span><span id="sansmic::Model::get_num_stages__void"></span><span class="target" id="classsansmic_1_1Model_1a3ee0045f63eaece2380ccf74e2cff202"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_num_stages</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7sansmic5Model14get_num_stagesEv" title="Link to this definition">#</a><br /></dt>
-<dd><p>Get the current number of stages. </p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>the number of stages </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N7sansmic5Model17get_current_stageEv">
-<span id="_CPPv3N7sansmic5Model17get_current_stageEv"></span><span id="_CPPv2N7sansmic5Model17get_current_stageEv"></span><span id="sansmic::Model::get_current_stage__void"></span><span class="target" id="classsansmic_1_1Model_1a31a43d808c840b9ff6844a722a8f2883"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_current_stage</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7sansmic5Model17get_current_stageEv" title="Link to this definition">#</a><br /></dt>
-<dd><p>Get the current stage number. </p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>the stage number </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N7sansmic5Model16get_current_timeEv">
-<span id="_CPPv3N7sansmic5Model16get_current_timeEv"></span><span id="_CPPv2N7sansmic5Model16get_current_timeEv"></span><span id="sansmic::Model::get_current_time__void"></span><span class="target" id="classsansmic_1_1Model_1a6faa1247aaf53f3d2a186ac79d824835"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_current_time</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7sansmic5Model16get_current_timeEv" title="Link to this definition">#</a><br /></dt>
-<dd><p>Get the current time. </p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>the time </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N7sansmic5Model18get_current_volumeEv">
-<span id="_CPPv3N7sansmic5Model18get_current_volumeEv"></span><span id="_CPPv2N7sansmic5Model18get_current_volumeEv"></span><span id="sansmic::Model::get_current_volume__void"></span><span class="target" id="classsansmic_1_1Model_1a790a684596f5fd053b92bcb7f0add79c"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_current_volume</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7sansmic5Model18get_current_volumeEv" title="Link to this definition">#</a><br /></dt>
-<dd><p>Get the current cavern volume (in bbl) </p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>the volume </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N7sansmic5Model17get_current_stateEv">
-<span id="_CPPv3N7sansmic5Model17get_current_stateEv"></span><span id="_CPPv2N7sansmic5Model17get_current_stateEv"></span><span id="sansmic::Model::get_current_state__void"></span><span class="target" id="classsansmic_1_1Model_1ab87f47c6faaa26daff54cb4648df7782"></span><a class="reference internal" href="structsansmic_1_1Results.html#_CPPv4N7sansmic7ResultsE" title="sansmic::Results"><span class="n"><span class="pre">Results</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_current_state</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7sansmic5Model17get_current_stateEv" title="Link to this definition">#</a><br /></dt>
-<dd><p>Get the single-timestep state of the model in a <a class="reference internal" href="structsansmic_1_1Results.html#structsansmic_1_1Results"><span class="std std-ref">Results</span></a> object. </p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference internal" href="structsansmic_1_1Results.html#structsansmic_1_1Results"><span class="std std-ref">Results</span></a> object with single timestep of data. </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N7sansmic5Model11get_resultsEv">
-<span id="_CPPv3N7sansmic5Model11get_resultsEv"></span><span id="_CPPv2N7sansmic5Model11get_resultsEv"></span><span id="sansmic::Model::get_results__void"></span><span class="target" id="classsansmic_1_1Model_1a7c41ce91bc8b6b668b598222cddedf8d"></span><a class="reference internal" href="structsansmic_1_1Results.html#_CPPv4N7sansmic7ResultsE" title="sansmic::Results"><span class="n"><span class="pre">Results</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_results</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7sansmic5Model11get_resultsEv" title="Link to this definition">#</a><br /></dt>
-<dd><p>Get the compelte results object. </p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference internal" href="structsansmic_1_1Results.html#structsansmic_1_1Results"><span class="std std-ref">Results</span></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N7sansmic5Model10get_stagesEv">
-<span id="_CPPv3N7sansmic5Model10get_stagesEv"></span><span id="_CPPv2N7sansmic5Model10get_stagesEv"></span><span id="sansmic::Model::get_stages__void"></span><span class="target" id="classsansmic_1_1Model_1a6f1da25d04a300a541d095cec47b8e22"></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="structsansmic_1_1Stage.html#_CPPv4N7sansmic5StageE" title="sansmic::Stage"><span class="n"><span class="pre">Stage</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_stages</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7sansmic5Model10get_stagesEv" title="Link to this definition">#</a><br /></dt>
-<dd><p>Get the stages object. </p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>vector of all stage definitions </p>
-</dd>
-</dl>
-</dd></dl>
-
-</div>
-<div class="breathe-sectiondef docutils container">
-<p class="breathe-sectiondef-title rubric" id="breathe-section-title-protected-attributes">Protected Attributes</p>
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N7sansmic5Model9verbosityE">
-<span id="_CPPv3N7sansmic5Model9verbosityE"></span><span id="_CPPv2N7sansmic5Model9verbosityE"></span><span id="sansmic::Model::verbosity__i"></span><span class="target" id="classsansmic_1_1Model_1a1bdcfae3209cbd96db35a2ae356fa15e"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">verbosity</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N7sansmic5Model9verbosityE" title="Link to this definition">#</a><br /></dt>
-<dd><p>verbosity setting for output </p>
-</dd></dl>
-
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N7sansmic5Model13b_use_outfileE">
-<span id="_CPPv3N7sansmic5Model13b_use_outfileE"></span><span id="_CPPv2N7sansmic5Model13b_use_outfileE"></span><span id="sansmic::Model::b_use_outfile__b"></span><span class="target" id="classsansmic_1_1Model_1ab05b2e7f0f818adc604654ca8ceacc07"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">b_use_outfile</span></span></span><a class="headerlink" href="#_CPPv4N7sansmic5Model13b_use_outfileE" title="Link to this definition">#</a><br /></dt>
-<dd><p>use or don’t use the .OUT file; default false </p>
-</dd></dl>
-
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N7sansmic5Model13b_use_tstfileE">
-<span id="_CPPv3N7sansmic5Model13b_use_tstfileE"></span><span id="_CPPv2N7sansmic5Model13b_use_tstfileE"></span><span id="sansmic::Model::b_use_tstfile__b"></span><span class="target" id="classsansmic_1_1Model_1a354591c998107467ef17113b06e23bef"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">b_use_tstfile</span></span></span><a class="headerlink" href="#_CPPv4N7sansmic5Model13b_use_tstfileE" title="Link to this definition">#</a><br /></dt>
-<dd><p>use or don’t use the .TST file; default true </p>
 </dd></dl>
 
 </div>
@@ -872,6 +742,10 @@
   </div>
   <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inheritance-relationships">Inheritance Relationships</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#base-type">Base Type</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#class-documentation">Class Documentation</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic5ModelE"><code class="docutils literal notranslate"><span class="pre">Model</span></code></a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic5Model5ModelEv"><code class="docutils literal notranslate"><span class="pre">Model()</span></code></a></li>
@@ -882,22 +756,8 @@
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic5Model8run_stepEv"><code class="docutils literal notranslate"><span class="pre">run_step()</span></code></a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic5Model10init_stageEv"><code class="docutils literal notranslate"><span class="pre">init_stage()</span></code></a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic5Model9end_stageEv"><code class="docutils literal notranslate"><span class="pre">end_stage()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic5Model17generate_tst_fileEb"><code class="docutils literal notranslate"><span class="pre">generate_tst_file()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic5Model17generate_out_fileEb"><code class="docutils literal notranslate"><span class="pre">generate_out_file()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic5Model19set_verbosity_levelEi"><code class="docutils literal notranslate"><span class="pre">set_verbosity_level()</span></code></a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic5Model13open_outfilesEb"><code class="docutils literal notranslate"><span class="pre">open_outfiles()</span></code></a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic5Model14close_outfilesEv"><code class="docutils literal notranslate"><span class="pre">close_outfiles()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic5Model18get_running_statusEv"><code class="docutils literal notranslate"><span class="pre">get_running_status()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic5Model14get_num_stagesEv"><code class="docutils literal notranslate"><span class="pre">get_num_stages()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic5Model17get_current_stageEv"><code class="docutils literal notranslate"><span class="pre">get_current_stage()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic5Model16get_current_timeEv"><code class="docutils literal notranslate"><span class="pre">get_current_time()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic5Model18get_current_volumeEv"><code class="docutils literal notranslate"><span class="pre">get_current_volume()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic5Model17get_current_stateEv"><code class="docutils literal notranslate"><span class="pre">get_current_state()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic5Model11get_resultsEv"><code class="docutils literal notranslate"><span class="pre">get_results()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic5Model10get_stagesEv"><code class="docutils literal notranslate"><span class="pre">get_stages()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic5Model9verbosityE"><code class="docutils literal notranslate"><span class="pre">verbosity</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic5Model13b_use_outfileE"><code class="docutils literal notranslate"><span class="pre">b_use_outfile</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic5Model13b_use_tstfileE"><code class="docutils literal notranslate"><span class="pre">b_use_tstfile</span></code></a></li>
 </ul>
 </li>
 </ul>

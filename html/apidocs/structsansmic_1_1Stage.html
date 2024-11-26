@@ -39,7 +39,7 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
 
-    <script src="../_static/documentation_options.js?v=e562d664"></script>
+    <script src="../_static/documentation_options.js?v=411a527d"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
@@ -60,17 +60,17 @@
     <script>
         DOCUMENTATION_OPTIONS.theme_version = '0.16.0';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://sandialabs.github.io/sansmic/_static/switcher.json';
-        DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'v1.0.2';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'v1.0.3';
         DOCUMENTATION_OPTIONS.show_version_warning_banner = true;
         </script>
     <script src="../_static/pypi-icon.js?v=74687d30"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Class Derivable" href="classsansmic_1_1Derivable.html" />
+    <link rel="next" title="Class BaseModel" href="classsansmic_1_1BaseModel.html" />
     <link rel="prev" title="Struct Scenario" href="structsansmic_1_1Scenario.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="1.0.2" />
+  <meta name="docsearch:version" content="1.0.3" />
   </head>
   
   
@@ -437,6 +437,7 @@
 <li class="toctree-l2"><a class="reference internal" href="structsansmic_1_1Results.html">Struct Results</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structsansmic_1_1Scenario.html">Struct Scenario</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Struct Stage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classsansmic_1_1BaseModel.html">Class BaseModel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classsansmic_1_1Derivable.html">Class Derivable</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classsansmic_1_1JetModel.html">Class JetModel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classsansmic_1_1Model.html">Class Model</a></li>
@@ -488,7 +489,9 @@
 <li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1a583d71ee41f917002e5274dc9e2dd828.html">Variable sansmic::UNIMPLEMENTED_FLOW_TABLES</a></li>
 <li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1a2f7db9be399d5ac9e2e7b21e5aff61df.html">Variable sansmic::UNIMPLEMENTED_GEOMETRY_IDATA</a></li>
 <li class="toctree-l2"><a class="reference internal" href="variable_libsansmic_8hpp_1acf7d3f4554cbe417c5e190b85a100894.html">Variable sansmic::zero_Fahrenheit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="define_basemodel_8cpp_1a2d2b6ceee9d9602972e2de6426a3b9cf.html">Define VERSION_INFO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="define_model_8cpp_1a2d2b6ceee9d9602972e2de6426a3b9cf.html">Define VERSION_INFO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_basemodel.cpp.html">File basemodel.cpp</a></li>
 <li class="toctree-l2"><a class="reference internal" href="file_jetmodel.cpp.html">File jetmodel.cpp</a></li>
 <li class="toctree-l2"><a class="reference internal" href="file_libsansmic.cpp.html">File libsansmic.cpp</a></li>
 <li class="toctree-l2"><a class="reference internal" href="file_libsansmic.hpp.html">File libsansmic.hpp</a></li>
@@ -592,8 +595,8 @@
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N7sansmic5Stage9debug_logER8ofstream">
-<span id="_CPPv3N7sansmic5Stage9debug_logER8ofstream"></span><span id="_CPPv2N7sansmic5Stage9debug_logER8ofstream"></span><span id="sansmic::Stage::debug_log__ofstreamR"></span><span class="target" id="structsansmic_1_1Stage_1ab1a29303c85f0ca68bd5a058a3fea0a6"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">debug_log</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">ofstream</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">fout</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7sansmic5Stage9debug_logER8ofstream" title="Link to this definition">#</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N7sansmic5Stage9debug_logER8ofstreami">
+<span id="_CPPv3N7sansmic5Stage9debug_logER8ofstreami"></span><span id="_CPPv2N7sansmic5Stage9debug_logER8ofstreami"></span><span id="sansmic::Stage::debug_log__ofstreamR.i"></span><span class="target" id="structsansmic_1_1Stage_1a870ea2c49e0ac3e7e2070d93917b3d78"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">debug_log</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">ofstream</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">fout</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">stageNum</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7sansmic5Stage9debug_logER8ofstreami" title="Link to this definition">#</a><br /></dt>
 <dd><p>Output debug data to a stream. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -745,11 +748,11 @@
       </div>
     </a>
     <a class="right-next"
-       href="classsansmic_1_1Derivable.html"
+       href="classsansmic_1_1BaseModel.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Class Derivable</p>
+        <p class="prev-next-title">Class BaseModel</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -775,7 +778,7 @@
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#struct-documentation">Struct Documentation</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic5StageE"><code class="docutils literal notranslate"><span class="pre">Stage</span></code></a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic5Stage5StageEv"><code class="docutils literal notranslate"><span class="pre">Stage()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic5Stage9debug_logER8ofstream"><code class="docutils literal notranslate"><span class="pre">debug_log()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic5Stage9debug_logER8ofstreami"><code class="docutils literal notranslate"><span class="pre">debug_log()</span></code></a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic5Stage5titleE"><code class="docutils literal notranslate"><span class="pre">title</span></code></a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic5Stage10leach_modeE"><code class="docutils literal notranslate"><span class="pre">leach_mode</span></code></a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N7sansmic5Stage10print_freqE"><code class="docutils literal notranslate"><span class="pre">print_freq</span></code></a></li>

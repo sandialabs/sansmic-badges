@@ -1,0 +1,14 @@
+.. _exhale_define_basemodel_8cpp_1a2d2b6ceee9d9602972e2de6426a3b9cf:
+
+Define VERSION_INFO
+===================
+
+- Defined in :ref:`file_basemodel.cpp`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: VERSION_INFO
+   :project: libsansmic
