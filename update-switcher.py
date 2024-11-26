@@ -30,6 +30,8 @@ versions = [
 with open('stable.txt', 'w') as fout:
     fout.write('latest')
 
+to_proc = list()
+
 found_stable = False
 stable = False
 for tag in tags:
@@ -40,6 +42,8 @@ for tag in tags:
         name = name + " (stable)"
         with open('stable.txt', 'w') as fout:
             fout.write(tag)
+    elif found_stable and "-" in tag:
+        continue
     else:
         stable = False
     versions.append(
@@ -50,6 +54,11 @@ for tag in tags:
             preferred=stable,
         )
     )
+    to_proc.insert(0,tag)
+
+with open('tagged.txt', 'w') as fout:
+    for tag in to_proc:
+        fout.write('{}\n'.format(tag))
 
 os.makedirs(os.path.abspath(os.path.join(".","html","_static")), exist_ok=True)
 

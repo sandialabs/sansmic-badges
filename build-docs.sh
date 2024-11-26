@@ -32,32 +32,3 @@ cp -f sansmic-ci/docs/_static/* docs/_static/
 cp html/_static/switcher.json docs/_static/
 cp -f sansmic-ci/docs/conf.py docs/conf.py
 sphinx-build -b html -d doctrees/latest docs/ html/latest
-
-# For each version tagged in the sansmic repository, create
-# documentation for it
-for TAG in $(git tag --list "v*.*.*" --sort=version:refname); do
-    # remove the previous installation of sansmic and checkout the tagged
-    # release; set the version environment variable
-    pip uninstall -y sansmic
-    rm -rf docs src
-    git checkout -f $TAG
-    export SANSMIC_SPHINX_VERSION=$TAG
-
-    # install the specified release
-    pip install -e .[formats]
-
-    # Create the directories needed to build the doxygen files
-    mkdir docs/_build
-    mkdir docs/_build/doxyxml
-
-    # Copy potentially missing files to the appropriate directories 
-    # for inclusion in the old documentation
-    cp -f sansmic-ci/docs/_static/*-icon.js sansmic-ci/docs/_static/*logo* docs/_static/
-    cp html/_static/switcher.json docs/_static/
-
-    # Update the configuration file with the current documentation config
-    cp -f sansmic-ci/docs/conf.py docs/conf.py
-
-    # Build the old documentation
-    sphinx-build -q -b html -d doctrees/$TAG docs html/$TAG
-done
