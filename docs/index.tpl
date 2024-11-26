@@ -1,19 +1,27 @@
 =======
 sansmic
 =======
+.. |nbsp| unicode:: 0xA0 
+   :trim:
 
 .. rubric:: Project details
 
 .. image:: https://img.shields.io/github/license/sandialabs/sansmic
    :alt: GitHub License
 
+|nbsp|
+
 .. image:: /_static/badges/Contributor%20Covenant-2.1-4baaaa.svg
    :alt: Contributor Covenant badge
    :target: https://github.com/sandialabs/sansmic/blob/main/CODE_OF_CONDUCT.md
 
+|nbsp|
+
 .. image:: https://www.bestpractices.dev/projects/9399/badge
    :alt: Best Practices badge
    :target: https://www.bestpractices.dev/projects/9399
+
+|nbsp|
 
 .. image:: https://api.scorecard.dev/projects/github.com/sandialabs/sansmic/badge
    :alt: Scorecard badge
@@ -24,33 +32,49 @@ sansmic
 
 .. image:: https://img.shields.io/pypi/v/sansmic?logo=pypi&logoColor=white
    :alt: PyPI - Version
+   :target: https://pypi.org/project/sansmic
+
+|nbsp|
 
 .. image:: https://img.shields.io/github/release-date/sandialabs/sansmic
    :alt: GitHub Release Date
+   :target: https://github.com/sandialabs/sansmic/releases/latest
+
+|nbsp|
 
 .. image:: https://img.shields.io/github/v/release/sandialabs/sansmic?display_name=release&logo=github&logoColor=white
    :alt: GitHub Release
+   :target: https://github.com/sandialabs/sansmic/releases/latest
+
+|nbsp|
 
 .. image:: https://img.shields.io/github/check-runs/sandialabs/sansmic/BUILD_SCRIPT_REPLACE?logo=github&logoColor=white
    :alt: GitHub tag check runs
-
+   :target: https://github.com/sandialabs/sansmic/releases/latest
 
 .. rubric:: Development version
 
 .. image:: https://sloc.xyz/github/sandialabs/sansmic/?category=code
    :alt: Lines of code badge
+   :target: https://github.com/sandialabs/sansmic
+
+|nbsp|
 
 .. image:: https://github.com/sandialabs/sansmic/actions/workflows/test-matrix.yml/badge.svg?branch=main
    :alt: Tests status on main branch badge
    :target: https://github.com/sandialabs/sansmic/actions/workflows/test-matrix.yml
 
+|nbsp|
+
 .. image:: https://codecov.io/github/sandialabs/sansmic/graph/badge.svg?token=oDeMIUHoqg
    :alt: Codecov on main branch badge
+   :target: https://app.codecov.io/github/sandialabs/sansmic
+
+|nbsp|
 
 .. image:: https://github.com/sandialabs/sansmic/actions/workflows/gh-pages.yml/badge.svg?branch=main
    :alt: Docs building on main branch badge
    :target: https://github.com/sandialabs/sansmic/actions/workflows/gh-pages.yml
-
 
 
 The sansmic leaching simulator
