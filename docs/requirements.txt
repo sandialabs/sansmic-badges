@@ -11,3 +11,4 @@ ipykernel>=6.28.0
 matplotlib
 plotly
 seaborn
+pandoc
