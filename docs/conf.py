@@ -12,6 +12,7 @@ sys.path.insert(0, os.path.abspath(os.path.join("..", "src", "python")))
 
 try:
     import sansmic
+
     version = os.environ.get("SANSMIC_SPHINX_VERSION", "dev")
 except ImportError:
     doxygen_installed = False
@@ -27,15 +28,15 @@ project = "sansmic"
 copyright = "2024 National Technology and Engineering Solutions of Sandia, LLC. Under the terms of Contract DE-NA0003525 with NTESS, the U.S. Government retains certain rights in this software."
 author = "See AUTHORS.md"
 
-if version.startswith('v'):
+if version.startswith("v"):
     version = version[1:]
-    release = 'v' + version
+    release = "v" + version
 else:
     release = version
 
 ga_token = os.environ.get("GOOGLE_ANALYTICS_TOKEN", "G-23TNKN36XM")
 
-if version == 'root':
+if version == "root":
     doxygen_installed = False
 
 # -- Extensions to load -------------------------------------------------------
@@ -46,7 +47,7 @@ if doxygen_installed:
             "exhale",
         ]
     )
-    
+
 extensions.extend(
     [
         "sphinx.ext.autodoc",
@@ -239,8 +240,8 @@ html_js_files = [
 # html_sidebars = {"nomenclature": []}
 html_theme_options = {
     "icon_links": [
-        { 
-            "name": "Issues", 
+        {
+            "name": "Issues",
             "url": "https://github.com/sandialabs/sansmic/issues",
             "type": "fontawesome",
             "icon": "fa-regular fa-circle-dot",
@@ -272,7 +273,7 @@ html_theme_options = {
         "json_url": "https://sandialabs.github.io/sansmic/_static/switcher.json",
         "version_match": release,
     },
-    "show_version_warning_banner": True if version != 'root' else False,
+    "show_version_warning_banner": True if version != "root" else False,
     # "secondary_sidebar_items": ["page-toc"], #["page-toc", "edit-this-page", "sourcelink"],
     "navbar_start": [
         "navbar-logo",
@@ -282,5 +283,12 @@ html_theme_options = {
         "theme-switcher",
         "navbar-icon-links",
     ],
+    "secondary_sidebar_items": {
+        "**": ["page-toc", "sourcelink"],
+        "examples/**": [],
+    },
     "analytics": {"google_analytics_id": ga_token},
+}
+nbsphinx_thumbnails = {
+    "basic-example/basic": "/_static/basic-thumbnail.png",
 }
