@@ -51,7 +51,8 @@ sansmic
 
    .. grid-item-card:: Development version
 
-      .. image:: https://sloc.xyz/github/sandialabs/sansmic/?category=code
+      .. 
+         image:: https://sloc.xyz/github/sandialabs/sansmic/?category=code
          :alt: Lines of code badge
          :target: https://github.com/sandialabs/sansmic
 
