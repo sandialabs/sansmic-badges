@@ -59,7 +59,7 @@ jobs:
       - name: Checkout old documentation
         run: |
           for TAG in $(cat tagged.txt); do
-            pushd sansmic-ci
+            pushd sansmic-docs
             git checkout -f $TAG
             cp -rf html ../html/$TAG
             popd
