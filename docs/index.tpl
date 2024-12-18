@@ -82,7 +82,7 @@ The sansmic leaching simulator
    User Guide </BUILD_SCRIPT_REPLACE/userman>
    API Reference </BUILD_SCRIPT_REPLACE/refman>
 
-**sansmic** is a package for the simulation of leaching in underground salt
+**Sansmic** is a package for the simulation of leaching in underground salt
 caverns. The core is written in C++ for speed, but the primary API and the
 command-line program are Python-based. The lower- or mixed-case name *sansmic* is used to
 differentiate it from the previous, FORTRAN-based versions of the same name.
