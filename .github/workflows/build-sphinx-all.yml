@@ -54,7 +54,7 @@ jobs:
       - name: Build documentation
         run: |
           python -m pip install -e .[formats]
-          bash sansmic-ci/build-docs.sh
+          bash sansmic-docs/build-docs.sh
 
       - name: Checkout old documentation
         run: |
