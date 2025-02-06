@@ -20,7 +20,7 @@ jobs:
           egress-policy: audit
 
       - name: Install
-        uses: pandoc/actions/setup@v1
+        uses: pandoc/actions/setup@6a25d32c172975d0c82425964800b60988e93279
         with:
           version: 2.19
 
